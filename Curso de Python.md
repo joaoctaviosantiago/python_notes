@@ -115,6 +115,8 @@ Uma vez instalado, crie um novo projeto e espere um bocadinho. A primeira vez qu
 
 VSCode é um editor de texto otimizado para programação e utiliza plugins para melhorar a vida do programador. Caso esteja utilizando um computador mais antigo ou lento, recomendo utilizar o Visual Studio Code com o plugin de python. É fácil de encontrar no google como instalar plugins. O download pode ser feito [neste link](https://code.visualstudio.com/).
 
+Uma vez instalado, crie um arquivo ```nome_do_arquivo.py```.
+
 Posteriormente nós utilizaremos o VSCode para alguns projetos.
 
 ---
@@ -404,7 +406,7 @@ Com este operador, os números são divididos e python os arredonda o resultado 
 print(10 // 3)
 ```
 
-O resultado de 10 dividido por três é 3.333, porém, como utilizamos o divisor inteiro, python nos dá como resposta o número 3.
+O resultado de 10 dividido por 3 é 3.333, porém, como utilizamos o divisor inteiro, python nos dá como resposta o número 3.
 
 ![[10 - floor_division.png]]
 
@@ -452,12 +454,11 @@ aqui estamos somando um ```int``` e um ```float```, então sabemos que o resulta
 
 e este será nosso resultado:
 
-![[14 - formatted_numbers.png]]
+![[14 - formatted_numbers_pt.png]]
 
 #### Ordem de operações matemáticas
 
-Assim como na matemática, em python a ordem das operações matemáticas também será
-respeitada.
+Assim como na matemática, em python a ordem das operações matemáticas também será respeitada.
 
 ```python
 number = 5 + (2 + 3) ** 2
@@ -469,8 +470,7 @@ primeiro fazemos o calculo entre parênteses, depois calculamos a potência e, p
 
 #### Números com underline
 
-Números muito grandes são um pouco difíceis de ler. Python resolve isso nos deixando usar
-underlines para separar os números, deixando-os mais legíveis.
+Números muito grandes são um pouco difíceis de ler. Python resolve isso nos deixando usar underlines para separar os números, deixando-os mais legíveis.
 
 ```python
 big_number = 4_540_000_000
@@ -479,9 +479,24 @@ print(big_number)
 
 ![[16 - number_with_underline.png]]
 
-### Revisitando variáveis
+### Boolean
 
-Agora que nós já temos um conhecimento sólido em relação às variáveis e tipos de dados, nós podemos voltar e nos aprofundarmos um pouco mais.
+O boolean é um tipo de dado com apenas dois valores possíveis: True (verdadeiro) e False (falso).
+
+```python
+true_bool = True
+false_bool = False
+```
+
+Bem fácil, não é?
+
+Eu sei que ele não parece tão relevante ainda, mas o boolean é extremamente importante e vamos ver alguns do seus usos logo.
+
+---
+
+## Revisitando variáveis
+
+Agora que nós já temos um conhecimento sólido em relação às variáveis e tipos de dados, nós podemos nos aprofundar um pouco mais.
 
 Até o momento, nós apenas atribuímos um valor à variável e a usamos. Mas como o nome diz, ela é variável. O que significa que podemos alterar seu valor a qualquer momento.
 
@@ -497,7 +512,7 @@ Neste exemplo, primeiro criamos uma variável ```number``` e atribuímos uma int
 
 Python lê o código de cima para baixo, lembra? Então primeiro ele cria a variável, depois modifica a modifica, e por ultimo, imprime o valor atual dela na tela, que é 10.
 
-Como python é uma linguagem dinamicamente tipada, nós podemos até modificar seu tipo para string e python entenderia:
+Como python é uma linguagem dinamicamente tipada, nós podemos até modificar seu tipo para string e python entenderia.
 
 ```python
 number = 100
@@ -507,7 +522,7 @@ print(number)
 
 ![[18 - revisiting_variables_2.png]]
 
-#### Mais operadores de atribuição
+### Mais operadores de atribuição
 
 Vamos imaginar que temos uma variável ```number``` de valor 2 e queiramos somar 10 ao seu valor. Como faríamos isso?
 
@@ -517,7 +532,7 @@ number = number + 10
 print(number)
 ```
 
-Parece um pouco confuso,né? Mas vamos passo a passo. Primeiro criamos a variável e atribuímos o valor 2. Depois, nós atribuímos à variável number o valor de ```number``` + 10, ou seja, o novo valor de ```number``` é seu valor atual (2) mais a integer 10. Resultando:
+Parece um pouco confuso,né? Mas vamos passo a passo. Primeiro criamos a variável e atribuímos o valor 2. Depois, nós atribuímos à variável ```number``` o valor de ```number``` + 10, ou seja, o novo valor de ```number``` é seu valor atual (2) mais a integer 10. Resultando:
 
 ![[19 - assigning_values.png]]
 
@@ -526,6 +541,7 @@ Outra forma de escrever isso, seria:
 ```python
 number = 2
 number += 10
+print(number)
 ```
 
 Alguns outros operadores de atribuição:
@@ -539,9 +555,13 @@ Alguns outros operadores de atribuição:
 | %=       | calcula o módulo e atribui o resto à variável                  |
 | \**=      | eleva o número e atribui o resultado à variável                |
 
-### Type Casting
+---
 
-Enquanto python nos permite trabalhar com integers e floats ao mesmo tempo, mesmo sendo tipos de dados diferentes, isto não ocorre quando se trata de strings e números. Se tentarmos, python levanta um erro:
+## Type Casting
+
+Type casting é o ato de mudar o tipo de uma variável.
+
+Enquanto python nos permite trabalhar com integers e floats ao mesmo tempo, mesmo sendo tipos de dados diferentes, isto não ocorre quando se trata de strings e números. Se tentarmos, python levanta um erro.
 
 ```python
 print("10" + 10)
@@ -551,9 +571,9 @@ print("10" + 10)
 
 Python está reclamando e dizendo que pode apenas concatenar ```string``` (str) com ```string```, e não ```int```.
 
-#### User input
+### Input do usuário | User input
 
-Quando usamos a função ```input()``` para pegar alguma informação do usuário, este dado sempre vem em formato de ```string```. Mesmo que o usuário tenha digitado um número. Para lidar com esta situação, precisamos converter os dados. E como fazemos isso?
+Quando usamos a função ```input()``` para pegar alguma informação do usuário, este dado sempre vem em formato de ```string```, mesmo que o usuário tenha digitado um número. Para lidar com esta situação, precisamos converter os dados. E como fazemos isso?
 
 Existem algumas funções que podemos usar:
 
@@ -588,20 +608,9 @@ ou, caso queira deixar o código ainda mais conciso:
 number = int(input("digite um número:\n"))
 ```
 
-### Boolean
+---
 
-O boolean é um tipo de dado com apenas dois valores possíveis: True (verdadeiro) e False (falso).
-
-```python
-true_bool = True
-false_bool = False
-```
-
-Bem fácil, não é?
-
-Eu sei que ele não parece tão relevante ainda, mas o boolean é extremamente importante e vamos ver alguns do seus usos logo.
-
-### Exercício 2
+## Exercício 2
 
 1. Crie um programa que peça para o usuário digitar 2 números e mostre sua soma.
 2. Crie um programa que peça ao usuário seu nome e o ano em que nasceu, e mostre uma frase com seu nome e quantos anos ele tem/fará neste ano.
@@ -613,9 +622,9 @@ Eu sei que ele não parece tão relevante ainda, mas o boolean é extremamente i
 
 Assim como as variáveis, as constantes são espacinhos na memória nos quais dados são armazenados. A diferença é que um valor atribuído a uma constante não pode ser alterado enquanto o programa está rodando.
 
-Quando você tem certeza de que o valor de um dado não será alterado durante a execução do programa, pode escrevê-lo como uma constante. Desta forma, o programa saberá que aquele valor não mudará e, por trás dos panos, fará as otimizações necessárias para funcionar de maneira mais eficiente.
+Quando você tem certeza de que o valor de um dado não será alterado durante a execução do programa, pode escrevê-lo como uma constante. Desta forma, a linguagem saberá que aquele valor não mudará e, por trás dos panos, fará as otimizações necessárias para funcionar de maneira mais eficiente.
 
-Tá, mas como faço isso em python? Então, python não tem o tipo de dado "constante". Porém, como este dado existe em outras linguagens, nós deixamos claro que a variável deve ser tratada como uma constante colocando seu nome em letras maiúsculas. Por exemplo:
+Tá, mas como faço isto em python? Então, python não tem o tipo de dado "constante". Porém, como este dado existe em outras linguagens, nós seguimos a mesma nomenclatura para deixar claro que a variável deve ser tratada como uma constante, colocando seu nome em letras maiúsculas. Por exemplo:
 
 ```python
 CHARACTER_NAME = Lonk
@@ -629,7 +638,7 @@ Comentários são linhas de códigos ignoradas por python, que escrevemos para n
 
 Imagine que você trabalhou em um projeto há uns anos e agora quer melhorá-lo. Ao abrir o projeto, você pode ler todo aquele código e decifrar o que cada linha está fazendo, mas seria muito mais rápido e fácil se houvessem comentários no código explicando o que cada bloco do código faz, ou explicando como você resolveu determinado problema.
 
-Comentários são essenciais e facilitam muito a nossa vida. Quando trabalhamos em equipe, eles nos permitem esclarecer para outros programadores o que nosso código está fazendo; Quando revisitamos nossos antigos projetos, nos permitem entender o que fizemos e como fizemos.
+Comentários são essenciais e facilitam muito a nossas vidas. Quando trabalhamos em equipe, eles nos permitem esclarecer para outros programadores o que nosso código está fazendo; Quando revisitamos nossos antigos projetos, nos permitem entender o que fizemos e como os fizemos.
 
 Em python, tudo que é escrito na frente de um ```#``` é tratado como um comentário.
 

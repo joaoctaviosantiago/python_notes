@@ -115,6 +115,8 @@ Once installed, create a new project and wait a little. The first time a project
 
 VSCode is a text editor optimized for coding and it utilizes plugins to improve the life of the programmer. If you are using and older or slower computer, I recommend using VSCode with the python plugin. It is easy to find on google how to install said plugins. The download can be done from [this link](https://code.visualstudio.com/).
 
+Once installed, create a file ```filename.py```.
+
 Later in the course we'll utilize VSCode for some projects.
 
 ---
@@ -332,7 +334,7 @@ In the ```f string``` all the variables are between curly braces in the middle o
 
 ---
 
-### Exercise 1:
+### Exercise 1
 
 1. What is the result of the following expression:
 
@@ -345,70 +347,70 @@ print("11" + "11")
 
 ### Numbers
 
-Existem dois tipos de dados numéricos: integer (Int) e float (floating-point number). Integers são números inteiros, enquanto floats são números decimais.
+There are two numeric data types: integer (Int) and float (floating-point number). Integers are whole numbers, while floats are numbers with decimal places.
 
-| Tipo de Dado | Exemplos                               |
+| Data type | Examples                               |
 |--------------|----------------------------------------|
 | Int          | -2, -1, 0, 1, 2, 3, 10, 45, 67, 106    |
 | Float        | -1.32 , -1.0 , 0.0 , 1.57, 43.5, 100.0 |
 
-Nós podemos fazer cálculos utilizando python, e para isso utilizamos operadores, assim como na matemática. Eles são:
+We can make calculations using python, and for this we utilize operators, just like in math. They are:
 
-| Operador | Nome                             | O que faz                                                     |
+| Operator | Name                             | What it does                                                  |
 |----------|----------------------------------|---------------------------------------------------------------|
-| +        | soma                             | soma os números                                               |
-| -        | subtração                        | subtrai os números                                            |
-| *        | multiplicação                    | multiplica os números                                         |
-| /        | divisão                          | divide os números                                             |
-| %        | módulo (modulus)                 | te dá o resto da divisão                                      |
-| **       | exponenciação                    | eleva o número                                                |
-| //       | divisor inteiro (floor division) | divide os números e té da um resultado arredondado para baixo |
+| +        | add                              | adds the number                                               |
+| -        | subtract                         | subtracts the number                                          |
+| *        | multiplication                   | multiplies the number                                         |
+| /        | division                         | divides the number                                            |
+| %        | modulus                          | gives you the remainder of the division                       |
+| **       | exponentiation                   | raises the number to a power                                  |
+| //       | floor division                   | divides the number and gives you the result rounded to the closest lowest number |
 
-Alguns são bem simples e você deve se lembrar, outros nem tanto. Então vamos dar uma olhadinha em uns exemplos e esclarecer seus usos.
+Some are quite simple and you probably remember them, but others not so much. Then let's take a look on some examples to clarify their usage.
 
-#### Módulo | Modulus
+#### Modulus
 
-Este operador divide os números e o resultado é o resto. Qual será o resultado da expressão abaixo?
+This operator divides the numbers and gives us the remainder of the division. What will be the result of the expression below?
 
 ```python
 print(11 % 2)
 ```
 
-isto mesmo! O resultado é 1.
+That's right! The result is 1.
 
 ![[8 - modulus.png]]
 
-Ele divide 11 por 2 e restam 1.
+It divides 11 by 2 and the remainder is 1.
 
-#### Exponenciação
+#### Exponentiation
 
-Caso não se lembre, exponenciação é o ato de multiplicar o número por ele mesmo uma ou mais vezes.
+In case you don't remember, exponentiation is the act of multiplying a number by itself one or more  times.
 
 ```python
 print(2 ** 3)
 ```
 
-é o mesmo que 2³ ou 2 · 2 · 2, que é igual a 8.
+Is the same as 2³ or 2 · 2 · 2, which is equal to 8.
 
 ![[9 - power.png]]
 
-#### Divisor Inteiro | Floor Division
+#### Floor Division
 
-Com este operador, os números são divididos e python os arredonda o resultado para baixo.
+With this operator, the numbers are divided and python rounds them to the closest lowest number.
 
 ```python
 print(10 // 3)
 ```
 
-O resultado de 10 dividido por três é 3.333, porém, como utilizamos o divisor inteiro, python nos dá como resposta o número 3.
+The result of 10 divided by 3 is 3.333, however, when we utilize the floor division, python gives 3 as the answer.
 
 ![[10 - floor_division.png]]
 
 #### Int e Float
 
-Em determinadas linguagens, você só pode executar operações com dados do mesmo tipo. Em python este não é o caso. A linguagem tenta sempre entender o que você quer fazer e tenta trazer a resposta mais precisa possível.
+In certain languages, youcan only execute operators with data of the same type. In python this is not the case. the language tries to understand what you're trying to do and tries to give you the most precise answer possible.
 
-Por conta disso, sempre que fazemos qualquer calculo entre um ```int``` e um ```float```, o resultado vai ser um ```float```. Python entende que a chance do resultado desta conta ser um número decimal é grande, então já faz a conversão pra ```float```.
+Because of that, it whenever we try to do an calculation with an ```int``` and a ```float```, the result will be a```float```. Python understands that there is a high chance the result of this calculation will be a number with decimal points, so it converts the result to ```float```.
 
 ```python
 print(5.0 + 3)
@@ -416,7 +418,7 @@ print(5.0 + 3)
 
 ![[11 - float.png]]
 
-Em alguns casos, como na divisão, isto também ocorre. Mesmo que seja uma divisão entre dois números inteiros. Python sabe que existe uma boa chance de que o resultado de uma divisão seja um número com virgula.
+In some cases, as in the division, this also occur. Even if the division is between two integers. Python knows that there is a good chance that the result of a division will be a number with decimal points.
 
 ```python
 print(4 / 2)
@@ -424,9 +426,9 @@ print(4 / 2)
 
 ![[12 - division.png]]
 
-#### Quantidade de casas decimais
+#### Number of decimal places
 
-As vezes python te dará um resultado com muitas casas decimais. Isto é normal e ocorre em muitas linguagens. Python sempre tenta entregar o valor mais próximo possível, o que é um pouco difícil devido a como computadores lidam com números.
+Sometimes python will give a result with many decimal places. This is normal and it happens in many languages. Python always tries to deliver the most precise answer, which is a little hard given how computers deal with numbers.
 
 ```python
 print(0.2 + 0.1)
@@ -434,39 +436,37 @@ print(0.2 + 0.1)
 
 ![[13 - decimal_points.png]]
 
-Mas e se eu quiser um número especifico de casas decimais? Neste caso, podemos formatar o resultado.
+But what if I want a number with a specific amount of decimal places? In this case, we can format the result.
 
 ```python
 number = 1 + 0.9887984
-print(f"Resultado não formatado: {number}")
-print(f'Resultado formatado: {"%.2f" % number}')
+print(f"Not formatted result: {number}")
+print(f'Formatted result: {"%.2f" % number}')
 ```
 
 aqui estamos somando um ```int``` e um ```float```, então sabemos que o resultado não formatado será um ```float``` e python vai tentar deixá-lo o mais preciso possível. Na terceira linha, repare que a variável não foi sozinha. Nós passamos ```"%.2f" % nome_da_variável```, que vai pegar o valor passado na variável e arredondar pra duas casas decimais.
 
-> **_Nota:_** O ```"%.2f"``` sempre deve vir entre aspas. O ```2``` é a quantidade de casas decimais que você quer.
+> **_Note:_** The ```"%.2f"``` must always be between quotation marks. The ```2``` is the amount of decimal places you want.
 
-e este será nosso resultado:
+and this will be the result:
 
-![[14 - formatted_numbers.png]]
+![[14 - formatted_numbers_en.png]]
 
-#### Ordem de operações matemáticas
+#### Order of mathematical operations
 
-Assim como na matemática, em python a ordem das operações matemáticas também será
-respeitada.
+Just like in math, in python the order of operations will also be respected.
 
 ```python
 number = 5 + (2 + 3) ** 2
 ```
 
-primeiro fazemos o calculo entre parênteses, depois calculamos a potência e, por fim, somamos.
+First we'll calculate the numbers between parenthesis, then the exponentiation and finally, we add.
 
 ![[15 - order.png]]
 
-#### Números com underline
+#### Numbers with underscore
 
-Números muito grandes são um pouco difíceis de ler. Python resolve isso nos deixando usar
-underlines para separar os números, deixando-os mais legíveis.
+Big numbers are often hard to read. Python solves this problem by letting us use underscores to separate the numbers, making them more readable.
 
 ```python
 big_number = 4_540_000_000
@@ -475,11 +475,26 @@ print(big_number)
 
 ![[16 - number_with_underline.png]]
 
-### Revisitando variáveis
+### Boolean
 
-Agora que nós já temos um conhecimento sólido em relação às variáveis e tipos de dados, nós podemos voltar e nos aprofundarmos um pouco mais.
+Boolean is a data type with only two possible values: True and False.
 
-Até o momento, nós apenas atribuímos um valor à variável e a usamos. Mas como o nome diz, ela é variável. O que significa que podemos alterar seu valor a qualquer momento.
+```python
+true_bool = True
+false_bool = False
+```
+
+Pretty easy, uh?
+
+I know that it doesn't seem too relevant yet, but boolean is extremely important and we'll see their usage soon.
+
+---
+
+## Revisiting variables
+
+Now that we already have a solid understanding of variables and data types, we can go a little deeper into these topics.
+
+Up to this point we've only assigned a value to a variable and used it. But, as the name suggests, it is variable. Which means we can alter it's value at any moment.
 
 ```python
 number = 100
@@ -487,13 +502,13 @@ number = 10
 print(number)
 ```
 
-Neste exemplo, primeiro criamos uma variável ```number``` e atribuímos uma integer de valor 100 a ela. Nada de novo. Logo abaixo, modificamos o valor da variável para 10. Ao rodarmos o código, temos este resultado:
+In this example, first we make a variable ```number```  and assign it the integer 100. Nothing new.  Then we modify the value of the variable to 10. When we run the code, this is the result we get:
 
 ![[17 - revisiting_variables.png]]
 
-Python lê o código de cima para baixo, lembra? Então primeiro ele cria a variável, depois modifica a modifica, e por ultimo, imprime o valor atual dela na tela, que é 10.
+Python reads the code from top to bottom, remember? So first it creates the variable, then python modifies it and finally, prints its current value on screen, which is 10.
 
-Como python é uma linguagem dinamicamente tipada, nós podemos até modificar seu tipo para string e python entenderia:
+Since python is a dynamically typed language, we can even change the type of the variable to string and python would understand it.
 
 ```python
 number = 100
@@ -503,9 +518,9 @@ print(number)
 
 ![[18 - revisiting_variables_2.png]]
 
-#### Mais operadores de atribuição
+### More assign operators
 
-Vamos imaginar que temos uma variável ```number``` de valor 2 e queiramos somar 10 ao seu valor. Como faríamos isso?
+Let's imagine that we have a variable ```number``` of value 2 and we want to add 10 to its value. How would we do that?
 
 ```python
 number = 2
@@ -513,31 +528,36 @@ number = number + 10
 print(number)
 ```
 
-Parece um pouco confuso,né? Mas vamos passo a passo. Primeiro criamos a variável e atribuímos o valor 2. Depois, nós atribuímos à variável number o valor de ```number``` + 10, ou seja, o novo valor de ```number``` é seu valor atual (2) mais a integer 10. Resultando:
+It looks a little confusing, right? But let's go through it step by step. First, we make a variable and assign it the value 2. Then, we assign to the variable ```number``` the value of ```number``` + 10, meaning that the new value of ```number``` will be its current value (2) plus the integer 10. Resulting in:
 
 ![[19 - assigning_values.png]]
 
-Outra forma de escrever isso, seria:
+Another way of writing this would be:
 
 ```python
 number = 2
 number += 10
+print(number)
 ```
 
-Alguns outros operadores de atribuição:
+Here are some other assign operators:
 
-| Operador | O que faz                                                      |
-|----------|----------------------------------------------------------------|
-| +=       | soma ao valor antigo e atribui o resultado à variável          |
-| -=       | subtrai do valor antigo e atribui o resultado à variável       |
-| \*=       | multiplica com o valor antigo e atribui o resultado à variável |
-| /=       | divide o valor antigo e atribui o resultado à variável         |
-| %=       | calcula o módulo e atribui o resto à variável                  |
-| \**=      | eleva o número e atribui o resultado à variável                |
+| Operator | What it does                                                        |
+|----------|---------------------------------------------------------------------|
+| +=       | adds to the old value and assigns the result to the variable        |
+| -=       | subtracts from the old value and assigns the result to the variable |
+| \*=       | multiplies by the old value and assigns the result to the variable  |
+| /=       | divides by the old value and assigns the result to the variable     |
+| %=       | calculates the division and assigns the remainder to the variable   |
+| \**=      | raises the number to the power and assings the result to the variable |
 
-### Type Casting
+---
 
-Enquanto python nos permite trabalhar com integers e floats ao mesmo tempo, mesmo sendo tipos de dados diferentes, isto não ocorre quando se trata de strings e números. Se tentarmos, python levanta um erro:
+## Type Casting
+
+Type casting is the act of changing the type of a variable. 
+
+While python allows us to work with integers and floats at the same time, even if they're different data types, this doesn't happen when with strings and numbers. If we try, python will raise an error.
 
 ```python
 print("10" + 10)
@@ -545,73 +565,62 @@ print("10" + 10)
 
 ![[20 - type_casting.png]]
 
-Python está reclamando e dizendo que pode apenas concatenar ```string``` (str) com ```string```, e não ```int```.
+Python is complaining and saying that it can only concatenate ```string``` (str) to ```string```, and not ```int```.
 
-#### User input
+### User input
 
-Quando usamos a função ```input()``` para pegar alguma informação do usuário, este dado sempre vem em formato de ```string```. Mesmo que o usuário tenha digitado um número. Para lidar com esta situação, precisamos converter os dados. E como fazemos isso?
+When we use the function ```input()``` to get some information from the user, this data always comes in the ```string``` format, even if the user has types a number. To deal with this situation we need to convert the data. And how do we do that?
 
-Existem algumas funções que podemos usar:
+There are a few functions we can use:
 
 ```python
-int(dado)
+int(data)
 ```
 
-transforma o dado passado em integer.
+turns the data into an integer.
 
 ```python
-float(dado)
+float(data)
 ```
 
-transforma o dado em float.
+turns the data into a float.
 
 ```python
-str(dado)
+str(data)
 ```
 
-transforma o dado em string.
+turns the data into a string.
 
-Um exemplo de uso:
+An use case example:
 
 ```python
-number = input("digite um número:\n")
+number = input("type a number:\n")
 number = int(number)
 ```
 
-ou, caso queira deixar o código ainda mais conciso:
+or, if you'd like to make your code more concise:
 
 ```python
-number = int(input("digite um número:\n"))
+number = int(input("type a number:\n"))
 ```
-
-### Boolean
-
-O boolean é um tipo de dado com apenas dois valores possíveis: True (verdadeiro) e False (falso).
-
-```python
-true_bool = True
-false_bool = False
-```
-
-Bem fácil, não é?
-
-Eu sei que ele não parece tão relevante ainda, mas o boolean é extremamente importante e vamos ver alguns do seus usos logo.
-
-### Exercício 2
-
-1. Crie um programa que peça para o usuário digitar 2 números e mostre sua soma.
-2. Crie um programa que peça ao usuário seu nome e o ano em que nasceu, e mostre uma frase com seu nome e quantos anos ele tem/fará neste ano.
-3. Crie um programa que peça ao usuário por dois números e mostre o valor da sua divisão com 3 casas decimais.
 
 ---
 
-## Constantes | Constants
+## Exercise 2
 
-Assim como as variáveis, as constantes são espacinhos na memória nos quais dados são armazenados. A diferença é que um valor atribuído a uma constante não pode ser alterado enquanto o programa está rodando.
+1. Make a program that asks the user to type 2 numbers and shows the result.
+2. Make a program that asks the user's name and the year they were born, and shows a sentence with their name and how old he is/will be this year.
+3. Make a program that asks the user for two numbers and show their division with 3 decimal places.
 
-Quando você tem certeza de que o valor de um dado não será alterado durante a execução do programa, pode escrevê-lo como uma constante. Desta forma, o programa saberá que aquele valor não mudará e, por trás dos panos, fará as otimizações necessárias para funcionar de maneira mais eficiente.
+---
 
-Tá, mas como faço isso em python? Então, python não tem o tipo de dado "constante". Porém, como este dado existe em outras linguagens, nós deixamos claro que a variável deve ser tratada como uma constante colocando seu nome em letras maiúsculas. Por exemplo:
+## Constants
+
+Just like variables, constants are spaces in memory where data is stored. The difference is that the value assigned to a constant cannot be changed when the program is running.
+
+When you are sure that the value of a data will not be altered during the execution of the program, you can write it as a constant. This way, the language will know that the value will not change and, behind the scenes, will make optimizations to work in a more efficient manner.
+
+Okay, but how do I do this in python? So, python does not have a constant data type. However, since this data type exists in other languages, we follow the same naming conventions to make it clear that the variable should be treated as a constant, by making it's name capitalized. For example:
 
 ```python
 CHARACTER_NAME = Lonk
@@ -619,25 +628,25 @@ CHARACTER_NAME = Lonk
 
 ---
 
-## Comentários | Comments
+## Comments
 
-Comentários são linhas de códigos ignoradas por python, que escrevemos para nós mesmos ou para outros programadores. Espera, isso soa confuso. Deixa eu explicar melhor com um exemplo:
+Comments are lines of code ignored by python, which we write for ourselves or for other programmers. Wait, this sounds confusing. Let me explain it with an example:
 
-Imagine que você trabalhou em um projeto há uns anos e agora quer melhorá-lo. Ao abrir o projeto, você pode ler todo aquele código e decifrar o que cada linha está fazendo, mas seria muito mais rápido e fácil se houvessem comentários no código explicando o que cada bloco do código faz, ou explicando como você resolveu determinado problema.
+Imagine that you worked on a project a year ago and now you want to improve it. When opening the project, you can read all that code and decipher what each line is doing, but it would be a lot faster and easier if there were comments in the code explaining what each block of code does, or explaining how you've solved a certain problem.
 
-Comentários são essenciais e facilitam muito a nossa vida. Quando trabalhamos em equipe, eles nos permitem esclarecer para outros programadores o que nosso código está fazendo; Quando revisitamos nossos antigos projetos, nos permitem entender o que fizemos e como fizemos.
+Comments are essential and make our lives much easier. When we are part of a team, they allow us to clarify to other programmers what our code is doing; When we revisit our old projects, they allows us to understand what and how we did them.
 
-Em python, tudo que é escrito na frente de um ```#``` é tratado como um comentário.
+In python, everything that's written in front of a ```#``` is treated as a comment.
 
 ```pyhon
-# Isto é um comentário
+# This is a comment.
 ```
 
 ---
 
-## O Zen de Python | The Zen of Python
+## The Zen of Python
 
-O Zen de Python é um texto escrito por Tim Peters que descreve a filosofia seguida pela comunidade para escrever um bom código em python.
+The Zen of Python is a text written by Tim Peters that describes the philosophy followed by the community to write good python code.
 
 ```
 Beautiful is better than ugly.
@@ -661,38 +670,33 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 ```
 
-Eu comentarei apenas sobre alguns dos princípios. Alguns podem não fazer sentido agora mas farão posteriormente.
+I'll comment only about a few principles. Some may not be understandable yet, but they will be later.
 
 ```
 Beautiful is better than ugly.
-# Bonito é melhor do que feio.
 
 Explicit is better than implicit.
-# Explícito é melhor do que implícito
 
 Simple is better than complex.
-# Simples é melhor do que complexo.
 
 Readability counts.
-# Legibilidade conta
 ```
 
-Quando estamos começando a programar, não sabemos o que é bom e o que é ruim. Hoje vemos muitos vídeos nas redes sociais nos dizendo para escrever códigos de determinada maneira pois "é mais profissional", quando, na verdade, você só está deixando o código mais difícil de ler sem necessidade. Um código legível, bonito, de fácil entendimento, e simples, é sempre preferível e mais profissional do que o oposto.
+When we are beginning our programming journey, we don't know what is good and what is bad. Today we see many videos on social media telling us to write code a certain way because "it is more professional", when, in fact, you're needlessly making your code harder to read. A readable, beautiful, easy to understand and simple code is always preferred and more professional than the opposite.
 
-E, por fim, talvez o princípio mais importante:
+And, finally, perhaps the most important principle:
 
 ```
 Now is better than never.
-# Agora é melhor do que nunca.
 ```
 
-Muitas vezes queremos aprender o máximo possível antes de começar. Sentimos que não estamos preparados, que não sabemos o suficiente. Porém, você não precisa saber de tudo para dar o primeiro passo. Mais importante do que escrever um código perfeito, é escrever um código que funciona. Mais pra frente, caso queira, você pode voltar e melhorá-lo.  
+Often times we want to learn as much as we can before starting. We feel we're not ready, that we don't know enough. However, you don't need to know everything to take the first step. More important that writing the perfect code, is to write a code that works. Later, if you want, you can revisit it and improve it.
 
-Não deixe pra depois. Faça agora o que você pode com o que você tem.
+Don't leave it for later. Do now what you can with what you have.
 
 ---
 
-# Capítulo 2: Controle de Fluxo | Flow Control
+# Chapter 2: Flow Control
 
 Quando falamos de controle de fluxo, nos referimos à habilidade de um programa de decidir o que fazer ou quantas vezes fazer, dependendo de uma condição. Dê uma olhadinha no fluxograma a seguir:
 
