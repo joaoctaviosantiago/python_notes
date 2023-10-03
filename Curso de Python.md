@@ -734,14 +734,14 @@ Nesta expressão, python vai checar se 2 é menor que 10 e resultado vai ser um 
 
 Os operadores de comparação são:
 
-| Expressão | O que faz        |
+| Operador  | O que faz        |
 |-----------|------------------|
 | ==        | igual a          |
-| !=        | Não é igual a    |
-| >         | Maior que        |
-| <         | Menor que        |
-| >=        | Maior ou igual a |
-| <=        | Menor ou igual a |
+| !=        | não é igual a    |
+| >         | maior que        |
+| <         | menor que        |
+| >=        | maior ou igual a |
+| <=        | menor ou igual a |
 
 ```python
 number1 = 10  

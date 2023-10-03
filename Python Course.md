@@ -698,55 +698,55 @@ Don't leave it for later. Do now what you can with what you have.
 
 # Chapter 2: Flow Control
 
-Quando falamos de controle de fluxo, nos referimos à habilidade de um programa de decidir o que fazer ou quantas vezes fazer, dependendo de uma condição. Dê uma olhadinha no fluxograma a seguir:
+When we talk about flow control, we are refering to the ability of a program to decide what to do or how many times to do it, depending on a condition. Take a look at the flow chart below:
 
-![[21 - flowchart_pt.drawio.png]]
+![[21 -  flowchart_en.drawio.png]]
 
-Neste exemplo, antes de decidirmos o que fazer, avaliamos certas condições. Está quente? Se não estiver, saímos. Caso esteja, verificamos então se está suportável, se estiver, saímos, se não estiver, esperamos um pouco e verificamos novamente.
+In this example, before deciding what to do, we evaluate certain conditions. Is it hot? if it isn't, we go outside. In case it is, we check if it's bearable, if it is, we go outside, if not, we wait a little and check again.
 
-Neste capítulo você aprenderá a utilizar o controle de fluxo para aumentar as funcionalidades dos seus programas.
+In this chapter you'll learn how to utilize flow control to improve the functionalities of your programs.
 
-## Operadores de comparação | Comparison Operators
+## Comparison Operators
 
-Antes de começarmos a utilizar o controle de fluxo nos nossos códigos, precisamos falar sobre os operadores de comparação. Eles são utilizados para formar expressões, que nada mais são do que uma combinação de operadores e valores que resulta em um valor. Nós já utilizamos expressões anteriormente, por exemplo:
+Before we begin to utilize flow control in our code, we need to talk about comparison operators. They're used to form expressions, which are simply a combination of operators and operands, resulting in a value. We have used expressions previously, for example:
 
 ```python
 number = 10 + 2
 ```
 
-10 + 2 é uma expressão que forma o valor 12. Nada de novo no horizonte. Com os operadores de comparação, nós podemos criar expressões um pouco mais complexas. Como, por exemplo:
+10 + 2 is an expression that forms the value 12. Nothing new in the horizon. With comparison operators we can create expressions a little more complex. As we can see below:
 
 ```python
 is_less_than = 2 < 10
 # is_less_than = True
 ```
 
-Nesta expressão, python vai checar se 2 é menor que 10 e resultado vai ser um ```boolean```, ou seja, verdadeiro ou falso.
+In this expression, python will check if two is less than 10 and the result will be a ```boolean```, in other words, true ou false.
 
-Os operadores de comparação são:
+The comparison operators are:
 
-| Expressão | O que faz        |
-|-----------|------------------|
-| ==        | igual a          |
-| !=        | Não é igual a    |
-| >         | Maior que        |
-| <         | Menor que        |
-| >=        | Maior ou igual a |
-| <=        | Menor ou igual a |
+| Operator  | What it does             |
+|-----------|--------------------------|
+| ==        | equal to                 |
+| !=        | not equal to             |
+| >         | greater than             |
+| <         | less than                |
+| >=        | greater than or equal to |
+| <=        | less than or equal to    |
 
 ```python
 number1 = 10  
 number2 = 2  
-
-print(f"{number1} é menor que {number2}? {number1 < number2}")  
-print(f"{number1} é maior que {number2}? {number1 > number2}")  
-print(f"{number1} é igual a {number2}? {number1 == number2}")  
-print(f"{number1} não é igual a {number2}? {number1 != number2}")
+  
+print(f"Is {number1} less than {number2}? {number1 < number2}")  
+print(f"Is {number1} greater than {number2}? {number1 > number2}")  
+print(f"Is {number1} equal to {number2}? {number1 == number2}")  
+print(f"Is {number1} not equal to {number2}? {number1 != number2}")
 ```
 
-![[22 - comparisson_operators_pt.png]]
+![[22 - comparisson_operators_en.png]]
 
-> **_Nota:_** Não confunda o operador de atribuição (=) com o operador de igualdade  (=\=).
+> **_Note:_** Do not confuse the assign operator (=) with the equality operator (=\=).
 
 ---
 
