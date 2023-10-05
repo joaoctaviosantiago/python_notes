@@ -347,6 +347,7 @@ print("11" + "11")
 ```
 
 2. Qual a diferença entre linguagens dinamicamente tipadas e linguagens estaticamente tipadas?
+
 3. Madlibs é um jogo de substituição de palavras onde. após a criação de uma lista de palavras, elas são colocadas numa história. Crie um programa que peça ao usuário 1 nome e 2 adjetivos, então os coloque numa frase.
 
 ### Números
@@ -613,7 +614,9 @@ number = int(input("digite um número:\n"))
 ## Exercício 2
 
 1. Crie um programa que peça para o usuário digitar 2 números e mostre sua soma.
+
 2. Crie um programa que peça ao usuário seu nome e o ano em que nasceu, e mostre uma frase com seu nome e quantos anos ele tem/fará neste ano.
+
 3. Crie um programa que peça ao usuário por dois números e mostre o valor da sua divisão com 3 casas decimais.
 
 ---
@@ -856,4 +859,77 @@ Ao contrário da indentação, que é tão importante em python, line breaks sã
 
 ## Operadores Lógicos | Logical Operators
 
+Operadores lógicos são utilizados quando queremos avaliar duas ou mais expressões. Existem 3 operadores lógicos em python: ```and```, ```or```, ```not```.
 
+> **_Nota:_** Para ajudar na leitura, algumas pessoas gostam de colocar as expressões entre parênteses.
+
+### and
+
+Quando utilizamos o operador ```and```, python só executará o bloco de código se todas as expressões forem verdadeiras.
+
+```python
+first_number = 15  
+second_number = 6  
+  
+if (first_number > 10) and (second_number < 20):  
+    print("yay")
+```
+
+Aqui, ```first_number``` é maior que 10 e ```second_number``` é menor que 20. Ambas as expressões são verdadeiras, logo, python executará o bloco de código.
+
+### or
+
+Quando utilizamos o operador ```or```, python executará o bloco de código caso uma das expressões sejam verdadeiras.
+
+```python
+first_number = 15  
+second_number = 6  
+  
+if first_number > 10 or second_number < 5:  
+    print("yay")
+```
+
+Neste caso, ```first_number > 10``` é verdadeiro e ```second_number < 5``` é falso. Python executará o bloco de código pois uma das expressões é verdadeira.
+
+### not
+
+Quando utilizamos o operador ```not```, invertemos o valor booleano. Se a expressão for verdadeira, ela passará a ser falsa; Se for falsa, passa a ser verdadeira.
+
+```python
+number = 6  
+  
+if not number < 5:
+    print("yay")
+```
+
+In this example, ```number < 5``` é falso, como utilizamos o operador ```not```, o bloco de código será executado pois ```not False``` é ```True```.
+
+---
+
+## Operador Ternário | Ternary Operator
+
+O operador ternário é um "```if``` de uma linha", é uma maneira mais concisa de se escrever um ```if/else``` simples.
+
+```python
+valor_produto = 999.99  
+posso_pagar = "não" if valor >= 1200 else "sim"
+```
+
+O valor da variável ```posso_pagar``` será "não" se o valor do produtor for maior ou igual a 1200, caso contrário, será "sim".
+
+---
+
+## Exercício 3
+
+1. Crie um programa que peça para o usuário as notas de 3 provas, calcule a média, imprima-a na tela e, se ela for maior ou igual 6, imprima "passou! (:", se estiver entre 4 e 6, imprima "está de recuperação" e, se a média for menor que 4, imprima na tela que o aluno foi reprovado.
+
+2. Crie um programa que peça para o usuário digitar seu peso e sua altura, calcule o IMC (Índice de Massa Corporal) e imprima na tela as informações seguindo a tabela abaixo:
+
+| IMC         | CLASSIFICAÇÃO   |
+|-------------|-----------------|
+| <18,5       | Baixo peso      |
+| 18,5 a 24,9 | Peso normal     |
+| 25,0 a 29,9 | Excesso de peso |
+| >30,0       | Obeso           |
+
+3. Crie um programa que calcule o valor da gorjeta. Peça ao usuário o valor da conta e quantos porcento do valor ele quer deixar de gorjeta, e imprima na tela o valor da conta, a porcentagem e o valor total da conta com a gorjeta inclusa.

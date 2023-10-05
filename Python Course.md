@@ -847,4 +847,77 @@ Unlike indentation, which is so important in python, line breaks are often ignor
 
 ## Logical Operators
 
+Logical operators are used when we want to evaluate two or more expressions. There are 3 logical operators in python: ```and```, ```or```, ```not```.
 
+> **_Note:_** To help with readability, some people prefer to put the expressions between parenthesis.
+
+### and
+
+When we use the ```and``` operator, python will only run the block of code if all the expressions are true.
+
+```python
+first_number = 15  
+second_number = 6  
+  
+if (first_number > 10) and (second_number < 20):  
+    print("yay")
+```
+
+Here, ```first_number``` is greater than 10 and ```second_number``` is less than 20. Both the expressions are true, thus, python will run the block of code.
+
+### or
+
+When we utilize the ```or``` operator, python will run the block of code if one of the expressions is true.
+
+```python
+first_number = 15  
+second_number = 6  
+  
+if first_number > 10 or second_number < 5:  
+    print("yay")
+```
+
+In this case, ```first_number > 10``` is true and ```second_number < 5``` is false. Python will execute the block of code because one of the expressions is true.
+
+### not
+
+When we use the ```not``` operator, we reverse the boolean value. If the expression is true, it will then become false; if it's false, it will become true.
+
+```python
+number = 6  
+  
+if not number < 5:
+    print("yay")
+```
+
+In this example, ```number < 5``` is false. Since we're using the ```not``` operator, the block of code will be executed because ```not False``` is ```True```.
+
+---
+
+## Ternary Operator
+
+The ternary operator is a "one-line ```if```", it's a more concise way of writing a simple ```if/else```.
+
+```python
+price = 999.99  
+can_afford = "no" if price >= 1200 else "yes"
+```
+
+The value of the variable ```can_afford``` will be "no" if the price is greater than or equal to 1200, otherwise, it will be "yes".
+
+---
+
+## Exercise 3
+
+1. Make a program that will ask the user for the grades of 3 exams, calculate the average grade, print it and if the grade is greater or equal to 6, print "You've passed! (:", if it was between 4 and 6, print "You will go to summer school", if it's less than 4, print "you've failed.
+
+2. Make a program that asks the user for their weight and height,  calculate their BMI (Body Mass Index) and print the information following the table below:
+
+| BMI         | Classification  |
+|-------------|-----------------|
+| <18,5       | Underweight     |
+| 18,5 a 24,9 | Normal weight   |
+| 25,0 a 29,9 | Overweight      |
+| >30,0       | Obesity         |
+
+3. Make a program that will calculate the tip. Ask the user for the value of the bill and how much, in percentage, they want to give as tip, then print the value of the bill, the percentage and the total value, including the tip.
