@@ -793,6 +793,8 @@ Primeiro python checa se o valor da variável ```name``` é igual a "Jorge"; Cas
 
 > **_Nota:_** Lembre-se que os códigos são executados de cima pra baixo. Uma vez que uma condição é verdadeira, python vai executar os códigos em seu bloco e não vai mais verificar se as outras condições também são verdadeiras.
 
+> **_Importante:_** ```if``` não precisa de um ```else```  para funcionar. Você pode ter um ```if``` sozinho e se a condição não for verdadeira, python pula o ```if``` e continua rodando o resto do código.
+
 ---
 ## Indentação | Indentation
 

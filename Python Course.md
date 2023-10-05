@@ -698,7 +698,7 @@ Don't leave it for later. Do now what you can with what you have.
 
 # Chapter 2: Flow Control
 
-When we talk about flow control, we are refering to the ability of a program to decide what to do or how many times to do it, depending on a condition. Take a look at the flow chart below:
+When we talk about flow control, we are referring to the ability of a program to decide what to do or how many times to do it, depending on a condition. Take a look at the flow chart below:
 
 ![[21 -  flowchart_en.drawio.png]]
 
@@ -752,7 +752,7 @@ print(f"Is {number1} not equal to {number2}? {number1 != number2}")
 
 ## If / Elif / Else
 
-A primeira forma de controle de fluxo que nós veremos é o ```if``` / ```else```. A ideia é simples: Se a condição for verdadeira, faça isto, caso contrário, faça aquilo. 
+The first form of flow control we'll see is the ```if``` / ```else```. The idea is simple: if a condition is true, do this, otherwise, do that.
 
 ```python
 name = "Jorge"
@@ -763,13 +763,13 @@ else:
 	print("Hello, person")
 ```
 
-Neste exemplo, comparamos se o valor da variável ```name``` é igual a "Jorge", python avalia esta expressão como verdadeira então faz os comandos seguintes. Resultando em:
+In this example, we compare if the value of the variable  ```name``` is the equal to "Jorge", python evaluates this expression as true, then executes the following commands. Resulting in:
 
 ![[23 - if_elif_else.png]]
 
-Caso o valor da variável ```nome``` não fosse igual a "Jorge", python executaria os comandos após ```else```. 
+If the value of the variable ```name``` was not equal to "Jorge", python would execute the commends after ```else```. 
 
-Tá, e o que é o ```elif```? O ```elif``` é utilizado quando nós temos mais de duas opções.
+Okay, what about the ```elif```? The ```elif``` is utilized when we have more than two options.
 
 ```python
 if name == "Jorge":
@@ -780,25 +780,27 @@ else:
 	print(f"Hello, person")
 ```
 
-Primeiro python checa se o valor da variável ```name``` é igual a "Jorge"; Caso não seja, ele checa se o valor é igual a "Janine"; Se também não for, ele executa o código em ```else```.
+First python will check if the value of the variable ```name``` is equal to "Jorge"; If it isn't, then it checks if the value is equal to "Janine"; If it also isn't, then it will execute the code after ```else```.
 
-> **_Nota:_** Lembre-se que os códigos são executados de cima pra baixo. Uma vez que uma condição é verdadeira, python vai executar os códigos em seu bloco e não vai mais verificar se as outras condições também são verdadeiras.
+> **_Note:_** Remember that the code are executed from top to bottom. Once a condition is true, python will execute the code in its block and will not verify if the other conditions are also true.
+
+> **_Important:_** ```if``` does not need an ```else``` statement for it to work. You can have an ```if``` statement by itself and if the condition is not true, python skips the ```if``` and continues running the rest of the code.
 
 ---
-## Indentação | Indentation
+## Indentation
 
-Indentação é o espaço no começo de uma linha. Na maioria das linguagens, ela só existe para organizar e embelezar o código. Em outras, como python, ela é extremamente importante pois define onde o bloco de código começa e termina. A indentação é feita com 4 espaços. A maioria dos editores de texto e IDEs permitem indendar com a tecla _tab_.
+indentation is the space in the beginning of a line. In most languages, it only exists to organize and beautify the code. In other languages, like python, it is extremely important because it defines where a block of code begins and where it ends. The indentation is created with 4 spaces. Most text editors and IDEs allow us to indent with the _tab_ key.
 
 ```python
 if name == "Jorge":
-	# este código está indentado e pertence ao bloco de código do "if"
+	# this code is indented and it belongs to the block of code of "if"
 	print("Hello, Jorge")
 else:
-	# este código está indentado e pertence ao bloco de código do "else"
+	# this code is indented and it belongs to the block of code of "else"
 	print("Hello, person")
 ```
 
-Um bloco de código pode conter outros blocos de código, como vemos no seguinte código:
+A block of code may contain other blocks of code, as we can see below:
 
 ```python
 username = "Ushi"  
@@ -817,32 +819,32 @@ else:
     print("unknown user.")
 ```
 
-Vamos ver passo a passo como python executará este código:
+Let's see step by step how python will execute this code:
 
-1. Primeiro, python checará se ```username == "Ushi"```, caso seja, ele rodará o seguinte bloco de código:
+1. First, python will check if ```username == "Ushi"```, if it is, it will run the following block of code:
 
 ![[24 - code_blocks_1.png]]
 
-2.  Então executará ```print("Hello, Ushi")``` e checará se ```password == "litterbox"```, caso seja, ele rodará o bloco de código mostrado abaixo:
+2.  Then it will run ```print("Hello, Ushi")``` and check if ```password == "litterbox"```, if it is, it will run the block of code shown below
 
 ![[24 - code_blocks_2.png]]
 
-3. Caso ```password``` não seja "litterbox", ele executará o seguinte bloco:
+3. In case ```password``` is not "litterbox", it will execute the following block of code:
 
 ![[24 - code_blocks_3.png]]
 
-4. Se ```username``` não for "Ushi", ele executará o seguinte bloco:
+4. If ```username``` isn't "Ushi", it will execute the following block of code:
 
 ![[24 - code_blocks_4.png]]
 
 ---
 
-## Quebras de linha | Line breaks
+## Line breaks
 
-Ao contrário da indentação, que é tão importante em python, line breaks são ignoradas e não afetam seu programa de nenhuma forma. Sendo assim, podemos usá-las para melhor organizar nosso código, deixando-o mais legível.
+Unlike indentation, which is so important in python, line breaks are often ignored and do not affect your program in any way. Because of this, we can use it to better organize our code, making it more readable.
 
 ---
 
-## Operadores Lógicos | Logical Operators
+## Logical Operators
 
 
