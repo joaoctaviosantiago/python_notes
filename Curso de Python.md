@@ -796,7 +796,7 @@ Primeiro python checa se o valor da variável ```name``` é igual a "Jorge"; Cas
 
 > **_Nota:_** Lembre-se que os códigos são executados de cima pra baixo. Uma vez que uma condição é verdadeira, python vai executar os códigos em seu bloco e não vai mais verificar se as outras condições também são verdadeiras.
 
-> **_Importante:_** ```if``` não precisa de um ```else```  para funcionar. Você pode ter um ```if``` sozinho e se a condição não for verdadeira, python pula o ```if``` e continua rodando o resto do código.
+> **_Importante:_** ```if``` não precisa de um ```else```  para funcionar. Você pode ter um ```if``` sozinho e se a condição não for verdadeira, python pula o ```if``` e continua rodando o resto do código. O ```if``` pode também terminar com um ```elif``` em vez de um ```else```.
 
 ---
 ## Indentação | Indentation
@@ -923,7 +923,7 @@ O valor da variável ```posso_pagar``` será "não" se o valor do produtor for m
 
 1. Crie um programa que peça para o usuário as notas de 3 provas, calcule a média, imprima-a na tela e, se ela for maior ou igual 6, imprima "passou! (:", se estiver entre 4 e 6, imprima "está de recuperação" e, se a média for menor que 4, imprima na tela que o aluno foi reprovado.
 
-2. Crie um programa que peça para o usuário digitar seu peso e sua altura, calcule o IMC (Índice de Massa Corporal) e imprima na tela as informações seguindo a tabela abaixo:
+2. Crie um programa que peça para o usuário digitar seu peso e sua altura, calcule o IMC (Índice de Massa Corporal), mostre-o cm duas casas decimais e imprima na tela as informações seguindo a tabela abaixo:
 
 | IMC         | CLASSIFICAÇÃO   |
 |-------------|-----------------|
@@ -933,3 +933,186 @@ O valor da variável ```posso_pagar``` será "não" se o valor do produtor for m
 | >30,0       | Obeso           |
 
 3. Crie um programa que calcule o valor da gorjeta. Peça ao usuário o valor da conta e quantos porcento do valor ele quer deixar de gorjeta, e imprima na tela o valor da conta, a porcentagem e o valor total da conta com a gorjeta inclusa.
+
+---
+
+## Laços | Loops
+
+O que são loops? Imagine que você está desenhando um círculo, quando você chega ao final do desenho, você encontra o ponto inicial do desenho. Na programação, loops são usados na repetição de códigos, quando um chega ao seu final, ele recomeça. Até agora, nossos códigos começaram e terminaram, de cima pra baixo. Mas e se quiséssemos que o código rodasse uma certa quantidade de vezes, ou se rodasse até uma condição ser verdadeira?
+
+> **_Nota:_** Cada "volta" de um loop é chamada de iteração.
+
+### For loop
+
+O ```for``` loop é utilizado quando sabemos quantas vezes o código precisa ser repetido. Ele é utilizado, normalmente, junto com a função ```range```. Vamos analisar o ```for``` loop um pouco mais a fundo:
+
+```python
+for number in range(1, 4):
+	print("Hello")
+```
+
+Primeiro utilizamos o comando ```for```, depois criamos uma variável que eu decidi chamar de ```number```, usamos o comando ```in``` e chamamos a função ```range```. Outra forma de ler isto, seria: "para cada número de 1 até 4, não incluindo 4, faça isto."
+
+Quando o loop começar, a variável ```number``` vai ter o valor de 1, python vai rodar os comandos no bloco de código e vai voltar para o começo do ```for``` loop, desta vez, ```number``` vai ter o valor de 2, o bloco de código vai rodar novamente e voltar para o começo, e agora ```number``` terá o valor de 3, o bloco de código vai rodar e o loop vai acabar.
+
+Nós podemos acessar a variável ```number``` dentro do ```for``` loop.
+
+```python
+for number in range(1, 4):  
+    print(number)
+```
+
+![[25 - range_function.png]]
+Como você pode ver aqui, no primeiro loop ```number``` tinha o valor de 1 e isso foi impresso na tela, no segundo tinha o valor de 2 e no terceiro o valor de 3.
+
+#### Laço for aninhado | Nested for loops
+
+Assim como com o ```if```, nós podemos criar um ```for``` loop dentro de outro.
+
+```python
+for i in range(1, 5):  
+    print(i, end=': ')  
+  
+    for j in range(1, 5):  
+        print(j, end=' ')  
+  
+    print()
+```
+
+Eu sei que este código assusta um pouco, então vamos lê-lo com calma. Primeiro um loop começa e a variável ```i``` tem o valor de 1, o bloco de código então roda. Nele, imprimimos ```i```; Em seguida o segundo ```for``` loop começa. Neste, a variável ```j``` será impressa 4 vezes (de 1 a 5 não incluindo 5), o segundo ```for``` termina de ser executado, voltamos o bloco de código do primeiro loop, e pulamos uma linha com a função ```print()```.
+
+Este é o resultado:
+
+![[26 - nested_loops.png]]
+
+> **_Nota:_**  A função ```print()```, normalmente, pula uma linha depois da impressão. Nós podemos alterar este comportamento com o parâmetro ```end=```.  Com ele podemos definir se vai ter um espaço depois de cada impressão, uma virgula, etc.
+
+É importante ressaltar que a variável ```i``` pode ser acessada em qualquer lugar dentro do bloco de código do primeiro ```for``` loop, até mesmo dentro do segundo ```for``` loop, por isso utilizei nomes diferentes para os dois.
+
+```python
+for i in range(1, 5):
+    print(i)  
+	# A variável i pode ser acessada aqui, mas a j não.
+
+    for j in range(1, 5):  
+        print(i, j)  
+		# tanto a variável i quanto a j podem ser acessadas aqui.
+    print()
+```
+
+#### range()
+
+Apesar de já termos visto como a função range() funciona, quero apenas reforçar o que vimos e adicionar mais uma coisinha. A função ```range``` pode ter até 3 parâmetros:
+
+```python
+range(começo, fim, passo)
+```
+
+O primeiro, que aqui chamei de ```começo```, define em que número a contagem vai começar; o segundo, que chamei de ```fim```, define em que número a contagem vai terminar, não incluindo este número; e a terceira, que chamei de ```passo``` determina a que passo a contagem é feita, de um em um, dois em dois, três em três. O padrão é de um em um.
+
+```python
+for num in range(0, 11, 2):  
+    print(num)
+```
+
+![[27 - ranged_function_steps.png]]
+
+### Laço while | While loop
+
+O ```while``` loop é executado enquanto uma condição for verdadeira. Ele é utilizado quando não sabemos quantas vezes o código precisará ser executado.
+
+```python
+number = 1  
+  
+while number <= 5:  
+    print(number)  
+    number += 1
+```
+
+Neste exemplo, python vai testar se ```number <= 5``` é verdadeiro, caso seja, ele vai rodar o bloco de código, imprimir o valor de number e somar 1 ao mesmo; caso não seja, o loop acaba.
+
+![[28 - while_loop.png]]
+
+> **_Importante:_** cuidado para não criar um loop infinito. Se a condição nunca se tornar falsa, o programa vai rodar infinitamente e, eventualmente, "crashar", ou seja, parar de funcionar e fechar.
+
+#### Valores truthy e falsy | truthy and falsy values
+
+Quando tentamos passar dados como condição, ao invés de uma expressão, python avalia aquele dado como  ```True``` ou ```False```. Quando o valor é verdadeiro, nós chamamos de "truthy", e quando é falso, de "falsy". Por exemplo:
+
+```python
+while 10:
+	print("truthy")
+```
+
+Os dados ```0```, ```0.0```, e ```''```, serão falsy. Qualquer outro dado será truthy.
+
+### Break
+
+```break``` é um comando utilizado dentro de um loop. Ele força python a parar o loop e sair dele.
+
+No código a seguir, o loop vai rodar e imprimir o valor de ```num``` enquanto seu valor não for maior que 5, quando isso acontecer, python sairá do loop e continuar com o código fora do ```for``` loop.
+
+```python
+for num in range(1, 10):  
+    if num > 5:  
+        break  
+    print(num)  
+  
+print("Done!")
+```
+
+![[29 - break.png]]
+
+### Continue
+
+O comando ```continue``` também é utilizado dentro de um loop. Quando python chega neste comando, ele passa para a próxima iteração do loop.
+
+```python
+for num in range(1, 11):  
+    if 2 < num < 8:  
+        continue  
+    print(num)  
+  
+print("Done!")
+```
+
+Aqui, estamos dizendo para python que, quando ```num``` estiver entre 2 e 8, para pular para a próxima iteração do loop. Ou seja, quando ```num``` for igual a 3, python vai chegar no comando ```continue``` e vai voltar pro começo, e ```num``` passará a ter o valor de 4, e assim sucessivamente até ```num``` ser maior ou igual a 8.
+
+Este será nosso resultado:
+
+![[30 - continue.png]]
+
+---
+
+## Exercício 4
+
+1. Crie um programa que imprima números de 1 a 10 e diga se são pares ou ímpares.
+2. Crie um programa que imprima os números de 1 a 50, porém, caso o número seja divisível por 3, imprima "Fizz", caso seja divisível por 5, imprima "Buzz", caso seja divisível por 3 e por 5, imprima "FizzBuzz".
+3. Crie um programa que imprima a seguinte figura:
+
+![[31 - exercise_4-2.png]]
+
+---
+
+# Capítulo 3: Estrutura de dados avançada
+
+## Lista | List
+
+
+
+
+## Try / Except
+
+blah
+
+---
+
+## Módulos | Modules
+
+
+
+
+exercícios função:
+
+criar uma simples calculadora e usar try catch zero division
+

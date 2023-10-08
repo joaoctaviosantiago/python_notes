@@ -784,7 +784,7 @@ First python will check if the value of the variable ```name``` is equal to "Jor
 
 > **_Note:_** Remember that the code are executed from top to bottom. Once a condition is true, python will execute the code in its block and will not verify if the other conditions are also true.
 
-> **_Important:_** ```if``` does not need an ```else``` statement for it to work. You can have an ```if``` statement by itself and if the condition is not true, python skips the ```if``` and continues running the rest of the code.
+> **_Important:_** ```if``` does not need an ```else``` statement for it to work. You can have an ```if``` statement by itself and if the condition is not true, python skips the ```if``` and continues running the rest of the code. The statement can also be ended with an ```elif``` instead of an ```else```.
 
 ---
 ## Indentation
@@ -911,7 +911,7 @@ The value of the variable ```can_afford``` will be "no" if the price is greater 
 
 1. Make a program that will ask the user for the grades of 3 exams, calculate the average grade, print it and if the grade is greater or equal to 6, print "You've passed! (:", if it was between 4 and 6, print "You will go to summer school", if it's less than 4, print "you've failed.
 
-2. Make a program that asks the user for their weight and height,  calculate their BMI (Body Mass Index) and print the information following the table below:
+2. Make a program that asks the user for their weight and height,  calculate their BMI (Body Mass Index), print it with 2 decimal points and print the information following the table below:
 
 | BMI         | Classification  |
 |-------------|-----------------|
@@ -921,3 +921,7 @@ The value of the variable ```can_afford``` will be "no" if the price is greater 
 | >30,0       | Obesity         |
 
 3. Make a program that will calculate the tip. Ask the user for the value of the bill and how much, in percentage, they want to give as tip, then print the value of the bill, the percentage and the total value, including the tip.
+
+---
+
+## For loop
