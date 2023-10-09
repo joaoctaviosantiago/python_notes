@@ -149,6 +149,8 @@ print()
 
 Is a function that prints on screen whatever data is between parenthesis.
 
+> **_Note:_** We'll study functions deeply later. For now, don't worry about them.
+
 ---
 
 ## Variables

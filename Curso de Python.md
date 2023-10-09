@@ -149,6 +149,8 @@ print()
 
 É uma função que imprime na tela os dados dentro dos parênteses.
 
+> **_Nota:_** Nós estudaremos funções a fundo posteriormente. Por enquanto, não ligue pra elas.
+
 ---
 
 ## Variáveis | Variables
@@ -1097,6 +1099,303 @@ Este será nosso resultado:
 # Capítulo 3: Estrutura de dados avançada
 
 ## Lista | List
+
+A lista é um tipo de dado que contém um ou mais itens ordenados. Dentro de uma lista nós podemos ter strings, números, outra listas, entre outros.
+
+```python
+my_list = ['Hello', 'World', 1, 2.0, 3]
+print(my_list)
+```
+
+![[32 - lists_1.png]]
+
+Neste exemplo temos uma lista com 5 itens de diversos tipos. Quando a imprimimos, python imprime a lista inteira, incluindo os colchetes.
+
+> **_Nota:_** Python reconhece uma lista por causa dos colchetes.
+
+Antes de vermos exemplos práticos de uso de uma lista, primeiro precisamos aprender a manipulá-la.
+
+### Acessando uma lista
+#### Acessando os itens da lista
+
+Como falamos anteriormente, listas são ordenadas, ou seja, todos os itens de uma lista estão em uma posição fixa dentro dela. Sabendo disso, nós podemos acessá-los através de seu índice (index em inglês).
+
+```python
+my_list = ['Hello', 'World', 1, 2.0, 3]
+# indice:    [0]      [1]   [2] [3] [4]
+print(my_list[0])
+```
+
+Aqui estamos dizendo para python imprimir o item que se encontra na posição 0 dentro da lista.
+
+![[33 - list_index.png]]
+
+> **_Importante:_** O índice sempre começa em 0. Então, numa lista de 5 itens, nós teremos os índices 0, 1, 2, 3, 4. índices são sempre ```Int```.
+
+
+#### Acessando lista dentro de uma lista
+
+Como falamos anteriormente, uma lista pode conter itens de qualquer tipo, incluindo listas, dicionários e outros tipos de dados que veremos mais à frente.
+
+```python
+names_and_numbers = [['Rebeca', 'Chelsey', 'Caroline'], [21, 73, -102]]  
+print(names_and_numbers[0])
+```
+
+Quando tentamos acessar o índice 0 da lista ```names_and_numbers```, python imprimirá a lista de nomes.
+
+![[34 - list_names.png]]
+
+Então como eu acesso a string ```'Rebeca'```?
+
+```python
+print(names_and_numbers[0][0])
+```
+
+Primeiro acessamos o item no índice 0 da lista ```names_and_numbers```, que é a lista de nomes, depois acessamos o item de índice 0 nela.
+
+![[35 - list_rebeca.png]]
+
+#### Acessando o ultimo item
+
+Python lê os itens de uma lista da esquerda pra direita.
+
+```python
+fruits = ['Apple', 'Banana', 'Grape', 'Strawberry', 'Orange']
+#            [0]      [1]      [2]        [3]          [4]
+```
+
+Quando passamos um índice negativo, python passa a ler a lista da direita para a esquerda.
+
+```python
+fruits = ['Apple', 'Banana', 'Grape', 'Strawberry', 'Orange']
+#           [-5]     [-4]      [-3]       [-2]        [-1]
+```
+
+### Modificando uma lista
+
+Agora que nós sabemos como acessar cada item dentro de uma lista, vamos ver como modificá-los.
+
+#### Substituindo items
+
+Para substituir um item na lista, nós primeiro acessamos o item e então atribuímos um valor, como fizemos com variáveis anteriormente.
+
+```python
+fruits = ['Apple', 'Banana', 'Grape']
+fruits[0] = 'Orange'
+print(fruits)
+```
+
+![[36 - replacing_list_items.png]]
+
+#### Adicionando itens no final
+
+Para adicionar itens no final de uma lista, nós utilizamos o método ```list_name.append()```.
+
+```python
+fruits = []
+fruits.append('Orange')
+fruits.append('Banana')
+fruits.append('Grape')
+print(fruits)
+```
+
+Neste exemplo, estamos criando uma lista vazia chamada ```fruits``` e, a seguir, utilizamos o método ```append()``` para adicionar itens no seu final, resultando em:
+
+![[37 - append.png]]
+
+> **_Nota:_** Nós estudaremos métodos a fundo posteriormente. Por enquanto, apenas aprenda a usá-los.
+
+#### Adicionando itens em posições específicas
+
+O método que utilizamos para adicionar um item em uma lista em uma posição especifica é o ```insert()```. Ao utilizá-lo, nós precisamos passar o índice e o dado que queremos adicionar.
+
+```python
+fruits = ['Orange', 'Banana', 'Grape']  
+fruits.insert(1, "apple")  
+print(fruits)
+```
+
+Nós estamos dizendo para python adicionar a ```string "apple"``` no índice 1 da lista ```fruits```. É importante ressaltar que python não vai substituir "Banana" por "apple", ele vai empurrar banana pra frente e adicionar "apple" onde "Banana" estava.
+
+![[38 - insert.png]]
+
+#### Removendo itens por índice
+
+Para remover itens de uma lista nós utilizamos o comando ```del```.
+
+```python
+fruits = ['Orange', 'Banana', 'Grape']  
+del fruits[1]  
+print(fruits)
+```
+
+![[39 - del.png]]
+
+Com o comando ```del``` nós simplesmente deletamos o item da lista.
+
+#### Removendo e atribuindo um item da lista com pop()
+
+O método ```pop()``` tem 3 usos. Ele pode:
+
+1. remover o ultimo item da lista
+2. remover um item específico da lista
+3. remover o item e atribuí-lo a uma variável
+
+Quando apenas utilizamos o método ```pop()```, ele removerá o ultimo item da lista:
+
+```python
+fruits = ['Orange', 'Banana', 'Grape']  
+fruits.pop()  
+print(fruits)
+```
+
+![[40 - pop_1.png]]
+
+Quando passamos o índice do item como argumento, ele removerá o item especifico. No exemplo a seguir, removeremos o item do índice 0:
+
+```python
+fruits = ['Orange', 'Banana', 'Grape']  
+fruits.pop(0)  
+print(fruits)
+```
+
+![[41 - pop_2.png]]
+
+Quando queremos remover o item de uma lista e atribuí-lo a uma variável, também utilizamos o ```pop()```
+
+```python
+fruits = ['Orange', 'Banana', 'Grape']  
+my_favorite_fruit = fruits.pop(1)  
+print(fruits)  
+print(my_favorite_fruit)
+```
+
+Neste último caso, nós não estamos apenas acessando o item na lista e atribuindo-o à variável. Nós estamos removendo ```'Banana'``` e atribuindo à variável ```my_favorite_fruit```
+
+![[42 - pop_2.png]]
+
+#### Removendo um item por valor
+
+Até agora só vimos maneiras de remover um item por índice.  Mas e quando sabemos o valor e não sabemos onde ele se encontra na lista? Para estes casos, utilizamos o método ```remove()```.
+
+```python
+fruits = ['Orange', 'Banana', 'Grape']  
+fruits.remove('Banana')  
+print(fruits)
+```
+
+![[43 - remove.png]]
+
+Aqui estamos dizendo para python encontrar a palavra 'Banana' na lista e removê-la.
+
+> **_Importante:_** O método ```remove()``` remove apenas o primeiro item com este valor!
+
+```python
+fruits = ['Orange', 'Banana', 'Grape', 'Banana']  
+fruits.remove('Banana')  
+print(fruits)
+```
+
+![[44 - remove_2.png]]
+
+#### Combinando listas
+
+Listas podem ser concatenadas, ou combinadas, com o operador ```+```:
+
+```python
+numbers = [1, 2, 3]  
+animals = ['cat', 'dog', 'capybara']  
+  
+numbers_and_animals = numbers + animals  
+  
+print(numbers_and_animals)
+```
+
+![[45 - list_concatenation_1.png]]
+
+#### Repetindo os valores
+
+Quando multiplicamos uma lista por uma ```int```, repetimos seus items dentro dela, como vemos abaixo:
+
+```python
+animals = ['cat', 'dog', 'capybara']  
+print(animals * 2)
+```
+
+![[46 - list_multiplication_1.png]]
+
+### Loops e listas
+
+Agora que já sabemos como manipular uma lista, nós podemos falar do seu verdadeiro poder. Nós podemos utilizar um loop para iterar por todos os itens da lista e executar um bloco de código para cada um dos itens. Calma, eu sei que tá começando a soar complicado de novo. Então vamos ver isso com calma.
+
+Imagina que nós temos uma lista de nomes de convidados para uma festa. Nós queremos criar um programa que dirá "Olá" para todos os convidados. Com o que aprendemos até agora, fazer algo assim seria muito trabalhoso.
+
+```python
+print("Hello, Joseph!")
+print("Hello, Johnny!")
+print("Hello, Richard!")
+print("Hello, Sabine!")
+print("Hello, Jessica!")
+```
+
+Já que estamos lidando com uma grande quantidade de valores, podemos utilizar loops e listas em conjunto para lidar com isso.
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+  
+for name in names:  
+    print(f"Hello, {name}!")
+```
+
+Neste código, o ```for``` loop vai começar e em sua primeira iteração, pegará o primeiro valor em ```names``` e atribuirá à variável ```name```, ou seja, na primeira iteração ```name = "joseph"```, python imprimirá a mensagem na tela, e o loop voltará ao começo, na segunda iteração, ```name = "Johnny"```, e assim sucessivamente até chegar ao final da lista, resultando em:
+
+![[47 - loops_and_lists_1.png]]
+
+Caso ainda não tenha ficado claro, tente ler o código da seguinte maneira: "para cada nome em ```names```, faça:".
+
+Como você pode ver, com poucas linhas de código nós podemos modificar diversos valores de uma única vez combinando listas e loops!
+
+### Os operadores ```in``` e ```not in```
+
+Nós usamos os operadores ```in``` e ```not in``` para checar se um valor está na lista ou não, respectivamente.
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+  
+if "Johnny" in names:  
+    print("yay")
+```
+
+Este código checa se a ```string``` "Johnny" faz parte da lista ```nomes``` e imprime "yay" caso faça.
+
+![[48 - in_operator.png]]
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+  
+if "Rebeca" not in names:  
+    print("boo")
+```
+
+Já este, checa se a ```string``` "Rebeca" não faz parte da lista ```names``` e, caso não faça, imprime "boo" na tela.
+
+![[49 - not_in_operator.png]]
+
+### List Slices
+
+
+
+### Métodos mais comuns
+
+
+### Exercícios 5
+
+## Revisitando strings
+
+
+
+
 
 
 

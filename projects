@@ -1,0 +1,4 @@
+Python script project to automate the cleaning of a download folder. It goes through it, creates different folders for each type and places the files in them
+
+
+You're running a raffle. Create a program in which you add the name of a person every time they buy a ticket, and in the end chooses the winner at random.
