@@ -125,7 +125,7 @@ Later in the course we'll utilize VSCode for some projects.
 
 ## My first program
 
-It is standard that the first thing we make is a little program that says _"Hello, world"_ to confirm that everything works properly, and this is what we're going to do. Write:
+It is standard that the first thing we make is a little program that says _"Hello, world"_ to confirm that everything works properly, and this is what we're going to do. Some IDE's or text editors automatically create a python file when you start a project, some don't. If your file was not created, make a file called "hello.py". The ```.py``` at the end is what makes this a python file. Write:
 
 ```python
 print("Hello, world")
@@ -150,6 +150,16 @@ print()
 Is a function that prints on screen whatever data is between parenthesis.
 
 > **_Note:_** We'll study functions deeply later. For now, don't worry about them.
+
+### Interpreted x compiled languages
+
+You might have heard that computers do not understand anything but zeros and ones. This is true, they only understand binary code. Then how is it possible that the computer has understood what I wrote? Behind the scenes, python reads the code and "explains" it to the computer.
+
+There are two types of languages, the **compiled** ones and the **interpreted** ones.
+
+Languages such as java, C and C++ are compiled, meaning the code written is converted to a language the computer understands and then we can execute the program. We compile it once and execute it multiple times.
+
+Other languages such as python and javascript are interpreted. Every time we run the code, the interpreter reads it and "explains" it to the computer. Every time we run the code, it will be read and explained again. When we open a website, for example, the browser reads the website's code and creates it on screen.
 
 ---
 

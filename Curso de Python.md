@@ -125,7 +125,7 @@ Posteriormente nós utilizaremos o VSCode para alguns projetos.
 
 ## Meu primeiro programa
 
-Por padrão, a primeira coisa que fazemos para confirmarmos que um programa funciona, é dizer _"Hello, world"_ , e é isso que vamos fazer. Escreva:
+Por padrão, a primeira coisa que fazemos para confirmarmos que um programa funciona, é dizer _"Hello, world"_ , e é isso que vamos fazer. Alguns IDE's ou editores de texto já criam um arquivo python por padrão ao iniciar um projeto, outros não. Caso o arquivo não tenha sido criado, crie um arquivo chamado "hello.py". O ```.py``` é o que define que isto é um arquivo python. Escreva:
 
 ```python
 print("Hello, world")
@@ -150,6 +150,16 @@ print()
 É uma função que imprime na tela os dados dentro dos parênteses.
 
 > **_Nota:_** Nós estudaremos funções a fundo posteriormente. Por enquanto, não ligue pra elas.
+
+### Linguagens compiladas x interpretadas
+
+Você pode ter ouvido anteriormente que computadores não entendem nada além de zeros e uns. E isto é verdade, eles só entendem código binário. Então como é possível que o computador tenha entendido o que eu escrevi? Por trás dos panos, python lê o código e "explica" para o computador o que fazer.
+
+Existem dois tipo de linguagens, as **compiladas** e as **interpretadas**. 
+
+Linguagens como java, C e C++ são compiladas, ou seja, o código escrito é convertido para uma linguagem que o computador entende e depois nós podemos executar o programa. Nós compilamos uma vez e executamos muitas vezes.
+
+Outras linguagens, como python e javascript, são interpretadas. Toda vez que rodamos o código, o interpretador o lê e "explica" para o computador o que fazer, de maneira que ele entenda. Toda vez que rodarmos o código, ele será lido e explicado novamente. Quando abrimos um site, por exemplo, o browser interpreta o código do site e o monta na tela.
 
 ---
 
@@ -513,7 +523,7 @@ Neste exemplo, primeiro criamos uma variável ```number``` e atribuímos uma int
 
 ![[17 - revisiting_variables.png]]
 
-Python lê o código de cima para baixo, lembra? Então primeiro ele cria a variável, depois modifica a modifica, e por ultimo, imprime o valor atual dela na tela, que é 10.
+Python lê o código de cima para baixo, lembra? Então primeiro ele cria a variável, depois a modifica e, por ultimo, imprime o valor atual dela na tela, que é 10.
 
 Como python é uma linguagem dinamicamente tipada, nós podemos até modificar seu tipo para string e python entenderia.
 
@@ -1096,11 +1106,95 @@ Este será nosso resultado:
 
 ---
 
+## Bonus: Controle de fluxo em Java
+
+Você já pode ter visto códigos com uma sintaxe diferente de python, códigos com parenteses, chaves, com uma aparência bem mais assustadora. Mas a verdade é que não passa disso: aparência. Os conceitos são os mesmos em todas as linguagens. Claro, cada linguagem tem suas particularidades, mas a base é sempre a mesma.
+
+Neste capítulo bonus eu quero te mostrar como seriam os controles de fluxo na linguagem java e explicá-los para que, caso encontre com outras linguagens que não sejam python, consiga ler os códigos sem problema algum.
+
+### if/else if/else
+
+```java
+int number = 16;
+
+if (number <= 10) {
+    System.out.println("Small number");
+} else if (number <= 30) {
+    System.out.println("Medium number");
+} else {
+    System.out.println("Big number");
+}
+```
+
+Pode ser que você consiga ler este código em java sem muitos problemas, mas vamos analisá-lo juntos, com calma, mesmo assim.
+
+primeiro nós criamos uma variável do tipo ```int``` de valor 16 e então começamos nosso ```if```. Entre parenteses nós temos a condição que será verificada e, dentro das chaves, nós temos o bloco de código que será executado se a condição for verdadeira. Neste caso, o comando ```System.out.println()```, que é o equivalente, em java, ao ```print()``` em python. Outra coisa diferente é que, em java, em vez de ```elif```, nós usamos ```else if```.
+
+### Laço for | For loop
+
+```java
+for (int i = 0; i < 10; i++) {
+	System.out.println("i = " + i);
+}
+```
+
+Este é um pouco mais assustador, não é?
+
+Neste tipo de ```for``` loop dentro dos parênteses, nós criamos uma variável ```i``` (mas pode ter qualquer outro nome, apesar deste ser o padrão) de valor 0, definimos que o loop rodará enquanto ```i < 10```, e depois escrevemos ```i++```, que é o equivalente a ```i += 1``` em python. Ou seja, após rodar o bloco de código que está entre chaves, 1 será somado ao valor de ```i```. Este código imprimirá na tela a ```string``` concatenada ```"i = " + i```.
+
+O equivalente a este ```for``` loop em python é:
+
+```python
+for i in range(0, 10):
+	print(f"i = {i}")
+```
+
+### Laço while | While loop
+
+```java
+int i = 0;
+    
+while (i < 10) {
+	System.out.println("i = " + i);
+	i++;
+}
+```
+
+O ```while``` loop já tem uma sintaxe parecida com a de python. Primeiro criamos uma variável do tipo ```int``` de valor 0 para criar a condição. O loop rodará enquanto ```i < 10```, imprimirá na tela ```"i = " + i``` e acrescentará 1 ao valor de ```i``` antes de checar o valor novamente.
+
+O equivalente a este ```while``` loop em python é:
+
+```python
+i = 0
+
+while i < 10:
+    print(f"i = {i}")
+    i += 1
+```
+
+---
+
 # Capítulo 3: Estrutura de dados avançada
+
+## Pensando como um programador
+
+Antes de começarmos a ver o conteúdo de mais um capítulo, eu gostaria de falar sobre como pensar com um programador. E o que isso quer dizer, exatamente?
+
+Bem, a cada exercício, nós estamos resolvendo problemas mais complexos. Nós começamos com problemas que só precisavam de variáveis e tipos de dados para serem resolvidos; depois resolvemos problemas que combinavam estes com controle de fluxo. Nós estamos aprendendo ferramentas e técnicas isoladas que podem ser combinadas para resolver um problema maior.
+
+E é a isto que me refiro quando digo "pensar como um programador". Eu quero que você aprenda a olhar para problemas com outros olhos. Quero que divida problemas complexos em problemas menores, que possam ser resolvidos com as ferramentas que você tem a sua disposição.
+
+Quando encontramos um problema grande e complexo, normalmente não sabemos nem por onde começar a resolvê-lo. O que devemos fazer é dividi-lo em problemas menores, de resolução mais simples, e resolvermos um por um; pedacinho por pedacinho.
+
+Uma técnica bem útil pra este objetivo é utilizar o ```TODO```, que pode ser traduzido como "para fazer". Imagine que você foi contratado para fazer um programa. O primeiro passo, é definir quais serão as funcionalidades dele (dividindo um problema grande e complexo em problemas menores) e, para cada funcionalidade, definimos os ```TODO```, ou seja, definimos o que cada funcionalidade fará, quantas variáveis vai precisar, de que tipos de dados, como o controle de fluxo será, e assim sucessivamente.
+
+Eu espero que, a partir de agora, você passe a olhar todos os problemas desta maneira. Pensando em quais passos você terá que dar para resolvê-los. E olhar para o que estamos aprendendo como novas ferramentas e novas maneiras de fazer o mesmo. Existem diversas formas de resolver o mesmo problema e cada um usará as ferramentas de sua maneira.
+
+---
 
 ## Lista | List
 
-A lista é um tipo de dado que contém um ou mais itens ordenados. Dentro de uma lista nós podemos ter strings, números, outra listas, entre outros.
+A lista é um tipo de dado que contém um ou mais elementos ordenados. Dentro de uma lista nós podemos ter strings, números, outra listas, entre outros.
 
 ```python
 my_list = ['Hello', 'World', 1, 2.0, 3]
@@ -1109,16 +1203,16 @@ print(my_list)
 
 ![[32 - lists_1.png]]
 
-Neste exemplo temos uma lista com 5 itens de diversos tipos. Quando a imprimimos, python imprime a lista inteira, incluindo os colchetes.
+Neste exemplo temos uma lista com 5 elementos de diversos tipos. Quando a imprimimos, python imprime a lista inteira, incluindo os colchetes.
 
 > **_Nota:_** Python reconhece uma lista por causa dos colchetes.
 
 Antes de vermos exemplos práticos de uso de uma lista, primeiro precisamos aprender a manipulá-la.
 
 ### Acessando uma lista
-#### Acessando os itens da lista
+#### Acessando os elementos da lista
 
-Como falamos anteriormente, listas são ordenadas, ou seja, todos os itens de uma lista estão em uma posição fixa dentro dela. Sabendo disso, nós podemos acessá-los através de seu índice (index em inglês).
+Como falamos anteriormente, listas são ordenadas, ou seja, todos os elementos de uma lista estão em uma posição fixa dentro dela. Sabendo disso, nós podemos acessá-los através de seu índice (index em inglês).
 
 ```python
 my_list = ['Hello', 'World', 1, 2.0, 3]
@@ -1126,16 +1220,16 @@ my_list = ['Hello', 'World', 1, 2.0, 3]
 print(my_list[0])
 ```
 
-Aqui estamos dizendo para python imprimir o item que se encontra na posição 0 dentro da lista.
+Aqui estamos dizendo para python imprimir o elemento que se encontra na posição 0 dentro da lista.
 
 ![[33 - list_index.png]]
 
-> **_Importante:_** O índice sempre começa em 0. Então, numa lista de 5 itens, nós teremos os índices 0, 1, 2, 3, 4. índices são sempre ```Int```.
+> **_Importante:_** O índice sempre começa em 0. Então, numa lista de 5 elementos, nós teremos os índices 0, 1, 2, 3, 4. índices são sempre ```Int```.
 
 
 #### Acessando lista dentro de uma lista
 
-Como falamos anteriormente, uma lista pode conter itens de qualquer tipo, incluindo listas, dicionários e outros tipos de dados que veremos mais à frente.
+Como falamos anteriormente, uma lista pode conter elementos de qualquer tipo, incluindo listas, dicionários e outros tipos de dados que veremos mais à frente.
 
 ```python
 names_and_numbers = [['Rebeca', 'Chelsey', 'Caroline'], [21, 73, -102]]  
@@ -1152,13 +1246,13 @@ Então como eu acesso a string ```'Rebeca'```?
 print(names_and_numbers[0][0])
 ```
 
-Primeiro acessamos o item no índice 0 da lista ```names_and_numbers```, que é a lista de nomes, depois acessamos o item de índice 0 nela.
+Primeiro acessamos o elemento no índice 0 da lista ```names_and_numbers```, que é a lista de nomes, depois acessamos o elemento de índice 0 nela.
 
 ![[35 - list_rebeca.png]]
 
-#### Acessando o ultimo item
+#### Acessando o ultimo elemento
 
-Python lê os itens de uma lista da esquerda pra direita.
+Python lê os elementos de uma lista da esquerda pra direita.
 
 ```python
 fruits = ['Apple', 'Banana', 'Grape', 'Strawberry', 'Orange']
@@ -1172,13 +1266,15 @@ fruits = ['Apple', 'Banana', 'Grape', 'Strawberry', 'Orange']
 #           [-5]     [-4]      [-3]       [-2]        [-1]
 ```
 
+Sendo assim, o elemento de índice ```-1``` é o ultimo elemento da lista.
+
 ### Modificando uma lista
 
-Agora que nós sabemos como acessar cada item dentro de uma lista, vamos ver como modificá-los.
+Agora que nós sabemos como acessar cada elemento dentro de uma lista, vamos ver como modificá-los.
 
-#### Substituindo items
+#### Substituindo elementos
 
-Para substituir um item na lista, nós primeiro acessamos o item e então atribuímos um valor, como fizemos com variáveis anteriormente.
+Para substituir um elemento na lista, nós primeiro acessamos o elemento e então atribuímos um valor, como fizemos com variáveis anteriormente.
 
 ```python
 fruits = ['Apple', 'Banana', 'Grape']
@@ -1186,11 +1282,11 @@ fruits[0] = 'Orange'
 print(fruits)
 ```
 
-![[36 - replacing_list_items.png]]
+![[36 - replacing_list_elements.png]]
 
-#### Adicionando itens no final
+#### Adicionando elementos no final
 
-Para adicionar itens no final de uma lista, nós utilizamos o método ```list_name.append()```.
+Para adicionar elementos no final de uma lista, nós utilizamos o método ```list_name.append()```.
 
 ```python
 fruits = []
@@ -1200,15 +1296,15 @@ fruits.append('Grape')
 print(fruits)
 ```
 
-Neste exemplo, estamos criando uma lista vazia chamada ```fruits``` e, a seguir, utilizamos o método ```append()``` para adicionar itens no seu final, resultando em:
+Neste exemplo, estamos criando uma lista vazia chamada ```fruits``` e, a seguir, utilizamos o método ```append()``` para adicionar elementos no seu final, resultando em:
 
 ![[37 - append.png]]
 
 > **_Nota:_** Nós estudaremos métodos a fundo posteriormente. Por enquanto, apenas aprenda a usá-los.
 
-#### Adicionando itens em posições específicas
+#### Adicionando elementos em posições específicas
 
-O método que utilizamos para adicionar um item em uma lista em uma posição especifica é o ```insert()```. Ao utilizá-lo, nós precisamos passar o índice e o dado que queremos adicionar.
+O método que utilizamos para adicionar um elemento em uma lista em uma posição especifica é o ```insert()```. Ao utilizá-lo, nós precisamos passar o índice e o dado que queremos adicionar.
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -1220,9 +1316,9 @@ Nós estamos dizendo para python adicionar a ```string "apple"``` no índice 1 d
 
 ![[38 - insert.png]]
 
-#### Removendo itens por índice
+#### Removendo elementos por índice
 
-Para remover itens de uma lista nós utilizamos o comando ```del```.
+Para remover elementos de uma lista nós utilizamos o comando ```del```.
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -1232,17 +1328,17 @@ print(fruits)
 
 ![[39 - del.png]]
 
-Com o comando ```del``` nós simplesmente deletamos o item da lista.
+Com o comando ```del``` nós simplesmente deletamos o elemento da lista.
 
-#### Removendo e atribuindo um item da lista com pop()
+#### Removendo e atribuindo um elemento da lista com pop()
 
 O método ```pop()``` tem 3 usos. Ele pode:
 
-1. remover o ultimo item da lista
-2. remover um item específico da lista
-3. remover o item e atribuí-lo a uma variável
+1. remover o ultimo elemento da lista
+2. remover um elemento específico da lista
+3. remover o elemento e atribuí-lo a uma variável
 
-Quando apenas utilizamos o método ```pop()```, ele removerá o ultimo item da lista:
+Quando apenas utilizamos o método ```pop()```, ele removerá o ultimo elemento da lista:
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -1252,7 +1348,7 @@ print(fruits)
 
 ![[40 - pop_1.png]]
 
-Quando passamos o índice do item como argumento, ele removerá o item especifico. No exemplo a seguir, removeremos o item do índice 0:
+Quando passamos o índice do elemento como argumento, ele removerá o elemento especifico. No exemplo a seguir, removeremos o elemento do índice 0:
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -1271,13 +1367,13 @@ print(fruits)
 print(my_favorite_fruit)
 ```
 
-Neste último caso, nós não estamos apenas acessando o item na lista e atribuindo-o à variável. Nós estamos removendo ```'Banana'``` e atribuindo à variável ```my_favorite_fruit```
+Neste último caso, nós não estamos apenas acessando o elemento na lista e atribuindo-o à variável. Nós estamos removendo ```'Banana'``` e atribuindo à variável ```my_favorite_fruit```
 
 ![[42 - pop_2.png]]
 
-#### Removendo um item por valor
+#### Removendo um elemento por valor
 
-Até agora só vimos maneiras de remover um item por índice.  Mas e quando sabemos o valor e não sabemos onde ele se encontra na lista? Para estes casos, utilizamos o método ```remove()```.
+Até agora só vimos maneiras de remover um elemento por índice.  Mas e quando sabemos o valor e não sabemos onde ele se encontra na lista? Para estes casos, utilizamos o método ```remove()```.
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -1289,7 +1385,7 @@ print(fruits)
 
 Aqui estamos dizendo para python encontrar a palavra 'Banana' na lista e removê-la.
 
-> **_Importante:_** O método ```remove()``` remove apenas o primeiro item com este valor!
+> **_Importante:_** O método ```remove()``` remove apenas o primeiro elemento com este valor!
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape', 'Banana']  
@@ -1316,7 +1412,7 @@ print(numbers_and_animals)
 
 #### Repetindo os valores
 
-Quando multiplicamos uma lista por uma ```int```, repetimos seus items dentro dela, como vemos abaixo:
+Quando multiplicamos uma lista por uma ```int```, repetimos seus elementos dentro dela, como vemos abaixo:
 
 ```python
 animals = ['cat', 'dog', 'capybara']  
@@ -1327,7 +1423,7 @@ print(animals * 2)
 
 ### Loops e listas
 
-Agora que já sabemos como manipular uma lista, nós podemos falar do seu verdadeiro poder. Nós podemos utilizar um loop para iterar por todos os itens da lista e executar um bloco de código para cada um dos itens. Calma, eu sei que tá começando a soar complicado de novo. Então vamos ver isso com calma.
+Agora que já sabemos como manipular uma lista, nós podemos falar do seu verdadeiro poder. Nós podemos utilizar um loop para iterar por todos os elementos da lista e executar um bloco de código para cada um dos elementos. Calma, eu sei que tá começando a soar complicado de novo. Então vamos ver isso com calma.
 
 Imagina que nós temos uma lista de nomes de convidados para uma festa. Nós queremos criar um programa que dirá "Olá" para todos os convidados. Com o que aprendemos até agora, fazer algo assim seria muito trabalhoso.
 
@@ -1373,7 +1469,7 @@ Este código checa se a ```string``` "Johnny" faz parte da lista ```nomes``` e i
 
 ```python
 names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
-  
+
 if "Rebeca" not in names:  
     print("boo")
 ```
@@ -1384,34 +1480,168 @@ Já este, checa se a ```string``` "Rebeca" não faz parte da lista ```names``` e
 
 ### List Slices
 
+Nós já sabemos como acessar um elemento dentro de uma lista, ou acessar todos os elementos de uma lista. Mas e quando nós quisermos acessar apenas alguns elementos dentro da lista? Uma opção seria criar um ```for```loop e utilizar condições para determinar quais elementos serão selecionados. Mas python nos permite fazer isso de uma forma: utilizando list slices.
 
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+  
+print(names[2:5])
+```
+
+Neste bloco de código, nós estamos dizendo à python para imprimir os elemento na lista ```names``` do índice 2 até o 5, não incluso, ou seja, índices 2, 3 e 4.
+
+![[50 - list_slices_1.png]]
+
+List slices funcionam da mesma forma que a função ```range()``` que aprendemos anteriormente.
+
+```python
+list_name[começo:fim:passo]
+```
+
+> **_Nota:_** O valor padrão para ```passo``` é 1, o que significa "de um em um".
+
+> **_Importante:_**  Não esquecer que o slice vai de um número até o outro sem incluí-lo. Se eu digo ```[0:3]```, eu estou dizendo do 0 até o 3 sem incluí-lo, ou seja, 0, 1, 2.
+
+Quando não colocamos um valor para o começo, estamos dizendo "comece do índice 0".
+
+```python
+numbers = [10, 20, 30, 40, 50, 60]  
+my_lucky_numbers = numbers[:3]  
+  
+print(my_lucky_numbers)
+```
+
+Neste bloco de código nós temos um variável do tipo ```list``` chamada ```numbers```, e estamos criando uma nova variável chamada ```my_lucky_numbers``` que também será uma lista, e estamos atribuindo a ela os elementos do começo da lista ```numbers``` até o elemento de índice 3, não incluso.
+
+![[51 - list_slices_2.png]]
+
+Quando não colocamos um valor para o fim, estamos dizendo "vá até o final".
+
+```python
+numbers = [10, 20, 30, 40, 50, 60]  
+my_lucky_numbers = numbers[2:]  
+  
+print(my_lucky_numbers)
+```
+
+![[52 - list_slices_3.png]]
+
+Você consegue me dizer o que o bloco de código no próximo exemplo faz?
+
+```python
+numbers = [10, 20, 30, 40, 50, 60]  
+my_lucky_numbers = numbers[::2]  
+  
+print(my_lucky_numbers)
+```
+
+Para descobrirmos, precisamos lembrar que list slices funcionam com três valores ```[começo:fim:passo]```. Não passamos nenhum número para o começo, então estamos dizendo "comece do índice 0"; também não passamos nenhum número para o fim, o que quer dizer "vá até o final"; e, por fim, estamos dizendo para ir de 2 em 2. Este código então irá ler toda a lista e atribuirá à ```my_lucky_numbers``` os elementos de índice 0, 2 e 4.
+
+![[53 - list_slices_4.png]]
 
 ### Métodos mais comuns
 
+Posteriormente nós veremos com calma o que são métodos e como criá-los. Por enquanto, só precisamos saber que eles são chamados utilizando a "Notação de ponto", em inglês, "Dot Notation", que nós já utilizamos:
+
+```python
+numbers = []
+numbers.append(1)
+```
+
+Como podemos ver, dot notation nada mais é do que utilizar um ponto para chamar um método. Nós veremos outros métodos antes de aprender como criá-los, e todos eles serão chamados através da dot notation.
+
+#### index()
+
+O método ```index()``` retorna, ou seja, têm como resultado, o índice de um elemento da lista.
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+jessica_index = names.index("Jessica")  
+print(jessica_index)
+```
+
+![[54 - index_method.png]]
+
+#### sort()
+
+O método ```sort()``` organiza uma lista, seja em ordem do menor para o maior ou em ordem alfabética.
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+names.sort()  
+print(names)
+```
+
+![[55 - sort_method_1.png]]
+
+Nós também podemos organizar a lista de maneira reversa com ele:
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+names.sort(reverse=True)  
+print(names)
+```
+
+![[56 - sorte_method_2.png]]
+
+#### reverse()
+
+O método ```reverse()``` reverte a ordem da lista.
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+names.reverse()  
+print(names)
+```
+
+![[57 - reverse_method.png]]
+
+### função sorted()
+
+A função ```sorted()``` organiza a lista sem alterar a original.
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+  
+print(f"Sorted: {sorted(names)}")  
+print(f"Original: {names}")
+```
+
+![[58 - sorted_function.png]]
+
+### função len()
+
+A função ```len()``` verifica a quantidade de elementos em uma lista
+
+```python
+numbers = [1, 2, 3, 4, 5, 6]  
+length_of_list = len(numbers)  
+print(length_of_list)
+```
+
+![[59 - len_function.png]]
+
+> **_Importante:_** Esta função também pode ser utilizada com outros tipos de dados, como dicionários, tuplas, strings, entre outros.
 
 ### Exercícios 5
 
-## Revisitando strings
+1. Crie um programa que, dada a lista abaixo, encontre o maior e o menor número e imprima-os na tela.
+
+```python
+numbers = [191, 78, 67, 195, 51, 154, 28, 45, 186, 106]
+```
+
+2. Crie um programa que imprima a lista abaixo sem nenhum número repetido e em ordem crescente:
+
+```python
+numbers = [6, 2, 5, 6, 2, 7, 1, 9, 1, 7, 6, 4, 2, 6]
+```
+
+3. Ainda utilizando a lista anterior, crie um programa que ache o número que mais se repete.
+
+## Strings também são listas!
 
 
 
 
-
-
-
-
-## Try / Except
-
-blah
-
----
-
-## Módulos | Modules
-
-
-
-
-exercícios função:
-
-criar uma simples calculadora e usar try catch zero division
 
