@@ -287,7 +287,7 @@ name = input("Qual o seu nome?\n")
 
 > **_Nota:_** ```\n``` no meio da string causa uma quebra de linha.
 
-A barra inversa também é utilizada para ignorar o caractere que vem logo em sua frente, como veremos a seguir.
+A barra inversa (também conhecida como _escape character_) também é utilizada para ignorar o caractere que vem logo em sua frente, como veremos a seguir.
 
 #### Devo usar aspas duplas ou únicas?
 
@@ -339,7 +339,7 @@ print("Hello,", name)
 
 > **_Nota:_** Neste caso, python coloca um espaço entre a variável.
 
-Como você já deve estar imaginando, concatenar diversas variáveis em um texto gigante seria muito trabalhoso. Existe uma forma mais fácil de concatenar em python: utilizando uma ```f string```.
+Como você já deve estar imaginando, concatenar diversas variáveis em um texto gigante seria muito trabalhoso. Existe uma forma mais fácil de concatenar em python: utilizando uma ```f string``` ou _formatted string_.
 
 ```python
 name = input("Qual o seu nome?\n")
@@ -659,6 +659,18 @@ Em python, tudo que é escrito na frente de um ```#``` é tratado como um coment
 
 ```pyhon
 # Isto é um comentário
+# E isto também!
+```
+
+Nós podemos também usar aspas triplas para fazer comentários de diversas linhas.
+
+```python
+"""
+Isto é um comentário
+E isto também!
+
+Tudo que é escrito aqui dentro é tratado como comentário.
+"""
 ```
 
 ---
@@ -1478,6 +1490,8 @@ Já este, checa se a ```string``` "Rebeca" não faz parte da lista ```names``` e
 
 ![[49 - not_in_operator.png]]
 
+> **_Importante:_** Letras maiúsculas e minúsculas são vistas como diferentes pelo computador. Sendo assim ```"Rebeca"``` não é a mesma coisa que ```rebeca```.
+
 ### List Slices
 
 Nós já sabemos como acessar um elemento dentro de uma lista, ou acessar todos os elementos de uma lista. Mas e quando nós quisermos acessar apenas alguns elementos dentro da lista? Uma opção seria criar um ```for```loop e utilizar condições para determinar quais elementos serão selecionados. Mas python nos permite fazer isso de uma forma: utilizando list slices.
@@ -1637,11 +1651,243 @@ numbers = [191, 78, 67, 195, 51, 154, 28, 45, 186, 106]
 numbers = [6, 2, 5, 6, 2, 7, 1, 9, 1, 7, 6, 4, 2, 6]
 ```
 
-3. Ainda utilizando a lista anterior, crie um programa que ache o número que mais se repete.
+3. Ainda utilizando a lista anterior, crie um programa que ache o número que mais se repete na lista, imprima-o na tela, juntamente com quantas vezes ele se repete.
 
 ## Strings também são listas!
 
+Nós já sabemos o que são ```strings``` e como elas funcionam, entretanto, agora que aprendemos mais conceitos, podemos olhá-las de uma outra maneira. ```Strings``` são como listas de caracteres alfanuméricos. Sendo assim, nós podemos, por exemplo, acessar cada caractere através do seu índice:
 
+```python
+word = "hello"  
+print(word[0])
+```
 
+aqui nós estamos acessando o elemento de índice 0 na ```string```.
 
+![[60 - string_list_1.png]]
 
+Nós também podemos acessar os elementos da ```string``` utilizando um ```for``` loop:
+
+```python
+word = "hello"  
+  
+for letter in word:  
+    print(letter, end=" ")
+```
+
+![[61 - string_list_2.png]]
+
+Ou usar a função ```len()``` para descobrir quantos elementos há na ```string```:
+
+```python
+word = "hello"  
+  
+letters = len(word)  
+print(letters)
+```
+
+![[62 - string_list_3.png]]
+
+Porém, ```string``` é um tipo de dado diferente de ```list```. Sendo assim, ele tem métodos diferentes. Neste módulo, nós veremos algumas outras formas de manipulação e métodos relacionados à ```string```.
+
+### Aspas triplas
+
+As ```string``` que vimos até agora estavam todas em uma unica linha. Nós podemos utilizar o que aprendemos até agora para construir strings com várias linhas, como, por exemplo, com quebras de linha, concatenação, ou até mesmo diversos ```print()```. Existe, porém, uma outra forma: as aspas tripas.
+
+```python
+text = """My dear,  
+  
+I'm sending you this text because I will not be able to get there on time. I'm stuck in traffic.  
+Save me some cake!  
+  
+Love,  
+me.  
+"""
+
+print(text)
+```
+
+![[63 - triple_quotes.png]]
+
+> **_Nota:_** Podem ser usadas aspas únicas ```'''```  ou duplas ```"""```
+
+### Raw strings
+
+Nós vimos que podemos ignorar caracteres e adicionar caracteres especiais utilizando a barra inversa, ou _escape character_. Mas e se nós quisermos que o que quer que seja digitado pelo usuário seja mantido na ```string```, incluindo barras inversas. É aqui que entram as raw strings or ```r string```.
+
+```python
+print(r"hello, \"my friends\"!")
+```
+
+![[64 - raw_string.png]]
+
+Na ```r string``` python trata tudo na string como parte dela, mesmo que você tente passar caracteres especiais.
+
+### Métodos mais comuns
+
+Existem outros métodos e você pode encontrá-los na documentação oficial,  livros, procurando no google ou perguntando a inteligências artificiais. Estes são apenas os mais comumente usados.
+
+#### upper()
+
+O método ```upper()``` faz com que as letras das palavras fiquem maiúsculas.
+
+```python
+name = "Fatma"  
+name = name.upper()  
+  
+print(name)
+```
+
+Aqui nós estamos criando uma varável do tipo ```string``` com o valor "Fatma", depois estamos atribuindo à variável ```name``` o valor original modificado para que todas as letras estejam maiúsculas.
+
+![[65 - upper_method.png]]
+
+#### lower()
+
+O método ```lower()``` faz com que as letras fiquem minúsculas.
+
+```python
+name = "Fatma"  
+name = name.lower()  
+  
+print(name)
+```
+
+![[66 - lower_method.png]]
+
+#### isupper() e islower()
+
+Checam se os caracteres da ```string``` são todos maiúsculos ou minúsculos, respectivamente.
+
+```python
+word1 = "HELLO"  
+word2 = "WORLD"  
+  
+print(f"{word1} is upper? = {word1.isupper()}")  
+print(f"{word2} is lower? = {word2.islower()}")
+```
+
+![[67 - isupper_islower.png]]
+
+#### capitalize()
+
+Transforma a primeira letra da ```string``` em maiúscula.
+
+```python
+text = 'rodrigo has a blue car.'  
+text = text.capitalize()  
+  
+print(text)
+```
+
+![[68 - capitalize_method.png]]
+
+#### title()
+
+Transforma todas as palavras da ```string```, colocando todas com letras maiúsculas.
+
+```python
+name = "james bond"  
+name = name.title()  
+  
+print(name)
+```
+
+![[69 - title_method.png]]
+
+#### startswith() and endswith()
+
+Checam se o a ```string``` começa ou termina com os argumentos passados para eles, respectivamente.
+
+```python
+message = "Hello, world! I'm here to learn how to code in python."  
+  
+print(message.startswith("Hello"))  
+print(message.endswith("world"))
+```
+
+![[70 - startswith_endswith.png]]
+
+#### split()
+
+O método ```split()``` pode separa uma string em elementos e retorna uma lista
+
+```python
+message = "Python is so much fun. I wish I had learned it sooner"  
+message = message.split()  
+  
+print(message)
+```
+
+![[71 - split_method.png]]
+
+Por padrão, ele separa a string pelos espaços, mas nós podemos alterar este comportamento passando o argumento pelo qual queremos separar a string. A seguir, vamos separar a mesma ```string``` pelo ponto final.
+
+```python
+message = "Python is so much fun. I wish I had learned it sooner"  
+message = message.split(".")  
+  
+print(message)
+```
+
+![[72 - split_method_2.png]]
+
+#### strip(), rstrip() and lstrip()
+
+Os métodos ```strip()```, ```rstrip()``` e ```lstrip()``` removem elementos da string. ```strip()``` remove elementos dos dois lados, ```rstrip()``` remove apenas do lado direito e ```lstrip()``` remove apenas do lado esquerdo. Por padrão, eles removem espaços em branco no começo, no final ou em ambos os lados da string.
+
+```python
+message = "     hello, world!       "  
+  
+print(f"strip: {message.strip()}")  
+print(f"rstrip: {message.rstrip()}")  
+print(f"lstrip: {message.lstrip()}")
+```
+
+![[73 - strip_method.png]]
+
+Porém, é possível passar como argumento o elemento que gostaríamos de remover. Talvez seu uso fique mais claro com o exemplo abaixo:
+
+```python
+message = "______hello, world!______"  
+  
+print(f"strip: {message.strip('_')}")  
+print(f"rstrip: {message.rstrip('_')}")  
+print(f"lstrip: {message.lstrip('_')}")
+```
+
+![[74 - strip_method_2.png]]
+
+#### replace()
+
+Este método troca um elemento da ```string``` por outro. Ele recebe dois argumentos: a palavra que você quer trocar e por qual você quer trocar.
+
+```python
+text = "oh no, my cat ate all my food!"  
+print(text)  
+  
+text = text.replace("cat", "dog")  
+# replace "cat" with "dog"
+print(text)
+```
+
+![[75 - replace_method.png]]
+
+#### count()
+
+O método ```count()``` recebe uma ```string``` argumento e conta quantas vezes este argumento aparece na frase, semelhante ao programa que criamos no exercício 5-3.
+
+```python
+text = "oh no, my cat ate all my food!"  
+  
+my_counter = text.count("my")  
+print(my_counter)
+```
+
+a palavra "my" aparece duas vezes na ```string``` dada.
+
+### Exercise 6
+
+1. a
+2. b
+3. Crie um programa que recebe uma palavra do usuário e imprime na tela a palavra ao contrário.
