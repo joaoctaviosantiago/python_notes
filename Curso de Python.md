@@ -1653,6 +1653,8 @@ numbers = [6, 2, 5, 6, 2, 7, 1, 9, 1, 7, 6, 4, 2, 6]
 
 3. Ainda utilizando a lista anterior, crie um programa que ache o número que mais se repete na lista, imprima-o na tela, juntamente com quantas vezes ele se repete.
 
+---
+
 ## Strings também são listas!
 
 Nós já sabemos o que são ```strings``` e como elas funcionam, entretanto, agora que aprendemos mais conceitos, podemos olhá-las de uma outra maneira. ```Strings``` são como listas de caracteres alfanuméricos. Sendo assim, nós podemos, por exemplo, acessar cada caractere através do seu índice:
@@ -1867,11 +1869,35 @@ text = "oh no, my cat ate all my food!"
 print(text)  
   
 text = text.replace("cat", "dog")  
-# replace "cat" with "dog"
+# troca a palavra "cat" na string por "dog"
 print(text)
 ```
 
 ![[75 - replace_method.png]]
+
+#### join()
+
+O método ```join()``` recebe uma lista ou tuple como argumento e concatena cada elemento usando a string como separador.
+
+```python
+words = ["Hello", "my", "friend", "Doug"]  
+phrase = " - blah - ".join(words)  
+print(phrase)
+```
+
+![[76 - join_method_1.png]]
+
+Eu concordo que pareça um método um pouco estranho. Mas talvez um outro exemplo deixe seu uso mais claro. Imagine que você tem uma ```list``` e deseja colocar todos os seus elementos dentro de uma ```string```, separados por espaço.
+
+```python
+words = ["Hello", "world", "this", "is", "dog"]  
+phrase = " ".join(words)  
+print(phrase)
+```
+
+Python pegará cada uma das palavras com a ```string``` que passamos, neste caso, um espaço vazio ```" "```.
+
+![[77 - join_method_2.png]]
 
 #### count()
 
@@ -1886,8 +1912,97 @@ print(my_counter)
 
 a palavra "my" aparece duas vezes na ```string``` dada.
 
+![[78 - count_method.png]]
+
 ### Exercise 6
 
-1. a
-2. b
-3. Crie um programa que recebe uma palavra do usuário e imprime na tela a palavra ao contrário.
+1. Crie um programa que recebe uma string do usuário e imprima na tela a mesma string, mas com a primeira metade toda em letras maiúsculas e a segunda metade toda em letras minúsculas.
+2. Crie um programa que receba uma frase do usuário e imprima na tela a frase ao contrário. Ex: "Olá mundo" -> "mundo Olá"
+3. Crie um programa que verifica se a palavra ou frase digitada pelo usuário é um palíndromo (palavra ou frase que se pode ler, indiferentemente, da esquerda para a direita ou vice-versa).
+
+---
+
+## Compreensão de lista | List comprehension
+
+List comprehension é uma forma mais concisa de se criar listas. Em uma única linha, nós podemos criar um ```for``` loop, adicionar os elementos na lista e até utilizar condições.
+
+Normalmente, nós criaríamos uma lista da seguinte maneira:
+
+```python
+numbers = []  
+  
+for number in range(1, 11):  
+    numbers.append(number)  
+  
+print(numbers)
+```
+
+![[79 - list_comprehension_1.png]]
+
+Porém, com list comprehension, nós podemos escrever a mesma coisa em apenas uma linha:
+
+```python
+numbers = [number for number in range(1, 11)]  
+print(numbers)
+```
+
+![[80 - list_comprehension_2.png]]
+
+O que nós estamos fazendo aqui? Primeiro, criamos uma variável ```numbers``` e dentro dos colchetes é onde colocamos a list comprehension. Ali, temos ```number for number in range(1, 11) ```, ou seja, adicione ```number``` à lista para cada valor de ```number``` de 1 até 11 (não incluso).
+
+O primeiro ```number``` dentro da list comprehension é a variável que será adicionada à lista.
+
+Vamos ver outro exemplo. Vamos criar uma lista apenas com números pares de 1 até 20 (não incluso).
+
+Sem list comprehension:
+
+```python
+numbers = []  
+  
+for number in range(1, 20):  
+    if number % 2 == 0:  
+        numbers.append(number)  
+  
+print(numbers)
+```
+
+![[81 - list_comprehension_3.png]]
+
+Com list comprehension:
+
+```python
+numbers = [number for number in range(1, 20) if number % 2 == 0]  
+print(numbers)
+```
+
+![[82 - list_comprehension_4.png]]
+
+No exemplo abaixo temos uma lista de nomes e queremos criar outra lista apenas com os nomes começados com a letra a.
+
+```python
+names = ["João", "Alice", "Janaína", "Ana", "Bruna", "Eduarda"]  
+names_with_a = []  
+  
+for name in names:  
+    if name.startswith('A'):  
+        names_with_a.append(name)  
+  
+print(names_with_a)
+```
+
+![[83 - list_comprehension_5.png]]
+
+```python
+names = ["João", "Alice", "Janaína", "Ana", "Bruna", "Eduarda"]  
+names_with_a = [name for name in names if name.startswith('A')]  
+print(names_with_a)
+```
+
+![[84 - list_comprehension_6.png]]
+
+Caso ainda não tenha ficado claro, tente ler da seguinte forma: _Adicione elemento para cada elemento na lista se elemento começa com 'A'_.
+
+
+
+
+
