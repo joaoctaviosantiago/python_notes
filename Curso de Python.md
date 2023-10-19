@@ -1655,7 +1655,7 @@ numbers = [6, 2, 5, 6, 2, 7, 1, 9, 1, 7, 6, 4, 2, 6]
 
 ---
 
-## Strings também são listas!
+## Revisitando strings
 
 Nós já sabemos o que são ```strings``` e como elas funcionam, entretanto, agora que aprendemos mais conceitos, podemos olhá-las de uma outra maneira. ```Strings``` são como listas de caracteres alfanuméricos. Sendo assim, nós podemos, por exemplo, acessar cada caractere através do seu índice:
 
@@ -1690,7 +1690,7 @@ print(letters)
 
 ![[62 - string_list_3.png]]
 
-Porém, ```string``` é um tipo de dado diferente de ```list```. Sendo assim, ele tem métodos diferentes. Neste módulo, nós veremos algumas outras formas de manipulação e métodos relacionados à ```string```.
+Porém, ```string``` é um tipo de dado diferente de ```list```. Por conta disto, ele tem métodos diferentes. Neste módulo, nós veremos algumas outras formas de manipulação e métodos relacionados à ```string```.
 
 ### Aspas triplas
 
@@ -1924,7 +1924,7 @@ a palavra "my" aparece duas vezes na ```string``` dada.
 
 ## Compreensão de lista | List comprehension
 
-List comprehension é uma forma mais concisa de se criar listas. Em uma única linha, nós podemos criar um ```for``` loop, adicionar os elementos na lista e até utilizar condições.
+List comprehension é uma forma mais concisa de se criar listas, e é encontrada em apenas algumas linguagens. Em uma única linha, nós podemos criar um ```for``` loop, adicionar os elementos na lista e até utilizar condições.
 
 Normalmente, nós criaríamos uma lista da seguinte maneira:
 
@@ -1950,9 +1950,17 @@ print(numbers)
 
 O que nós estamos fazendo aqui? Primeiro, criamos uma variável ```numbers``` e dentro dos colchetes é onde colocamos a list comprehension. Ali, temos ```number for number in range(1, 11) ```, ou seja, adicione ```number``` à lista para cada valor de ```number``` de 1 até 11 (não incluso).
 
-O primeiro ```number``` dentro da list comprehension é a variável que será adicionada à lista.
+> **_Nota:_** O primeiro ```number``` dentro da list comprehension é a variável que será adicionada à lista.
 
-Vamos ver outro exemplo. Vamos criar uma lista apenas com números pares de 1 até 20 (não incluso).
+Uma outra forma de **ler** a list comprehension é a seguinte:
+
+```python
+numbers = [numbers.append(number) for number in range(1, 11)]
+```
+
+A primeira variável dentro da list comprehension será adicionada à lista sendo criada.
+
+Vamos ver outros exemplos. Criaremos uma lista apenas com números pares de 1 até 20 (não incluso).
 
 Sem list comprehension:
 
@@ -1979,6 +1987,8 @@ print(numbers)
 
 No exemplo abaixo temos uma lista de nomes e queremos criar outra lista apenas com os nomes começados com a letra a.
 
+Sem list comprehension:
+
 ```python
 names = ["João", "Alice", "Janaína", "Ana", "Bruna", "Eduarda"]  
 names_with_a = []  
@@ -1992,6 +2002,8 @@ print(names_with_a)
 
 ![[83 - list_comprehension_5.png]]
 
+Com list comprehension:
+
 ```python
 names = ["João", "Alice", "Janaína", "Ana", "Bruna", "Eduarda"]  
 names_with_a = [name for name in names if name.startswith('A')]  
@@ -2000,7 +2012,43 @@ print(names_with_a)
 
 ![[84 - list_comprehension_6.png]]
 
-Caso ainda não tenha ficado claro, tente ler da seguinte forma: _Adicione elemento para cada elemento na lista se elemento começa com 'A'_.
+### Exercícios 7
+
+> **_Nota:_** Utilize _list comprehension_ para resolver estas questões.
+
+1. Dadas as listas abaixo, crie um programa que imprima na tela uma lista apenas com os números em comum entre elas.
+
+```python
+first_list = [2, 7, 33, 27, 92, 40, 3, 28, 56]  
+second_list = [90, 12, 23, 7, 38, 29, 56, 13, 2]
+```
+
+2. Crie um programa que gere uma lista de 'par' ou 'ímpar'  para cada número de 1 até 20 (não incluso). Ex: \[ímpar, par, ímpar, par...]
+3. Crie um programa que peça ao usuário uma frase e imprima uma lista de todas as palavras com 4 letras ou menos.
+
+---
+
+## Dicionário | Dictionary
+
+```Dictionary``` é um tipo de dado que guarda diversos elementos, assim como uma lista, e são utilizados para guardar elementos que estão relacionados entre si. Eles são armazenados em pares chamados de "key" (palavra-chave) e "value" (valor), separados por dois pontos ```:```. Para criá-los, utilizamos chaves em vez de colchetes.
+
+```python
+# person = {key: value, key: value, key: value, ...}
+person = {'name': 'Mario', 'age': 25, 'location': 'Mushroom Kingdom'}
+```
+
+Além de ser criado com chaves em vez de colchetes, outra grande diferença é que para acessarmos um valor, nós não usamos um índice numérico, nós usamos as palavras-chave.
+
+```python
+person = {'name': 'Mario', 'age': 25, 'location': 'Mushroom Kingdom'} 
+print(person['name'])  
+print(person['age'])
+```
+
+![[85 - dictionary_1.png]]
+
+
+
 
 
 
