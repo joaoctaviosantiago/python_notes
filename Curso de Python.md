@@ -1041,6 +1041,8 @@ for num in range(0, 11, 2):
 
 ![[27 - ranged_function_steps.png]]
 
+> **_Nota:_** Se passarmos apenas um valor como argumento, python conta de 0 até este valor, sem incluí-lo. ```range(3)``` terá um resultado de 0, 1, 2.
+
 ### Laço while | While loop
 
 O ```while``` loop é executado enquanto uma condição for verdadeira. Ele é utilizado quando não sabemos quantas vezes o código precisará ser executado.
@@ -1637,6 +1639,24 @@ print(length_of_list)
 
 > **_Importante:_** Esta função também pode ser utilizada com outros tipos de dados, como dicionários, tuplas, strings, entre outros.
 
+### Embelezando listas
+
+Pode acontecer de nossas listas serem muito grandes ou com muitos elementos, o que as tornam difíceis de ler. Nestes casos, podemos escrever a lista de uma maneira um pouco diferente, para facilitar a leitura.
+
+```python
+hello_list = [  
+    "hello",  
+    "World",  
+    "This",  
+    "Is",  
+    "Doggo"  
+]
+```
+
+A lista continuará funcionando perfeitamente.
+
+> **_Importante:_** Não se esqueça da vírgula entre os elementos!
+
 ### Exercícios 5
 
 1. Crie um programa que, dada a lista abaixo, encontre o maior e o menor número e imprima-os na tela.
@@ -2047,10 +2067,195 @@ print(person['age'])
 
 ![[85 - dictionary_1.png]]
 
+Uma outra diferença é que os elementos de um dicionário são desordenados, enquanto os de uma lista são ordenados.
+
+```python
+my_list = [1, 2, 3]  
+my_other_list = [3, 2, 1]  
+print(my_list == my_other_list)
+```
+
+Neste caso, o resultado é ```False``` pois os valores de alguns índices são diferentes. Listas são ordenada, ou seja, a ordem de cada valor é importante.
+
+```python
+my_dict = {'first': 1, 'second': 2, 'third': 3}  
+my_other_dict = {'second': 2, 'third': 3, 'first': 1}  
+print(my_dict == my_other_dict)
+```
+
+Já aqui, o resultado é ```True``` pois listas não são ordenadas. Python não se importa com a ordem dos elementos, apenas que eles sejam iguais.
+
+### Acessando elementos
+
+Apesar de termos acabado de ver como acessar os elementos de um dicionário, eu quero explicar novamente para que, caso você queira relembrar, consiga encontrar facilmente.
+
+Nós acessamos os elementos de um dicionário através das palavras-chave.
+
+```python
+doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"}
+```
+
+Neste ```dictionary``` nós temos 3 palavras-chave - ```name```, ```age``` e ```breed``` - e nós as usaremos para acessar seus respectivos valores.
+
+```python
+doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"} 
+
+print(f"Name: {doggo['name']}")  
+print(f"Age: {doggo['age']}")  
+print(f"Breed: {doggo['breed']}")
+```
+
+![[86 - dict_accessing_elements.png]]
+
+### Modificando um dicionário
+
+#### Adicionando elementos
+
+Para adicionar elementos, precisamos passar a palavra-chave a ser adicionada e seu respectivo valor:
+
+```python
+doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"}  
+  
+doggo["favorite_toy"] = "bone"  
+print(doggo)
+```
+
+A palavra-chave "favorite_toy" não existe no ```dictionary```, então python adiciona a mesma e atribui a ela o valor de "bone".
+
+![[87 - dict_adding_elements.png]]
+
+#### Modificando elementos
+
+Para modificar elementos, apenas atribuímos um novo valor ao mesmo.
+
+```python
+doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"}  
+  
+doggo["name"] = "Dorito"
+print(doggo)
+```
+
+![[88 - dict_modifying_elements.png]]
+
+#### Deletando elementos
+
+Para deletarmos elementos, utilizamos o comando ```del```.
+
+```python
+doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"}  
+  
+del doggo["breed"]  
+print(doggo)
+```
+
+![[89 - dict_deleting_elements.png]]
+
+> **_Nota:_** O elemento é permanente deletado. 
+
+### Loops e dicionários
+
+Assim como fizemos com os dados de tipo ```list```, nós podemos utilizar loops para iterar por todos os elementos de um ```dictionary```. Mas, para isso, precisamos utilizar alguns métodos.
+
+#### keys()
+
+Este método nós da acesso apenas às palavras-chave de um dicionário.
+
+```python
+catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+
+print(catto.keys())
+```
+
+![[90 - dict_method_keys_1.png]]
+
+E, assim, podemos utilizar um for loop para acessar todas as palavras-chave.
+
+```python
+catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+  
+for key in catto.keys():  
+    print(key)
+```
+
+![[91 - dict_method_keys_2.png]]
+
+#### values()
+
+Assim como o método ```keys()```, o método ```values()``` nos dá acesso apenas aos valores do dicionário.
+
+```python
+catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+  
+print(catto.values())
+```
+
+![[92- dict_method_values_1.png]]
+
+E com ele nós podemos utilizar um loop para acessar apenas os valores do dicionário.
+
+```python
+catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+  
+for values in catto.values():  
+    print(values)
+```
+
+![[93- dict_method_values_2.png]]
+
+#### items()
+
+O método ```ìtems()``` nos dá acesso tanto às palavras-chave quanto aos valores.
+
+```python
+catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+  
+print(catto.items())
+```
+
+![[94 - dict_method_items_1.png]]
+
+Por conta disto, o ```for``` loop é um pouco diferente. Ele tem duas variáveis.
+
+```python
+catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+  
+for key, value in catto.items():  
+    print(f"Key: {key} -> Value: {value}")
+```
+
+![[95 - dict_method_items_2.png]]
+
+Como este loop tem duas variáveis, uma para a palavra-chave (```key```) e a outra para o valor (```value```), nós podemos manipular as duas dentro do ```for``` loop.
+
+> **_Nota:_** Assim como vimos anteriormente, o nome das variáveis passadas no ```for``` loop pode ser qualquer coisa. Eu escolhi "key" e "value".
+
+### Métodos mais comuns
+
+#### get()
+
+O método ```get()``` pode ter um ou dois argumentos.  Quando tentamos acessar uma palavra-chave que não existe dentro do dicionário, python levantará um erro. O método ```get()``` retornará o valor se a palavra-chave existir e, caso não exista, retornará o valor que passarmos como argumento.
+
+```python
+items = {"sword": 3, "shield": 1, "dagger": 2, "bow": 1}  
+  
+print(items.get("bow", 0))
+```
+
+Neste exemplo, estamos dizendo para python imprimir o valor da palavra-chave "bow", caso não exista no dicionário, diga que o valor é 0. A palavra-chave existe no dicionário, então python imprime seu valor.
+
+![[96 - dict_method_get_1.png]]
+
+```python
+items = {"sword": 3, "shield": 1, "dagger": 2}  
+  
+print(items.get("bow", 0))
+```
+
+Já neste exemplo, a palavra-chave "bow" não existe no dicionário ```ìtems```, então python imprimirá o valor padrão (default).
+
+![[97 - dict_method_get_2.png]]
+
+> **_Nota:_** Caso você só passe um argumento, imprimirá o valor se a palavra-chave existir no dicionário e, caso não exista, imprimirá o valor ```None```, que é um tipo de dado que significa "nenhum valor existente".
 
 
-
-
-
-
-
+####
