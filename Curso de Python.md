@@ -46,6 +46,14 @@ Não se limite aos exercícios do curso. Programação é como LEGO. É um exerc
 
 ---
 
+## Sobre os exercícios
+
+Existem diversas maneiras de se fazer a mesma coisa na programação. Alguns códigos são mais otimizados que outros, mas desde que tudo funcione, tudo bem. As respostas dos exercícios podem ser encontradas [neste repositório](https://github.com/joaosoutosantiago/temporary_python_exercises).
+
+Tente fazer do seu jeito e, caso não consiga, veja as respostas.
+
+---
+
 ## Bonus: Como funciona um computador?
 
 Cada peça de um computador tem um trabalho específico. Aqui quero esclarecer um pouco mais o que cada peça de hardware faz, de maneira superficial. Isto vai nos ajudar a esclarecer umas coisas mais pra frente.
@@ -1188,7 +1196,7 @@ while i < 10:
 
 ---
 
-# Capítulo 3: Estrutura de dados avançada
+# Capítulo 3: Tipos de dados collection
 
 ## Pensando como um programador
 
@@ -1243,7 +1251,7 @@ Aqui estamos dizendo para python imprimir o elemento que se encontra na posiçã
 
 #### Acessando lista dentro de uma lista
 
-Como falamos anteriormente, uma lista pode conter elementos de qualquer tipo, incluindo listas, dicionários e outros tipos de dados que veremos mais à frente.
+Como falamos anteriormente, uma lista pode conter elementos de qualquer tipo, incluindo ```lists``` , ```dictionaries``` e outros tipos de dados que veremos mais à frente.
 
 ```python
 names_and_numbers = [['Rebeca', 'Chelsey', 'Caroline'], [21, 73, -102]]  
@@ -1637,7 +1645,7 @@ print(length_of_list)
 
 ![[59 - len_function.png]]
 
-> **_Importante:_** Esta função também pode ser utilizada com outros tipos de dados, como dicionários, tuplas, strings, entre outros.
+> **_Importante:_** Esta função também pode ser utilizada com outros tipos de dados, como ```dictionary```, ```tuple```, ```string```, entre outros.
 
 ### Embelezando listas
 
@@ -2067,7 +2075,7 @@ print(person['age'])
 
 ![[85 - dictionary_1.png]]
 
-Uma outra diferença é que os elementos de um dicionário são desordenados, enquanto os de uma lista são ordenados.
+Uma outra diferença é que os elementos de um ```dictionary``` são desordenados, enquanto os de uma lista são ordenados.
 
 ```python
 my_list = [1, 2, 3]  
@@ -2087,9 +2095,9 @@ Já aqui, o resultado é ```True``` pois listas não são ordenadas. Python não
 
 ### Acessando elementos
 
-Apesar de termos acabado de ver como acessar os elementos de um dicionário, eu quero explicar novamente para que, caso você queira relembrar, consiga encontrar facilmente.
+Apesar de termos acabado de ver como acessar os elementos de um ```dictionary```, eu quero explicar novamente para que, caso você queira relembrar, consiga encontrar facilmente.
 
-Nós acessamos os elementos de um dicionário através das palavras-chave.
+Nós acessamos os elementos de um ```dictionary``` através das palavras-chave.
 
 ```python
 doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"}
@@ -2158,7 +2166,7 @@ Assim como fizemos com os dados de tipo ```list```, nós podemos utilizar loops 
 
 #### keys()
 
-Este método nós da acesso apenas às palavras-chave de um dicionário.
+Este método nós da acesso apenas às palavras-chave de um ```dictionary```.
 
 ```python
 catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
@@ -2181,7 +2189,7 @@ for key in catto.keys():
 
 #### values()
 
-Assim como o método ```keys()```, o método ```values()``` nos dá acesso apenas aos valores do dicionário.
+Assim como o método ```keys()```, o método ```values()``` nos dá acesso apenas aos valores do ```dictionary```.
 
 ```python
 catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
@@ -2191,7 +2199,7 @@ print(catto.values())
 
 ![[92- dict_method_values_1.png]]
 
-E com ele nós podemos utilizar um loop para acessar apenas os valores do dicionário.
+E com ele nós podemos utilizar um loop para acessar apenas os valores do ```dictionary```.
 
 ```python
 catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
@@ -2233,7 +2241,7 @@ Como este loop tem duas variáveis, uma para a palavra-chave (```key```) e a out
 
 #### get()
 
-O método ```get()``` pode ter um ou dois argumentos.  Quando tentamos acessar uma palavra-chave que não existe dentro do dicionário, python levantará um erro. O método ```get()``` retornará o valor se a palavra-chave existir e, caso não exista, retornará o valor que passarmos como argumento.
+O método ```get()``` pode ter um ou dois argumentos.  Quando tentamos acessar uma palavra-chave que não existe dentro do ```dictionary```, python levantará um erro. O método ```get()``` retornará o valor se a palavra-chave existir e, caso não exista, retornará o valor que passarmos como argumento.
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2, "bow": 1}  
@@ -2241,7 +2249,7 @@ items = {"sword": 3, "shield": 1, "dagger": 2, "bow": 1}
 print(items.get("bow", 0))
 ```
 
-Neste exemplo, estamos dizendo para python imprimir o valor da palavra-chave "bow", caso não exista no dicionário, diga que o valor é 0. A palavra-chave existe no dicionário, então python imprime seu valor.
+Neste exemplo, estamos dizendo para python imprimir o valor da palavra-chave "bow", caso não exista no ```dictionary```, diga que o valor é 0. A palavra-chave existe no ```dictionary```, então python imprime seu valor.
 
 ![[96 - dict_method_get_1.png]]
 
@@ -2251,11 +2259,287 @@ items = {"sword": 3, "shield": 1, "dagger": 2}
 print(items.get("bow", 0))
 ```
 
-Já neste exemplo, a palavra-chave "bow" não existe no dicionário ```ìtems```, então python imprimirá o valor padrão (default).
+Já neste exemplo, a palavra-chave "bow" não existe no ```dictionary```, então python imprimirá o valor padrão (default).
 
 ![[97 - dict_method_get_2.png]]
 
-> **_Nota:_** Caso você só passe um argumento, imprimirá o valor se a palavra-chave existir no dicionário e, caso não exista, imprimirá o valor ```None```, que é um tipo de dado que significa "nenhum valor existente".
+> **_Nota:_** Caso você só passe um argumento, imprimirá o valor se a palavra-chave existir no ```dictionary``` e, caso não exista, imprimirá o valor ```None```, que é um tipo de dado que significa "nenhum valor existente".
 
 
-####
+#### copy()
+
+Este método permite que nós criemos uma cópia de um ```dictionary```.
+
+```python
+items = {"sword": 3, "shield": 1, "dagger": 2}  
+new_items = items.copy()  
+  
+print(f"Items: {items}")  
+print(f"New items: {new_items}")
+```
+
+![[98 - dict_method_copy.png]]
+
+#### clear()
+
+```clear()``` remove todos os elementos de um ```dictionary```.
+
+```python
+items = {"sword": 3, "shield": 1, "dagger": 2}  
+  
+items.clear()  
+print(f"Items: {items}")
+```
+
+![[99 - dict_method_clear.png]]
+
+#### setdefault()
+
+O método ```setdefault()``` faz com que o ```dictionary``` sempre tenha determinada palavra-chave e valor.
+
+```python
+items = {"sword": 3, "shield": 1, "dagger": 2}  
+  
+items.setdefault("heartstone", 1)  
+print(f"Items: {items}")
+```
+
+No exemplo acima, nós definimos que o ```dictionary``` deve ter ao menos 1 "heartstone" obrigatoriamente. Como não colocamos no dicionário, python colocará.
+
+![[100 - dict_method_setdefault().png]]
+
+Caso já existisse uma palavra-chave "heartstone" no ```dictionary``` python não faria nada.
+
+```python
+items = {"sword": 3, "shield": 1, "dagger": 2, "heartstone": 3}  
+  
+items.setdefault("heartstone", 1)  
+print(f"Items: {items}")
+```
+
+![[101 - dict_method_setdefault()_2.png]]
+
+#### pop()
+
+```pop()``` é um método que recebe uma palavra chave como argumento e remove o elemento do ```dictionary```.
+
+```python
+items = {"sword": 3, "shield": 1, "dagger": 2}  
+  
+items.pop("sword")  
+print(f"Items: {items}")
+```
+
+![[102 - dict_method_pop().png]]
+
+### Embelezando dicionários
+
+Assim como como dados do tipo ```list```, nós podemos escrever dados do tipo ```dictionary``` de tal maneira que fiquem mais legíveis, como no exemplo abaixo:
+
+```python
+person = {  
+    "name": "Luigi",  
+    "age": 24,  
+    "location": "Mushroom Kingdom"  
+}  
+  
+print(person)
+```
+
+![[103 - beautifying_dict.png]]
+
+> **_Importante:_** Não esqueça de colocar virgula entre os elementos!
+
+### Exercícios 8
+
+Utilize a lista abaixo para os exercícios 1 e 2:
+
+```python
+people = {  
+    'James': 30,  
+    'Mary': 23,  
+    'Robert': 83,  
+    'Patricia': 42,  
+    'John': 19,  
+    'Jennifer': 27,  
+    'Michael': 36,  
+    'Linda': 65,  
+    'David': 76  
+}
+```
+
+1. Encontre a pessoa mais velha e imprima-o na tela.
+2. Encontre a média de idade das pessoas e imprima-a na tela com 2 casas decimais.
+3. Você foi contratado para criar um programa para entrevistar 10 pessoas sobre o que preferem, pizza ou sushi. Crie um programa para esta pesquisa que ao final imprima na tela o que a maioria prefere e quantos votos o ganhador recebeu.
+
+## Tuple
+
+Também conhecidas como "tupla" no português, ```tuple``` são dados iteráveis, assim como ```list``` e ```dictionary```. Os elementos de um ```tuple``` são ordenados, então podemos acessá-los com índices, porém, um ```tuple``` é imutável. Uma vez criado, ele não pode ser modificado.
+
+Um ```tuple``` é criado colocando os dados entre parênteses.
+
+```python
+numbers = (10, 20, 30)  
+  
+print(numbers)
+```
+
+![[104 - tuple.png]]
+
+> **_Importante:_** Uma ```list``` ou um ```dictionary``` dentro de um ```tuple``` ainda pode ser modificados, porém, a estrutura do ```tuple``` não pode.
+
+### Acessando elementos
+
+Como ```tuple``` é ordenado, seus elementos podem ser acessados através de índices, assim como ```list```.
+
+```python
+numbers = (10, 20, 30)  
+  
+print(numbers[1])
+```
+
+![[105 - accessing_tuple.png]]
+
+> **_Importante:_** Os índices começam sempre em 0.
+
+### Tuple slices
+
+Também podemos acessar os elementos de ```tuple``` com slices.
+
+```python
+numbers = (10, 20, 30, 40, 50)  
+  
+print(numbers[:3])
+```
+
+![[106 - tuple_slices_1.png]]
+
+```python
+numbers = ("Banana", "Apple", "Grape")  
+  
+print(numbers[::-1])
+```
+
+![[107 - tuple_slices_2.png]]
+
+### Métodos
+
+#### count()
+
+Conta a quantidade de vezes que um elemento aparece no ```tuple```.
+
+```python
+numbers = (10, 20, 30, 30, 40, 20, 30, 10)  
+  
+print(numbers.count(30))
+``` 
+
+![[108 - tuple_method_count.png]]
+
+#### index()
+
+Mostra o índice do dado passado.
+
+``` python
+names = ("George", "Geoff", "Gob")  
+  
+print(names.index("Geoff"))
+```
+
+![[109 - tuple_method_index.png]]
+
+### Unpacking tuple
+
+Unpacking tuple significa colocar cada elemento da ```tuple``` dentro de uma variável. Python nos permite fazer isso de forma bem elegante.
+
+```python
+numbers = (10, 20, 30)  
+a, b, c = numbers  
+  
+print(a)  
+print(b)  
+print(c)
+```
+
+![[110 - unpacking_tuple.png]]
+
+### Trocando variáveis
+
+Podemos também trocar o valor de variáveis com ```tuple```. Normalmente, se quiséssemos fazer isso, faríamos da forma abaixo:
+
+```python
+a = 10  
+b = 20  
+  
+print(f"a: {a}, b: {b}")  
+  
+c = a  
+a = b  
+b = c  
+  
+print(f"a: {a}, b: {b}")
+```
+
+![[111 - swapping_variables_1.png]]
+
+Temos duas variáveis ```a``` de valor 10 e ```b``` de valor 20 e queremos trocar seus valores para que  ```a``` seja 20 e ```b``` seja 10. Para isto, criamos uma variável temporária ```c```, depois colocamos o valor de ```a``` em ```c```, o de ```b``` em ```a``` e o de ```c``` em ```b```. É como se tivéssemos dois copos e quiséssemos passar o refrigerante primeiro copo pro segundo e o do segundo pro primeiro. Para isso usamos um terceiro copo.
+
+Com ```typle``` podemos fazer esta troca de uma maneira muito mais simples.
+
+```python
+a = 10  
+b = 20  
+  
+print(f"a: {a}, b: {b}")  
+  
+a, b = b, a  
+  
+print(f"a: {a}, b: {b}")
+```
+
+![[112 - swapping_variables_2.png]]
+
+### Concatenando tuple
+
+Apesar de não podermos modificar tuples, podemos concatená-las para criar novas tuples.
+
+```python
+numbers = (1, 2, 3)
+numbers_total = numbers + (4, 5, 6)
+
+print(numbers_total)
+```
+
+![[113 - tuple_concatenation.png]]
+
+### Exercícios 9
+
+Utilize a ```tuple``` abaixo para os exercícios:
+
+```python
+numbers = (7, 42, 93, 58, 12, 24, 30)
+```
+
+1. Imprima os três últimos números.
+2. imprima a média de todos os elementos
+3. imprima o tuple ao contrário
+
+## Set
+
+```set``` é um tipo de dado iterável que remove elementos duplicados. Seus elementos não são organizados, ou seja, não podemos acessá-los através de índices (é comum os elementos virem em ordens diferentes ao serem impressos).
+
+```python
+numbers = {10, 20, 10, 30, 10, 40}  
+  
+print(numbers)
+```
+
+![[114 - set_1.png]]
+
+Como podemos ver, todos os números repetidos foram removidos e a ordem em que foram impressos está diferente da ordem em que o ```set``` foi escrito.
+
+
+
+
+
+

@@ -307,6 +307,8 @@ for num in range(0, 11, 2):
 
 ![[27 - ranged_function_steps.png]]
 
+> **_Nota:_** Se passarmos apenas um valor como argumento, python conta de 0 até este valor, sem incluí-lo. ```range(3)``` terá um resultado de 0, 1, 2.
+
 ### Laço while | While loop
 
 O ```while``` loop é executado enquanto uma condição for verdadeira. Ele é utilizado quando não sabemos quantas vezes o código precisará ser executado.
@@ -381,5 +383,73 @@ Este será nosso resultado:
 3. Crie um programa que imprima a seguinte figura:
 
 ![[31 - exercise_4-2.png]]
+
+---
+
+## Bonus: Controle de fluxo em Java
+
+Você já pode ter visto códigos com uma sintaxe diferente de python, códigos com parenteses, chaves, com uma aparência bem mais assustadora. Mas a verdade é que não passa disso: aparência. Os conceitos são os mesmos em todas as linguagens. Claro, cada linguagem tem suas particularidades, mas a base é sempre a mesma.
+
+Neste capítulo bonus eu quero te mostrar como seriam os controles de fluxo na linguagem java e explicá-los para que, caso encontre com outras linguagens que não sejam python, consiga ler os códigos sem problema algum.
+
+### if/else if/else
+
+```java
+int number = 16;
+
+if (number <= 10) {
+    System.out.println("Small number");
+} else if (number <= 30) {
+    System.out.println("Medium number");
+} else {
+    System.out.println("Big number");
+}
+```
+
+Pode ser que você consiga ler este código em java sem muitos problemas, mas vamos analisá-lo juntos, com calma, mesmo assim.
+
+Primeiro nós criamos uma variável do tipo ```int``` de valor 16 e então começamos nosso ```if```. Entre parenteses nós temos a condição que será verificada e, dentro das chaves, nós temos o bloco de código que será executado se a condição for verdadeira. Neste caso, o comando ```System.out.println()```, que é o equivalente, em java, ao ```print()``` em python. Outra coisa diferente é que, em java, em vez de ```elif```, nós usamos ```else if```.
+
+### Laço for | For loop
+
+```java
+for (int i = 0; i < 10; i++) {
+	System.out.println("i = " + i);
+}
+```
+
+Este é um pouco mais assustador, não é?
+
+Neste tipo de ```for``` loop dentro dos parênteses, nós criamos uma variável ```i``` (mas pode ter qualquer outro nome, apesar deste ser o padrão) de valor 0, definimos que o loop rodará enquanto ```i < 10```, e depois escrevemos ```i++```, que é o equivalente a ```i += 1``` em python. Ou seja, após rodar o bloco de código que está entre chaves, 1 será somado ao valor de ```i```. Este código imprimirá na tela a ```string``` concatenada ```"i = " + i```.
+
+O equivalente a este ```for``` loop em python é:
+
+```python
+for i in range(0, 10):
+	print(f"i = {i}")
+```
+
+### Laço while | While loop
+
+```java
+int i = 0;
+    
+while (i < 10) {
+	System.out.println("i = " + i);
+	i++;
+}
+```
+
+O ```while``` loop já tem uma sintaxe parecida com a de python. Primeiro criamos uma variável do tipo ```int``` de valor 0 para criar a condição. O loop rodará enquanto ```i < 10```, imprimirá na tela ```"i = " + i``` e acrescentará 1 ao valor de ```i``` antes de checar o valor novamente.
+
+O equivalente a este ```while``` loop em python é:
+
+```python
+i = 0
+
+while i < 10:
+    print(f"i = {i}")
+    i += 1
+```
 
 ---
