@@ -9,8 +9,8 @@ print(f"Average: {'%.2f' % avg}")
 
 if avg >= 6:
     print("You've passed! (:")
-# elif avg between 4 and 6
-elif 4 > avg > 6:
+# elif avg between 4 (included) and 6 (not included)
+elif 4 <= avg < 6:
     print("You have summer school")
 else:
     print("You've failed.")

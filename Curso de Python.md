@@ -187,7 +187,6 @@ Neste exemplo, estamos separando um espacinho na memória e chamando de ```messa
 Como podemos ver, temos o mesmo resultado. Python imprimiu o valor atribuído à variável
 ```message```.
 
-
 > **_Importante:_** O sinal de igual (=) não é o igual da matemática. O igual comparativo/matemático nós veremos mais pra frente. Em python (=) é chamado de "Assign operator" ou operador de atribuição. Ele pega o valor do dado e atribui a uma variável.
 
 Tá, e onde isto é usado? Pensa nos jogos que você já jogou. O número de vidas, seu HP, os nomes dos personagens, seus atributos, sua munição. Tudo isso é guardado dentro de variáveis.
@@ -1196,7 +1195,9 @@ while i < 10:
 
 ---
 
-# Capítulo 3: Tipos de dados collection
+# Capítulo 3: Tipos de dados collections
+
+Existem tipos de dados mais avançados chamados de ```collections```, que funcionam como contêineres que pode armazenar um ou mais dados de tipos variados. Neste capítulo nós falaremos das collections que já vem com python, chamadas de _built-in collections_.
 
 ## Pensando como um programador
 
@@ -2058,7 +2059,7 @@ second_list = [90, 12, 23, 7, 38, 29, 56, 13, 2]
 
 ## Dicionário | Dictionary
 
-```Dictionary``` é um tipo de dado que guarda diversos elementos, assim como uma lista, e são utilizados para guardar elementos que estão relacionados entre si. Eles são armazenados em pares chamados de "key" (palavra-chave) e "value" (valor), separados por dois pontos ```:```. Para criá-los, utilizamos chaves em vez de colchetes.
+```dictionary``` ou ```dict``` é um tipo de dado que guarda diversos elementos, assim como uma lista, e são utilizados para guardar elementos que estão relacionados entre si. Eles são armazenados em pares chamados de "key" (palavra-chave) e "value" (valor), separados por dois pontos ```:```. Para criá-los, utilizamos chaves em vez de colchetes.
 
 ```python
 # person = {key: value, key: value, key: value, ...}
@@ -2372,6 +2373,8 @@ people = {
 2. Encontre a média de idade das pessoas e imprima-a na tela com 2 casas decimais.
 3. Você foi contratado para criar um programa para entrevistar 10 pessoas sobre o que preferem, pizza ou sushi. Crie um programa para esta pesquisa que ao final imprima na tela o que a maioria prefere e quantos votos o ganhador recebeu.
 
+---
+
 ## Tuple
 
 Também conhecidas como "tupla" no português, ```tuple``` são dados iteráveis, assim como ```list``` e ```dictionary```. Os elementos de um ```tuple``` são ordenados, então podemos acessá-los com índices, porém, um ```tuple``` é imutável. Uma vez criado, ele não pode ser modificado.
@@ -2482,9 +2485,9 @@ print(f"a: {a}, b: {b}")
 
 ![[111 - swapping_variables_1.png]]
 
-Temos duas variáveis ```a``` de valor 10 e ```b``` de valor 20 e queremos trocar seus valores para que  ```a``` seja 20 e ```b``` seja 10. Para isto, criamos uma variável temporária ```c```, depois colocamos o valor de ```a``` em ```c```, o de ```b``` em ```a``` e o de ```c``` em ```b```. É como se tivéssemos dois copos e quiséssemos passar o refrigerante primeiro copo pro segundo e o do segundo pro primeiro. Para isso usamos um terceiro copo.
+Temos duas variáveis ```a``` de valor 10 e ```b``` de valor 20 e queremos trocar seus valores para que ```a``` seja 20 e ```b``` seja 10. Para isto, criamos uma variável temporária ```c```, depois colocamos o valor de ```a``` em ```c```, o de ```b``` em ```a``` e o de ```c``` em ```b```. É como se tivéssemos dois copos e um com refrigerante de laranja no copo A e outro com refrigerante de uva B, e nós quiséssemos colocar o de uva no A e o de laranja no B. Para isso, nós usaríamos um terceiro copo vazio chamado de C. Colocaríamos o refrigerante de laranja no C, o de uva no copo A e o de laranja, que está no copo C, no copo B.
 
-Com ```typle``` podemos fazer esta troca de uma maneira muito mais simples.
+Com ```tuple``` podemos fazer esta troca de uma maneira muito mais simples.
 
 ```python
 a = 10  
@@ -2524,9 +2527,11 @@ numbers = (7, 42, 93, 58, 12, 24, 30)
 2. imprima a média de todos os elementos
 3. imprima o tuple ao contrário
 
+---
+
 ## Set
 
-```set``` é um tipo de dado iterável que remove elementos duplicados. Seus elementos não são organizados, ou seja, não podemos acessá-los através de índices (é comum os elementos virem em ordens diferentes ao serem impressos).
+```set``` é um tipo de dado iterável que remove elementos duplicados. Seus elementos não são organizados, ou seja, não podemos acessá-los através de índices (é comum que os elementos mudem de ordem cada vez que são impressos).
 
 ```python
 numbers = {10, 20, 10, 30, 10, 40}  
@@ -2537,6 +2542,310 @@ print(numbers)
 ![[114 - set_1.png]]
 
 Como podemos ver, todos os números repetidos foram removidos e a ordem em que foram impressos está diferente da ordem em que o ```set``` foi escrito.
+
+Os dados do tipo ```set``` só podem conter dados imutáveis, ou seja, dados que não podem ser mudados. Se você tentar colocar um dado do tipo ```list``` ou ```dict``` dentro de um ```set```, python levantará um erro.
+
+> **_Importante:_** Cuidado para não confundir ```set``` com ```dictionary```. Ambos usam chaves mas ```dictionary``` tem um par de palavra-chave e valor.
+
+### Acessando elementos
+
+Já que os elementos de um ```set``` não estão em ordem, não podemos acessá-los com índices. Por isso, a única forma de acessá-los é através de um loop.
+
+```python
+vowels = {"a", "e", "i", "o", "u"}  
+  
+for vowel in vowels:  
+    print(vowel)
+```
+
+![[115 - accessing_sets.png]]
+
+### Modificando um set
+
+#### adicionando elementos
+
+##### add()
+
+Através do método ```add()``` nós podemos adicionar um elemento no ```set```.
+
+```python
+letters = {"a", "b", "c"}  
+  
+letters.add("d")  
+print(letters)
+```
+
+![[116 - set_method_add.png]]
+
+##### update()
+
+O método ```update()``` recebe um iterável como argumento e, assim, nos permite adicionar vários elementos de uma vez.
+
+```python
+languages = {"python", "gdscript", "kotlin"}  
+languages_to_learn = ["java", "kotlin"]  
+  
+languages.update(languages_to_learn)  
+print(languages)
+``` 
+
+![[117 - set_method_update.png]]
+
+#### Removendo elementos
+
+##### remove()
+
+O método ```remove()``` remove um elemento do ```set```. Se o elemento não estiver no ```set```, ele levanta um erro.
+
+```python
+languages = {"python", "gdscript", "kotlin"}  
+  
+languages.discard("kotlin")  
+print(languages)
+```
+
+![[118 - set_method_remove.png]]
+
+> **_Nota:_** Nós aprenderemos a lidar com erros posteriormente.
+
+##### discard()
+
+```discard()``` também remove um elemento do ```set```, mas caso o elemento não exista, ele não levanta um erro.
+
+```python
+languages = {"python", "gdscript", "kotlin"}  
+  
+languages.discard("kotlin")  
+print(languages)
+```
+
+![[119 - set_method_discard.png]]
+
+#### pop()
+
+O método ```pop()``` com ```set``` tem 2 usos. Ele pode:
+
+1. remover um elemento **aleatório** da lista
+3. remover um elemento **aleatório** e atribuí-lo a uma variável
+
+primeiro uso:
+
+```python
+languages = {"python", "gdscript", "kotlin"}  
+  
+languages.pop()  
+print(languages)
+```
+
+![[120 - set_method_pop_1.png]]
+
+segundo uso:
+
+```python
+languages = {"python", "gdscript", "kotlin"}  
+  
+random_language = languages.pop()  
+print(languages)  
+print(random_language)
+```
+
+![[121 - set_method_pop_2.png]]
+
+### Operações com set
+
+Assim como na matemática, operações de conjuntos como união, intersecção e diferença, podem ser feitas com o set. Eu sei que a gente se assusta quando lê que tem matemática envolvida. Mas eu vou explicar em detalhes e desenhar pra você ver que não é nenhum bicho de sete cabeças.
+
+Existem operadores e métodos para cara uma dessas operações. Eu mostrarei das duas formas.
+
+> **_Nota:_** Nos exemplos eu utilizei dois sets apenas, mas é possível fazer operações com três ou mais sets também.
+
+#### União
+
+Quando fazemos a união de sets, nós pegamos todos os elementos contidos em todos os sets.
+
+![[122 - set_union.jpg]]
+
+Em python, nós podemos utilizar o método ```union()``` ou o operador ```|```.
+
+```python
+numbers = {1, 2, 3, 4}  
+more_numbers = {3, 4, 5, 6}  
+  
+print(f"Method: {numbers.union(more_numbers)}")  
+print(f"Operator: {numbers | more_numbers}")
+```
+
+![[123 - set_union_2.png]]
+
+Como podemos ver, foi criado um novo set contendo todos os elementos contidos nos sets ```numbers``` e ```more_numbers```, sem repeti-los, pois dados do tipo ```set``` não aceitam repetições de valores.
+
+#### Interseção
+
+Quando fazemos a interseção de sets, nós pegamos apenas os elementos únicos que existem em todos eles.
+
+![[124 - set_intersection.jpg]]
+
+Em python, nós podemos utilizar o método ```intersection()``` ou o operador ```&```.
+
+```python
+numbers = {1, 2, 3, 4}  
+more_numbers = {3, 4, 5, 6}
+
+print(f"Method: {numbers.intersection(more_numbers)}")  
+print(f"Operator: {numbers & more_numbers}")
+```
+
+![[125 - set_intersection_2.png]]
+
+Aqui foi criado um novo set contendo apenas os elementos que aparecem tanto no set ```numbers``` quanto no set ```more_numbers```. Novamente: sem repeti-los pois dados do tipo ```set``` não aceitam repetição de valores.
+
+#### Diferença
+
+Quando fazemos a diferença entre sets, nós pegamos apenas os elementos que existem em um set mas não existem nos outros.
+
+![[126 - set_difference.jpg]]
+
+Em python, nós podemos utilizar o método ```difference()``` ou o operador ```-```.
+
+```python
+numbers = {1, 2, 3, 4}  
+more_numbers = {3, 4, 5, 6}
+
+print(f"Method: {numbers.difference(more_numbers)}")  
+print(f"Operator: {numbers - more_numbers}")
+```
+
+![[127 - set_difference_2.png]]
+
+Um novo set foi criado contendo apenas os números que pertencem ao set ```numbers``` que não pertencem a outros sets.
+
+#### Diferença simétrica
+
+Quando fazemos a diferença simétrica entre sets, nós pegamos todos os elementos que são únicos de cada set. Qualquer elemento que apareça em mais de um set é ignorado.
+
+![[128 - set_symmetric_difference.jpg]]
+
+Em python, nós podemos utilizar o método ```symmetric_difference()``` ou o operador ```^```.
+
+```python
+numbers = {1, 2, 3, 4}  
+more_numbers = {3, 4, 5, 6}
+
+print(f"Method: {numbers.symmetric_difference(more_numbers)}")  
+print(f"Operator: {numbers ^ more_numbers}")
+```
+
+![[129 - set_symmetric_difference_2.png]]
+
+Neste caso, criamos um novo set com todos os elementos únicos que pertencem ao set ```numbers``` e ao set ```more_numbers```. Qualquer elemento que pertença aos dois sets não foi incluído.
+
+---
+
+## Mais type casting
+
+Como vimos anteriormente, nós podemos alterar o tipo de um dado através do que chamamos de type casting. E também podemos fazer isso com dados do tipo collection.
+
+De maneira geral, eles funcionam da mesma forma dos que vimos anteriormente, a única diferença é que eles têm que receber um dado iterável (que nós podemos acessar usando um loop), como uma string ou uma collection.
+
+```python
+list(dado)
+```
+
+Converte o dado para o tipo ```list```.
+
+```python
+tuple(dado)
+```
+
+Converte o dado para o tipo ```tuple```.
+
+```python
+set(dado)
+```
+
+Converte o dado para o tipo ```set```.
+
+E nós podemos visualizar isso com a função ```type()``` que nos diz o tipo do dado passado.
+
+```python
+numbers = [1, 2, 3]  
+print(numbers)  
+print(type(numbers), end="\n\n")  
+  
+numbers = tuple(numbers)  
+print(numbers)  
+print(type(numbers), end="\n\n")  
+  
+numbers = set(numbers)  
+print(numbers)  
+print(type(numbers))
+```
+
+![[130 - type_casting.png]]
+
+> **_Nota:_** Nós aprenderemos posteriormente a criar nossas próprias classes.
+
+Type casting para o tipo de dado ```dictionary``` é um pouquinho diferente. Ele recebe uma lista, um set ou um tuple de tuples de tamanho 2 e então os converte para um dicionário.
+
+Como sabemos, dicionários armazenam elementos em pares de palavras-chave e valores. Sendo assim, para transformarmos um dado para o tipo ```dict```, precisamos passar como argumento dados do tipo ```tuple```  de tamanho 2.
+
+```python
+name_and_age = [("Whiskers", 3), ("Bubbles", 6)]  
+  
+print(dict(name_and_age))
+```
+
+Neste exemplo, temos uma lista de dados do tipo ```tuple``` (mas poderia ser um set de tuples ou um tuple de tuples), e estamos convertendo-o para o tipo ```dict```.
+
+![[131 - type_casting_dict.png]]
+
+---
+
+## Função zip()
+
+
+---
+
+## Qual tipo de dado escolher
+
+---
+
+## Revisitando variáveis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

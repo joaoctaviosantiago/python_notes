@@ -212,7 +212,6 @@ O valor da variável ```posso_pagar``` será "não" se o valor do produtor for m
 ## Exercício 3
 
 1. Crie um programa que peça para o usuário as notas de 3 provas, calcule a média, imprima-a na tela e, se ela for maior ou igual 6, imprima "passou! (:", se estiver entre 4 e 6, imprima "está de recuperação" e, se a média for menor que 4, imprima na tela que o aluno foi reprovado.
-
 2. Crie um programa que peça para o usuário digitar seu peso e sua altura, calcule o IMC (Índice de Massa Corporal), mostre-o cm duas casas decimais e imprima na tela as informações seguindo a tabela abaixo:
 
 | IMC         | CLASSIFICAÇÃO   |
@@ -269,7 +268,7 @@ for i in range(1, 5):
     print()
 ```
 
-Eu sei que este código assusta um pouco, então vamos lê-lo com calma. Primeiro um loop começa e a variável ```i``` tem o valor de 1, o bloco de código então roda. Nele, imprimimos ```i```; Em seguida o segundo ```for``` loop começa. Neste, a variável ```j``` será impressa 4 vezes (de 1 a 5 não incluindo 5), o segundo ```for``` termina de ser executado, voltamos o bloco de código do primeiro loop, e pulamos uma linha com a função ```print()```.
+Eu sei que este código assusta um pouco, então vamos lê-lo com calma. O primeiro loop começa e a variável ```i``` tem o valor de 1, o bloco de código então roda. Nele, imprimimos ```i```; Em seguida o segundo ```for``` loop começa. Neste, a variável ```j``` será impressa 4 vezes (de 1 a 5 não incluindo 5), o segundo ```for``` termina de ser executado, voltamos o bloco de código do primeiro loop, e pulamos uma linha com a função ```print()```.
 
 Este é o resultado:
 
@@ -325,18 +324,19 @@ Neste exemplo, python vai testar se ```number <= 5``` é verdadeiro, caso seja, 
 
 ![[28 - while_loop.png]]
 
-> **_Importante:_** cuidado para não criar um loop infinito. Se a condição nunca se tornar falsa, o programa vai rodar infinitamente e, eventualmente, "crashar", ou seja, parar de funcionar e fechar.
+> **_Importante:_** Cuidado para não criar um loop infinito. Se a condição nunca se tornar falsa, o programa vai rodar infinitamente e, eventualmente, "crashar", ou seja, parar de funcionar e fechar.
 
 #### Valores truthy e falsy | truthy and falsy values
 
-Quando tentamos passar dados como condição, ao invés de uma expressão, python avalia aquele dado como  ```True``` ou ```False```. Quando o valor é verdadeiro, nós chamamos de "truthy", e quando é falso, de "falsy". Por exemplo:
+Quando tentamos passar dados como condição, ao invés de uma expressão, python avalia aquele dado como ```True``` ou ```False```. Quando o valor é verdadeiro, nós chamamos de "truthy", e quando é falso, de "falsy". Por exemplo:
 
 ```python
 while 10:
 	print("truthy")
+	# isto é um loop infinito
 ```
 
-Os dados ```0```, ```0.0```, e ```''```, serão falsy. Qualquer outro dado será truthy.
+Os dados ```0```, ```0.0```, e ```''```, são falsy. Qualquer outro dado será truthy.
 
 ### Break
 
@@ -390,7 +390,7 @@ Este será nosso resultado:
 
 Você já pode ter visto códigos com uma sintaxe diferente de python, códigos com parenteses, chaves, com uma aparência bem mais assustadora. Mas a verdade é que não passa disso: aparência. Os conceitos são os mesmos em todas as linguagens. Claro, cada linguagem tem suas particularidades, mas a base é sempre a mesma.
 
-Neste capítulo bonus eu quero te mostrar como seriam os controles de fluxo na linguagem java e explicá-los para que, caso encontre com outras linguagens que não sejam python, consiga ler os códigos sem problema algum.
+Nesta seção bonus eu quero te mostrar como seriam os controles de fluxo na linguagem java e explicá-los para que, caso encontre com outras linguagens que não sejam python, consiga ler os códigos sem problema algum.
 
 ### if/else if/else
 
@@ -420,7 +420,7 @@ for (int i = 0; i < 10; i++) {
 
 Este é um pouco mais assustador, não é?
 
-Neste tipo de ```for``` loop dentro dos parênteses, nós criamos uma variável ```i``` (mas pode ter qualquer outro nome, apesar deste ser o padrão) de valor 0, definimos que o loop rodará enquanto ```i < 10```, e depois escrevemos ```i++```, que é o equivalente a ```i += 1``` em python. Ou seja, após rodar o bloco de código que está entre chaves, 1 será somado ao valor de ```i```. Este código imprimirá na tela a ```string``` concatenada ```"i = " + i```.
+Neste tipo de ```for``` loop, dentro dos parênteses, nós criamos uma variável ```i``` (mas pode ter qualquer outro nome, apesar deste ser o padrão) de valor 0, definimos que o loop rodará enquanto ```i < 10```, e depois escrevemos ```i++```, que é o equivalente a ```i += 1``` em python. Ou seja, após rodar o bloco de código que está entre chaves, 1 será somado ao valor de ```i```. Este código imprimirá na tela a ```string``` concatenada ```"i = " + i```.
 
 O equivalente a este ```for``` loop em python é:
 
@@ -440,7 +440,7 @@ while (i < 10) {
 }
 ```
 
-O ```while``` loop já tem uma sintaxe parecida com a de python. Primeiro criamos uma variável do tipo ```int``` de valor 0 para criar a condição. O loop rodará enquanto ```i < 10```, imprimirá na tela ```"i = " + i``` e acrescentará 1 ao valor de ```i``` antes de checar o valor novamente.
+O ```while``` loop já tem uma sintaxe parecida com a de python. Primeiro criamos uma variável do tipo ```int``` de valor 0 para criar a condição. O loop rodará enquanto ```i < 10```, imprimirá na tela ```"i = " + i``` e acrescentará 1 ao valor de ```i``` antes de checar a condição novamente.
 
 O equivalente a este ```while``` loop em python é:
 

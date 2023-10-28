@@ -25,14 +25,13 @@ Um motivo de ansiedade ao redor de quem considera aprender a programar é o _mit
 
 ## Eu acho que estou muito velho pra aprender a programar
 
-Outro _mito_ bastante comum é de que só consegue aprender a programar bem, aqueles que
-aprenderam cedo. Programação se aprende fazendo, praticando. Você cresce com cada dia que pratica. Ninguém nasce um programador. É uma habilidade adquirida através de estudo e prática.
+Outro _mito_ bastante comum é de que só consegue aprender a programar bem, aqueles que aprenderam cedo. Programação se aprende fazendo, praticando. Você cresce com cada dia que pratica. Ninguém nasce um programador. É uma habilidade adquirida através de estudo e prática.
 
 ---
 
 ## Por que python?
 
-Python é uma linguagem de _"uso geral"_ , o que significa que é uma linguagem usada em diversas áreas, incluindo a área de dados, machine learning, desenvolvimento de software, desenvolvimento web, automação, entre outras. Além de ser uma linguagem amplamente utilizada, sua sintaxe é muito parecida com o inglês, o que a torna muito menos intimidadora para quem está começando.
+Python é uma linguagem de _"uso geral"_ , o que significa que é uma linguagem usada em diversas áreas, incluindo ciência de dados, machine learning, desenvolvimento de software, desenvolvimento web, automação, entre outras. Além de ser uma linguagem amplamente utilizada, sua sintaxe é muito parecida com o inglês, o que a torna muito menos intimidadora para quem está começando.
 
 ---
 
@@ -50,7 +49,7 @@ Não se limite aos exercícios do curso. Programação é como LEGO. É um exerc
 
 Existem diversas maneiras de se fazer a mesma coisa na programação. Alguns códigos são mais otimizados que outros, mas desde que tudo funcione, tudo bem. As respostas dos exercícios podem ser encontradas [neste repositório](https://github.com/joaosoutosantiago/temporary_python_exercises).
 
-Tente fazer do seu jeito e, caso não consiga, veja as respostas.
+Tente fazer do seu jeito e, caso não consiga, veja minhas respostas.
 
 ---
 
@@ -184,9 +183,7 @@ Neste exemplo, estamos separando um espacinho na memória e chamando de ```messa
 
 ![[4 - resultado_variable.png]]
 
-Como podemos ver, temos o mesmo resultado. Python imprimiu o valor atribuído à variável
-```message```.
-
+Como podemos ver, temos o mesmo resultado. Python imprimiu o valor atribuído à variável ```message```.
 
 > **_Importante:_** O sinal de igual (=) não é o igual da matemática. O igual comparativo/matemático nós veremos mais pra frente. Em python (=) é chamado de "Assign operator" ou operador de atribuição. Ele pega o valor do dado e atribui a uma variável.
 
@@ -212,7 +209,7 @@ Variáveis podem ter qualquer nome. Porém, existem algumas regras a serem segui
 
 ## Python lê o código de cima para baixo
 
-As linguagens de programação, em geral, lêem código de cima para baixo. No código a seguir, tentamos imprimir uma variável que ainda não foi lida por python:
+As linguagens de programação, em geral, leem código de cima para baixo. No código a seguir, tentamos imprimir uma variável que ainda não foi lida por python:
 
 ```python
 print(f"Hello, {nome}")
@@ -253,8 +250,7 @@ Algumas linguagens são mais rigorosas e nos forçam a especificar o tipo de dad
 Outras linguagens são menos exigentes e checam o tipo de dado quando o programa roda. Elas são conhecidas como _Dynamically Typed Languages_ (Linguagens dinamicamente
 tipadas), e alguns exemplos são: Python, JavaScript, Ruby, PHP.
 
-Mas se python consegue reconhecer o tipo de dado, por que preciso saber dos diferentes tipos?
-Cada tipo tem suas regras de uso e interação. Nós vamos aprender mais sobre isso ao falar de cada um deles a seguir.
+Mas se python consegue reconhecer o tipo de dado, por que preciso saber dos diferentes tipos? Cada tipo tem suas regras de uso e interação. Nós vamos aprender mais sobre isso ao falar de cada um deles a seguir.
 
 Aqui está um exemplo de variável do tipo String em java, uma linguagem estaticamente tipada:
 
@@ -469,7 +465,7 @@ print(f"Resultado não formatado: {number}")
 print(f'Resultado formatado: {"%.2f" % number}')
 ```
 
-aqui estamos somando um ```int``` e um ```float```, então sabemos que o resultado não formatado será um ```float``` e python vai tentar deixá-lo o mais preciso possível. Na terceira linha, repare que a variável não foi sozinha. Nós passamos ```"%.2f" % nome_da_variável```, que vai pegar o valor passado na variável e arredondar pra duas casas decimais.
+aqui estamos somando um ```int``` e um ```float```, então sabemos que o resultado será um ```float``` e python vai tentar deixá-lo o mais preciso possível. Na terceira linha, repare que a variável não foi sozinha. Nós passamos ```"%.2f" % nome_da_variável```, que vai pegar o valor passado na variável e arredondar pra duas casas decimais.
 
 > **_Nota:_** O ```"%.2f"``` sempre deve vir entre aspas. O ```2``` é a quantidade de casas decimais que você quer.
 
@@ -479,7 +475,7 @@ e este será nosso resultado:
 
 #### Ordem de operações matemáticas
 
-Assim como na matemática, em python a ordem das operações matemáticas também será respeitada.
+Assim como na matemática, em python a ordem das operações matemáticas também deverá ser respeitada.
 
 ```python
 number = 5 + (2 + 3) ** 2
@@ -634,9 +630,7 @@ number = int(input("digite um número:\n"))
 ## Exercício 2
 
 1. Crie um programa que peça para o usuário digitar 2 números e mostre sua soma.
-
 2. Crie um programa que peça ao usuário seu nome e o ano em que nasceu, e mostre uma frase com seu nome e quantos anos ele tem/fará neste ano.
-
 3. Crie um programa que peça ao usuário por dois números e mostre o valor da sua divisão com 3 casas decimais.
 
 ---
