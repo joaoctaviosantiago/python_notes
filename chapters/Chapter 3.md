@@ -1,26 +1,26 @@
-# Capítulo 3: Tipos de dados collections
+# Chapter 3: Collections data type
 
-Existem tipos de dados mais avançados chamados de ```collections```, que funcionam como contêineres que pode armazenar um ou mais dados de tipos variados. Neste capítulo nós falaremos das **collections que já vem com python**, chamadas de _built-in collections_.
+There are more advanced data types called ```collections``` that work like containers that can hold one or more data of various types. In this chapter we'll talk about python's **built-in collections**.
 
-## Pensando como um programador
+## Thinking like a programmer
 
-Antes de começarmos a ver o conteúdo de mais um capítulo, eu gostaria de falar sobre como pensar com um programador. E o que isso quer dizer, exatamente?
+Before we begin with the contents of this chapter, I would like to talk about how to think like a programmer. And what does this mean, exactly?
 
-Bem, a cada exercício, nós estamos resolvendo problemas mais complexos. Nós começamos com problemas que só precisavam de variáveis e tipos de dados para serem resolvidos; depois resolvemos problemas que combinavam estes com controle de fluxo. Nós estamos aprendendo ferramentas e técnicas isoladas que podem ser combinadas para resolver problemas maiores.
+Well, with each exercise we're solving more complex problem. We started by solving problems that only required variables and data types to be solved; then we solved problems that combined these with flow control. We are learning isolated tools and techniques that can be combined to solve bigger problems. 
 
-E é a isto que me refiro quando digo "pensar como um programador". Eu quero que você aprenda a olhar para problemas com outros olhos. Quero que divida problemas complexos em problemas menores, que possam ser resolvidos com as ferramentas que você tem a sua disposição.
+And I refer to this when I say "thinking like a programmer". I want you to learn to look at problem through different lenses. I want you to divide complex problems into smaller problems that can be solved with the tools you have at your disposal.
 
-Quando encontramos um problema grande e complexo, normalmente não sabemos nem por onde começar a resolvê-lo. O que devemos fazer é dividi-lo em problemas menores, de resolução mais simples, e resolvermos um por um; pedacinho por pedacinho.
+When we find a big and complex problem, normally we don't even know where we begin to solve it.  What we must do is to divide it into smaller problems that have a simpler answer, and solve them one by one; piece by piece.
 
-Uma técnica bem útil pra este objetivo é utilizar o ```TODO```, que pode ser traduzido como "para fazer". Imagine que você foi contratado para fazer um programa. O primeiro passo, é definir quais serão as funcionalidades dele (dividindo um problema grande e complexo em problemas menores) e, para cada funcionalidade, definimos os ```TODO```, ou seja, definimos o que cada funcionalidade fará, quantas variáveis vai precisar, de que tipos de dados, como o controle de fluxo será, e assim sucessivamente.
+A useful technique to achieve this goal is ```TODO```. Imagine you were hired to make a program. The first step is to define its functionalities (dividing a bigger problem into smaller, less complex ones) and, for each functionality, we define the ```TODO```, in other words, we define what each functionality will do, how many variables it will need, which data types, how the flow control will be and so on.
 
-Eu espero que, a partir de agora, você passe a olhar todos os problemas desta maneira. Pensando em quais passos você terá que dar para resolvê-los. E olhar para o que estamos aprendendo como novas ferramentas e novas maneiras de fazer o mesmo. Existem diversas formas de resolver o mesmo problema e cada um usará as ferramentas de sua maneira.
+I hope that, from now on, you'll look at problems this way. Thinking about which steps you'll have to take to solve them. And look to what we're learning as new tools and new ways of doing the same. There are multiple ways to solve the same problem, and each will use the tools in a different way.
 
 ---
 
-## Lista | List
+## List
 
-A lista é um tipo de dado que contém um ou mais elementos ordenados. Dentro de uma lista nós podemos ter strings, números, outra listas, entre outros.
+A list is a data type that contains one or more ordered elements. Within a list we can have strings, numbers, other lists, among others.
 
 ```python
 my_list = ['Hello', 'World', 1, 2.0, 3]
@@ -29,16 +29,16 @@ print(my_list)
 
 ![[32 - lists_1.png]]
 
-Neste exemplo temos uma lista com 5 elementos de diversos tipos. Quando a imprimimos, python imprime a lista inteira, incluindo os colchetes.
+In this example we have a list with 5 elements of various types. When we print it, python prints the entire list, including the square brackets.
 
-> **_Nota:_** Python reconhece uma lista por causa dos colchetes.
+> **_Note:_** Python recognizes a list because of the square brackets.
 
-Antes de vermos exemplos práticos de uso de uma lista, precisamos aprender a manipulá-la.
+Before we see practical uses of a list, we need to learn how to manipulate it.
 
-### Acessando uma lista
-#### Acessando os elementos da lista
+### Accessing a list
+#### Accessing the elements of a list
 
-Como falamos anteriormente, listas são ordenadas, ou seja, todos os elementos de uma lista estão em uma posição fixa dentro dela. Sabendo disso, nós podemos acessá-los através de seu índice (index em inglês).
+As we've said, lists are ordered, which means that each element has a fixed position within them. Knowing this, we can access them by their index.
 
 ```python
 my_list = ['Hello', 'World', 1, 2.0, 3]
@@ -46,61 +46,61 @@ my_list = ['Hello', 'World', 1, 2.0, 3]
 print(my_list[0])
 ```
 
-Aqui estamos dizendo para python imprimir o elemento que se encontra na posição 0 dentro da lista.
+Here we're telling python to print the element that is found in the position or index 0 within the list.
 
 ![[33 - list_index.png]]
 
-> **_Importante:_** O índice sempre começa em 0. Então, numa lista de 5 elementos, nós teremos os índices 0, 1, 2, 3, 4. índices são sempre ```Int```.
+> **_Important:_** The index always begins at 0. So, in a list of 5 elements, we have indexes 0, 1, 2, 3, 4. Indexes are always ```int```.
 
+#### Accessing a list within a list
 
-#### Acessando lista dentro de uma lista
-
-Uma lista pode conter elementos de qualquer tipo, incluindo ```lists``` , ```dictionaries``` e outros tipos de dados que veremos mais à frente.
+A list can contain elements of various types, including ```lists``` , ```dictionaries``` and other types we'll see later.
 
 ```python
 names_and_numbers = [['Rebeca', 'Chelsey', 'Caroline'], [21, 73, -102]]  
 print(names_and_numbers[0])
 ```
 
-Quando tentamos acessar o índice 0 da lista ```names_and_numbers```, python imprimirá a lista de nomes.
+When we try to access the index 0 of the list ```names_and_numbers```, python will print the list of names.
 
 ![[34 - list_names.png]]
 
-Então como eu acesso a string ```'Rebeca'```?
+So how do I access the string ```'Rebeca'```?
 
 ```python
 print(names_and_numbers[0][0])
 ```
 
-Primeiro acessamos o elemento no índice 0 da lista ```names_and_numbers```, que é a lista de nomes, depois acessamos o elemento de índice 0 nela.
+First we access the element of index 0 of the list ```names_and_numbers```, which is the list of names, then we access the element of index 0 of it.
 
 ![[35 - list_rebeca.png]]
 
-#### Acessando o ultimo elemento
+#### Accessing the last element
 
-Python lê os elementos de uma lista da esquerda pra direita.
+Python reads the elements of a list from left to right.
 
 ```python
 fruits = ['Apple', 'Banana', 'Grape', 'Strawberry', 'Orange']
 #            [0]      [1]      [2]        [3]          [4]
 ```
 
-Quando passamos um índice negativo, python passa a ler a lista da direita para a esquerda.
+When we use negative indexes, python reads them from right to left.
 
 ```python
 fruits = ['Apple', 'Banana', 'Grape', 'Strawberry', 'Orange']
 #           [-5]     [-4]      [-3]       [-2]        [-1]
 ```
 
-Sendo assim, o elemento de índice ```-1``` é o ultimo elemento da lista.
+So the element of index ```-1``` is the last element of the list.
 
-### Modificando uma lista
+### Modifying a list
 
-Agora que nós sabemos como acessar cada elemento dentro de uma lista, vamos ver como modificá-los.
+Now that we've learned how to access each element in a list, we'll see how to 
+modify them.
 
-#### Substituindo elementos
+#### Replacing elements
 
-Para substituir um elemento na lista, nós primeiro acessamos o elemento e então atribuímos um valor, como fizemos com variáveis anteriormente.
+To replace a element in a list, we first must access the element and then assign a value, as we've done with variables previously.
 
 ```python
 fruits = ['Apple', 'Banana', 'Grape']
@@ -110,9 +110,9 @@ print(fruits)
 
 ![[36 - replacing_list_elements.png]]
 
-#### Adicionando elementos no final
+#### Adding elements to the end
 
-Para adicionar elementos no final de uma lista, nós utilizamos o método ```list_name.append()```.
+To add elements to the end of a list we use the method ```list_name.append()```.
 
 ```python
 fruits = []
@@ -122,11 +122,11 @@ fruits.append('Grape')
 print(fruits)
 ```
 
-Neste exemplo, estamos criando uma lista vazia chamada ```fruits``` e, a seguir, utilizamos o método ```append()``` para adicionar elementos no seu final, resultando em:
+In this example, we're creating an empty list and calling it ```fruits```,  we then use the method ```append()``` to add elements to its end, resulting in:
 
 ![[37 - append.png]]
 
-> **_Nota:_** Nós estudaremos métodos a fundo posteriormente. Por enquanto, apenas aprenda a usá-los.
+> **_Note:_** We'll study methods in a deeper manner in the future. For now, just learn how to use them.
 
 #### Adicionando elementos em posições específicas
 

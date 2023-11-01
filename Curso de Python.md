@@ -1197,7 +1197,7 @@ while i < 10:
 
 # Capítulo 3: Tipos de dados collections
 
-Existem tipos de dados mais avançados chamados de ```collections```, que funcionam como contêineres que pode armazenar um ou mais dados de tipos variados. Neste capítulo nós falaremos das collections que já vem com python, chamadas de _built-in collections_.
+Existem tipos de dados mais avançados chamados de ```collections```, que funcionam como contêineres que pode armazenar um ou mais dados de tipos variados. Neste capítulo nós falaremos das **collections que já vem com python**, chamadas de _built-in collections_. Existem diversas outras que podem ser
 
 ## Pensando como um programador
 
@@ -2741,6 +2741,27 @@ Neste caso, criamos um novo set com todos os elementos únicos que pertencem ao 
 
 ---
 
+## Frozenset
+
+Dados do tipo ```frozenset``` são sets imutáveis, ou seja, o original não pode ser modificado.
+
+Nós podemos criá-los através da função ```frozenset()```.
+
+Se não passarmos argumentos, a função cria um dado do tipo ```frozenset``` vazio. Caso passemos um dado iterável como argumento para a função, ela faz type casting e transforma o dado em um frozenset.
+
+``` python
+numbers = [1, 2, 3, 4, 5]  
+numbers = frozenset(numbers)  
+  
+print(numbers)
+```
+
+Neste exemplo passamos uma lista como argumento, fazemos o type casting para frozenset e este é o resultado:
+
+![[130 - frozenset.png]]
+
+---
+
 ## Mais type casting
 
 Como vimos anteriormente, nós podemos alterar o tipo de um dado através do que chamamos de type casting. E também podemos fazer isso com dados do tipo collection.
@@ -2781,7 +2802,7 @@ print(numbers)
 print(type(numbers))
 ```
 
-![[130 - type_casting.png]]
+![[131 - type_casting.png]]
 
 > **_Nota:_** Nós aprenderemos posteriormente a criar nossas próprias classes.
 
@@ -2797,20 +2818,145 @@ print(dict(name_and_age))
 
 Neste exemplo, temos uma lista de dados do tipo ```tuple``` (mas poderia ser um set de tuples ou um tuple de tuples), e estamos convertendo-o para o tipo ```dict```.
 
-![[131 - type_casting_dict.png]]
+![[132 - type_casting_dict.png]]
+
+---
+## Exercício 10
+
+Dadas as listas abaixo:
+
+```python
+names1 = ['Rachel', 'Augusto', "Giorgio"]  
+names2 = ['Pedro', 'Conan', 'Rachel',]  
+names3 = ['Conan', 'Giorgio', 'Rodrigo']
+```
+
+1. Imprima na tela os elementos que aparecem em uma lista mas não nas outras.
+2. Imprima na tela todos os elementos das três listas sem duplicações.
+3. Crie um programa para checar se a lista abaixo tem números repetidos e imprima na tela "Sim, tem números repetidos." ou "Não tem números repetidos".
+
+```python
+numbers = [12, 7, 5, 46, 32, 26, 1, 90, 88, 7, 12, 26, 1]
+```
 
 ---
 
 ## Função zip()
 
+A função ```zip()``` recebe 2 ou mais dados iteráveis como argumento e os transforma em um objeto do tipo ```zip```, que contém um conjunto de tuples e é iterável. Eu sei que soa muito complicado mas com exemplos tudo ficará mais claro.
+
+```python
+positions = [1, 2, 3]  
+months = ["January", "February", "March"]  
+my_zip = zip(positions, months)  
+
+print(my_zip)
+```
+
+Neste exemplo temos duas listas e estamos utilizando a função ```zip()``` para uni-los. Se tentarmos imprimir diretamente, python imprimirá que é um objeto do tipo ```zip``` e onde ele se encontra na memória.
+
+![[133 - zip_1.png]]
+
+Objetos do tipo ```zip``` são iteráveis, então podemos utilizar um loop para acessar seus elementos.
+
+```python
+positions = [1, 2, 3]  
+months = ["January", "February", "March"]  
+my_zip = zip(positions, months)  
+  
+for element in my_zip:  
+    print(element)
+```
+
+![[134 - zip_2.png]]
+
+Ao acessar seus elementos, podemos ver que o objeto do tip ```zip``` pegou os elementos de cada lista e criou tuples. Primeiro elemento com primeiro elemento, segundo elemento com segundo elemento, e assim por diante.
+
+Então o object do tipo ```zip``` contém um ou mais elementos do tipo ```tuple```. E nós podemos usar type casting para transformar um objeto ```zip``` em uma lista, um set, um tuple, ou até um dict.
+
+No exemplo abaixo, o transformamos em uma lista de tuples:
+
+```python
+positions = [1, 2, 3]  
+months = ["January", "February", "March"]  
+zip_list = list(zip(positions, months))  
+  
+print(zip_list)
+```
+
+![[135 - zip_3.png]]
+
+Já neste exemplo, o transformamos em um dict:
+
+```python
+positions = [1, 2, 3]  
+months = ["January", "February", "March"]  
+zip_dict = dict(zip(positions, months))  
+  
+print(zip_dict)
+```
+
+![[136 - zip_4.png]]
+
+> **_Importante:_** Só é possível transformar um objeto do tipo ```zip``` em um objeto do tipo ```dict``` quando temos no zip apenas tuples de tamanho 2, pois dicts só aceitam pares de elementos.
+
+### Iteráveis de tamanhos diferentes
+
+Quando nós passamos iteráveis de tamanhos diferentes como argumentos para a função ```zip()```, o objeto zip terá o tamanho igual ao do menor argumento. Deixa eu explicar isso com um exemplo:
+
+```python
+positions = [1, 2, 3, 4, 5, 6, 7]  
+months = ["January", "February", "March"]  
+zip_list = list(zip(positions, months))  
+  
+print(zip_list)
+```
+
+Aqui estamos passando dois argumentos para a função ```zip()```, a lista ```positions``` tem um tamanho de 7, ou seja, ela tem 7 elementos, enquanto a lista ```months``` tem apenas 3. Neste caso, o objeto zip criado terá um tamanho igual ao tamanho do menor argumento passado, que neste caso é a lista ```month```. O tamanho do objeto zip será 3.
+
+![[137 - zip_5.png]]
 
 ---
 
-## Qual tipo de dado escolher
+## Otimização
+
+Eu sei que nós vimos muitos tipos de dados e seus diferentes usos. E como sei qual dado usar ou quando usar? Não existe resposta certa pra esta pegunta. Existem diversas soluções para um mesmo problema. Você pode chegar ao mesmo resultado utilizando diferentes tipos de dados e cabe a você escolher o que achar melhor.
+
+Com isso em mente, é importante falarmos da otimização. Dizemos que um código é otimizado quando ele é eficiente. Ele usa a quantidade mínima de memória necessária para funcionar ou chega a um resultado de maneira rápida. E escolher o tipo de dado necessário para seu algoritmo faz diferença. Por exemplo, se você sabe que um conjunto de dados não será e nem poderá ser alterado durante a execução de um programa, utilize um dado do tipo ```tuple``` ao invés de uma lista, pois o tuple tem estas características especificamente - ele é otimizado para isto.
+
+Quando nós criamos mais de um algoritmo para resolver um mesmo problema, nós podemos avaliar qual é o mais eficiente através do que chamamos de notação Big O, em inglês, Big O Notation. Imagine que você criou dois algoritmos que modificam dados do tipo ```string```. Quando trabalhamos com strings curtas, ambos os algoritmos são bem rápidos e resolvem o problema em milésimos de segundo. Mas e quando trabalhamos com strings com mil caracteres, ou cem mil caracteres, qual deles seria mais rápido? A Notação Big O seve para responder essa pergunta, avaliando-os e classificando-os.
+
+### O mais importante é fazer funcionar
+
+Eu não acredito que seja relevante estudarmos otimização por enquanto. Então não quero que você se preocupe com isso. Estou comentando apenas para que você saiba que existe e que, posteriormente, caso queira, possa se aprofundar mais por conta própria.
+
+Eu fiz questão de colocar no título para que isso fique bem claro: A otimização vem depois, caso haja necessidade. **O primeiro e mais importante passo é fazer o programa funcionar.** Se você quiser voltar e otimizar seu código posteriormente, ou caso haja necessidade,  okay. Excelente. Mas caso não veja necessidade, siga em frente.
+
+A intenção aqui é de que você conheça estes termos e tenha uma noção do que eles significam. É comum ouvir relatos de excelentes programadores que aprenderam sozinhos a programar e se sentiram completamente perdidos ao entrar na industria e ouvir estes termos técnicos dos quais nunca haviam ouvido falar.
+
+Então não se preocupe com isso por agora. Siga estudando pois primeiro é necessário aprender como fazer, depois nós podemos focar como melhorar o que foi feito.
 
 ---
 
-## Revisitando variáveis
+## Bonus: Uma análise mais aprofundada sobre variáveis
+
+Neste ponto você já está bem confortável com variáveis, com o que são e como usá-las. Então agora eu gostaria de explicá-las um pouco mais a fundo.
+
+Na maioria dos cursos que eu fiz e livros que li, variáveis eram descritas como sendo "diferentes das variáveis que existem na matemática". E se você já fez outros cursos ou já viu variáveis sendo explicadas desta forma, provavelmente ficou confuso como eu fiquei. Porque se pararmos pra pensar, as variáveis que usamos até agora são idênticas às variáveis matemáticas. Na matemática, uma variável ```x``` tem um valor que pode ser um número inteiro ou um número decimal, por exemplo. Então por que é explicado dessa forma? Esta é uma pergunta que, na maioria dos cursos, fica sem resposta; então nós a responderemos aqui.
+
+Nós sabemos que as variáveis são armazenadas em endereços na memória. Quando criamos uma variável e a damos um nome, este nome é simplesmente uma referência, ou apelido, para o endereço na memória onde este dado está localizado.
+
+Imagine que você está voltando para casa e encontra um amigo, ele pergunta "Aonde você está indo?" e você responde "Estou indo para a minha casa." Quando você diz "minha casa", seu amigo entende que você está se referindo ao endereço, que Rua Muçarela, número 70, Bairro Queijo. Então ou você pode falar o seu endereço, ou pode usar uma referência mais descritiva. E é assim que funciona com as variáveis.
+
+Quando criamos uma variável chamada ```hello``` e chamamos a função ```print()``` para imprimi-la na tela, python entende que quando você diz ```hello```, você está se referindo ao dado que se encontra naquele endereço na memória.
+
+E é assim que a variável computacional se difere da variável matemática. Ela não é simplesmente um nome com um valor, ela é um nome que aponta para um endereço na memória, onde um valor se encontra.
+
+---
+
+
+
+
 
 
 
