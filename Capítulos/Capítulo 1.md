@@ -156,7 +156,7 @@ print()
 
 É uma função que imprime na tela os dados dentro dos parênteses.
 
-> **_Nota:_** Nós estudaremos funções a fundo posteriormente. Por enquanto, não ligue pra elas.
+> **_Nota:_** Nós estudaremos funções a fundo posteriormente. Por enquanto, não ligue para elas.
 
 ### Linguagens compiladas x interpretadas
 
@@ -179,13 +179,13 @@ message = "Hello, world"
 print(message)
 ```
 
-Neste exemplo, estamos separando um espacinho na memória e chamando de ```message```, depois pegamos o dado ```Hello, world``` e colocamos dentro dela. Em seguida, chamamos a função ```print()``` novamente:
+Neste exemplo, estamos separando um espacinho na memória e chamando de ```message```, depois pegamos o dado ```Hello, world``` e colocamos dentro dele. Em seguida, chamamos a função ```print()``` novamente:
 
 ![[4 - resultado_variable.png]]
 
 Como podemos ver, temos o mesmo resultado. Python imprimiu o valor atribuído à variável ```message```.
 
-> **_Importante:_** O sinal de igual (=) não é o igual da matemática. O igual comparativo/matemático nós veremos mais pra frente. Em python (=) é chamado de "Assign operator" ou operador de atribuição. Ele pega o valor do dado e atribui a uma variável.
+> **_Importante:_** O sinal de igual ```=``` não é o igual da matemática. O igual comparativo/matemático nós veremos mais pra frente. Em python ```=``` é chamado de "Assign operator" ou operador de atribuição. Ele pega o valor do dado e atribui a uma variável.
 
 Tá, e onde isto é usado? Pensa nos jogos que você já jogou. O número de vidas, seu HP, os nomes dos personagens, seus atributos, sua munição. Tudo isso é guardado dentro de variáveis.
 
@@ -357,7 +357,7 @@ name = input("Qual o seu nome?\n")
 print(f"Hello, {name}")
 ```
 
-Na ```f string``` todas as variáveis ficam dentro de chaves no meio da string. python entende que são variáveis e as substitui.
+Na ```f string``` todas as variáveis ficam dentro de chaves no meio da string. Python entende que são variáveis e as substitui.
 
 ---
 
@@ -472,7 +472,7 @@ print(f"Resultado não formatado: {number}")
 print(f'Resultado formatado: {"%.2f" % number}')
 ```
 
-aqui estamos somando um ```int``` e um ```float```, então sabemos que o resultado será um ```float``` e python vai tentar deixá-lo o mais preciso possível. Na terceira linha, repare que a variável não foi sozinha. Nós passamos ```"%.2f" % nome_da_variável```, que vai pegar o valor passado na variável e arredondar pra duas casas decimais.
+aqui estamos somando um ```int``` e um ```float```, então sabemos que o resultado será um ```float``` e python tentará deixá-lo o mais preciso possível. Na terceira linha, repare que a variável não foi sozinha. Nós passamos ```"%.2f" % nome_da_variável```, que vai pegar o valor da variável e arredondar pra duas casas decimais.
 
 > **_Nota:_** O ```"%.2f"``` sempre deve vir entre aspas. O ```2``` é a quantidade de casas decimais que você quer.
 
@@ -648,7 +648,7 @@ Assim como as variáveis, as constantes são espacinhos na memória nos quais da
 
 Quando você tem certeza de que o valor de um dado não será alterado durante a execução do programa, pode escrevê-lo como uma constante. Desta forma, a linguagem saberá que aquele valor não mudará e, por trás dos panos, fará as otimizações necessárias para funcionar de maneira mais eficiente.
 
-Tá, mas como faço isto em python? Então, python não tem o tipo de dado "constante". Porém, como este dado existe em outras linguagens, nós seguimos a mesma nomenclatura para deixar claro que a variável deve ser tratada como uma constante, colocando seu nome em letras maiúsculas. Por exemplo:
+Tá, mas como faço isto em python? Então, python não tem o tipo de dado "constante". Porém, como este dado existe em outras linguagens, nós seguimos a mesma nomenclatura, colocando seu nome em letras maiúsculas. Pois assim deixamos claro para outros programadores ou para quando revisitarmos nosso código, que a variável deve ser tratada como uma constante. Por exemplo:
 
 ```python
 CHARACTER_NAME = Lonk

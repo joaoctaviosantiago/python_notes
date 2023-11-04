@@ -183,7 +183,7 @@ In this example, we're separating a little space in memory and calling it ```mes
 
 As we can see, we have the same result. Python printed the value assigned to the variable ```message```.
 
-> **_Important:_** The equal sign (=) is not the same as the mathematical sign. We'll see the comparative equal sign later. In python (=) is called _"Assign operator"_. It gets a value and assign it to a variable.
+> **_Important:_** The equal sign ```=``` is not the same as the mathematical sign. We'll see the comparative equal sign later. In python ```=``` is called _"Assign operator"_. It gets a value and assign it to a variable.
 
 Okay, but where is this used? Think of the games you've played. The number of lives, your HP, the name of the characters, their attributes, the ammo. All of this data is stored in variables.
 
@@ -645,7 +645,7 @@ Just like variables, constants are spaces in memory where data is stored. The di
 
 When you are sure that the value of a data will not be altered during the execution of the program, you can write it as a constant. This way, the language will know that the value will not change and, behind the scenes, will make optimizations to work in a more efficient manner.
 
-Okay, but how do I do this in python? So, python does not have a constant data type. However, since this data type exists in other languages, we follow the same naming conventions to make it clear that the variable should be treated as a constant, by making it's name capitalized. For example:
+Okay, but how do I do this in python? So, python does not have a constant data type. However, since this data type exists in other languages, we follow the same naming conventions and make its name capitalized. This way we make it clear to other programmers or to ourselves when we revisit our code, that the variable should be treated as a constant. For example:
 
 ```python
 CHARACTER_NAME = Lonk
