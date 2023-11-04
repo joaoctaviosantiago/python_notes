@@ -261,7 +261,7 @@ Como podemos ver, nós não precisamos explicitamente dizer a python o tipo de d
 String message = "Hello, world";
 ```
 
-Em java nós precisamos dizer que tipo de dado a variáveis deve esperar receber.
+Em java nós precisamos dizer que tipo de dado a variável deve esperar receber.
 
 Mas se python consegue reconhecer o tipo de dado, por que preciso saber dos diferentes tipos? Cada tipo tem suas regras de uso e interação. Nós vamos aprender mais sobre isso ao falar de cada um deles a seguir.
 
