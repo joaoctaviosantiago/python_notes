@@ -247,13 +247,21 @@ There are many data types, and each is treated by the language in a different wa
 Some languages are more strict and force us to specify the type of data a variable will take. These are known as _Statically Typed Languages_, and some examples are: Java, C, C++, C#, Kotlin, Go.
 Other languages are less demanding and check the type of data within the variable when the program runs. These are known as _Dynamically Typed Languages_, and some examples are: Python, JavaScript, Ruby, PHP.
 
-But if python can recognize them, why do I need to know all the different types? Each type has their own rules of usage and interaction. We'll learn more about these when we talk about them in the following sections.
+We've already created variables and assigned data to them, like this:
 
-Here is an example of a variable of type string in java, a statically typed language:
+```python
+message = "Hello, world"
+```
+
+As we can see, we did not have to explicitly tell python the type of data we're assigning to the variable. It can figure out the type. But in other languages, such as java, we do. Here is an example of a variable being created in java, a statically typed language:
 
 ```java
-String name = "João";
+String message = "Hello, world";
 ```
+
+In java we have to tell it what is the type of data the variable should expect.
+
+But if python can recognize them, why do I need to know all the different types? Each type has their own rules of usage and interaction. We'll learn more about these when we talk about them in the following sections.
 
 ### String
 

@@ -247,16 +247,23 @@ Além do google e o stackoverflow, agora também temos inteligencias artificiais
 Existem diversos tipos de dados, e cada um é tratado de uma forma diferente por trás dos panos pela linguagem. A interação entre os dados vai depender do seu tipo. 
 
 Algumas linguagens são mais rigorosas e nos forçam a especificar o tipo de dado que cada variável vai receber. Estas são conhecidas como _Statically Typed Languages_ (Linguagens estaticamente tipadas), e alguns exemplos são Java, C, C++, C#, Kotlin, Go.
-Outras linguagens são menos exigentes e checam o tipo de dado quando o programa roda. Elas são conhecidas como _Dynamically Typed Languages_ (Linguagens dinamicamente
-tipadas), e alguns exemplos são: Python, JavaScript, Ruby, PHP.
+Outras linguagens são menos exigentes e checam o tipo de dado quando o programa roda. Elas são conhecidas como _Dynamically Typed Languages_ (Linguagens dinamicamente tipadas), e alguns exemplos são: Python, JavaScript, Ruby, PHP.
 
-Mas se python consegue reconhecer o tipo de dado, por que preciso saber dos diferentes tipos? Cada tipo tem suas regras de uso e interação. Nós vamos aprender mais sobre isso ao falar de cada um deles a seguir.
+Nós já criamos variáveis e atribuímos dados a elas, assim:
 
-Aqui está um exemplo de variável do tipo String em java, uma linguagem estaticamente tipada:
+```python
+message = "Hello, world"
+```
+
+Como podemos ver, nós não precisamos explicitamente dizer a python o tipo de dado que será atribuído à variável. Ele consegue descobrir o tipo sozinho. Mas em outras linguagens, como java, nós precisamos. Aqui está um exemplo de uma variável sendo criada em java, uma linguagem estaticamente tipada.
 
 ```java
-String name = "João";
+String message = "Hello, world";
 ```
+
+Em java nós precisamos dizer que tipo de dado a variáveis deve esperar receber.
+
+Mas se python consegue reconhecer o tipo de dado, por que preciso saber dos diferentes tipos? Cada tipo tem suas regras de uso e interação. Nós vamos aprender mais sobre isso ao falar de cada um deles a seguir.
 
 ### String
 
