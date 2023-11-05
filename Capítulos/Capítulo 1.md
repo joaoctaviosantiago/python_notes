@@ -122,7 +122,7 @@ Uma vez instalado, crie um novo projeto e espere um bocadinho. A primeira vez qu
 
 VSCode é um editor de texto otimizado para programação e utiliza plugins para melhorar a vida do programador. Caso esteja utilizando um computador mais antigo ou lento, recomendo utilizar o Visual Studio Code com o plugin de python. É fácil de encontrar no google como instalar plugins. O download pode ser feito [neste link](https://code.visualstudio.com/).
 
-Uma vez instalado, abra o programa e clique em "Open folder" e escolha a pasta onde seus projetos e arquivos ficarão. Após isto, crie um arquivo ```nome_do_arquivo.py``` clicando com o botão direito do mouse no painel "EXPLORER", do lado esquerdo da tela.
+Uma vez instalado, abra o programa, clique em "Open folder" e escolha a pasta onde seus projetos e arquivos ficarão. Após isto, crie um arquivo ```nome_do_arquivo.py``` clicando com o botão direito do mouse no painel "EXPLORER", do lado esquerdo da tela.
 
 Posteriormente nós utilizaremos o VSCode para alguns projetos.
 

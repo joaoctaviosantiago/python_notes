@@ -120,7 +120,7 @@ Once installed, create a new project and wait a little. The first time a project
 
 VSCode is a text editor optimized for coding and it utilizes plugins to improve the life of the programmer. If you are using and older or slower computer, I recommend using VSCode with the python plugin. It is easy to find on google how to install said plugins. The download can be done from [this link](https://code.visualstudio.com/).
 
-Once installed, create a file ```filename.py```.
+Once installed, open the program, click in "Open folder" and select the folder in which your files will be. After this, create a file ```filename.py``` by clicking with the right button of the mouse on the "EXPLORER" panel, on the left side of the screen.
 
 Later in the course we'll utilize VSCode for some projects.
 
