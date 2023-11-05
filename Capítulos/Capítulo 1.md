@@ -122,7 +122,7 @@ Uma vez instalado, crie um novo projeto e espere um bocadinho. A primeira vez qu
 
 VSCode é um editor de texto otimizado para programação e utiliza plugins para melhorar a vida do programador. Caso esteja utilizando um computador mais antigo ou lento, recomendo utilizar o Visual Studio Code com o plugin de python. É fácil de encontrar no google como instalar plugins. O download pode ser feito [neste link](https://code.visualstudio.com/).
 
-Uma vez instalado, crie um arquivo ```nome_do_arquivo.py```.
+Uma vez instalado, abra o programa e clique em "Open folder" e escolha a pasta onde seus projetos e arquivos ficarão. Após isto, crie um arquivo ```nome_do_arquivo.py``` clicando com o botão direito do mouse no painel "EXPLORER", do lado esquerdo da tela.
 
 Posteriormente nós utilizaremos o VSCode para alguns projetos.
 
@@ -132,7 +132,7 @@ Posteriormente nós utilizaremos o VSCode para alguns projetos.
 
 ## Meu primeiro programa
 
-Por padrão, a primeira coisa que fazemos para confirmarmos que um programa funciona, é dizer _"Hello, world"_ , e é isso que vamos fazer. Alguns IDE's ou editores de texto já criam um arquivo python por padrão ao iniciar um projeto, outros não. Caso o arquivo não tenha sido criado, crie um arquivo chamado "hello.py". O ```.py``` é o que define que isto é um arquivo python. Escreva:
+Por padrão, a primeira coisa que fazemos para confirmarmos que um programa funciona, é fazê-lo dizer _"Hello, world"_ , e é isso que vamos fazer. Alguns IDE's ou editores de texto já criam um arquivo python por padrão ao iniciar um projeto, outros não. Caso não tenha sido criado, crie um arquivo chamado "hello.py". O ```.py``` é o que define que isto é um arquivo python. Escreva:
 
 ```python
 print("Hello, world")
@@ -198,10 +198,10 @@ Variáveis podem ter qualquer nome. Porém, existem algumas regras a serem segui
 
 > **_Nota:_** Existem alguns estilos de nomenclatura. Entre eles estão:
 > 
-> * **camelCase:** A primeira palavra é com letra minuscula e todas as outras são com letra maiúscula
-> * **PascalCase:** A primeira letra de cada palavra começa com letra maiúscula
-> * **snake_case:** Todas as palavras são com letra minúscula e separadas por underline
-> * **kebab-case:** Todas as palavras são com letra minúscula e separadas por hífen
+> * **camelCase:** A primeira palavra é com letra minúscula e todas as outras são com letra maiúscula.
+> * **PascalCase:** A primeira letra de cada palavra começa com letra maiúscula.
+> * **snake_case:** Todas as palavras são com letra minúscula e separadas por underline.
+> * **kebab-case:** Todas as palavras são com letra minúscula e separadas por hífen.
 > 
 > Python recomenda _snake_case_.
 
