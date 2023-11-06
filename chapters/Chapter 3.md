@@ -128,9 +128,9 @@ In this example, we're creating an empty list and calling it ```fruits```,  we t
 
 > **_Note:_** We'll study methods in a deeper manner in the future. For now, just learn how to use them.
 
-#### Adicionando elementos em posições específicas
+#### Adding elements to specific positions
 
-O método que utilizamos para adicionar um elemento em uma lista em uma posição especifica é o ```insert()```. Ao utilizá-lo, nós precisamos passar o índice e o dado que queremos adicionar.
+The method we utilize to add an element to a list in a specific position is ```insert()```.  When utilizing it, we need to pass the index and the data we'd like to add.
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -138,13 +138,13 @@ fruits.insert(1, "apple")
 print(fruits)
 ```
 
-Nós estamos dizendo para python adicionar a ```string "apple"``` no índice 1 da lista ```fruits```. É importante ressaltar que python não vai substituir "Banana" por "apple", ele vai empurrar banana pra frente e adicionar "apple" onde "Banana" estava.
+We are telling python to add a ```string "apple"``` into index 1 of the ```fruits``` list. It is important to note that python will not replace "Banana" with "apple". It will push "Banana" forward and add "apple" where "Banana" was.
 
 ![[38 - insert.png]]
 
-#### Removendo elementos por índice
+#### Removing elements by index
 
-Para remover elementos de uma lista nós utilizamos o comando ```del```.
+To remove elements of a list we utilize the ```del``` command.
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -154,27 +154,27 @@ print(fruits)
 
 ![[39 - del.png]]
 
-Com o comando ```del``` nós simplesmente deletamos o elemento da lista.
+With the ```del``` command we can simply delete an element of a list.
 
-#### Removendo e atribuindo um elemento da lista com pop()
+#### Removing and assigning an element from a list with pop()
 
-O método ```pop()``` tem 3 usos. Ele pode:
+The method ```pop()``` has 3 uses. It can:
 
-1. remover o ultimo elemento da lista
-2. remover um elemento específico da lista
-3. remover o elemento e atribuí-lo a uma variável
+1. remove the last element from a list
+2. remove a specific element from a list
+3. remove the element and assign it to a variable
 
-Quando apenas utilizamos o método ```pop()```, ele removerá o ultimo elemento da lista:
+When we only use the method ```pop()```, it will remove the last element from a list:
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
-fruits.pop()  
+fruits.pop()
 print(fruits)
 ```
 
 ![[40 - pop_1.png]]
 
-Quando passamos o índice do elemento como argumento, ele removerá o elemento especifico. No exemplo a seguir, removeremos o elemento do índice 0:
+When we pass the index of an element as an argument, it will remove the specific element. In the following examples, we'll remove the element in index 0.
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -184,7 +184,7 @@ print(fruits)
 
 ![[41 - pop_2.png]]
 
-Quando queremos remover o item de uma lista e atribuí-lo a uma variável, também utilizamos o ```pop()```
+When we want to remove the item from a list and assign it to a variable, we also use ```pop()```
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -193,13 +193,13 @@ print(fruits)
 print(my_favorite_fruit)
 ```
 
-Neste último caso, nós não estamos apenas acessando o elemento na lista e atribuindo-o à variável. Nós estamos removendo ```'Banana'``` e atribuindo à variável ```my_favorite_fruit```
+In this example, we are not only accessing the element in the list and assigning it to the variable. We're removing ```'Banana'``` and assigning it to the variable ```my_favorite_fruit```
 
 ![[42 - pop_2.png]]
 
-#### Removendo um elemento por valor
+#### Removing an element by value
 
-Até agora só vimos maneiras de remover um elemento por índice.  Mas e quando sabemos o valor e não sabemos onde ele se encontra na lista? Para estes casos, utilizamos o método ```remove()```.
+So far we've only seen ways of removing an element by index. But what about when we know the value but not where it is? In these cases we utilize the ```remove()``` method.
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -209,9 +209,9 @@ print(fruits)
 
 ![[43 - remove.png]]
 
-Aqui estamos dizendo para python encontrar a palavra 'Banana' na lista e removê-la.
+Here we are telling python to find the word 'Banana' in the list and remove it.
 
-> **_Importante:_** O método ```remove()``` remove apenas o primeiro elemento com este valor!
+> **_Important:_** The ```remove()``` method removes only the first instance of the value!
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape', 'Banana']  
@@ -221,9 +221,9 @@ print(fruits)
 
 ![[44 - remove_2.png]]
 
-#### Combinando listas
+#### Combining lists
 
-Listas podem ser concatenadas, ou combinadas, com o operador ```+```:
+Lists can be concatenated, or combined, with the ```+``` operator:
 
 ```python
 numbers = [1, 2, 3]  
@@ -236,9 +236,9 @@ print(numbers_and_animals)
 
 ![[45 - list_concatenation_1.png]]
 
-#### Repetindo os valores
+#### Repeating the values
 
-Quando multiplicamos uma lista por uma ```int```, repetimos seus elementos dentro dela, como vemos abaixo:
+When we multiple a list by an ```int```, we repeat its elements inside of it, as we can see below:
 
 ```python
 animals = ['cat', 'dog', 'capybara']  
@@ -247,11 +247,11 @@ print(animals * 2)
 
 ![[46 - list_multiplication_1.png]]
 
-### Loops e listas
+### Loops and lists
 
-Agora que já sabemos como manipular uma lista, nós podemos falar do seu verdadeiro poder. Nós podemos utilizar um loop para iterar por todos os elementos da lista e executar um bloco de código para cada um dos elementos. Calma, eu sei que tá começando a soar complicado de novo. Então vamos ver isso com calma.
+Now that we know how to manipulate a list, we can talk about its true power. We can utilize a loop to iterate through all the elements of a list and execute a block of code for each of the elements. Wait, I know this is starting to sound complicated again. So let's go step by step.
 
-Imagina que nós temos uma lista de nomes de convidados para uma festa. Nós queremos criar um programa que dirá "Olá" para todos os convidados. Com o que aprendemos até agora, fazer algo assim seria muito trabalhoso.
+Imagine that we are having a party and we have a list of guest names. We could make a program that will say "Hello" to all the guests. With what we've learned so far, making something like this would be a lot of work.
 
 ```python
 print("Hello, Joseph!")
@@ -261,7 +261,20 @@ print("Hello, Sabine!")
 print("Hello, Jessica!")
 ```
 
-Já que estamos lidando com uma grande quantidade de valores, podemos utilizar loops e listas em conjunto para lidar com isso.
+Since we're dealing with a huge number of values, we can utilize loops and lists together to tackle this problem.
+
+With what we've seen so far, we can access the elements of a list by their indexes, so we can use a ```for```loop to do it.
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']
+
+for index in range(len(names)):
+	print(names[index])
+```
+
+Here I'm creating a ```for``` loop that starts at 0 and goes up to the length of the ```names``` list. The ```names``` list has 5 elements, so the ```range()``` function will go from 0 to 5, non-inclusive. In the first iteration, python will print ```names[0]```, which is the value ```"Joseph"```, in the second iteration, it will print ```names[1]```, which is ```"Johnny"```  and so on.
+
+This is how you'd normally do it in other languages. Python, however, offers us a much more elegant solution to this problem.
 
 ```python
 names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
@@ -270,17 +283,17 @@ for name in names:
     print(f"Hello, {name}!")
 ```
 
-Neste código, o ```for``` loop vai começar e em sua primeira iteração, pegará o primeiro valor em ```names``` e atribuirá à variável ```name```, ou seja, na primeira iteração ```name = "joseph"```, python imprimirá a mensagem na tela, e o loop voltará ao começo, na segunda iteração, ```name = "Johnny"```, e assim sucessivamente até chegar ao final da lista, resultando em:
+In this code, the ```for``` loop will begin and, in its first iteration, it will get the first element in ```names``` and assign it to the variable ```name```. In other words, in the first iteration ```name = "joseph"```. Python will print the message on screen, and the loop will start again. In the second iteration, ```name = "Johnny"```, and so on until it reaches the end of the list, resulting in:
 
 ![[47 - loops_and_lists_1.png]]
 
-Caso ainda não tenha ficado claro, tente ler o código da seguinte maneira: "para cada nome em ```names```, faça:".
+In case it still isn't clear, try reading the code like this: "for each name in ```names```, do:".
 
-Como você pode ver, com poucas linhas de código nós podemos modificar diversos valores de uma única vez combinando listas e loops!
+As you can see, with only a few lines of code we can modify multiple values at once by combining lists and loops!
 
-### Os operadores ```in``` e ```not in```
+### The ```in``` and ```not in``` operators
 
-Nós usamos os operadores ```in``` e ```not in``` para checar se um valor está na lista ou não, respectivamente.
+We use the ```in``` and ```not in``` operators to check if a value is in a list or not, respectively.
 
 ```python
 names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
@@ -289,7 +302,7 @@ if "Johnny" in names:
     print("yay")
 ```
 
-Este código checa se a ```string``` "Johnny" faz parte da lista ```nomes``` e imprime "yay" caso faça.
+This code checks if the ```string``` "Johnny" is part of the list ```names``` and prints "yay" in case it is.
 
 ![[48 - in_operator.png]]
 
@@ -300,15 +313,15 @@ if "Rebeca" not in names:
     print("boo")
 ```
 
-Já este, checa se a ```string``` "Rebeca" não faz parte da lista ```names``` e, caso não faça, imprime "boo" na tela.
+In this code, however, it checks if the ```string``` "Rebeca" is not a part of the list ```names``` and, in case it isn't, it prints "boo" on screen.
 
 ![[49 - not_in_operator.png]]
 
-> **_Importante:_** Letras maiúsculas e minúsculas são vistas como diferentes pelo computador. Sendo assim ```"Rebeca"``` não é a mesma coisa que ```rebeca```.
+> **_Important:_** Uppercase and lowercase letters are seen differently by the computer. So ```"Rebeca"``` is not the same as ```rebeca```.
 
 ### List Slices
 
-Nós já sabemos como acessar um elemento dentro de uma lista, ou acessar todos os elementos de uma lista. Mas e quando nós quisermos acessar apenas alguns elementos dentro da lista? Uma opção seria criar um ```for```loop e utilizar condições para determinar quais elementos serão selecionados. Mas python nos permite fazer isso de uma forma: utilizando list slices.
+We already know how to access an element within a list, or how to access all the elements of a list. But what about when we only want to access some elements of a list? One option would be to create a ```for```loop and use conditions to determine which elements will be selected. But python allows us to do it in a different way: using list slices.
 
 ```python
 names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
@@ -316,21 +329,21 @@ names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']
 print(names[2:5])
 ```
 
-Neste bloco de código, nós estamos dizendo à python para imprimir os elemento na lista ```names``` do índice 2 até o 5, não incluso, ou seja, índices 2, 3 e 4.
+In this block of code, we are telling python to print the elements of the ```names``` from index 2 to index 5, non-inclusive. So indexes 2, 3, and 4.
 
 ![[50 - list_slices_1.png]]
 
-List slices funcionam da mesma forma que a função ```range()``` que aprendemos anteriormente.
+List slices work the same way as the ```range()``` function we've learned previously.
 
 ```python
-list_name[começo:fim:passo]
+list_name[beginning:end:step]
 ```
 
-> **_Nota:_** O valor padrão para ```passo``` é 1, o que significa "de um em um".
+> **_Note:_** The standard value for ```step``` is 1, which means "one by one".
 
-> **_Importante:_**  Não esquecer que o slice vai de um número até o outro sem incluí-lo. Se eu digo ```[0:3]```, eu estou dizendo do 0 até o 3 sem incluí-lo, ou seja, 0, 1, 2.
+> **_Important:_**  Do not forget that the slice goes from one number to the next, non-inclusively.  If I say ```[0:3]```, I'm saying from 0 up to but not including 3, in other words, 0, 1, 2.
 
-Quando não colocamos um valor para o começo, estamos dizendo "comece do índice 0".
+When we don't put in a value for the beginning, we're saying "start from index 0".
 
 ```python
 numbers = [10, 20, 30, 40, 50, 60]  
@@ -339,11 +352,11 @@ my_lucky_numbers = numbers[:3]
 print(my_lucky_numbers)
 ```
 
-Neste bloco de código nós temos um variável do tipo ```list``` chamada ```numbers```, e estamos criando uma nova variável chamada ```my_lucky_numbers``` que também será uma lista, e estamos atribuindo a ela os elementos do começo da lista ```numbers``` até o elemento de índice 3, não incluso.
+In this block of code, we have a variable of type ```list``` called ```numbers```, and we're making a new variable called ```my_lucky_numbers```, which is also a list, and we're assigning to it the elements from the beginning of the ```numbers``` list up to the element of index 3, non-inclusive.
 
 ![[51 - list_slices_2.png]]
 
-Quando não colocamos um valor para o fim, estamos dizendo "vá até o final".
+When we don't put in a value for end, we're saying "go until the end".
 
 ```python
 numbers = [10, 20, 30, 40, 50, 60]  
@@ -354,7 +367,7 @@ print(my_lucky_numbers)
 
 ![[52 - list_slices_3.png]]
 
-Você consegue me dizer o que o bloco de código no próximo exemplo faz?
+Can you tell me what the block of code of the next example does?
 
 ```python
 numbers = [10, 20, 30, 40, 50, 60]  
@@ -363,24 +376,24 @@ my_lucky_numbers = numbers[::2]
 print(my_lucky_numbers)
 ```
 
-Para descobrirmos, precisamos lembrar que list slices funcionam com três valores ```[começo:fim:passo]```. Não passamos nenhum número para o começo, então estamos dizendo "comece do índice 0"; também não passamos nenhum número para o fim, o que quer dizer "vá até o final"; e, por fim, estamos dizendo para ir de 2 em 2. Este código então irá ler toda a lista e atribuirá à ```my_lucky_numbers``` os elementos de índice 0, 2 e 4.
+To find out, we need to remember that list slices work with three values ```[começo:fim:passo]```. We didn't pass any value for the beginning, so we're starting from index 0; we also didn't pass any value for the end, and this means "go until the end"; and, lastly, we're telling python to go in twos. This code will then read the entire list and it will assign to ```my_lucky_numbers``` the elements in indexes 0, 2 and 4.
 
 ![[53 - list_slices_4.png]]
 
-### Métodos mais comuns
+### Most common methods
 
-Posteriormente nós veremos com calma o que são métodos e como criá-los. Por enquanto, só precisamos saber que eles são chamados utilizando a "Notação de ponto", em inglês, "Dot Notation", que nós já utilizamos:
+Later we'll see in detail what methods are and how to create them. But, for now, we only need to know that we call them utilizing the "Dot Notation", which we have utilized before:
 
 ```python
 numbers = []
 numbers.append(1)
 ```
 
-Como podemos ver, dot notation nada mais é do que utilizar um ponto para chamar um método. Nós veremos outros métodos antes de aprender como criá-los, e todos eles serão chamados através da dot notation.
+As we can see, the dot notation is nothing more than utilizing a dot to call a method. We'll see other methods before we learn how to create them, and all of them will be called via dot notation.
 
 #### index()
 
-O método ```index()``` retorna, ou seja, têm como resultado, o índice de um elemento da lista.
+The ```index()``` method returns, in other words, has as a result, the index of an element from a list.
 
 ```python
 names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
@@ -392,7 +405,7 @@ print(jessica_index)
 
 #### sort()
 
-O método ```sort()``` organiza uma lista, seja em ordem do menor para o maior ou em ordem alfabética.
+The ```sort()``` method organizes the list, in ascending order, or in alphabetical order.
 
 ```python
 names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
@@ -402,7 +415,7 @@ print(names)
 
 ![[55 - sort_method_1.png]]
 
-Nós também podemos organizar a lista de maneira reversa com ele:
+We can also organize the list in reverse, or descending order with it:
 
 ```python
 names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
@@ -414,7 +427,7 @@ print(names)
 
 #### reverse()
 
-O método ```reverse()``` reverte a ordem da lista.
+The ```reverse()``` method reverses the order of a list.
 
 ```python
 names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
@@ -484,6 +497,7 @@ numbers = [6, 2, 5, 6, 2, 7, 1, 9, 1, 7, 6, 4, 2, 6]
 ```
 
 3. Ainda utilizando a lista anterior, crie um programa que ache o número que mais se repete na lista, imprima-o na tela, juntamente com quantas vezes ele se repete.
+4. **Bonus:** Do question 3 without using the ```count()``` method.
 
 ---
 

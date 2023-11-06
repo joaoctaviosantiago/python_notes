@@ -130,7 +130,7 @@ Neste exemplo, estamos criando uma lista vazia chamada ```fruits``` e, a seguir,
 
 #### Adicionando elementos em posições específicas
 
-O método que utilizamos para adicionar um elemento em uma lista em uma posição especifica é o ```insert()```. Ao utilizá-lo, nós precisamos passar o índice e o dado que queremos adicionar.
+O método que utilizamos para adicionar um elemento a uma lista em uma posição especifica é o ```insert()```. Ao utilizá-lo, nós precisamos passar o índice e o dado que queremos adicionar.
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -138,7 +138,7 @@ fruits.insert(1, "apple")
 print(fruits)
 ```
 
-Nós estamos dizendo para python adicionar a ```string "apple"``` no índice 1 da lista ```fruits```. É importante ressaltar que python não vai substituir "Banana" por "apple", ele vai empurrar banana pra frente e adicionar "apple" onde "Banana" estava.
+Nós estamos dizendo para python adicionar a ```string "apple"``` no índice 1 da lista ```fruits```. É importante ressaltar que python não vai substituir "Banana" por "apple", ele vai empurrar "Banana" pra frente e adicionar "apple" onde "Banana" estava.
 
 ![[38 - insert.png]]
 
@@ -174,7 +174,7 @@ print(fruits)
 
 ![[40 - pop_1.png]]
 
-Quando passamos o índice do elemento como argumento, ele removerá o elemento especifico. No exemplo a seguir, removeremos o elemento do índice 0:
+Quando passamos o índice do elemento como argumento, ele removerá o elemento especifico. No exemplo a seguir, removeremos o elemento do índice 0.
 
 ```python
 fruits = ['Orange', 'Banana', 'Grape']  
@@ -263,6 +263,19 @@ print("Hello, Jessica!")
 
 Já que estamos lidando com uma grande quantidade de valores, podemos utilizar loops e listas em conjunto para lidar com isso.
 
+Com o que aprendemos até agora, nós podemos acessar os elementos de uma lista por seus índices, então podemos utilizar um ```for```loop para isto.
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']
+
+for index in range(len(names)):
+	print(names[index])
+```
+
+Aqui estamos criando um ```for``` loop que começa em 0 e vai até o tamanho da lista ```names```. A lista ```names``` tem 5 elementos, então a função ```range()``` function irá de 0 a 5, não incluso. Na primeira iteração, python imprimirá ```names[0]```, que é o valor ```"Joseph"```, na segunda iteração, imprimirá ```names[1]```, que é ```"Johnny"```  e assim sucessivamente.
+
+É assim que normalmente faríamos em outras linguagens. Python, entretanto, nos oferece uma solução muito mais elegante para este problema.
+
 ```python
 names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
   
@@ -270,7 +283,7 @@ for name in names:
     print(f"Hello, {name}!")
 ```
 
-Neste código, o ```for``` loop vai começar e em sua primeira iteração, pegará o primeiro valor em ```names``` e atribuirá à variável ```name```, ou seja, na primeira iteração ```name = "joseph"```, python imprimirá a mensagem na tela, e o loop voltará ao começo, na segunda iteração, ```name = "Johnny"```, e assim sucessivamente até chegar ao final da lista, resultando em:
+Neste código, o ```for``` loop vai começar e em sua primeira iteração, pegará o primeiro elemento em ```names``` e atribuirá à variável ```name```, ou seja, na primeira iteração ```name = "joseph"```, python imprimirá a mensagem na tela, e o loop voltará ao começo, na segunda iteração, ```name = "Johnny"```, e assim sucessivamente até chegar ao final da lista, resultando em:
 
 ![[47 - loops_and_lists_1.png]]
 
@@ -289,7 +302,7 @@ if "Johnny" in names:
     print("yay")
 ```
 
-Este código checa se a ```string``` "Johnny" faz parte da lista ```nomes``` e imprime "yay" caso faça.
+Este código checa se a ```string``` "Johnny" faz parte da lista ```names``` e imprime "yay" caso faça.
 
 ![[48 - in_operator.png]]
 
@@ -316,7 +329,7 @@ names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']
 print(names[2:5])
 ```
 
-Neste bloco de código, nós estamos dizendo à python para imprimir os elemento na lista ```names``` do índice 2 até o 5, não incluso, ou seja, índices 2, 3 e 4.
+Neste bloco de código, nós estamos dizendo à python para imprimir os elementos na lista ```names``` do índice 2 até o 5, não incluso, ou seja, índices 2, 3 e 4.
 
 ![[50 - list_slices_1.png]]
 
@@ -363,7 +376,7 @@ my_lucky_numbers = numbers[::2]
 print(my_lucky_numbers)
 ```
 
-Para descobrirmos, precisamos lembrar que list slices funcionam com três valores ```[começo:fim:passo]```. Não passamos nenhum número para o começo, então estamos dizendo "comece do índice 0"; também não passamos nenhum número para o fim, o que quer dizer "vá até o final"; e, por fim, estamos dizendo para ir de 2 em 2. Este código então irá ler toda a lista e atribuirá à ```my_lucky_numbers``` os elementos de índice 0, 2 e 4.
+Para descobrirmos, precisamos lembrar que list slices funcionam com três valores ```[começo:fim:passo]```. Não passamos nenhum valor para o começo, então estamos dizendo "comece do índice 0"; também não passamos nenhum valor para o fim, o que quer dizer "vá até o final"; e, por fim, estamos dizendo para ir de 2 em 2. Este código então irá ler toda a lista e atribuirá à ```my_lucky_numbers``` os elementos de índice 0, 2 e 4.
 
 ![[53 - list_slices_4.png]]
 
@@ -423,6 +436,13 @@ print(names)
 ```
 
 ![[57 - reverse_method.png]]
+
+---
+#### count()
+
+# TO BE DONE
+
+---
 
 ### função sorted()
 
