@@ -306,7 +306,16 @@ for num in range(0, 11, 2):
 
 ![[27 - ranged_function_steps.png]]
 
-> **_Note:_** If we pass only one value as an argument, python will count from 0 to this value, without including it. ```range(3)``` will result in 0, 1, 2.
+It is also possible to pass only one argument to the ```range()``` function. In this case, python will run from 0 up to the passed argument. For example:
+
+```python
+for number in range(5):
+	print(number)
+```
+
+In the first iteration, ```number``` will have the value of 0, in the second it will have the value of 1, then 2, 3, and 4. Running 5 times in total. The loop will run from 0 to 5, non-inclusive.
+
+![[27-5 - range_function_single_argument.png]]
 
 ### While loop
 
@@ -380,9 +389,13 @@ This will be our result:
 
 1. Make a program that will print the number from 1 to 10 and say if they're odd or even.
 2. Make a program that will print the numbers from 1 to 50, however, in case the number is divisible by 3, print "Fizz", if its divisible by 5, print "Buzz" and if it's divisible by 3 and 5, print "FizzBuzz". Hint: 15 is supposed to be "FizzBuzz".
-3. Make a program that will print the following drawing:
+3. Make a program that prints the following drawing:
 
-![[31 - exercise_4-2.png]]
+![[31 - exercise_4-3.png]]
+
+4. **Bonus:** Make a program that prints the following drawing:
+
+![[31-2 - exercise_4-4.png]]
 
 ---
 

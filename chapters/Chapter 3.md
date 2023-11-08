@@ -380,6 +380,57 @@ To find out, we need to remember that list slices work with three values ```[com
 
 ![[53 - list_slices_4.png]]
 
+### sorted() function
+
+The ```sorted()``` function organizes the list without altering the original.
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+  
+print(f"Sorted: {sorted(names)}")  
+print(f"Original: {names}")
+```
+
+![[58 - sorted_function.png]]
+
+### len() function
+
+The ```len()``` function counts how many elements there are in a list.
+
+```python
+numbers = [1, 2, 3, 4, 5, 6]  
+length_of_list = len(numbers)  
+print(length_of_list)
+```
+
+![[59 - len_function.png]]
+
+> **_Important:_** This function can also be used with other data types, such as ```dictionary```, ```tuple```, ```string```, among others.
+
+### max() function
+
+The ```max()``` function returns the largest value in a list.
+
+```python
+numbers = [10, 20, 30]  
+  
+print(max(numbers))
+```
+
+![[59 -1 - max_function.png]]
+
+### min() function
+
+The ```min()``` function returns the smallest value in a list.
+
+```python
+numbers = [10, 20, 30]  
+  
+print(min(numbers))
+```
+
+![[59 -2 -min_function.png]]
+
 ### Most common methods
 
 Later we'll see in detail what methods are and how to create them. But, for now, we only need to know that we call them utilizing the "Dot Notation", which we have utilized before:
@@ -437,36 +488,26 @@ print(names)
 
 ![[57 - reverse_method.png]]
 
-### função sorted()
+#### count()
 
-A função ```sorted()``` organiza a lista sem alterar a original.
+The ```count()``` method receives one argument and counts how many times it appears in the last.
 
 ```python
-names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+names = ["Jessica", 'Jessica', 'Richard', 'Sabine', 'Jessica']  
+counter = names.count("Jessica")  
   
-print(f"Sorted: {sorted(names)}")  
-print(f"Original: {names}")
+print(counter)
 ```
 
-![[58 - sorted_function.png]]
+In this example, we're passing the string "Jessica" as argument. Python, then, will count how many times the string "Jessica" appears in the list and will assign this value to the variable ```counter```. Resulting in:
 
-### função len()
+![[57-5 - count_method.png]]
 
-A função ```len()``` verifica a quantidade de elementos em uma lista
+The element "Jessica" appears 3 times in the ```names``` list.
 
-```python
-numbers = [1, 2, 3, 4, 5, 6]  
-length_of_list = len(numbers)  
-print(length_of_list)
-```
+### Beautifying lists
 
-![[59 - len_function.png]]
-
-> **_Importante:_** Esta função também pode ser utilizada com outros tipos de dados, como ```dictionary```, ```tuple```, ```string```, entre outros.
-
-### Embelezando listas
-
-Pode acontecer de nossas listas serem muito grandes ou com muitos elementos, o que as tornam difíceis de ler. Nestes casos, podemos escrever a lista de uma maneira um pouco diferente, para facilitar a leitura.
+It can happen that our lists are too big, that they have too many elements, which make them hard to read. In these cases, we can write the list in a different way, to make it easier to read.
 
 ```python
 hello_list = [  
@@ -478,43 +519,45 @@ hello_list = [
 ]
 ```
 
-A lista continuará funcionando perfeitamente.
+The list will continue to work perfectly.
 
-> **_Importante:_** Não se esqueça da vírgula entre os elementos!
+> **_Important:_** Do not forget the comma between elements!
 
-### Exercícios 5
+### Exercise 5
 
-1. Crie um programa que, dada a lista abaixo, encontre o maior e o menor número e imprima-os na tela.
+1. Create a program that, given the list below, finds the largest and smallest numbers, then prints them.
 
 ```python
 numbers = [191, 78, 67, 195, 51, 154, 28, 45, 186, 106]
 ```
 
-2. Crie um programa que imprima a lista abaixo sem nenhum número repetido e em ordem crescente:
+2. **Bonus:** Do exercise 1 without using the ```min()``` and ```max()``` functions.
+
+3. Create a program that will print the list below without any duplicated numbers and in ascending order:
 
 ```python
 numbers = [6, 2, 5, 6, 2, 7, 1, 9, 1, 7, 6, 4, 2, 6]
 ```
 
-3. Ainda utilizando a lista anterior, crie um programa que ache o número que mais se repete na lista, imprima-o na tela, juntamente com quantas vezes ele se repete.
-4. **Bonus:** Do question 3 without using the ```count()``` method.
+4. Still utilizing the previous list, create a program that will find the most common number in the list and print it alongside with how many times it appears on the list.
+5. **Bonus:** Do exercise 3 without using the ```count()``` method.
 
 ---
 
-## Revisitando strings
+## Revisiting strings
 
-Nós já sabemos o que são ```strings``` e como elas funcionam, entretanto, agora que aprendemos mais conceitos, podemos olhá-las de uma outra maneira. ```Strings``` são como listas de caracteres alfanuméricos. Sendo assim, nós podemos, por exemplo, acessar cada caractere através do seu índice:
+We already know what ```strings``` are and how they work; however, now that we've learned more concepts, we can look at them from a different angle. ```Strings``` are like lists of alphanumeric characters. With this in mind, we can, for example, access each character through its index:
 
 ```python
 word = "hello"  
 print(word[0])
 ```
 
-aqui nós estamos acessando o elemento de índice 0 na ```string```.
+Here we're accessing the element of index 0 in the ```string```.
 
 ![[60 - string_list_1.png]]
 
-Nós também podemos acessar os elementos da ```string``` utilizando um ```for``` loop:
+We can also access elements of a ```string``` using a ```for``` loop:
 
 ```python
 word = "hello"  
@@ -525,7 +568,7 @@ for letter in word:
 
 ![[61 - string_list_2.png]]
 
-Ou usar a função ```len()``` para descobrir quantos elementos há na ```string```:
+Or utilize the ```len()``` function to count how many elements are in the ```string```:
 
 ```python
 word = "hello"  
@@ -536,11 +579,11 @@ print(letters)
 
 ![[62 - string_list_3.png]]
 
-Porém, ```string``` é um tipo de dado diferente de ```list```. Por conta disto, ele tem métodos diferentes. Neste módulo, nós veremos algumas outras formas de manipulação e métodos relacionados à ```string```.
+```string``` is a different data type than a ```list```; thus, it has different methods. In this module we'll see other ways to manipulate and methods related to the ```string``` data type.
 
-### Aspas triplas
+### Triple quotation marks
 
-As ```string``` que vimos até agora estavam todas em uma unica linha. Nós podemos utilizar o que aprendemos até agora para construir strings com várias linhas, como, por exemplo, com quebras de linha, concatenação, ou até mesmo diversos ```print()```. Existe, porém, uma outra forma: as aspas tripas.
+The ```string``` we've seen so far were all in the same line. We can utilize what we've learned to create strings with multiple lines, like, for example, with line breaks, concatenation, or even multiple ```print()``` functions. There is, however, another way: the quotation marks.
 
 ```python
 text = """My dear,  
@@ -557,11 +600,11 @@ print(text)
 
 ![[63 - triple_quotes.png]]
 
-> **_Nota:_** Podem ser usadas aspas únicas ```'''```  ou duplas ```"""```
+> **_Note:_** There can be used single ```'''```  ou double ```"""``` quotes.
 
 ### Raw strings
 
-Nós vimos que podemos ignorar caracteres e adicionar caracteres especiais utilizando a barra inversa, ou _escape character_. Mas e se nós quisermos que o que quer que seja digitado pelo usuário seja mantido na ```string```, incluindo barras inversas. É aqui que entram as raw strings or ```r string```.
+We've seen that we can ignore characters and add special ones with the backslash, also known as the _escape character_. But what if we want that whatever it is type by the use is kept in the ```string```, including backslashes. This is where the raw string or ```r string``` come into play.
 
 ```python
 print(r"hello, \"my friends\"!")
@@ -569,15 +612,15 @@ print(r"hello, \"my friends\"!")
 
 ![[64 - raw_string.png]]
 
-Na ```r string``` python trata tudo na string como parte dela, mesmo que você tente passar caracteres especiais.
+In the ```r string``` python treats everything as a part of it, even if you pass special characters.
 
-### Métodos mais comuns
+### Most common methods
 
-Existem outros métodos e você pode encontrá-los na documentação oficial,  livros, procurando no google ou perguntando a inteligências artificiais. Estes são apenas os mais comumente usados.
+There are other methods and you can find them in the official documentation, books, on google or asking AIs. These are just the more commonly used ones.
 
 #### upper()
 
-O método ```upper()``` faz com que as letras das palavras fiquem maiúsculas.
+The ```upper()``` method puts all the letters in the string in uppercase.
 
 ```python
 name = "Fatma"  
@@ -586,13 +629,13 @@ name = name.upper()
 print(name)
 ```
 
-Aqui nós estamos criando uma varável do tipo ```string``` com o valor "Fatma", depois estamos atribuindo à variável ```name``` o valor original modificado para que todas as letras estejam maiúsculas.
+Here we're creating a variable of type ```string``` with the value "Fatma", then we're assigning to the variable ```name``` the original value modified so that all the letters are in uppercase.
 
 ![[65 - upper_method.png]]
 
 #### lower()
 
-O método ```lower()``` faz com que as letras fiquem minúsculas.
+The ```lower()``` method puts all the letters in the string in lowercase.
 
 ```python
 name = "Fatma"  
@@ -605,7 +648,7 @@ print(name)
 
 #### isupper() e islower()
 
-Checam se os caracteres da ```string``` são todos maiúsculos ou minúsculos, respectivamente.
+They check if the characters in the string ```string``` are all in uppercase or lowercase, respectively.
 
 ```python
 word1 = "HELLO"  
@@ -619,7 +662,7 @@ print(f"{word2} is lower? = {word2.islower()}")
 
 #### capitalize()
 
-Transforma a primeira letra da ```string``` em maiúscula.
+It transforms the first letter of the ```string``` in an uppercase letter.
 
 ```python
 text = 'rodrigo has a blue car.'  
@@ -632,7 +675,7 @@ print(text)
 
 #### title()
 
-Transforma todas as palavras da ```string```, colocando todas com letras maiúsculas.
+It makes each word in the ```string``` start with an uppercase letter.
 
 ```python
 name = "james bond"  
@@ -645,7 +688,7 @@ print(name)
 
 #### startswith() and endswith()
 
-Checam se o a ```string``` começa ou termina com os argumentos passados para eles, respectivamente.
+They check if  the ```string``` begins or ends with the passed arguments, respectively.
 
 ```python
 message = "Hello, world! I'm here to learn how to code in python."  
@@ -658,7 +701,7 @@ print(message.endswith("world"))
 
 #### split()
 
-O método ```split()``` pode separa uma string em elementos e retorna uma lista
+The ```split()``` method separates a string into elements and returns a list of them.
 
 ```python
 message = "Python is so much fun. I wish I had learned it sooner"  
@@ -669,7 +712,7 @@ print(message)
 
 ![[71 - split_method.png]]
 
-Por padrão, ele separa a string pelos espaços, mas nós podemos alterar este comportamento passando o argumento pelo qual queremos separar a string. A seguir, vamos separar a mesma ```string``` pelo ponto final.
+By default, it separates the string by its white spaces. But we can alter this behavior by passing an argument by which we want to separate the string. Next, we'll separate the same ```string``` by the full stop mark.
 
 ```python
 message = "Python is so much fun. I wish I had learned it sooner"  
@@ -682,7 +725,7 @@ print(message)
 
 #### strip(), rstrip() and lstrip()
 
-Os métodos ```strip()```, ```rstrip()``` e ```lstrip()``` removem elementos da string. ```strip()``` remove elementos dos dois lados, ```rstrip()``` remove apenas do lado direito e ```lstrip()``` remove apenas do lado esquerdo. Por padrão, eles removem espaços em branco no começo, no final ou em ambos os lados da string.
+The ```strip()```, ```rstrip()``` and ```lstrip()``` methods remove elements of a string. ```strip()``` removes elements from both sides, ```rstrip()``` removes only form the right side, and ```lstrip()``` removes only from the left side. By default, they remove white spaces in the beginning, end or in both sides of the string.
 
 ```python
 message = "     hello, world!       "  
@@ -694,7 +737,7 @@ print(f"lstrip: {message.lstrip()}")
 
 ![[73 - strip_method.png]]
 
-Porém, é possível passar como argumento o elemento que gostaríamos de remover. Talvez seu uso fique mais claro com o exemplo abaixo:
+However, it is possible to pass as an argument, the element you wish to remove. Maybe their uses will be clearer with the example below:
 
 ```python
 message = "______hello, world!______"  
@@ -708,7 +751,7 @@ print(f"lstrip: {message.lstrip('_')}")
 
 #### replace()
 
-Este método troca um elemento da ```string``` por outro. Ele recebe dois argumentos: a palavra que você quer trocar e por qual você quer trocar.
+This method replaces an element of the ```string``` with another. It receives two arguments: the part of the string that you want to replace and the part of the string with which you want to replace it.
 
 ```python
 text = "oh no, my cat ate all my food!"  
@@ -721,9 +764,11 @@ print(text)
 
 ![[75 - replace_method.png]]
 
+In this example we're replacing the string "cat" with "dog".
+
 #### join()
 
-O método ```join()``` recebe uma lista ou tuple como argumento e concatena cada elemento usando a string como separador.
+The ```join()``` method receives a list or tuple as argument and concatenates each element a string as separator.
 
 ```python
 words = ["Hello", "my", "friend", "Doug"]  
@@ -733,7 +778,7 @@ print(phrase)
 
 ![[76 - join_method_1.png]]
 
-Eu concordo que pareça um método um pouco estranho. Mas talvez um outro exemplo deixe seu uso mais claro. Imagine que você tem uma ```list``` e deseja colocar todos os seus elementos dentro de uma ```string```, separados por espaço.
+I agree that it is a bit of a strange method. But maybe another example makes it clearer. Imagine you have a  ```list``` and wishes to put all of its elements into a ```string```, separated by a space.
 
 ```python
 words = ["Hello", "world", "this", "is", "dog"]  
@@ -741,13 +786,15 @@ phrase = " ".join(words)
 print(phrase)
 ```
 
-Python pegará cada uma das palavras com a ```string``` que passamos, neste caso, um espaço vazio ```" "```.
+Python will take the ```string``` we've passed, in this case, a white space ```" "``` and put it between each of the elements of the list passed as argument.
 
 ![[77 - join_method_2.png]]
 
+In other words, ```" ".join(words)``` means "take each element of the list ```words``` and put them into a string, separating them with ```" "``` ".
+
 #### count()
 
-O método ```count()``` recebe uma ```string``` argumento e conta quantas vezes este argumento aparece na frase, semelhante ao programa que criamos no exercício 5-3.
+The ```count()``` method takes a ```string``` as argument and counts how many times it appears in the sentence. It's similar to the program we made on exercise 5-3.
 
 ```python
 text = "oh no, my cat ate all my food!"  
@@ -756,23 +803,23 @@ my_counter = text.count("my")
 print(my_counter)
 ```
 
-a palavra "my" aparece duas vezes na ```string``` dada.
+The word "my" appears twice in the given ```string```.
 
 ![[78 - count_method.png]]
 
 ### Exercise 6
 
-1. Crie um programa que recebe uma string do usuário e imprima na tela a mesma string, mas com a primeira metade toda em letras maiúsculas e a segunda metade toda em letras minúsculas.
-2. Crie um programa que receba uma frase do usuário e imprima na tela a frase ao contrário. Ex: "Olá mundo" -> "mundo Olá"
-3. Crie um programa que verifica se a palavra ou frase digitada pelo usuário é um palíndromo (palavra ou frase que se pode ler, indiferentemente, da esquerda para a direita ou vice-versa).
+1. Create a program that receives a string from the user and prints the same string but with the first half all in uppercase and the second half all in lowercase.
+2. Make a program that receives a phrase from the user and prints it backwards. Ex: "Hello world" -> "world Hello"
+3. Make a program that verifies if the world or phrase given by the user is a palindrome (a word, phrase, or sequence that reads the same backward as forward)
 
 ---
 
 ## Compreensão de lista | List comprehension
 
-List comprehension é uma forma mais concisa de se criar listas, e é encontrada em apenas algumas linguagens. Em uma única linha, nós podemos criar um ```for``` loop, adicionar os elementos na lista e até utilizar condições.
+List comprehension is a more concise form of creating a list, and it only exists in a few languages. In a single line, we can create a ```for``` loop, add the elements and even conditions.
 
-Normalmente, nós criaríamos uma lista da seguinte maneira:
+Normally, we'd create a list in the following way:
 
 ```python
 numbers = []  
@@ -785,7 +832,7 @@ print(numbers)
 
 ![[79 - list_comprehension_1.png]]
 
-Porém, com list comprehension, nós podemos escrever a mesma coisa em apenas uma linha:
+However, with list comprehension, we can write the same thing in just one line:
 
 ```python
 numbers = [number for number in range(1, 11)]  
@@ -794,11 +841,11 @@ print(numbers)
 
 ![[80 - list_comprehension_2.png]]
 
-O que nós estamos fazendo aqui? Primeiro, criamos uma variável ```numbers``` e dentro dos colchetes é onde colocamos a list comprehension. Ali, temos ```number for number in range(1, 11) ```, ou seja, adicione ```number``` à lista para cada valor de ```number``` de 1 até 11 (não incluso).
+What are we doing here? First, we create a variable ```numbers``` and inside of the square brackets is where we put a list comprehension. There, we have ```number for number in range(1, 11) ```, in other words, add ```number``` to the list for each value of ```number``` from 1 to 11 (non-inclusive).
 
-> **_Nota:_** O primeiro ```number``` dentro da list comprehension é a variável que será adicionada à lista.
+> **_Note:_** The first ```number``` in the list comprehension is the variable that will be added to the list.
 
-Uma outra forma de **ler** a list comprehension é a seguinte:
+Another way of **reading** the list comprehension is the following:
 
 ```python
 numbers = [numbers.append(number) for number in range(1, 11)]
@@ -806,9 +853,9 @@ numbers = [numbers.append(number) for number in range(1, 11)]
 
 A primeira variável dentro da list comprehension será adicionada à lista sendo criada.
 
-Vamos ver outros exemplos. Criaremos uma lista apenas com números pares de 1 até 20 (não incluso).
+Let's see some other examples. We'll make a list with only even numbers from 1 to 20 (non-inclusive).
 
-Sem list comprehension:
+Without list comprehension:
 
 ```python
 numbers = []  
@@ -822,7 +869,7 @@ print(numbers)
 
 ![[81 - list_comprehension_3.png]]
 
-Com list comprehension:
+With list comprehension:
 
 ```python
 numbers = [number for number in range(1, 20) if number % 2 == 0]  
@@ -831,9 +878,9 @@ print(numbers)
 
 ![[82 - list_comprehension_4.png]]
 
-No exemplo abaixo temos uma lista de nomes e queremos criar outra lista apenas com os nomes começados com a letra a.
+In the example below, we have a list of names and we want to create another list only with the names that start with the letter a.
 
-Sem list comprehension:
+Without list comprehension:
 
 ```python
 names = ["João", "Alice", "Janaína", "Ana", "Bruna", "Eduarda"]  
@@ -848,7 +895,7 @@ print(names_with_a)
 
 ![[83 - list_comprehension_5.png]]
 
-Com list comprehension:
+With list comprehension:
 
 ```python
 names = ["João", "Alice", "Janaína", "Ana", "Bruna", "Eduarda"]  
@@ -858,32 +905,32 @@ print(names_with_a)
 
 ![[84 - list_comprehension_6.png]]
 
-### Exercícios 7
+### Exercise 7
 
-> **_Nota:_** Utilize _list comprehension_ para resolver estas questões.
+> **_Note:_** Use _list comprehension_ to solve these exercises.
 
-1. Dadas as listas abaixo, crie um programa que imprima na tela uma lista apenas com os números em comum entre elas.
+1. Given the lists below, create a program that prints a list with only the numbers in common between them.
 
 ```python
 first_list = [2, 7, 33, 27, 92, 40, 3, 28, 56]  
 second_list = [90, 12, 23, 7, 38, 29, 56, 13, 2]
 ```
 
-2. Crie um programa que gere uma lista de 'par' ou 'ímpar'  para cada número de 1 até 20 (não incluso). Ex: \[ímpar, par, ímpar, par...]
-3. Crie um programa que peça ao usuário uma frase e imprima uma lista de todas as palavras com 4 letras ou menos.
+2. Make a program that generates a list of "even" or "odd" for each number from 1 to 20 (non-inclusive).  Ex: \[odd, even, odd, even...]
+3. Make a program that asks the user for a sentence and print a list of all the words with 4 or less letters from it.
 
 ---
 
-## Dicionário | Dictionary
+## Dictionary
 
-```dictionary``` ou ```dict``` é um tipo de dado que guarda diversos elementos, assim como uma lista, e são utilizados para guardar elementos que estão relacionados entre si. Eles são armazenados em pares chamados de "key" (palavra-chave) e "value" (valor), separados por dois pontos ```:```. Para criá-los, utilizamos chaves em vez de colchetes.
+```dictionary``` or ```dict``` is a data type that stores multiple elements, just like a list, and are used to store elements that are related. They are stored in pairs called "key" and "value", separated by a colon ```:```.  To create them, we utilize curly braces instead of square brackets.
 
 ```python
 # person = {key: value, key: value, key: value, ...}
 person = {'name': 'Mario', 'age': 25, 'location': 'Mushroom Kingdom'}
 ```
 
-Além de ser criado com chaves em vez de colchetes, outra grande diferença é que para acessarmos um valor, nós não usamos um índice numérico, nós usamos as palavras-chave.
+In addition to being created with curly braces instead of square brackets, another big difference is that to access a value, we dont use a numeric index, we use the keys.
 
 ```python
 person = {'name': 'Mario', 'age': 25, 'location': 'Mushroom Kingdom'} 
@@ -893,7 +940,7 @@ print(person['age'])
 
 ![[85 - dictionary_1.png]]
 
-Uma outra diferença é que os elementos de um ```dictionary``` são desordenados, enquanto os de uma lista são ordenados.
+Another difference is that the elements of a  ```dictionary``` are unordered, while list elements are ordered.
 
 ```python
 my_list = [1, 2, 3]  
@@ -901,7 +948,7 @@ my_other_list = [3, 2, 1]
 print(my_list == my_other_list)
 ```
 
-Neste caso, o resultado é ```False``` pois os valores de alguns índices são diferentes. Listas são ordenada, ou seja, a ordem de cada valor é importante.
+In this case, the result is ```False``` because the values of each index are different. Lists are ordered, meaning that the order of each value is important.
 
 ```python
 my_dict = {'first': 1, 'second': 2, 'third': 3}  
@@ -909,19 +956,19 @@ my_other_dict = {'second': 2, 'third': 3, 'first': 1}
 print(my_dict == my_other_dict)
 ```
 
-Já aqui, o resultado é ```True``` pois listas não são ordenadas. Python não se importa com a ordem dos elementos, apenas que eles sejam iguais.
+Here, however, the result is ```True``` because dictionaries are unordered. Python doesn't care about the order of the elements, as long as they're all the same, the dictionaries will be equal.
 
-### Acessando elementos
+### Accessing elements
 
-Apesar de termos acabado de ver como acessar os elementos de um ```dictionary```, eu quero explicar novamente para que, caso você queira relembrar, consiga encontrar facilmente.
+Though we've just seen how to access the elements of a ```dictionary```, I want to explain it again so that, in case you'd like to remember later on, you can easily find it here.
 
-Nós acessamos os elementos de um ```dictionary``` através das palavras-chave.
+We access the elements of a ```dictionary``` with their keys.
 
 ```python
 doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"}
 ```
 
-Neste ```dictionary``` nós temos 3 palavras-chave - ```name```, ```age``` e ```breed``` - e nós as usaremos para acessar seus respectivos valores.
+In this ```dictionary``` we have 3 keys - ```name```, ```age``` and ```breed``` - and we use them to access their respective values.
 
 ```python
 doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"} 
@@ -933,11 +980,11 @@ print(f"Breed: {doggo['breed']}")
 
 ![[86 - dict_accessing_elements.png]]
 
-### Modificando um dicionário
+### Modifying a dictionary
 
-#### Adicionando elementos
+#### Adding elements
 
-Para adicionar elementos, precisamos passar a palavra-chave a ser adicionada e seu respectivo valor:
+To add elements, we need to pass a key to be added and its respective value:
 
 ```python
 doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"}  
@@ -946,13 +993,13 @@ doggo["favorite_toy"] = "bone"
 print(doggo)
 ```
 
-A palavra-chave "favorite_toy" não existe no ```dictionary```, então python adiciona a mesma e atribui a ela o valor de "bone".
+The key "favorite_toy" does not exist in the ```dictionary```, so python will add it and assign to it the value "bone"
 
 ![[87 - dict_adding_elements.png]]
 
-#### Modificando elementos
+#### Modifying elements
 
-Para modificar elementos, apenas atribuímos um novo valor ao mesmo.
+To modify elements, we simply assign a new value to them.
 
 ```python
 doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"}  
@@ -963,9 +1010,9 @@ print(doggo)
 
 ![[88 - dict_modifying_elements.png]]
 
-#### Deletando elementos
+#### Deleting elements
 
-Para deletarmos elementos, utilizamos o comando ```del```.
+To delete elements we utilize the  ```del``` command.
 
 ```python
 doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"}  
@@ -976,15 +1023,15 @@ print(doggo)
 
 ![[89 - dict_deleting_elements.png]]
 
-> **_Nota:_** O elemento é permanente deletado. 
+> **_Note:_** The element is permanently deleted.
 
-### Loops e dicionários
+### Loops and dictionaries
 
-Assim como fizemos com os dados de tipo ```list```, nós podemos utilizar loops para iterar por todos os elementos de um ```dictionary```. Mas, para isso, precisamos utilizar alguns métodos.
+Just like we've done with the ```list``` data type, we can use loops to iterate through all the elements of a ```dictionary```. But, for this, we need to utilize a few methods.
 
 #### keys()
 
-Este método nós da acesso apenas às palavras-chave de um ```dictionary```.
+This method gives us access to only the keys of a ```dictionary```.
 
 ```python
 catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
@@ -994,7 +1041,7 @@ print(catto.keys())
 
 ![[90 - dict_method_keys_1.png]]
 
-E, assim, podemos utilizar um for loop para acessar todas as palavras-chave.
+And, this way, we can use a loop to access all the keys.
 
 ```python
 catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
@@ -1007,7 +1054,7 @@ for key in catto.keys():
 
 #### values()
 
-Assim como o método ```keys()```, o método ```values()``` nos dá acesso apenas aos valores do ```dictionary```.
+Just like the ```keys()``` method, the ```values()``` method gives us access only to the values of a ```dictionary```.
 
 ```python
 catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
@@ -1017,7 +1064,7 @@ print(catto.values())
 
 ![[92- dict_method_values_1.png]]
 
-E com ele nós podemos utilizar um loop para acessar apenas os valores do ```dictionary```.
+And with it we can use a loop to access only the values of a ```dictionary```.
 
 ```python
 catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
@@ -1030,7 +1077,7 @@ for values in catto.values():
 
 #### items()
 
-O método ```ìtems()``` nos dá acesso tanto às palavras-chave quanto aos valores.
+The ```ìtems()``` method gives us access to both keys and values.
 
 ```python
 catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
@@ -1040,7 +1087,7 @@ print(catto.items())
 
 ![[94 - dict_method_items_1.png]]
 
-Por conta disto, o ```for``` loop é um pouco diferente. Ele tem duas variáveis.
+Because of that, the ```for``` loop is a little different. It has two variables.
 
 ```python
 catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
@@ -1051,15 +1098,15 @@ for key, value in catto.items():
 
 ![[95 - dict_method_items_2.png]]
 
-Como este loop tem duas variáveis, uma para a palavra-chave (```key```) e a outra para o valor (```value```), nós podemos manipular as duas dentro do ```for``` loop.
+Since this loop has two variables, one for ```key``` and another one for ```value```, we can manipulate both inside the ```for``` loop.
 
-> **_Nota:_** Assim como vimos anteriormente, o nome das variáveis passadas no ```for``` loop pode ser qualquer coisa. Eu escolhi "key" e "value".
+> **_Note:_** Just like we've seen before, the name of the variables passed in the ```for``` loop can be anything. I've chosen "key" and "value".
 
-### Métodos mais comuns
+### Most common methods
 
 #### get()
 
-O método ```get()``` pode ter um ou dois argumentos.  Quando tentamos acessar uma palavra-chave que não existe dentro do ```dictionary```, python levantará um erro. O método ```get()``` retornará o valor se a palavra-chave existir e, caso não exista, retornará o valor que passarmos como argumento.
+The ```get()``` method can have one or two arguments. When we try to access a key that does not exist in a ```dictionary```, python will raise an error. The ```get()``` method will return the value if the key exist and, if it doesn't, it will return the value we've passed as argument.
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2, "bow": 1}  
@@ -1067,7 +1114,7 @@ items = {"sword": 3, "shield": 1, "dagger": 2, "bow": 1}
 print(items.get("bow", 0))
 ```
 
-Neste exemplo, estamos dizendo para python imprimir o valor da palavra-chave "bow", caso não exista no ```dictionary```, diga que o valor é 0. A palavra-chave existe no ```dictionary```, então python imprime seu valor.
+In this example, we're telling python to print the value of the key "bow", if it doesn't exist in the ```dictionary```, print that the value is 0. The key exists in the ```dictionary```, so python prints its value.
 
 ![[96 - dict_method_get_1.png]]
 
@@ -1077,16 +1124,16 @@ items = {"sword": 3, "shield": 1, "dagger": 2}
 print(items.get("bow", 0))
 ```
 
-Já neste exemplo, a palavra-chave "bow" não existe no ```dictionary```, então python imprimirá o valor padrão (default).
+In this example, however, the key "bow" doesn't exist in the ```dictionary```, so python will print the default value.
 
 ![[97 - dict_method_get_2.png]]
 
-> **_Nota:_** Caso você só passe um argumento, imprimirá o valor se a palavra-chave existir no ```dictionary``` e, caso não exista, imprimirá o valor ```None```, que é um tipo de dado que significa "nenhum valor existente".
+> **_Note:_** If you only pass one argument, it will print the value if the word exists in the ```dictionary``` and, in case it doesn't, it will print the value ```None```, which is a data type that means "no value".
 
 
 #### copy()
 
-Este método permite que nós criemos uma cópia de um ```dictionary```.
+This method allows us to create a copy of a ```dictionary```.
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2}  
@@ -1100,7 +1147,7 @@ print(f"New items: {new_items}")
 
 #### clear()
 
-```clear()``` remove todos os elementos de um ```dictionary```.
+```clear()``` removes all the elements of a ```dictionary```.
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2}  
@@ -1113,7 +1160,7 @@ print(f"Items: {items}")
 
 #### setdefault()
 
-O método ```setdefault()``` faz com que o ```dictionary``` sempre tenha determinada palavra-chave e valor.
+The ```setdefault()``` method makes the ```dictionary``` always have a certain key and value.
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2}  
@@ -1122,11 +1169,11 @@ items.setdefault("heartstone", 1)
 print(f"Items: {items}")
 ```
 
-No exemplo acima, nós definimos que o ```dictionary``` deve ter ao menos 1 "heartstone" obrigatoriamente. Como não colocamos no dicionário, python colocará.
+In the example above, we're defining that the ```dictionary``` must have at least 1 "heartstone". Since we didn't put one in the dictionary, python will put it.
 
 ![[100 - dict_method_setdefault().png]]
 
-Caso já existisse uma palavra-chave "heartstone" no ```dictionary``` python não faria nada.
+In case there is already a "heartstone" key in the ```dictionary```, python won't do anything.
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2, "heartstone": 3}  
@@ -1139,7 +1186,7 @@ print(f"Items: {items}")
 
 #### pop()
 
-```pop()``` é um método que recebe uma palavra chave como argumento e remove o elemento do ```dictionary```.
+```pop()``` is a method that receives a key as argument and remove it from the ```dictionary```.
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2}  
@@ -1150,9 +1197,9 @@ print(f"Items: {items}")
 
 ![[102 - dict_method_pop().png]]
 
-### Embelezando dicionários
+### Beautifying dictionaries
 
-Assim como como dados do tipo ```list```, nós podemos escrever dados do tipo ```dictionary``` de tal maneira que fiquem mais legíveis, como no exemplo abaixo:
+Just like with the ```list``` data type, we can write data of type ```dictionary``` in such way that they're more readable, as we can see in the example below:
 
 ```python
 person = {  
@@ -1166,11 +1213,11 @@ print(person)
 
 ![[103 - beautifying_dict.png]]
 
-> **_Importante:_** Não esqueça de colocar virgula entre os elementos!
+> **_Important:_** Do not forget to put a comma between the elements!
 
-### Exercícios 8
+### Exercise 8
 
-Utilize a lista abaixo para os exercícios 1 e 2:
+Use the dictionary below for exercises 1 and 2:
 
 ```python
 people = {  
@@ -1186,9 +1233,9 @@ people = {
 }
 ```
 
-1. Encontre a pessoa mais velha e imprima-o na tela.
-2. Encontre a média de idade das pessoas e imprima-a na tela com 2 casas decimais.
-3. Você foi contratado para criar um programa para entrevistar 10 pessoas sobre o que preferem, pizza ou sushi. Crie um programa para esta pesquisa que ao final imprima na tela o que a maioria prefere e quantos votos o ganhador recebeu.
+1. Find the oldest person and print their name and age.
+2. Find the average age of people and print it with 2 decimal places.
+3. You were hired to create a program to interview 10 people about what they prefer, pizza or sushi. Make a program for this research that, in the end, print what the majority prefers and how many votes the winner received.
 
 ---
 

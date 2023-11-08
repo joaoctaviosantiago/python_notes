@@ -1123,7 +1123,7 @@ Este será nosso resultado:
 2. Crie um programa que imprima os números de 1 a 50, porém, caso o número seja divisível por 3, imprima "Fizz", caso seja divisível por 5, imprima "Buzz", caso seja divisível por 3 e por 5, imprima "FizzBuzz".
 3. Crie um programa que imprima a seguinte figura:
 
-![[31 - exercise_4-2.png]]
+![[31 - exercise_4-3.png]]
 
 ---
 

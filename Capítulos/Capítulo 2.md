@@ -306,7 +306,16 @@ for num in range(0, 11, 2):
 
 ![[27 - ranged_function_steps.png]]
 
-> **_Nota:_** Se passarmos apenas um valor como argumento, python conta de 0 até este valor, sem incluí-lo. ```range(3)``` terá um resultado de 0, 1, 2.
+Também é possível passar apenas um argumento. Neste caso, python rodará de 0 até o argumento passado. Por exemplo:
+
+```python
+for number in range(5):
+	print(number)
+```
+
+Na primeira iteração, ```number``` terá o valor de 0, na segunda terá o valor de 1, depois 2, 3 e 4. Rodando, assim, 5 vezes. O loop rodará de 0 até 5, não incluso.
+
+![[27-5 - range_function_single_argument.png]]
 
 ### Laço while | While loop
 
@@ -382,7 +391,11 @@ Este será nosso resultado:
 2. Crie um programa que imprima os números de 1 a 50, porém, caso o número seja divisível por 3, imprima "Fizz", caso seja divisível por 5, imprima "Buzz", caso seja divisível por 3 e por 5, imprima "FizzBuzz".
 3. Crie um programa que imprima a seguinte figura:
 
-![[31 - exercise_4-2.png]]
+![[31 - exercise_4-3.png]]
+
+4. **Bonus:** crie um programa que imprima a figura abaixo:
+
+![[31-2 - exercise_4-4.png]]
 
 ---
 

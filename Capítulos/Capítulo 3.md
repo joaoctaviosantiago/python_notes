@@ -380,6 +380,57 @@ Para descobrirmos, precisamos lembrar que list slices funcionam com três valore
 
 ![[53 - list_slices_4.png]]
 
+### Função sorted()
+
+A função ```sorted()``` organiza a lista sem alterar a original.
+
+```python
+names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+  
+print(f"Sorted: {sorted(names)}")  
+print(f"Original: {names}")
+```
+
+![[58 - sorted_function.png]]
+
+### Função len()
+
+A função ```len()``` verifica a quantidade de elementos em uma lista.
+
+```python
+numbers = [1, 2, 3, 4, 5, 6]  
+length_of_list = len(numbers)  
+print(length_of_list)
+```
+
+![[59 - len_function.png]]
+
+> **_Importante:_** Esta função também pode ser utilizada com outros tipos de dados, como ```dictionary```, ```tuple```, ```string```, entre outros.
+
+### Função max()
+
+A função ```max()``` retorna o maior valor em uma lista.
+
+```python
+numbers = [10, 20, 30]  
+  
+print(max(numbers))
+```
+
+![[59 -1 - max_function.png]]
+
+### Função min()
+
+A função ```min()``` returna o menor valor em uma lista.
+
+```python
+numbers = [10, 20, 30]  
+  
+print(min(numbers))
+```
+
+![[59 -2 -min_function.png]]
+
 ### Métodos mais comuns
 
 Posteriormente nós veremos com calma o que são métodos e como criá-los. Por enquanto, só precisamos saber que eles são chamados utilizando a "Notação de ponto", em inglês, "Dot Notation", que nós já utilizamos:
@@ -437,43 +488,26 @@ print(names)
 
 ![[57 - reverse_method.png]]
 
----
 #### count()
 
-# TO BE DONE
-
----
-
-### função sorted()
-
-A função ```sorted()``` organiza a lista sem alterar a original.
+O método ```count()``` recebe um argumento e conta quantas vezes este argumento aparece na lista.
 
 ```python
-names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
+names = ["Jessica", 'Jessica', 'Richard', 'Sabine', 'Jessica']  
+counter = names.count("Jessica")  
   
-print(f"Sorted: {sorted(names)}")  
-print(f"Original: {names}")
+print(counter)
 ```
 
-![[58 - sorted_function.png]]
+Neste exemplo, passamos como argumento a string "Jessica". Então python contará quantas vezes a string "Jessica" aparece na lista e atribuirá este valor à variável ```counter```. Resultando em:
 
-### função len()
+![[57-5 - count_method.png]]
 
-A função ```len()``` verifica a quantidade de elementos em uma lista
-
-```python
-numbers = [1, 2, 3, 4, 5, 6]  
-length_of_list = len(numbers)  
-print(length_of_list)
-```
-
-![[59 - len_function.png]]
-
-> **_Importante:_** Esta função também pode ser utilizada com outros tipos de dados, como ```dictionary```, ```tuple```, ```string```, entre outros.
+O elemento "Jessica" aparece 3 vezes na lista ```names```.
 
 ### Embelezando listas
 
-Pode acontecer de nossas listas serem muito grandes ou com muitos elementos, o que as tornam difíceis de ler. Nestes casos, podemos escrever a lista de uma maneira um pouco diferente, para facilitar a leitura.
+Pode acontecer de nossas listas serem muito grandes, terem muitos elementos, o que as tornam difíceis de ler. Nestes casos, podemos escrever a lista de uma maneira um pouco diferente, para facilitar a leitura.
 
 ```python
 hello_list = [  
@@ -497,13 +531,15 @@ A lista continuará funcionando perfeitamente.
 numbers = [191, 78, 67, 195, 51, 154, 28, 45, 186, 106]
 ```
 
-2. Crie um programa que imprima a lista abaixo sem nenhum número repetido e em ordem crescente:
+2. **Bonus:** Faça o exercício 1 sem utilizar as funções ```min()``` e ```max()```.
+3. Crie um programa que imprima a lista abaixo sem nenhum número repetido e em ordem crescente:
 
 ```python
 numbers = [6, 2, 5, 6, 2, 7, 1, 9, 1, 7, 6, 4, 2, 6]
 ```
 
-3. Ainda utilizando a lista anterior, crie um programa que ache o número que mais se repete na lista, imprima-o na tela, juntamente com quantas vezes ele se repete.
+4. Ainda utilizando a lista anterior, crie um programa que ache o número que mais se repete na lista, imprima-o na tela, juntamente com quantas vezes ele se repete.
+5. **Bonus:** Faça o exercício 3 sem utilizar o método ```count()```.
 
 ---
 
@@ -516,7 +552,7 @@ word = "hello"
 print(word[0])
 ```
 
-aqui nós estamos acessando o elemento de índice 0 na ```string```.
+Aqui nós estamos acessando o elemento de índice 0 na ```string```.
 
 ![[60 - string_list_1.png]]
 
@@ -563,7 +599,7 @@ print(text)
 
 ![[63 - triple_quotes.png]]
 
-> **_Nota:_** Podem ser usadas aspas únicas ```'''```  ou duplas ```"""```
+> **_Nota:_** Podem ser usadas aspas únicas ```'''```  ou duplas ```"""```.
 
 ### Raw strings
 
@@ -638,7 +674,7 @@ print(text)
 
 #### title()
 
-Transforma todas as palavras da ```string```, colocando todas com letras maiúsculas.
+Transforma todas as palavras da ```string```, fazendo com que elas comecem com letras maiúsculas.
 
 ```python
 name = "james bond"  
@@ -651,7 +687,7 @@ print(name)
 
 #### startswith() and endswith()
 
-Checam se o a ```string``` começa ou termina com os argumentos passados para eles, respectivamente.
+Checam se a ```string``` começa ou termina com os argumentos passados para eles, respectivamente.
 
 ```python
 message = "Hello, world! I'm here to learn how to code in python."  
@@ -664,7 +700,7 @@ print(message.endswith("world"))
 
 #### split()
 
-O método ```split()``` pode separa uma string em elementos e retorna uma lista
+O método ```split()``` pode separa uma string em elementos e retorna uma lista deles.
 
 ```python
 message = "Python is so much fun. I wish I had learned it sooner"  
@@ -714,7 +750,7 @@ print(f"lstrip: {message.lstrip('_')}")
 
 #### replace()
 
-Este método troca um elemento da ```string``` por outro. Ele recebe dois argumentos: a palavra que você quer trocar e por qual você quer trocar.
+Este método substitui um elemento da ```string``` por outro. Ele recebe dois argumentos: a parte da string que você quer substituir e a parte da string pela qual quer substituir.
 
 ```python
 text = "oh no, my cat ate all my food!"  
@@ -727,6 +763,7 @@ print(text)
 
 ![[75 - replace_method.png]]
 
+Neste exemplo nós substituímos a string "cat" por "dog".
 #### join()
 
 O método ```join()``` recebe uma lista ou tuple como argumento e concatena cada elemento usando a string como separador.
@@ -747,13 +784,14 @@ phrase = " ".join(words)
 print(phrase)
 ```
 
-Python pegará cada uma das palavras com a ```string``` que passamos, neste caso, um espaço vazio ```" "```.
+Python pegará a ```string``` que passamos, neste caso, um espaço vazio ```" "``` e colocará entre a cada um dos elementos da lista passada como argumento.
 
 ![[77 - join_method_2.png]]
 
+Em outras palavras, ```" ".join(words)``` quer dizer "pegue cada elemento da lista ```words``` e coloque em uma string, separando-os com ```" "``` ".
 #### count()
 
-O método ```count()``` recebe uma ```string``` argumento e conta quantas vezes este argumento aparece na frase, semelhante ao programa que criamos no exercício 5-3.
+O método ```count()``` recebe um argumento do tipo ```string``` e conta quantas vezes ele aparece na frase, semelhante ao programa que criamos no exercício 5-3.
 
 ```python
 text = "oh no, my cat ate all my food!"  
@@ -762,11 +800,11 @@ my_counter = text.count("my")
 print(my_counter)
 ```
 
-a palavra "my" aparece duas vezes na ```string``` dada.
+A palavra "my" aparece duas vezes na ```string``` dada.
 
 ![[78 - count_method.png]]
 
-### Exercise 6
+### Exercícios 6
 
 1. Crie um programa que recebe uma string do usuário e imprima na tela a mesma string, mas com a primeira metade toda em letras maiúsculas e a segunda metade toda em letras minúsculas.
 2. Crie um programa que receba uma frase do usuário e imprima na tela a frase ao contrário. Ex: "Olá mundo" -> "mundo Olá"
@@ -866,7 +904,7 @@ print(names_with_a)
 
 ### Exercícios 7
 
-> **_Nota:_** Utilize _list comprehension_ para resolver estas questões.
+> **_Nota:_** Utilize _list comprehension_ para resolver estes exercícios.
 
 1. Dadas as listas abaixo, crie um programa que imprima na tela uma lista apenas com os números em comum entre elas.
 
@@ -907,7 +945,7 @@ my_other_list = [3, 2, 1]
 print(my_list == my_other_list)
 ```
 
-Neste caso, o resultado é ```False``` pois os valores de alguns índices são diferentes. Listas são ordenada, ou seja, a ordem de cada valor é importante.
+Neste caso, o resultado é ```False``` pois os valores de cada índice são diferentes. Listas são ordenada, ou seja, a ordem de cada valor é importante.
 
 ```python
 my_dict = {'first': 1, 'second': 2, 'third': 3}  
@@ -915,11 +953,11 @@ my_other_dict = {'second': 2, 'third': 3, 'first': 1}
 print(my_dict == my_other_dict)
 ```
 
-Já aqui, o resultado é ```True``` pois listas não são ordenadas. Python não se importa com a ordem dos elementos, apenas que eles sejam iguais.
+Já aqui, o resultado é ```True``` pois dicionários não são ordenados. Python não se importa com a ordem dos elementos, apenas que eles sejam iguais.
 
 ### Acessando elementos
 
-Apesar de termos acabado de ver como acessar os elementos de um ```dictionary```, eu quero explicar novamente para que, caso você queira relembrar, consiga encontrar facilmente.
+Apesar de termos acabado de ver como acessar os elementos de um ```dictionary```, eu quero explicar novamente para que, caso você queira relembrar posteriormente, consiga encontrar facilmente aqui.
 
 Nós acessamos os elementos de um ```dictionary``` através das palavras-chave.
 
@@ -958,7 +996,7 @@ A palavra-chave "favorite_toy" não existe no ```dictionary```, então python ad
 
 #### Modificando elementos
 
-Para modificar elementos, apenas atribuímos um novo valor ao mesmo.
+Para modificar elementos, apenas atribuímos um novo valor aos mesmos.
 
 ```python
 doggo = {"name": "Nugget", "age": 3, "breed": "Golden Retriever"}  
@@ -1000,7 +1038,7 @@ print(catto.keys())
 
 ![[90 - dict_method_keys_1.png]]
 
-E, assim, podemos utilizar um for loop para acessar todas as palavras-chave.
+E, assim, podemos utilizar um loop para acessar todas as palavras-chave.
 
 ```python
 catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
@@ -1013,7 +1051,7 @@ for key in catto.keys():
 
 #### values()
 
-Assim como o método ```keys()```, o método ```values()``` nos dá acesso apenas aos valores do ```dictionary```.
+Assim como o método ```keys()```, o método ```values()``` nos dá acesso apenas aos valores de um ```dictionary```.
 
 ```python
 catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
@@ -1065,7 +1103,7 @@ Como este loop tem duas variáveis, uma para a palavra-chave (```key```) e a out
 
 #### get()
 
-O método ```get()``` pode ter um ou dois argumentos.  Quando tentamos acessar uma palavra-chave que não existe dentro do ```dictionary```, python levantará um erro. O método ```get()``` retornará o valor se a palavra-chave existir e, caso não exista, retornará o valor que passarmos como argumento.
+O método ```get()``` pode ter um ou dois argumentos.  Quando tentamos acessar uma palavra-chave que não existe dentro de um ```dictionary```, python levantará um erro. O método ```get()``` retornará o valor se a palavra-chave existir e, caso não exista, retornará o valor que passarmos como argumento.
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2, "bow": 1}  
@@ -1145,7 +1183,7 @@ print(f"Items: {items}")
 
 #### pop()
 
-```pop()``` é um método que recebe uma palavra chave como argumento e remove o elemento do ```dictionary```.
+```pop()``` é um método que recebe uma palavra-chave como argumento e remove do ```dictionary```.
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2}  
@@ -1176,7 +1214,7 @@ print(person)
 
 ### Exercícios 8
 
-Utilize a lista abaixo para os exercícios 1 e 2:
+Utilize o dicionário abaixo para os exercícios 1 e 2:
 
 ```python
 people = {  
@@ -1192,7 +1230,7 @@ people = {
 }
 ```
 
-1. Encontre a pessoa mais velha e imprima-o na tela.
+1. Encontre a pessoa mais velha e imprima na tela seu nome e idade.
 2. Encontre a média de idade das pessoas e imprima-a na tela com 2 casas decimais.
 3. Você foi contratado para criar um programa para entrevistar 10 pessoas sobre o que preferem, pizza ou sushi. Crie um programa para esta pesquisa que ao final imprima na tela o que a maioria prefere e quantos votos o ganhador recebeu.
 

@@ -375,7 +375,7 @@ print("11" + "11")
 
 ### Números
 
-Existem dois tipos de dados numéricos: integer (Int) e float (floating-point number). Integers são números inteiros, enquanto floats são números decimais.
+Existem dois tipos de dados numéricos: int (integer) e float (floating-point number). Integers são números inteiros, enquanto floats são números decimais.
 
 | Tipo de Dado | Exemplos                               |
 |--------------|----------------------------------------|

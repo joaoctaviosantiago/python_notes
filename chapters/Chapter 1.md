@@ -372,7 +372,7 @@ print("11" + "11")
 
 ### Numbers
 
-There are two numeric data types: integer (Int) and float (floating-point number). Integers are whole numbers, while floats are numbers with decimal places.
+There are two numeric data types: int (integer) and float (floating-point number). Integers are whole numbers, while floats are numbers with decimal places.
 
 | Data type | Examples                               |
 |--------------|----------------------------------------|
