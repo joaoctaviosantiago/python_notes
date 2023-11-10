@@ -1238,7 +1238,7 @@ people = {
 
 ## Tuple
 
-Também conhecidas como "tupla" no português, ```tuple``` são dados iteráveis, assim como ```list``` e ```dictionary```. Os elementos de um ```tuple``` são ordenados, então podemos acessá-los com índices, porém, um ```tuple``` é imutável. Uma vez criado, ele não pode ser modificado.
+Também conhecidas como "tupla" no português, ```tuple``` são tipos de dados iteráveis, assim como ```list``` e ```dictionary```. Os elementos de um ```tuple``` são ordenados, então podemos acessá-los com índices; porém, um ```tuple``` é imutável. Uma vez criado, ele não pode ser modificado.
 
 Um ```tuple``` é criado colocando os dados entre parênteses.
 
@@ -1346,7 +1346,7 @@ print(f"a: {a}, b: {b}")
 
 ![[111 - swapping_variables_1.png]]
 
-Temos duas variáveis ```a``` de valor 10 e ```b``` de valor 20 e queremos trocar seus valores para que ```a``` seja 20 e ```b``` seja 10. Para isto, criamos uma variável temporária ```c```, depois colocamos o valor de ```a``` em ```c```, o de ```b``` em ```a``` e o de ```c``` em ```b```. É como se tivéssemos dois copos e um com refrigerante de laranja no copo A e outro com refrigerante de uva B, e nós quiséssemos colocar o de uva no A e o de laranja no B. Para isso, nós usaríamos um terceiro copo vazio chamado de C. Colocaríamos o refrigerante de laranja no C, o de uva no copo A e o de laranja, que está no copo C, no copo B.
+Temos duas variáveis, ```a``` de valor 10 e ```b``` de valor 20, e queremos trocar seus valores para que ```a``` seja 20 e ```b``` seja 10. Para isto, criamos uma variável temporária ```c```, depois colocamos o valor de ```a``` em ```c```, o de ```b``` em ```a``` e o de ```c``` em ```b```. É como se tivéssemos dois copos, refrigerante de laranja no copo A e refrigerante de uva no copo B, e nós quiséssemos colocar o de uva no A e o de laranja no B. Para isso, nós usaríamos um terceiro copo vazio chamado de C. Colocaríamos o refrigerante de laranja no C, o de uva no copo A e o de laranja, que está no copo C, no copo B.
 
 Com ```tuple``` podemos fazer esta troca de uma maneira muito mais simples.
 
@@ -1378,7 +1378,7 @@ print(numbers_total)
 
 ### Exercícios 9
 
-Utilize a ```tuple``` abaixo para os exercícios:
+Utilize a ```tuple``` abaixo para resolver os exercícios 1, 2 e 3:
 
 ```python
 numbers = (7, 42, 93, 58, 12, 24, 30)
@@ -1387,6 +1387,7 @@ numbers = (7, 42, 93, 58, 12, 24, 30)
 1. Imprima os três últimos números.
 2. imprima a média de todos os elementos
 3. imprima o tuple ao contrário
+4. Você está trabalhando com um time para criar um jogo 2D. Nestes jogos, a posição dos personagens é definida pelas coordenadas (x, y). Você ficou encarregado de criar um novo poder para o personagem do jogador que troca sua posição com seu inimigo. Crie o código para esta mecânica e imprima na tela as posições antigas e atuais.
 
 ---
 
@@ -1406,7 +1407,7 @@ Como podemos ver, todos os números repetidos foram removidos e a ordem em que f
 
 Os dados do tipo ```set``` só podem conter dados imutáveis, ou seja, dados que não podem ser mudados. Se você tentar colocar um dado do tipo ```list``` ou ```dict``` dentro de um ```set```, python levantará um erro.
 
-> **_Importante:_** Cuidado para não confundir ```set``` com ```dictionary```. Ambos usam chaves mas ```dictionary``` tem um par de palavra-chave e valor.
+> **_Importante:_** Cuidado para não confundir ```set``` com ```dictionary```. Ambos usam chaves mas ```dictionary``` tem pares de palavras-chave e valores.
 
 ### Acessando elementos
 
@@ -1427,7 +1428,7 @@ for vowel in vowels:
 
 ##### add()
 
-Através do método ```add()``` nós podemos adicionar um elemento no ```set```.
+Através do método ```add()``` nós podemos adicionar um elemento ao ```set```.
 
 ```python
 letters = {"a", "b", "c"}  
@@ -1486,10 +1487,10 @@ print(languages)
 
 O método ```pop()``` com ```set``` tem 2 usos. Ele pode:
 
-1. remover um elemento **aleatório** da lista
+1. remover um elemento **aleatório** do set
 3. remover um elemento **aleatório** e atribuí-lo a uma variável
 
-primeiro uso:
+Primeiro uso:
 
 ```python
 languages = {"python", "gdscript", "kotlin"}  
@@ -1500,7 +1501,7 @@ print(languages)
 
 ![[120 - set_method_pop_1.png]]
 
-segundo uso:
+Segundo uso:
 
 ```python
 languages = {"python", "gdscript", "kotlin"}  
@@ -1617,7 +1618,7 @@ numbers = frozenset(numbers)
 print(numbers)
 ```
 
-Neste exemplo passamos uma lista como argumento, fazemos o type casting para frozenset e este é o resultado:
+Neste exemplo, passamos uma lista como argumento, fazemos o type casting para frozenset e este é o resultado:
 
 ![[130 - frozenset.png]]
 
@@ -1625,9 +1626,9 @@ Neste exemplo passamos uma lista como argumento, fazemos o type casting para fro
 
 ## Mais type casting
 
-Como vimos anteriormente, nós podemos alterar o tipo de um dado através do que chamamos de type casting. E também podemos fazer isso com dados do tipo collection.
+Nós sabemos que podemos alterar o tipo de um dado através do que chamamos de type casting. E também podemos fazer isso com dados do tipo collection.
 
-De maneira geral, eles funcionam da mesma forma dos que vimos anteriormente, a única diferença é que eles têm que receber um dado iterável (que nós podemos acessar usando um loop), como uma string ou uma collection.
+De maneira geral, eles funcionam da mesma forma dos que vimos anteriormente. A única diferença é que eles têm que receber um dado iterável (que nós podemos acessar usando um loop) como argumento, como uma string ou uma collection.
 
 ```python
 list(dado)
@@ -1694,7 +1695,7 @@ names3 = ['Conan', 'Giorgio', 'Rodrigo']
 
 1. Imprima na tela os elementos que aparecem em uma lista mas não nas outras.
 2. Imprima na tela todos os elementos das três listas sem duplicações.
-3. Crie um programa para checar se a lista abaixo tem números repetidos e imprima na tela "Sim, tem números repetidos." ou "Não tem números repetidos".
+3. Crie um programa para checar se a lista abaixo tem números repetidos e imprima na tela "Sim, tem números repetidos." ou "Não, não tem números repetidos".
 
 ```python
 numbers = [12, 7, 5, 46, 32, 26, 1, 90, 88, 7, 12, 26, 1]
@@ -1731,7 +1732,7 @@ for element in my_zip:
 
 ![[134 - zip_2.png]]
 
-Ao acessar seus elementos, podemos ver que o objeto do tip ```zip``` pegou os elementos de cada lista e criou tuples. Primeiro elemento com primeiro elemento, segundo elemento com segundo elemento, e assim por diante.
+Ao acessar seus elementos, podemos ver que o objeto do tipo ```zip``` pegou os elementos de cada lista e criou tuples. Primeiro elemento com primeiro elemento, segundo elemento com segundo elemento, e assim por diante.
 
 Então o object do tipo ```zip``` contém um ou mais elementos do tipo ```tuple```. E nós podemos usar type casting para transformar um objeto ```zip``` em uma lista, um set, um tuple, ou até um dict.
 
@@ -1773,7 +1774,7 @@ zip_list = list(zip(positions, months))
 print(zip_list)
 ```
 
-Aqui estamos passando dois argumentos para a função ```zip()```, a lista ```positions``` tem um tamanho de 7, ou seja, ela tem 7 elementos, enquanto a lista ```months``` tem apenas 3. Neste caso, o objeto zip criado terá um tamanho igual ao tamanho do menor argumento passado, que neste caso é a lista ```month```. O tamanho do objeto zip será 3.
+Aqui estamos passando dois argumentos para a função ```zip()```: a lista ```positions``` que tem um tamanho 7, ou seja, ela tem 7 elementos; e a lista ```months``` que tem apenas 3. Neste caso, o objeto zip criado terá um tamanho igual ao tamanho do menor argumento passado, que é a lista ```month```. O tamanho do objeto zip será 3.
 
 ![[137 - zip_5.png]]
 
@@ -1781,15 +1782,15 @@ Aqui estamos passando dois argumentos para a função ```zip()```, a lista ```po
 
 ## Otimização
 
-Eu sei que nós vimos muitos tipos de dados e seus diferentes usos. E como sei qual dado usar ou quando usar? Não existe resposta certa pra esta pegunta. Existem diversas soluções para um mesmo problema. Você pode chegar ao mesmo resultado utilizando diferentes tipos de dados e cabe a você escolher o que achar melhor.
+Eu sei que nós vimos muitos tipos de dados e seus diferentes usos. Mas como sei qual dado usar ou quando usar? Não existe resposta certa pra esta pegunta. Existem diversas soluções para um mesmo problema. Você pode chegar ao mesmo resultado utilizando diferentes tipos de dados e cabe a você escolher o que achar melhor.
 
-Com isso em mente, é importante falarmos da otimização. Dizemos que um código é otimizado quando ele é eficiente. Ele usa a quantidade mínima de memória necessária para funcionar ou chega a um resultado de maneira rápida. E escolher o tipo de dado necessário para seu algoritmo faz diferença. Por exemplo, se você sabe que um conjunto de dados não será e nem poderá ser alterado durante a execução de um programa, utilize um dado do tipo ```tuple``` ao invés de uma lista, pois o tuple tem estas características especificamente - ele é otimizado para isto.
+Com isso em mente, é importante falarmos da otimização. Dizemos que um código é otimizado quando ele é eficiente. Ele usa a quantidade mínima de memória necessária para funcionar ou chega a um resultado de maneira rápida. E escolher o tipo de dado necessário para seu algoritmo faz diferença. Por exemplo, se você sabe que um conjunto de dados não será e nem poderá ser alterado durante a execução de um programa, utilize um dado do tipo ```tuple``` em vez de uma lista, pois o tuple tem estas características especificamente - ele é otimizado para isto.
 
-Quando nós criamos mais de um algoritmo para resolver um mesmo problema, nós podemos avaliar qual é o mais eficiente através do que chamamos de notação Big O, em inglês, Big O Notation. Imagine que você criou dois algoritmos que modificam dados do tipo ```string```. Quando trabalhamos com strings curtas, ambos os algoritmos são bem rápidos e resolvem o problema em milésimos de segundo. Mas e quando trabalhamos com strings com mil caracteres, ou cem mil caracteres, qual deles seria mais rápido? A Notação Big O seve para responder essa pergunta, avaliando-os e classificando-os.
+Quando nós criamos mais de um algoritmo para resolver um mesmo problema, nós podemos avaliar qual é o mais eficiente através do que chamamos de Notação Big O, em inglês, Big O Notation. Imagine que você criou dois algoritmos que modificam dados do tipo ```string```. Quando trabalhamos com strings curtas, ambos os algoritmos são bem rápidos e resolvem o problema em milésimos de segundo. Mas e quando trabalhamos com strings com mil caracteres, ou cem mil caracteres, qual deles seria mais rápido? A Notação Big O serve para responder essa pergunta, avaliando-os e classificando-os.
 
 ### O mais importante é fazer funcionar
 
-Eu não acredito que seja relevante estudarmos otimização por enquanto. Então não quero que você se preocupe com isso. Estou comentando apenas para que você saiba que existe e que, posteriormente, caso queira, possa se aprofundar mais por conta própria.
+Eu não acredito que seja relevante estudarmos otimização por enquanto, então não quero que você se preocupe com isso. Estou comentando apenas para que você saiba que isto existe. Nós aprenderemos mais sobre otimização num capítulo futuro.
 
 Eu fiz questão de colocar no título para que isso fique bem claro: A otimização vem depois, caso haja necessidade. **O primeiro e mais importante passo é fazer o programa funcionar.** Se você quiser voltar e otimizar seu código posteriormente, ou caso haja necessidade,  okay. Excelente. Mas caso não veja necessidade, siga em frente.
 
@@ -1807,9 +1808,25 @@ Na maioria dos cursos que eu fiz e livros que li, variáveis eram descritas como
 
 Nós sabemos que as variáveis são armazenadas em endereços na memória. Quando criamos uma variável e a damos um nome, este nome é simplesmente uma referência, ou apelido, para o endereço na memória onde este dado está localizado.
 
-Imagine que você está voltando para casa e encontra um amigo, ele pergunta "Aonde você está indo?" e você responde "Estou indo para a minha casa." Quando você diz "minha casa", seu amigo entende que você está se referindo ao endereço, que Rua Muçarela, número 70, Bairro Queijo. Então ou você pode falar o seu endereço, ou pode usar uma referência mais descritiva. E é assim que funciona com as variáveis.
+Imagine que você está voltando para casa e encontra um amigo, ele pergunta "Aonde você está indo?" e você responde "Estou indo para a minha casa." Quando você diz "minha casa", seu amigo entende que você está se referindo ao endereço, que é Rua Muçarela, número 70, Bairro Queijo. Então ou você pode falar o seu endereço, ou pode usar uma referência mais descritiva. E é assim que funciona com as variáveis.
 
 Quando criamos uma variável chamada ```hello``` e chamamos a função ```print()``` para imprimi-la na tela, python entende que quando você diz ```hello```, você está se referindo ao dado que se encontra naquele endereço na memória.
+
+Para que isto fique um pouco mais claro, vamos analisar a função ```zip()``` que vimos anteriormente.
+
+```python
+positions = [1, 2, 3]  
+months = ["January", "February", "March"]  
+my_zip = zip(positions, months)  
+
+print(my_zip)
+```
+
+Quando tentamos imprimir na tela o valor da variável ```my_zip```, python entende que o nome da variável é simplesmente uma referência a um endereço na memória.
+
+![[133 - zip_1.png]]
+
+Quando a imprimimos, ele nos diz que dentro do endereço ```0x7f9a1e5f3780``` na memória há um objeto zip. Python entende que a variável de nome ```my_zip``` é uma referência ao endereço ```0x7f9a1e5f3780``` na memória.
 
 E é assim que a variável computacional se difere da variável matemática. Ela não é simplesmente um nome com um valor, ela é um nome que aponta para um endereço na memória, onde um valor se encontra.
 

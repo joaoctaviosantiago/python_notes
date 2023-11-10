@@ -499,7 +499,7 @@ counter = names.count("Jessica")
 print(counter)
 ```
 
-In this example, we're passing the string "Jessica" as argument. Python, then, will count how many times the string "Jessica" appears in the list and will assign this value to the variable ```counter```. Resulting in:
+In this example, we're passing the string "Jessica" as an argument. Python, then, will count how many times the string "Jessica" appears in the list and will assign this value to the variable ```counter```. Resulting in:
 
 ![[57-5 - count_method.png]]
 
@@ -768,7 +768,7 @@ In this example we're replacing the string "cat" with "dog".
 
 #### join()
 
-The ```join()``` method receives a list or tuple as argument and concatenates each element a string as separator.
+The ```join()``` method receives a list or tuple as an argument and concatenates each element a string as separator.
 
 ```python
 words = ["Hello", "my", "friend", "Doug"]  
@@ -786,7 +786,7 @@ phrase = " ".join(words)
 print(phrase)
 ```
 
-Python will take the ```string``` we've passed, in this case, a white space ```" "``` and put it between each of the elements of the list passed as argument.
+Python will take the ```string``` we've passed, in this case, a white space ```" "``` and put it between each of the elements of the list passed as an argument.
 
 ![[77 - join_method_2.png]]
 
@@ -794,7 +794,7 @@ In other words, ```" ".join(words)``` means "take each element of the list ```wo
 
 #### count()
 
-The ```count()``` method takes a ```string``` as argument and counts how many times it appears in the sentence. It's similar to the program we made on exercise 5-3.
+The ```count()``` method takes a ```string``` as an argument and counts how many times it appears in the sentence. It's similar to the program we made on exercise 5-3.
 
 ```python
 text = "oh no, my cat ate all my food!"  
@@ -815,7 +815,7 @@ The word "my" appears twice in the given ```string```.
 
 ---
 
-## Compreensão de lista | List comprehension
+## List comprehension
 
 List comprehension is a more concise form of creating a list, and it only exists in a few languages. In a single line, we can create a ```for``` loop, add the elements and even conditions.
 
@@ -1106,7 +1106,7 @@ Since this loop has two variables, one for ```key``` and another one for ```valu
 
 #### get()
 
-The ```get()``` method can have one or two arguments. When we try to access a key that does not exist in a ```dictionary```, python will raise an error. The ```get()``` method will return the value if the key exist and, if it doesn't, it will return the value we've passed as argument.
+The ```get()``` method can have one or two arguments. When we try to access a key that does not exist in a ```dictionary```, python will raise an error. The ```get()``` method will return the value if the key exist and, if it doesn't, it will return the value we've passed as an argument.
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2, "bow": 1}  
@@ -1186,7 +1186,7 @@ print(f"Items: {items}")
 
 #### pop()
 
-```pop()``` is a method that receives a key as argument and remove it from the ```dictionary```.
+```pop()``` is a method that receives a key as an argument and remove it from the ```dictionary```.
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2}  
@@ -1241,9 +1241,9 @@ people = {
 
 ## Tuple
 
-Também conhecidas como "tupla" no português, ```tuple``` são dados iteráveis, assim como ```list``` e ```dictionary```. Os elementos de um ```tuple``` são ordenados, então podemos acessá-los com índices, porém, um ```tuple``` é imutável. Uma vez criado, ele não pode ser modificado.
+```tuple``` is an iterable data type, just like ```list``` and ```dictionary```. The elements of a ```tuple``` are ordered, so we can access them by their indexes; however, a```tuple``` is immutable. Once created, it cannot be modified.
 
-Um ```tuple``` é criado colocando os dados entre parênteses.
+A ```tuple``` is created by putting data in-between parenthesis.
 
 ```python
 numbers = (10, 20, 30)  
@@ -1253,11 +1253,11 @@ print(numbers)
 
 ![[104 - tuple.png]]
 
-> **_Importante:_** Uma ```list``` ou um ```dictionary``` dentro de um ```tuple``` ainda pode ser modificados, porém, a estrutura do ```tuple``` não pode.
+> **_Important:_** A ```list``` or a ```dictionary``` inside of a ```tuple``` can still be modified; but the structure of the ```tuple``` cannot.
 
-### Acessando elementos
+### Accessing elements
 
-Como ```tuple``` é ordenado, seus elementos podem ser acessados através de índices, assim como ```list```.
+Since ```tuple``` is ordered, its elements can be accessed by their indexes, just like ```list```.
 
 ```python
 numbers = (10, 20, 30)  
@@ -1267,11 +1267,11 @@ print(numbers[1])
 
 ![[105 - accessing_tuple.png]]
 
-> **_Importante:_** Os índices começam sempre em 0.
+> **_Important:_** The indexes always begin at 0.
 
 ### Tuple slices
 
-Também podemos acessar os elementos de ```tuple``` com slices.
+We can also access the elements of a ```tuple``` with slices.
 
 ```python
 numbers = (10, 20, 30, 40, 50)  
@@ -1289,11 +1289,11 @@ print(numbers[::-1])
 
 ![[107 - tuple_slices_2.png]]
 
-### Métodos
+### Methods
 
 #### count()
 
-Conta a quantidade de vezes que um elemento aparece no ```tuple```.
+It counts the amount of times an element appears in the ```tuple```.
 
 ```python
 numbers = (10, 20, 30, 30, 40, 20, 30, 10)  
@@ -1305,10 +1305,10 @@ print(numbers.count(30))
 
 #### index()
 
-Mostra o índice do dado passado.
+It shows the index of the element passed as an argument.
 
 ``` python
-names = ("George", "Geoff", "Gob")  
+names = ("Giulia", "Geoff", "Gob")  
   
 print(names.index("Geoff"))
 ```
@@ -1317,7 +1317,7 @@ print(names.index("Geoff"))
 
 ### Unpacking tuple
 
-Unpacking tuple significa colocar cada elemento da ```tuple``` dentro de uma variável. Python nos permite fazer isso de forma bem elegante.
+Unpacking tuple means to put each element of the ```tuple```inside of a variable. Python allows us to do this in a very elegant manner.
 
 ```python
 numbers = (10, 20, 30)  
@@ -1330,9 +1330,9 @@ print(c)
 
 ![[110 - unpacking_tuple.png]]
 
-### Trocando variáveis
+### Swapping variables
 
-Podemos também trocar o valor de variáveis com ```tuple```. Normalmente, se quiséssemos fazer isso, faríamos da forma abaixo:
+We can also swap the value of variables with ```tuple```. Normally, if we want to do this, we would do it in the way shown below:
 
 ```python
 a = 10  
@@ -1349,9 +1349,9 @@ print(f"a: {a}, b: {b}")
 
 ![[111 - swapping_variables_1.png]]
 
-Temos duas variáveis ```a``` de valor 10 e ```b``` de valor 20 e queremos trocar seus valores para que ```a``` seja 20 e ```b``` seja 10. Para isto, criamos uma variável temporária ```c```, depois colocamos o valor de ```a``` em ```c```, o de ```b``` em ```a``` e o de ```c``` em ```b```. É como se tivéssemos dois copos e um com refrigerante de laranja no copo A e outro com refrigerante de uva B, e nós quiséssemos colocar o de uva no A e o de laranja no B. Para isso, nós usaríamos um terceiro copo vazio chamado de C. Colocaríamos o refrigerante de laranja no C, o de uva no copo A e o de laranja, que está no copo C, no copo B.
+We have two variables, ```a``` of value 10 and ```b``` of value 20, and want to swap their values so that ```a``` becomes 20 and ```b``` becomes 10. To do this, we create a new temporary variable ```c```, then put the value of ```a``` in ```c```, the value of ```b``` in ```a``` and of ```c``` in ```b```. It's as if we had two cups, orange soda in cup A and grape soda in cup B, and wanted to put grape soda in cup A and orange soda in cup B. For this, we'd use a third empty cup called C. We'd put orange soda in cup C, grape soda in cup A and orange soda, which is currently in cup C, in cup B.
 
-Com ```tuple``` podemos fazer esta troca de uma maneira muito mais simples.
+With ```tuple``` we can do this in a much easier way.
 
 ```python
 a = 10  
@@ -1366,9 +1366,9 @@ print(f"a: {a}, b: {b}")
 
 ![[112 - swapping_variables_2.png]]
 
-### Concatenando tuple
+### Concatenating tuple
 
-Apesar de não podermos modificar tuples, podemos concatená-las para criar novas tuples.
+Though we cannot modify tuples, we can concatenate them to create new ones.
 
 ```python
 numbers = (1, 2, 3)
@@ -1379,23 +1379,24 @@ print(numbers_total)
 
 ![[113 - tuple_concatenation.png]]
 
-### Exercícios 9
+### Exercise 9
 
-Utilize a ```tuple``` abaixo para os exercícios:
+Use the below```tuple``` to solve the exercises 1, 2 and 3:
 
 ```python
 numbers = (7, 42, 93, 58, 12, 24, 30)
 ```
 
-1. Imprima os três últimos números.
-2. imprima a média de todos os elementos
-3. imprima o tuple ao contrário
+1. Print the last three numbers
+2. Print the average of all the elements
+3. Print the tuple backwards
+4. You're working with a team to create a 2D game. In such games, character's positions are defined by the coordinates (x, y). You're asked to create a new spell for the player character that swaps their location with their enemy. Create the code for this mechanic and print the previous positions and the current ones.
 
 ---
 
 ## Set
 
-```set``` é um tipo de dado iterável que remove elementos duplicados. Seus elementos não são organizados, ou seja, não podemos acessá-los através de índices (é comum que os elementos mudem de ordem cada vez que são impressos).
+```set``` is an iterable data type that removes duplicated elements. Its elements are unorganized, meaning that we cannot access them by indexes (it is common that elements change order when printed).
 
 ```python
 numbers = {10, 20, 10, 30, 10, 40}  
@@ -1405,15 +1406,15 @@ print(numbers)
 
 ![[114 - set_1.png]]
 
-Como podemos ver, todos os números repetidos foram removidos e a ordem em que foram impressos está diferente da ordem em que o ```set``` foi escrito.
+As we can see, all the duplicated numbers were removed and the order in which they were printed is different than the order in which the ```set``` is written.
 
-Os dados do tipo ```set``` só podem conter dados imutáveis, ou seja, dados que não podem ser mudados. Se você tentar colocar um dado do tipo ```list``` ou ```dict``` dentro de um ```set```, python levantará um erro.
+The data of type ```set``` can only contain immutable data, which means data that cannot be altered. If you try to add a data of type ```list``` or ```dict``` inside of a ```set```, python will raise an error.
 
-> **_Importante:_** Cuidado para não confundir ```set``` com ```dictionary```. Ambos usam chaves mas ```dictionary``` tem um par de palavra-chave e valor.
+> **_Important:_** Be careful not to confuse ```set``` with ```dictionary```. Both use curly braces but ```dictionary``` has key-value pairs.
 
-### Acessando elementos
+### Accessing elements
 
-Já que os elementos de um ```set``` não estão em ordem, não podemos acessá-los com índices. Por isso, a única forma de acessá-los é através de um loop.
+Since the elements of a ```set``` are not ordered, we can't access them by indexes. Because of this, the only way of accessing them is through a loop.
 
 ```python
 vowels = {"a", "e", "i", "o", "u"}  
@@ -1424,13 +1425,13 @@ for vowel in vowels:
 
 ![[115 - accessing_sets.png]]
 
-### Modificando um set
+### Modifying a set
 
-#### adicionando elementos
+#### Adding elements
 
 ##### add()
 
-Através do método ```add()``` nós podemos adicionar um elemento no ```set```.
+Through the ```add()``` method we can add an element to a ```set```.
 
 ```python
 letters = {"a", "b", "c"}  
@@ -1443,7 +1444,7 @@ print(letters)
 
 ##### update()
 
-O método ```update()``` recebe um iterável como argumento e, assim, nos permite adicionar vários elementos de uma vez.
+The ```update()``` method takes an iterable data as an argument and, this way, allows us to add multiple elements at once.
 
 ```python
 languages = {"python", "gdscript", "kotlin"}  
@@ -1455,11 +1456,11 @@ print(languages)
 
 ![[117 - set_method_update.png]]
 
-#### Removendo elementos
+#### Removing elements
 
 ##### remove()
 
-O método ```remove()``` remove um elemento do ```set```. Se o elemento não estiver no ```set```, ele levanta um erro.
+The ```remove()``` method removes an element from the ```set```. If the element is not in the ```set```, it raises an error.
 
 ```python
 languages = {"python", "gdscript", "kotlin"}  
@@ -1470,11 +1471,11 @@ print(languages)
 
 ![[118 - set_method_remove.png]]
 
-> **_Nota:_** Nós aprenderemos a lidar com erros posteriormente.
+> **_Note:_** We'll learn how to deal with errors later.
 
 ##### discard()
 
-```discard()``` também remove um elemento do ```set```, mas caso o elemento não exista, ele não levanta um erro.
+```discard()``` also removes an element from a ```set```, but if the element doesn't exist, it doesn't raise an error.
 
 ```python
 languages = {"python", "gdscript", "kotlin"}  
@@ -1487,12 +1488,12 @@ print(languages)
 
 #### pop()
 
-O método ```pop()``` com ```set``` tem 2 usos. Ele pode:
+The ```pop()``` method with a ```set``` has to use cases. It can:
 
-1. remover um elemento **aleatório** da lista
-3. remover um elemento **aleatório** e atribuí-lo a uma variável
+1. remove a **random** element from the set
+3. remove a **random** element and assign it to a variable
 
-primeiro uso:
+First use case:
 
 ```python
 languages = {"python", "gdscript", "kotlin"}  
@@ -1503,7 +1504,7 @@ print(languages)
 
 ![[120 - set_method_pop_1.png]]
 
-segundo uso:
+Second use case:
 
 ```python
 languages = {"python", "gdscript", "kotlin"}  
@@ -1515,21 +1516,21 @@ print(random_language)
 
 ![[121 - set_method_pop_2.png]]
 
-### Operações com set
+### Set operations
 
-Assim como na matemática, operações de conjuntos como união, intersecção e diferença, podem ser feitas com o set. Eu sei que a gente se assusta quando lê que tem matemática envolvida. Mas eu vou explicar em detalhes e desenhar pra você ver que não é nenhum bicho de sete cabeças.
+Just like in math, set operations such as union, intersection and difference can be done with a set. I know that we get scared when math is involved. But I'll try to explain it all in detail and draw for you to see that it is not as hard as it seems.
 
-Existem operadores e métodos para cara uma dessas operações. Eu mostrarei das duas formas.
+There are operators and methods for each of these operations. I'll be showing both.
 
-> **_Nota:_** Nos exemplos eu utilizei dois sets apenas, mas é possível fazer operações com três ou mais sets também.
+> **_Note:_** In the examples I used two sets only, but it is also possible to do operations with three or more.
 
-#### União
+#### Union
 
-Quando fazemos a união de sets, nós pegamos todos os elementos contidos em todos os sets.
+When we make a union of sets, we take all the elements contained in all the sets.
 
 ![[122 - set_union.jpg]]
 
-Em python, nós podemos utilizar o método ```union()``` ou o operador ```|```.
+In python, we can utilize the ```union()``` or the ```|``` operator.
 
 ```python
 numbers = {1, 2, 3, 4}  
@@ -1541,15 +1542,15 @@ print(f"Operator: {numbers | more_numbers}")
 
 ![[123 - set_union_2.png]]
 
-Como podemos ver, foi criado um novo set contendo todos os elementos contidos nos sets ```numbers``` e ```more_numbers```, sem repeti-los, pois dados do tipo ```set``` não aceitam repetições de valores.
+As we can see, a new set was created containing all the elements of the sets ```numbers``` and ```more_numbers```, with no duplicates, since ```set``` data types don't allow them.
 
-#### Interseção
+#### Intersection
 
-Quando fazemos a interseção de sets, nós pegamos apenas os elementos únicos que existem em todos eles.
+When we do the intersection of sets, we simply take the unique elements that belong to all the sets.
 
 ![[124 - set_intersection.jpg]]
 
-Em python, nós podemos utilizar o método ```intersection()``` ou o operador ```&```.
+In python, we can utilize the ```intersection()``` method or the ```&``` operator.
 
 ```python
 numbers = {1, 2, 3, 4}  
@@ -1561,15 +1562,15 @@ print(f"Operator: {numbers & more_numbers}")
 
 ![[125 - set_intersection_2.png]]
 
-Aqui foi criado um novo set contendo apenas os elementos que aparecem tanto no set ```numbers``` quanto no set ```more_numbers```. Novamente: sem repeti-los pois dados do tipo ```set``` não aceitam repetição de valores.
+Here a new set was created containing the elements that appear in both the ```numbers``` set and the ```more_numbers``` set. Again, without duplicates because data of type ```set``` does not allow for duplicated values.
 
-#### Diferença
+#### Difference
 
-Quando fazemos a diferença entre sets, nós pegamos apenas os elementos que existem em um set mas não existem nos outros.
+When we do the difference between sets, we take only the elements that exist in one set but not the others.
 
 ![[126 - set_difference.jpg]]
 
-Em python, nós podemos utilizar o método ```difference()``` ou o operador ```-```.
+In python, we can use the ```difference()``` method or the ```-``` operator.
 
 ```python
 numbers = {1, 2, 3, 4}  
@@ -1581,15 +1582,15 @@ print(f"Operator: {numbers - more_numbers}")
 
 ![[127 - set_difference_2.png]]
 
-Um novo set foi criado contendo apenas os números que pertencem ao set ```numbers``` que não pertencem a outros sets.
+A new set was created containing only the numbers that are present in the ```numbers``` set, but that are not present in the other sets.
 
-#### Diferença simétrica
+#### Symmetric difference
 
-Quando fazemos a diferença simétrica entre sets, nós pegamos todos os elementos que são únicos de cada set. Qualquer elemento que apareça em mais de um set é ignorado.
+When we do the symmetric difference of sets, we take all the elements that are unique to each set. Any element that is present in both sets is ignored.
 
 ![[128 - set_symmetric_difference.jpg]]
 
-Em python, nós podemos utilizar o método ```symmetric_difference()``` ou o operador ```^```.
+In python, we can use the ```symmetric_difference()``` method or the ```^```operator.
 
 ```python
 numbers = {1, 2, 3, 4}  
@@ -1601,17 +1602,17 @@ print(f"Operator: {numbers ^ more_numbers}")
 
 ![[129 - set_symmetric_difference_2.png]]
 
-Neste caso, criamos um novo set com todos os elementos únicos que pertencem ao set ```numbers``` e ao set ```more_numbers```. Qualquer elemento que pertença aos dois sets não foi incluído.
+In this case, we're creating a new set with all the elements that belong to the ```numbers``` set and to the ```more_numbers``` set. Any other element that is present in both sets was not included.
 
 ---
 
 ## Frozenset
 
-Dados do tipo ```frozenset``` são sets imutáveis, ou seja, o original não pode ser modificado.
+Data of the type ```frozenset``` are immutable sets, meaning the original cannot be modified.
 
-Nós podemos criá-los através da função ```frozenset()```.
+We can create them using the ```frozenset()``` function.
 
-Se não passarmos argumentos, a função cria um dado do tipo ```frozenset``` vazio. Caso passemos um dado iterável como argumento para a função, ela faz type casting e transforma o dado em um frozenset.
+If we don't pass any arguments, the function will create an empty data of type ```frozenset```. In case we do pass an iterable as an argument to the function, it will do a type casting and turn the data into a frozenset.
 
 ``` python
 numbers = [1, 2, 3, 4, 5]  
@@ -1620,37 +1621,37 @@ numbers = frozenset(numbers)
 print(numbers)
 ```
 
-Neste exemplo passamos uma lista como argumento, fazemos o type casting para frozenset e este é o resultado:
+In this example, we're passing a list as an argument and doing the type casting to frozenset. This is the result:
 
 ![[130 - frozenset.png]]
 
 ---
 
-## Mais type casting
+## More type casting
 
-Como vimos anteriormente, nós podemos alterar o tipo de um dado através do que chamamos de type casting. E também podemos fazer isso com dados do tipo collection.
+We know that we can alter the type of a data through what we call type casting. And we can also do this with collection data types.
 
-De maneira geral, eles funcionam da mesma forma dos que vimos anteriormente, a única diferença é que eles têm que receber um dado iterável (que nós podemos acessar usando um loop), como uma string ou uma collection.
-
-```python
-list(dado)
-```
-
-Converte o dado para o tipo ```list```.
+In general, they work the say way as we've seen before. The only difference is that they have to take an iterable (that we can access using a loop) data as an argument, like a string or a collection.
 
 ```python
-tuple(dado)
+list(data)
 ```
 
-Converte o dado para o tipo ```tuple```.
+Converts the data to the ```list``` type.
 
 ```python
-set(dado)
+tuple(data)
 ```
 
-Converte o dado para o tipo ```set```.
+Converts the data to the ```tuple``` type.
 
-E nós podemos visualizar isso com a função ```type()``` que nos diz o tipo do dado passado.
+```python
+set(data)
+```
+
+Converts the data to the ```set``` type.
+
+And we can visualize this with the ```type()``` function, which tells us the type of the passed data.
 
 ```python
 numbers = [1, 2, 3]  
@@ -1668,11 +1669,11 @@ print(type(numbers))
 
 ![[131 - type_casting.png]]
 
-> **_Nota:_** Nós aprenderemos posteriormente a criar nossas próprias classes.
+> **_Note:_** We will later learn how to create our own classes.
 
-Type casting para o tipo de dado ```dictionary``` é um pouquinho diferente. Ele recebe uma lista, um set ou um tuple de tuples de tamanho 2 e então os converte para um dicionário.
+Type casting to the ```dictionary``` data type is a little different. It receives a list, a set or a tuple of tuples of length 2 and then converts them to a dictionary.
 
-Como sabemos, dicionários armazenam elementos em pares de palavras-chave e valores. Sendo assim, para transformarmos um dado para o tipo ```dict```, precisamos passar como argumento dados do tipo ```tuple```  de tamanho 2.
+As we know, dictionaries store elements in key-value pairs. Because of this, to transform a data to the ```dict``` type, we need to pass as arguments data of type ```tuple```  of length 2.
 
 ```python
 name_and_age = [("Whiskers", 3), ("Bubbles", 6)]  
@@ -1680,14 +1681,14 @@ name_and_age = [("Whiskers", 3), ("Bubbles", 6)]
 print(dict(name_and_age))
 ```
 
-Neste exemplo, temos uma lista de dados do tipo ```tuple``` (mas poderia ser um set de tuples ou um tuple de tuples), e estamos convertendo-o para o tipo ```dict```.
+In this example, we hae a list of data of ```tuple``` type (but it could be a set of tuples or a tuple of tuples), and we're converting it to the ```dict``` type.
 
 ![[132 - type_casting_dict.png]]
 
 ---
-## Exercício 10
+## Exercise 10
 
-Dadas as listas abaixo:
+Given the lists below:
 
 ```python
 names1 = ['Rachel', 'Augusto', "Giorgio"]  
@@ -1695,9 +1696,9 @@ names2 = ['Pedro', 'Conan', 'Rachel',]
 names3 = ['Conan', 'Giorgio', 'Rodrigo']
 ```
 
-1. Imprima na tela os elementos que aparecem em uma lista mas não nas outras.
-2. Imprima na tela todos os elementos das três listas sem duplicações.
-3. Crie um programa para checar se a lista abaixo tem números repetidos e imprima na tela "Sim, tem números repetidos." ou "Não tem números repetidos".
+1. Print the elements that appear in one list but not the others.
+2. Print all the elements of all three lists without duplicates.
+3. Create a program to check if the list below has repeated numbers and print "Yes, it has repeated numbers" or "No, it doesn't have repeated numbers".
 
 ```python
 numbers = [12, 7, 5, 46, 32, 26, 1, 90, 88, 7, 12, 26, 1]
@@ -1705,9 +1706,9 @@ numbers = [12, 7, 5, 46, 32, 26, 1, 90, 88, 7, 12, 26, 1]
 
 ---
 
-## Função zip()
+## zip() function
 
-A função ```zip()``` recebe 2 ou mais dados iteráveis como argumento e os transforma em um objeto do tipo ```zip```, que contém um conjunto de tuples e é iterável. Eu sei que soa muito complicado mas com exemplos tudo ficará mais claro.
+The ```zip()``` function takes 2 or more iterable data as arguments and turns them into an object of type ```zip```, which contains a group of tuples and is iterable. I know it sounds too complicated, but it will be clearer with some examples.
 
 ```python
 positions = [1, 2, 3]  
@@ -1717,11 +1718,11 @@ my_zip = zip(positions, months)
 print(my_zip)
 ```
 
-Neste exemplo temos duas listas e estamos utilizando a função ```zip()``` para uni-los. Se tentarmos imprimir diretamente, python imprimirá que é um objeto do tipo ```zip``` e onde ele se encontra na memória.
+In this example we have two lists and we're using the ```zip()``` function to join them. If we try to print it directly, python will print that it is an object of type ```zip``` and where it is located in memory.
 
 ![[133 - zip_1.png]]
 
-Objetos do tipo ```zip``` são iteráveis, então podemos utilizar um loop para acessar seus elementos.
+Objects of type ```zip``` are iterable, so we can use a loop to access its elements.
 
 ```python
 positions = [1, 2, 3]  
@@ -1734,11 +1735,11 @@ for element in my_zip:
 
 ![[134 - zip_2.png]]
 
-Ao acessar seus elementos, podemos ver que o objeto do tip ```zip``` pegou os elementos de cada lista e criou tuples. Primeiro elemento com primeiro elemento, segundo elemento com segundo elemento, e assim por diante.
+When accessing them, we can see that the object of type ```zip``` took the elements of each list and created tuples. The first element with the first element, the second element with the second element and so on.
 
-Então o object do tipo ```zip``` contém um ou mais elementos do tipo ```tuple```. E nós podemos usar type casting para transformar um objeto ```zip``` em uma lista, um set, um tuple, ou até um dict.
+So the object of type ```zip``` contains one or more elements of type ```tuple```. And we can use type casting to turn a ```zip``` object into a list, a set, a tuple or even a dict.
 
-No exemplo abaixo, o transformamos em uma lista de tuples:
+In the example below, we transform it into a list of tuples:
 
 ```python
 positions = [1, 2, 3]  
@@ -1750,7 +1751,7 @@ print(zip_list)
 
 ![[135 - zip_3.png]]
 
-Já neste exemplo, o transformamos em um dict:
+In this example, we turn it into a dict:
 
 ```python
 positions = [1, 2, 3]  
@@ -1762,11 +1763,11 @@ print(zip_dict)
 
 ![[136 - zip_4.png]]
 
-> **_Importante:_** Só é possível transformar um objeto do tipo ```zip``` em um objeto do tipo ```dict``` quando temos no zip apenas tuples de tamanho 2, pois dicts só aceitam pares de elementos.
+> **_Important:_** It is only possible to turn an object of type ```zip``` in an object of type ```dict``` when the zip has only tuples of size 2, because dicts only accept pairs of elements.
 
-### Iteráveis de tamanhos diferentes
+### Iterables of different lengths
 
-Quando nós passamos iteráveis de tamanhos diferentes como argumentos para a função ```zip()```, o objeto zip terá o tamanho igual ao do menor argumento. Deixa eu explicar isso com um exemplo:
+When we pass iterables of different lengths as arguments to the ```zip()``` function, the zip object will have its length equal to the length of the shortest argument. Let me use an example to demonstrate this:
 
 ```python
 positions = [1, 2, 3, 4, 5, 6, 7]  
@@ -1776,45 +1777,61 @@ zip_list = list(zip(positions, months))
 print(zip_list)
 ```
 
-Aqui estamos passando dois argumentos para a função ```zip()```, a lista ```positions``` tem um tamanho de 7, ou seja, ela tem 7 elementos, enquanto a lista ```months``` tem apenas 3. Neste caso, o objeto zip criado terá um tamanho igual ao tamanho do menor argumento passado, que neste caso é a lista ```month```. O tamanho do objeto zip será 3.
+Here we're passing two arguments to the ```zip()``` function: the ```positions``` list that has a length of 7, meaning it has 7 elements; and the ```months``` list that has only 3. In this case, the  created zip object will have its length equal to the shortest argument passed, the ```month``` list. The length of the zip object will be 3.
 
 ![[137 - zip_5.png]]
 
 ---
 
-## Otimização
+## Optimization
 
-Eu sei que nós vimos muitos tipos de dados e seus diferentes usos. E como sei qual dado usar ou quando usar? Não existe resposta certa pra esta pegunta. Existem diversas soluções para um mesmo problema. Você pode chegar ao mesmo resultado utilizando diferentes tipos de dados e cabe a você escolher o que achar melhor.
+I know that we've seen many data types and their different uses. But how do I know which data type to use? There is no correct answer to this question. There are many solutions to the same problem. You can get to the same result utilizing different data types and it is up to you to choose which one you think is best.
 
-Com isso em mente, é importante falarmos da otimização. Dizemos que um código é otimizado quando ele é eficiente. Ele usa a quantidade mínima de memória necessária para funcionar ou chega a um resultado de maneira rápida. E escolher o tipo de dado necessário para seu algoritmo faz diferença. Por exemplo, se você sabe que um conjunto de dados não será e nem poderá ser alterado durante a execução de um programa, utilize um dado do tipo ```tuple``` ao invés de uma lista, pois o tuple tem estas características especificamente - ele é otimizado para isto.
+With this in mind, it is important that we talk about optimization. We say a code is optimize when it is efficient. it uses the minimum amount of memory required for it to work or it reaches a result in a fast manner. And choosing which data type is needed for your algorithm does make a difference. For example, if you know that a set of data will not and cannot be changed during runtime, use a data of type ```tuple``` instead of a list, for the tuple has these characteristics specifically - it is optimized for it.
 
-Quando nós criamos mais de um algoritmo para resolver um mesmo problema, nós podemos avaliar qual é o mais eficiente através do que chamamos de notação Big O, em inglês, Big O Notation. Imagine que você criou dois algoritmos que modificam dados do tipo ```string```. Quando trabalhamos com strings curtas, ambos os algoritmos são bem rápidos e resolvem o problema em milésimos de segundo. Mas e quando trabalhamos com strings com mil caracteres, ou cem mil caracteres, qual deles seria mais rápido? A Notação Big O seve para responder essa pergunta, avaliando-os e classificando-os.
+When we create more than one algorithm to solve a problem, we can evaluate which is more efficient using what is called Big O Notation. Imagine you've created two algorithms that modify a data of type ```string```. When we're working with short strings, both algorithms are fast and solve the problem in milliseconds. But what about when we work with strings with a thousand characters, or one hundred thousand, which one would be faster? The Big O Notation is used to solve this question, evaluating them and classifying them.
 
-### O mais importante é fazer funcionar
+### The most important thing is to make it work
 
-Eu não acredito que seja relevante estudarmos otimização por enquanto. Então não quero que você se preocupe com isso. Estou comentando apenas para que você saiba que existe e que, posteriormente, caso queira, possa se aprofundar mais por conta própria.
+I don't believe that it is relevant for us to study optimization for now, so I don't want you to worry about it. I'm only mentioning it so you know this exists. We'll learn more about it on a later chapter.
 
-Eu fiz questão de colocar no título para que isso fique bem claro: A otimização vem depois, caso haja necessidade. **O primeiro e mais importante passo é fazer o programa funcionar.** Se você quiser voltar e otimizar seu código posteriormente, ou caso haja necessidade,  okay. Excelente. Mas caso não veja necessidade, siga em frente.
+I made sure to put this in the title so that it is clear: Optimization comes later, if there is need for it. **The first and most important part is to make the program work.** If you'd like to go back and optimize your code later down the road, if there is need, okay. Great. But in case there is no need, move on.
 
-A intenção aqui é de que você conheça estes termos e tenha uma noção do que eles significam. É comum ouvir relatos de excelentes programadores que aprenderam sozinhos a programar e se sentiram completamente perdidos ao entrar na industria e ouvir estes termos técnicos dos quais nunca haviam ouvido falar.
+The intention here is that you know these terms and have an idea of what they mean. It is common to hear cases in which excellent programmers learned to code by themselves and felt completely lost once they entered the industry and started hearing these technical terms they had never heard of.
 
-Então não se preocupe com isso por agora. Siga estudando pois primeiro é necessário aprender como fazer, depois nós podemos focar como melhorar o que foi feito.
+So don't worry about it for now. Let's continue studying because first we need to learn how to do it, then we can learn how to improve what we've made.
 
 ---
 
-## Bonus: Uma análise mais aprofundada sobre variáveis
+## Bonus: A deeper look into variables
 
-Neste ponto você já está bem confortável com variáveis, com o que são e como usá-las. Então agora eu gostaria de explicá-las um pouco mais a fundo.
+You're already quite comfortable with variables, what they are and how to use them. So now I'd like to explain them a little further.
 
-Na maioria dos cursos que eu fiz e livros que li, variáveis eram descritas como sendo "diferentes das variáveis que existem na matemática". E se você já fez outros cursos ou já viu variáveis sendo explicadas desta forma, provavelmente ficou confuso como eu fiquei. Porque se pararmos pra pensar, as variáveis que usamos até agora são idênticas às variáveis matemáticas. Na matemática, uma variável ```x``` tem um valor que pode ser um número inteiro ou um número decimal, por exemplo. Então por que é explicado dessa forma? Esta é uma pergunta que, na maioria dos cursos, fica sem resposta; então nós a responderemos aqui.
+In most courses I've done and books I've read, variables were described as "different than the variables in math". And if you've done other courses or have seen them being described in such way, you were probably as confused as I was; because if we stop to think about it, the variables we've used so far are identical to the variables in math. In mathematics, a variable ```x``` has a value that can be an integer or a floating-point number, for example. So why is it that they are explained in such way? This is the question that is not answered in most courses, so we'll answer it here.
 
-Nós sabemos que as variáveis são armazenadas em endereços na memória. Quando criamos uma variável e a damos um nome, este nome é simplesmente uma referência, ou apelido, para o endereço na memória onde este dado está localizado.
+We know that variables are stored in memory addresses. When we create a variable and give it a name, this name is simply a reference, or a label, to the memory address in which the data is located.
 
-Imagine que você está voltando para casa e encontra um amigo, ele pergunta "Aonde você está indo?" e você responde "Estou indo para a minha casa." Quando você diz "minha casa", seu amigo entende que você está se referindo ao endereço, que Rua Muçarela, número 70, Bairro Queijo. Então ou você pode falar o seu endereço, ou pode usar uma referência mais descritiva. E é assim que funciona com as variáveis.
+Imagine you're returning home and run into a friend, and he asks "Where are you going?" and you asnwer "i'm going home." When you say "home", your friend understands that you're referring to your address, which is Mozzarella street, number 70, Cheese county. So you can either say your full address, or you can use a more descriptive reference. And this is how it works with variables.
 
-Quando criamos uma variável chamada ```hello``` e chamamos a função ```print()``` para imprimi-la na tela, python entende que quando você diz ```hello```, você está se referindo ao dado que se encontra naquele endereço na memória.
+When we create a variable called ```hello``` and call the ```print()``` function to print it, python understand that when you say ```hello```, you're referring to some data that is located on that address in memory.
 
-E é assim que a variável computacional se difere da variável matemática. Ela não é simplesmente um nome com um valor, ela é um nome que aponta para um endereço na memória, onde um valor se encontra.
+To make this a little more visible, let's take another look at the ```zip()``` function we saw earlier.
+
+```python
+positions = [1, 2, 3]  
+months = ["January", "February", "March"]  
+my_zip = zip(positions, months)  
+
+print(my_zip)
+```
+
+When we try to print the variable ```my_zip```, python understands that the variable name is simply a reference to an address in memory. 
+
+![[133 - zip_1.png]]
+
+When we print it, it tells us that inside the memory address ```0x7f9a1e5f3780``` there is a zip object. Python understands that the variable name ```my_zip``` is a reference to the memory address ```0x7f9a1e5f3780```.
+
+And this is how a computational variable differs from the mathematical variable. It isn't simply a name with a value, it is a name that points to memory address, where a value is located.
 
 ---
 
