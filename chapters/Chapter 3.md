@@ -376,7 +376,7 @@ my_lucky_numbers = numbers[::2]
 print(my_lucky_numbers)
 ```
 
-To find out, we need to remember that list slices work with three values ```[começo:fim:passo]```. We didn't pass any value for the beginning, so we're starting from index 0; we also didn't pass any value for the end, and this means "go until the end"; and, lastly, we're telling python to go in twos. This code will then read the entire list and it will assign to ```my_lucky_numbers``` the elements in indexes 0, 2 and 4.
+To find out, we need to remember that list slices work with three values ```[beginning:end:step]```. We didn't pass any value for the beginning, so we're starting from index 0; we also didn't pass any value for the end, and this means "go until the end"; and, lastly, we're telling python to go in twos. This code will then read the entire list and it will assign to ```my_lucky_numbers``` the elements in indexes 0, 2 and 4.
 
 ![[53 - list_slices_4.png]]
 
@@ -581,6 +581,26 @@ print(letters)
 
 ```string``` is a different data type than a ```list```; thus, it has different methods. In this module we'll see other ways to manipulate and methods related to the ```string``` data type.
 
+### String slices
+
+Just like lists, we can also slice strings using their indexes. It works in the exact same way as **list slices**.
+
+```python
+name = "Rebeca"  
+  
+print(name[2:5])
+```
+
+With your knowledge of list slices, do you know what will be printed?
+
+![[62-1 string_slices.png]]
+
+That's  correct! It prints the characters from index 2 up to index 5, non-inclusive. So indexes 2, 3 and 4 of the string ```name```.
+
+> **_Note:_** Remember that indexes start at 0!
+
+Everything that we've learned about **list slices** is applicable to strings. And this is a very powerful and useful tool to manipulate them. So don't hesitate to go back and read it again!
+
 ### Triple quotation marks
 
 The ```string``` we've seen so far were all in the same line. We can utilize what we've learned to create strings with multiple lines, like, for example, with line breaks, concatenation, or even multiple ```print()``` functions. There is, however, another way: the quotation marks.
@@ -758,7 +778,7 @@ text = "oh no, my cat ate all my food!"
 print(text)  
   
 text = text.replace("cat", "dog")  
-# troca a palavra "cat" na string por "dog"
+# changes the word "cat" in the string for the word "dog"
 print(text)
 ```
 
@@ -851,7 +871,9 @@ Another way of **reading** the list comprehension is the following:
 numbers = [numbers.append(number) for number in range(1, 11)]
 ```
 
-A primeira variável dentro da list comprehension será adicionada à lista sendo criada.
+> **_Note:_** This code does not work, it's simply to show how to read a list comprehension.
+
+The first variable inside the list comprehension - ``` number ``` - will be appended to the list being created.
 
 Let's see some other examples. We'll make a list with only even numbers from 1 to 20 (non-inclusive).
 
@@ -904,6 +926,88 @@ print(names_with_a)
 ```
 
 ![[84 - list_comprehension_6.png]]
+
+### Structure
+
+List comprehension can be a little hard to grasp at first. What i want you to understand is how it is structured. 
+
+1. First comes the variable that will be appended to the list, along with any filtering conditions
+
+```python
+list_comprehension = [variable]  
+```
+
+2. then comes the ```for``` loop
+
+```python
+list_comprehension = [variable for variable in range(10)]  
+```
+
+3. and finally you have the conditions to filter the ```for``` loop.
+
+```python
+list_comprehension = [variable for variable in range(10) if variable > 5]  
+```
+
+The example above is the equivalent of this:
+
+```python
+list_comprehension = []
+
+for variable in range(10):  
+    if variable > 5:  
+        list_comprehension.append(variable)
+```
+
+Let's see a few more examples to make it clearer. Pay attention to the structure.
+
+Below I have a list of my favorite pokémon:
+
+```python
+my_favorite_pokemon = ["Dragonite", "Milotic", "Lapras", "Meganium", "Gengar", "Serperior"]  
+```
+
+But when I play, I only like to use pokémon that starts with the letter M. So, using list comprehension, let's create a list of my favorite pokémon that start with the letter M.
+
+```python
+my_favorite_pokemon = ["Dragonite", "Milotic", "Lappras", "Meganium", "Gengar", "Serperior"]  
+
+my_pokemon = [pokemon for pokemon in my_favorite_pokemon if pokemon.startswith("M")]
+```
+
+I'm going to iterate through all the pokémon names in the list ```my_favorite_pokemon``` and, if their names start with M, I'll append them to the list ```my_pokemon```.
+
+Again: first what's going to be appended, then the for loop, and finally the conditions.
+
+One more example.
+
+I have a list of pokémon:
+
+```python
+pokemon = ["Kilowattrel", "Entei", "Lugia", "Crabominable", "Snorlax"]
+```
+
+But I firmly believe that any pokémon with a name longer than 10 characters is not cool. So I want to create a new list that has "Cool", if the pokémon's name is smaller than 10 characters or "not cool", if it's not.
+
+```python
+pokemon = ["Kilowattrel", "Entei", "Lugia", "Crabominable", "Snorlax"] 
+
+cool_pokemon = ["Cool" if len(name) > 10 else "Not cool" for name in pokemon]
+```
+
+Here i'm appending "Cool" if the length of name is bigger than 10 and "Not cool" if it's not, for each name in the list ```pokemon```.
+
+A last one:
+
+Let's go through the list ```my_favorite_pokemon``` and get all the pokémon names that start with M. If they have more than 7 characters of length, we'll append "Cute", of not, we'll append "Not cute."
+
+```python
+my_favorite_pokemon = ["Dragonite", "Milotic", "Lappras", "Meganium", "Gengar", "Serperior"]  
+
+cute_pokemon = ["Cute" if len(pokemon) <= 7 else "Not cute" for pokemon in my_favorite_pokemon if pokemon.startswith("M")]
+```
+
+Here we're telling python to append "Cute" if ```len(pokemon) <= 7``` else "Not Cute" for each pokémon in ```my_favorite_pokemon``` that starts with the letter M.
 
 ### Exercise 7
 
@@ -1381,7 +1485,7 @@ print(numbers_total)
 
 ### Exercise 9
 
-Use the below```tuple``` to solve the exercises 1, 2 and 3:
+Use the ```tuple``` below to solve the exercises 1, 2 and 3:
 
 ```python
 numbers = (7, 42, 93, 58, 12, 24, 30)
@@ -1390,7 +1494,7 @@ numbers = (7, 42, 93, 58, 12, 24, 30)
 1. Print the last three numbers
 2. Print the average of all the elements
 3. Print the tuple backwards
-4. You're working with a team to create a 2D game. In such games, character's positions are defined by the coordinates (x, y). You're asked to create a new spell for the player character that swaps their location with their enemy. Create the code for this mechanic and print the previous positions and the current ones.
+4. You're working with a team to create a 2D game. In such games, character's positions are defined by the coordinates (x, y). You're asked to create a new spell for the player character that swaps their location with their enemy. Create the code for this mechanic, print the previous positions and the current ones.
 
 ---
 
@@ -1787,7 +1891,7 @@ Here we're passing two arguments to the ```zip()``` function: the ```positions``
 
 I know that we've seen many data types and their different uses. But how do I know which data type to use? There is no correct answer to this question. There are many solutions to the same problem. You can get to the same result utilizing different data types and it is up to you to choose which one you think is best.
 
-With this in mind, it is important that we talk about optimization. We say a code is optimize when it is efficient. it uses the minimum amount of memory required for it to work or it reaches a result in a fast manner. And choosing which data type is needed for your algorithm does make a difference. For example, if you know that a set of data will not and cannot be changed during runtime, use a data of type ```tuple``` instead of a list, for the tuple has these characteristics specifically - it is optimized for it.
+With this in mind, it is important that we talk about optimization. We say a code is optimized when it is efficient. It uses the minimum amount of memory required for it to work or it reaches a result in a fast manner. And choosing which data type is needed for your algorithm does make a difference. For example, if you know that a set of data will not and cannot be changed during runtime, use a data of type ```tuple``` instead of a list, for the tuple has these characteristics specifically - it is optimized for it.
 
 When we create more than one algorithm to solve a problem, we can evaluate which is more efficient using what is called Big O Notation. Imagine you've created two algorithms that modify a data of type ```string```. When we're working with short strings, both algorithms are fast and solve the problem in milliseconds. But what about when we work with strings with a thousand characters, or one hundred thousand, which one would be faster? The Big O Notation is used to solve this question, evaluating them and classifying them.
 

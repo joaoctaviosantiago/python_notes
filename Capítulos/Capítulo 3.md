@@ -580,6 +580,26 @@ print(letters)
 
 Porém, ```string``` é um tipo de dado diferente de ```list```. Por conta disto, ele tem métodos diferentes. Neste módulo, nós veremos algumas outras formas de manipulação e métodos relacionados à ```string```.
 
+### String slices
+
+Assim como listas, nós também podemos usar slices em strings com seus índices. Funciona exatamente da mesma forma que **list slices**. 
+
+```python
+name = "Rebeca"  
+  
+print(name[2:5])
+```
+
+Com nosso conhecimento de list slices, o que você acha que será impresso?
+
+![[62-1 string_slices.png]]
+
+Correto! Python imprime do índice 2 ao índice 5, não incluso. Então, índices 2, 3 e 4 da string ```name```.
+
+> **_Nota:_** Lembre-se que índices começam do 0!
+
+Tudo o que nós aprendemos sobre **list slices** é aplicado à strings. E esta é uma ferramenta muito poderosa e útil para manipulá-las. Não hesite em voltar e ler novamente!
+
 ### Aspas triplas
 
 As ```string``` que vimos até agora estavam todas em uma unica linha. Nós podemos utilizar o que aprendemos até agora para construir strings com várias linhas, como, por exemplo, com quebras de linha, concatenação, ou até mesmo diversos ```print()```. Existe, porém, uma outra forma: as aspas tripas.
@@ -848,7 +868,7 @@ Uma outra forma de **ler** a list comprehension é a seguinte:
 numbers = [numbers.append(number) for number in range(1, 11)]
 ```
 
-A primeira variável dentro da list comprehension será adicionada à lista sendo criada.
+A primeira variável dentro da list comprehension - ```number``` - será adicionada à lista sendo criada.
 
 Vamos ver outros exemplos. Criaremos uma lista apenas com números pares de 1 até 20 (não incluso).
 
@@ -901,6 +921,88 @@ print(names_with_a)
 ```
 
 ![[84 - list_comprehension_6.png]]
+
+### Estrutura
+
+List comprehension podem ser um pouco difíceis de entender a princípio. O que eu quero que você entenda é como ela é estruturada. 
+
+1. Primeiro vem a variável da qual você quer adicionar à lista, juntamente com qualquer condição para filtrá-la.
+
+```python
+list_comprehension = [variable]  
+```
+
+2. Então vem o ```for``` loop
+
+```python
+list_comprehension = [variable for variable in range(10)]  
+```
+
+3. E finalmente você tem as condições para filtrar o ```for``` loop.
+
+```python
+list_comprehension = [variable for variable in range(10) if variable > 5]  
+```
+
+O exemplo acima é equivalente a isto:
+
+```python
+list_comprehension = []
+
+for variable in range(10):  
+    if variable > 5:  
+        list_comprehension.append(variable)
+```
+
+Vamos ver alguns outros exemplos para esclarecer tudo. Preste atenção à estrutura.
+
+Abaixo nós temos uma lista dos meus pokémon favoritos:
+
+```python
+my_favorite_pokemon = ["Dragonite", "Milotic", "Lapras", "Meganium", "Gengar", "Serperior"]  
+```
+
+Mas quando eu jogo, eu só gosto de usar pokémon que começa com a letra M. Então, usando list comprehension, vamos criar uma lista dos meus pokémon favoritos que começam com a letra M.
+
+```python
+my_favorite_pokemon = ["Dragonite", "Milotic", "Lappras", "Meganium", "Gengar", "Serperior"]  
+
+my_pokemon = [pokemon for pokemon in my_favorite_pokemon if pokemon.startswith("M")]
+```
+
+Eu iterarei por todos os nomes de pokémon na lista ```my_favorite_pokemon``` e, se seus nomes começarem com a letra M, eu os adicionarei à lista ```my_pokemon```.
+
+Novamente: primeiro o que será adicionado à lista, depois o loop e por fim as condições.
+
+Mais um exemplo.
+
+Eu tenho uma lista de pokémon:
+
+```python
+pokemon = ["Kilowattrel", "Entei", "Lugia", "Crabominable", "Snorlax"]
+```
+
+Mas eu acredito firmemente que qualquer pokémon com um nome mais longo que 10 caracteres não é legal. Então eu quero criar uma nova lista que diz "Cool" se o nome do pokémon for menor que 10 caracteres ou "Not cool" se não for..
+
+```python
+pokemon = ["Kilowattrel", "Entei", "Lugia", "Crabominable", "Snorlax"] 
+
+cool_pokemon = ["Cool" if len(name) > 10 else "Not cool" for name in pokemon]
+```
+
+Aqui eu estou adicionando "Cool" se o tamanho do nome for maior que 10 e "Not cool" se não for, para cada nome na lista ```pokemon```.
+
+Um último:
+
+Vamos usar a lista ```my_favorite_pokemon``` e pegar todos os nomes de pokémon que começam com a letra M. Se o tamanho do nome for maior que 7 caracteres, adicionaremos "Cute", se não for, adicionaremos "Not cute".
+
+```python
+my_favorite_pokemon = ["Dragonite", "Milotic", "Lappras", "Meganium", "Gengar", "Serperior"]  
+
+cute_pokemon = ["Cute" if len(pokemon) <= 7 else "Not cute" for pokemon in my_favorite_pokemon if pokemon.startswith("M")]
+```
+
+Aqui estamos dizendo a python que adicione "Cute" se ```len(pokemon) <= 7``` ou então "Not cute" se não for, para cada pokémon em ```my_favorite_pokemon``` que começa com a letra M.
 
 ### Exercícios 7
 
