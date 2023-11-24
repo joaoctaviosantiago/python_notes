@@ -2,7 +2,7 @@
 
 When we talk about flow control, we are referring to the ability of a program to decide what to do or how many times to do it, depending on a condition. Take a look at the flow chart below:
 
-![[21 -  flowchart_en.drawio.png]]
+![[chapter 2 - flowchart_en.drawio.png]]
 
 In this example, before deciding what to do, we evaluate certain conditions. Is it hot? if it isn't, we go outside. In case it is, we check if it's bearable, if it is, we go outside, if not, we wait a little and check again.
 
@@ -46,7 +46,7 @@ print(f"Is {number1} equal to {number2}? {number1 == number2}")
 print(f"Is {number1} not equal to {number2}? {number1 != number2}")
 ```
 
-![[22 - comparisson_operators_en.png]]
+![[chapter 1 - comparisson_operators_en.png]]
 
 > **_Note:_** Do not confuse the assign operator (=) with the equality operator (=\=).
 
@@ -67,7 +67,7 @@ else:
 
 In this example, we compare if the value of the variable ```name``` is the equal to "Jorge", python evaluates this expression as true, then executes the following commands. Resulting in:
 
-![[23 - if_elif_else.png]]
+![[chapter 2 - if_elif_else.png]]
 
 If the value of the variable ```name``` was not equal to "Jorge", python would execute the commends after ```else```. 
 
@@ -125,19 +125,19 @@ Let's see, step by step, how python will execute this code:
 
 1. First, python will check if ```username == "Ushi"```, if it is, it will run the following block of code:
 
-![[24 - code_blocks_1.png]]
+![[chapter 2 - code_blocks_1.png]]
 
 2.  So it will run ```print("Hello, Ushi")``` and check if ```password == "litterbox"```, if it is, it will run the block of code shown below
 
-![[24 - code_blocks_2.png]]
+![[chapter 2 - code_blocks_2.png]]
 
 3. In case ```password``` is not "litterbox", it will execute the following block of code:
 
-![[24 - code_blocks_3.png]]
+![[chapter 2 - code_blocks_3.png]]
 
 4. If ```username``` isn't "Ushi", it will execute the following block of code:
 
-![[24 - code_blocks_4.png]]
+![[chapter 2 - code_blocks_4.png]]
 
 ---
 
@@ -251,7 +251,7 @@ for number in range(1, 4):
     print(number)
 ```
 
-![[25 - range_function.png]]
+![[chapter 2 - range_function.png]]
 As you can see here, on the first loop, ```number``` had the value of 1 and that was printed on screen, on the second it had the value of 2 and on the third it had the value of 3.
 
 #### Nested for loops
@@ -272,7 +272,7 @@ I know this code is a little scary, so let's read it together. The first loop be
 
 This is the result:
 
-![[26 - nested_loops.png]]
+![[chapter 2 - nested_loops.png]]
 
 > **_Note:_**  The function ```print()``` normally breaks the line after printing. We can change this behavior by passing the parameter ```end=```.  With it we can define if after each print there will be a space, a line break, a comma, etc.
 
@@ -304,7 +304,7 @@ for num in range(0, 11, 2):
     print(num)
 ```
 
-![[27 - ranged_function_steps.png]]
+![[chapter 2 - ranged_function_steps.png]]
 
 It is also possible to pass only one argument to the ```range()``` function. In this case, python will run from 0 up to the passed argument. For example:
 
@@ -315,7 +315,7 @@ for number in range(5):
 
 In the first iteration, ```number``` will have the value of 0, in the second it will have the value of 1, then 2, 3, and 4. Running 5 times in total. The loop will run from 0 to 5, non-inclusive.
 
-![[27-5 - range_function_single_argument.png]]
+![[chapter 2 - range_function_single_argument.png]]
 
 ### While loop
 
@@ -331,7 +331,7 @@ while number <= 5:
 
 In this example, python will test if ```number <= 5``` is true, in case it is, it will run the block of code, print the value of number and add 1 to it; case it isn't, the loop ends.
 
-![[28 - while_loop.png]]
+![[chapter 2 - while_loop.png]]
 
 > **_Important:_** Be careful so that you don't create an infinite loop. If the condition never becomes false, the program will run infinitely and, eventually, crash - it will stop working and close.
 
@@ -362,7 +362,7 @@ for num in range(1, 10):
 print("Done!")
 ```
 
-![[29 - break.png]]
+![[chapter 2 - break.png]]
 
 ### Continue
 
@@ -381,7 +381,7 @@ Here, we're telling python that, when the value of ```num``` is between 2 and 8,
 
 This will be our result:
 
-![[30 - continue.png]]
+![[chapter 2 - continue.png]]
 
 ---
 
@@ -391,11 +391,11 @@ This will be our result:
 2. Make a program that will print the numbers from 1 to 50, however, in case the number is divisible by 3, print "Fizz", if its divisible by 5, print "Buzz" and if it's divisible by 3 and 5, print "FizzBuzz". Hint: 15 is supposed to be "FizzBuzz".
 3. Make a program that prints the following drawing:
 
-![[31 - exercise_4-3.png]]
+![[chapter 2 - exercise_4-3.png]]
 
 4. **Bonus:** Make a program that prints the following drawing:
 
-![[31-2 - exercise_4-4.png]]
+![[chapter 2 - exercise_4-4.png]]
 
 ---
 

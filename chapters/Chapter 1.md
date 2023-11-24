@@ -1,4 +1,3 @@
-
 # Introduction
 
 ## What is programming?
@@ -88,7 +87,7 @@ Python can be downloaded from the [official website](https://www.python.org/down
 
 The windows installation is simple, like any other software. Select "Add python.exe to PATH" and then just click "next" and wait.
 
-![[1 - install_python.png]]
+![[chapter 1 - install_python.png]]
 
 > **_Important:_** Check the "Add python.exe to PATH" checkbox before installing.
 
@@ -140,11 +139,11 @@ print("Hello, world")
 
 And execute the program by clicking on the **play** button at the top of the screen:
 
-![[2 - play.png]]
+![[chapter 1 - play.png]]
 
 This should be the result:
 
-![[3 - hello_world_resultado.png]]
+![[chapter 1 - hello_world_resultado.png]]
 
 There you go! You'e just made your first python program. Simple, right?
 
@@ -179,7 +178,7 @@ print(message)
 
 In this example, we're separating a little space in memory and calling it ```message```,  then we get the data ```Hello, world``` and put it inside of that space. Next, we call the function ```print()``` again:
 
-![[4 - resultado_variable.png]]
+![[chapter 1 - resultado_variable.png]]
 
 As we can see, we have the same result. Python printed the value assigned to the variable ```message```.
 
@@ -216,7 +215,7 @@ nome = "João"
 
 When we try to run the code, python raises an error:
 
-![[5 - erro.png]]
+![[chapter 1 - erro.png]]
 
 Here, python gives us some information about where it believes the problem is. It informs us the file and line. Then it says the name of the error it's found:
 
@@ -278,7 +277,7 @@ print(name)
 
 When we run the code, this is what we'll see:
 
-![[6 - string_input_en.png]]
+![[chapter 1 - string_input_en.png]]
 
 ```python
 input()
@@ -337,7 +336,7 @@ print("Hello, " + name)
 
 In this case, we are concatenating the string ```"Hello, "``` and the string inside the variable ```name```, which was given by the user.
 
-![[7 - concatenation_1_en.png]]
+![[chapter 1 - concatenation_1_en.png]]
 
 Another way of concatenating variables is by separating them with a comma:
 
@@ -403,7 +402,7 @@ print(11 % 2)
 
 That's right! The result is 1.
 
-![[8 - modulus.png]]
+![[chapter 1 - modulus.png]]
 
 It divides 11 by 2 and the remainder is 1.
 
@@ -417,7 +416,7 @@ print(2 ** 3)
 
 Is the same as 2³ or 2 · 2 · 2, which is equal to 8.
 
-![[9 - power.png]]
+![[chapter 1 - power.png]]
 
 #### Floor Division
 
@@ -429,7 +428,7 @@ print(10 // 3)
 
 The result of 10 divided by 3 is 3.333, however, when we utilize the floor division, python gives 3 as the answer.
 
-![[10 - floor_division.png]]
+![[chapter 1 - floor_division.png]]
 
 #### Int e Float
 
@@ -441,7 +440,7 @@ Because of that, it whenever we try to do an calculation with an ```int``` and a
 print(5.0 + 3)
 ```
 
-![[11 - float.png]]
+![[chapter 1 - float.png]]
 
 In some cases, as in the division, this also occur. Even if the division is between two integers. Python knows that there is a good chance that the result of a division will be a number with decimal points.
 
@@ -449,7 +448,7 @@ In some cases, as in the division, this also occur. Even if the division is betw
 print(4 / 2)
 ```
 
-![[12 - division.png]]
+![[chapter 1 - division.png]]
 
 #### Number of decimal places
 
@@ -459,7 +458,7 @@ Sometimes python will give a result with many decimal places. This is normal and
 print(0.2 + 0.1)
 ```
 
-![[13 - decimal_points.png]]
+![[chapter 1 - decimal_points.png]]
 
 But what if I want a number with a specific amount of decimal places? In this case, we can format the result.
 
@@ -475,7 +474,7 @@ Here we're trying to add an ```int``` and a ```float```, so we know that the res
 
 and this will be the result:
 
-![[14 - formatted_numbers_en.png]]
+![[chapter 1 - formatted_numbers_en.png]]
 
 #### Order of mathematical operations
 
@@ -487,7 +486,7 @@ number = 5 + (2 + 3) ** 2
 
 First we'll calculate the numbers between parenthesis, then the exponentiation and finally, we add.
 
-![[15 - order.png]]
+![[chapter 1 - order.png]]
 
 #### Numbers with underscore
 
@@ -498,7 +497,7 @@ big_number = 4_540_000_000
 print(big_number)
 ```
 
-![[16 - number_with_underline.png]]
+![[chapter 1 - number_with_underline.png]]
 
 ### Boolean
 
@@ -529,7 +528,7 @@ print(number)
 
 In this example, first we make a variable ```number```  and assign it the integer 100. Nothing new.  Then we modify the value of the variable to 10. When we run the code, this is the result we get:
 
-![[17 - revisiting_variables.png]]
+![[chapter 1 - revisiting_variables.png]]
 
 Python reads the code from top to bottom, remember? So first it creates the variable, then python modifies it and finally, prints its current value on screen, which is 10.
 
@@ -541,7 +540,7 @@ number = "hello"
 print(number)
 ```
 
-![[18 - revisiting_variables_2.png]]
+![[chapter 1 - revisiting_variables_2.png]]
 
 ### More assign operators
 
@@ -555,7 +554,7 @@ print(number)
 
 It looks a little confusing, right? But let's go through it step by step. First, we create a variable and assign it the value 2. Then, we assign to the variable ```number``` the value of ```number``` + 10, meaning that the new value of ```number``` will be its current value (2) plus the integer 10. Resulting in:
 
-![[19 - assigning_values.png]]
+![[chapter 1 - assigning_values.png]]
 
 Another way of writing this would be:
 
@@ -588,7 +587,7 @@ While python allows us to work with integers and floats at the same time, even i
 print("10" + 10)
 ```
 
-![[20 - type_casting.png]]
+![[chapter 1 - type_casting.png]]
 
 Python is complaining and saying that it can only concatenate ```string``` (str) to ```string```, and not ```int```.
 

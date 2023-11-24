@@ -27,7 +27,7 @@ my_list = ['Hello', 'World', 1, 2.0, 3]
 print(my_list)
 ```
 
-![[32 - lists_1.png]]
+![[chapter 3 - lists_1.png]]
 
 Neste exemplo temos uma lista com 5 elementos de diversos tipos. Quando a imprimimos, python imprime a lista inteira, incluindo os colchetes.
 
@@ -48,7 +48,7 @@ print(my_list[0])
 
 Aqui estamos dizendo para python imprimir o elemento que se encontra na posição 0 dentro da lista.
 
-![[33 - list_index.png]]
+![[chapter 3 - list_index.png]]
 
 > **_Importante:_** O índice sempre começa em 0. Então, numa lista de 5 elementos, nós teremos os índices 0, 1, 2, 3, 4. índices são sempre ```Int```.
 
@@ -64,7 +64,7 @@ print(names_and_numbers[0])
 
 Quando tentamos acessar o índice 0 da lista ```names_and_numbers```, python imprimirá a lista de nomes.
 
-![[34 - list_names.png]]
+![[chapter 3 - list_names.png]]
 
 Então como eu acesso a string ```'Rebeca'```?
 
@@ -74,7 +74,7 @@ print(names_and_numbers[0][0])
 
 Primeiro acessamos o elemento no índice 0 da lista ```names_and_numbers```, que é a lista de nomes, depois acessamos o elemento de índice 0 nela.
 
-![[35 - list_rebeca.png]]
+![[chapter 3 - list_rebeca.png]]
 
 #### Acessando o ultimo elemento
 
@@ -108,7 +108,7 @@ fruits[0] = 'Orange'
 print(fruits)
 ```
 
-![[36 - replacing_list_elements.png]]
+![[chapter 3 - replacing_list_elements.png]]
 
 #### Adicionando elementos no final
 
@@ -124,7 +124,7 @@ print(fruits)
 
 Neste exemplo, estamos criando uma lista vazia chamada ```fruits``` e, a seguir, utilizamos o método ```append()``` para adicionar elementos no seu final, resultando em:
 
-![[37 - append.png]]
+![[chapter 3 - append.png]]
 
 > **_Nota:_** Nós estudaremos métodos a fundo posteriormente. Por enquanto, apenas aprenda a usá-los.
 
@@ -140,7 +140,7 @@ print(fruits)
 
 Nós estamos dizendo para python adicionar a ```string "apple"``` no índice 1 da lista ```fruits```. É importante ressaltar que python não vai substituir "Banana" por "apple", ele vai empurrar "Banana" pra frente e adicionar "apple" onde "Banana" estava.
 
-![[38 - insert.png]]
+![[chapter 3 - insert.png]]
 
 #### Removendo elementos por índice
 
@@ -152,7 +152,7 @@ del fruits[1]
 print(fruits)
 ```
 
-![[39 - del.png]]
+![[chapter 3 - del.png]]
 
 Com o comando ```del``` nós simplesmente deletamos o elemento da lista.
 
@@ -172,7 +172,7 @@ fruits.pop()
 print(fruits)
 ```
 
-![[40 - pop_1.png]]
+![[chapter 3 - pop_1.png]]
 
 Quando passamos o índice do elemento como argumento, ele removerá o elemento especifico. No exemplo a seguir, removeremos o elemento do índice 0.
 
@@ -182,7 +182,7 @@ fruits.pop(0)
 print(fruits)
 ```
 
-![[41 - pop_2.png]]
+![[chapter 3 - pop_2.png]]
 
 Quando queremos remover o item de uma lista e atribuí-lo a uma variável, também utilizamos o ```pop()```
 
@@ -195,7 +195,7 @@ print(my_favorite_fruit)
 
 Neste último caso, nós não estamos apenas acessando o elemento na lista e atribuindo-o à variável. Nós estamos removendo ```'Banana'``` e atribuindo à variável ```my_favorite_fruit```
 
-![[42 - pop_2.png]]
+![[chapter 3 - pop_3.png]]
 
 #### Removendo um elemento por valor
 
@@ -207,7 +207,7 @@ fruits.remove('Banana')
 print(fruits)
 ```
 
-![[43 - remove.png]]
+![[chapter 3 - remove.png]]
 
 Aqui estamos dizendo para python encontrar a palavra 'Banana' na lista e removê-la.
 
@@ -219,7 +219,7 @@ fruits.remove('Banana')
 print(fruits)
 ```
 
-![[44 - remove_2.png]]
+![[chapter 3 - remove_2.png]]
 
 #### Combinando listas
 
@@ -234,7 +234,7 @@ numbers_and_animals = numbers + animals
 print(numbers_and_animals)
 ```
 
-![[45 - list_concatenation_1.png]]
+![[chapter 3 - list_concatenation_1.png]]
 
 #### Repetindo os valores
 
@@ -245,7 +245,7 @@ animals = ['cat', 'dog', 'capybara']
 print(animals * 2)
 ```
 
-![[46 - list_multiplication_1.png]]
+![[chapter 3 - list_multiplication_1.png]]
 
 ### Loops e listas
 
@@ -285,7 +285,7 @@ for name in names:
 
 Neste código, o ```for``` loop vai começar e em sua primeira iteração, pegará o primeiro elemento em ```names``` e atribuirá à variável ```name```, ou seja, na primeira iteração ```name = "joseph"```, python imprimirá a mensagem na tela, e o loop voltará ao começo, na segunda iteração, ```name = "Johnny"```, e assim sucessivamente até chegar ao final da lista, resultando em:
 
-![[47 - loops_and_lists_1.png]]
+![[chapter 3 - loops_and_lists_1.png]]
 
 Caso ainda não tenha ficado claro, tente ler o código da seguinte maneira: "para cada nome em ```names```, faça:".
 
@@ -304,7 +304,7 @@ if "Johnny" in names:
 
 Este código checa se a ```string``` "Johnny" faz parte da lista ```names``` e imprime "yay" caso faça.
 
-![[48 - in_operator.png]]
+![[chapter 3 - in_operator.png]]
 
 ```python
 names = ["Joseph", 'Johnny', 'Richard', 'Sabine', 'Jessica']  
@@ -315,7 +315,7 @@ if "Rebeca" not in names:
 
 Já este, checa se a ```string``` "Rebeca" não faz parte da lista ```names``` e, caso não faça, imprime "boo" na tela.
 
-![[49 - not_in_operator.png]]
+![[chapter 3 - not_in_operator.png]]
 
 > **_Importante:_** Letras maiúsculas e minúsculas são vistas como diferentes pelo computador. Sendo assim ```"Rebeca"``` não é a mesma coisa que ```rebeca```.
 
@@ -331,7 +331,7 @@ print(names[2:5])
 
 Neste bloco de código, nós estamos dizendo à python para imprimir os elementos na lista ```names``` do índice 2 até o 5, não incluso, ou seja, índices 2, 3 e 4.
 
-![[50 - list_slices_1.png]]
+![[chapter 3 - list_slices_1.png]]
 
 List slices funcionam da mesma forma que a função ```range()``` que aprendemos anteriormente.
 
@@ -354,7 +354,7 @@ print(my_lucky_numbers)
 
 Neste bloco de código nós temos um variável do tipo ```list``` chamada ```numbers```, e estamos criando uma nova variável chamada ```my_lucky_numbers``` que também será uma lista, e estamos atribuindo a ela os elementos do começo da lista ```numbers``` até o elemento de índice 3, não incluso.
 
-![[51 - list_slices_2.png]]
+![[chapter 3 - list_slices_2.png]]
 
 Quando não colocamos um valor para o fim, estamos dizendo "vá até o final".
 
@@ -365,7 +365,7 @@ my_lucky_numbers = numbers[2:]
 print(my_lucky_numbers)
 ```
 
-![[52 - list_slices_3.png]]
+![[chapter 3 - list_slices_3.png]]
 
 Você consegue me dizer o que o bloco de código no próximo exemplo faz?
 
@@ -378,7 +378,7 @@ print(my_lucky_numbers)
 
 Para descobrirmos, precisamos lembrar que list slices funcionam com três valores ```[começo:fim:passo]```. Não passamos nenhum valor para o começo, então estamos dizendo "comece do índice 0"; também não passamos nenhum valor para o fim, o que quer dizer "vá até o final"; e, por fim, estamos dizendo para ir de 2 em 2. Este código então irá ler toda a lista e atribuirá à ```my_lucky_numbers``` os elementos de índice 0, 2 e 4.
 
-![[53 - list_slices_4.png]]
+![[chapter 3 - list_slices_4.png]]
 
 ### Função sorted()
 
@@ -391,7 +391,7 @@ print(f"Sorted: {sorted(names)}")
 print(f"Original: {names}")
 ```
 
-![[58 - sorted_function.png]]
+![[chapter 3 - sorted_function.png]]
 
 ### Função len()
 
@@ -403,7 +403,7 @@ length_of_list = len(numbers)
 print(length_of_list)
 ```
 
-![[59 - len_function.png]]
+![[chapter 3 - len_function.png]]
 
 > **_Importante:_** Esta função também pode ser utilizada com outros tipos de dados, como ```dictionary```, ```tuple```, ```string```, entre outros.
 
@@ -417,7 +417,7 @@ numbers = [10, 20, 30]
 print(max(numbers))
 ```
 
-![[59 -1 - max_function.png]]
+![[chapter 3 - max_function.png]]
 
 ### Função min()
 
@@ -429,7 +429,7 @@ numbers = [10, 20, 30]
 print(min(numbers))
 ```
 
-![[59 -2 -min_function.png]]
+![[chapter 3 - min_function.png]]
 
 ### Métodos mais comuns
 
@@ -452,7 +452,7 @@ jessica_index = names.index("Jessica")
 print(jessica_index)
 ```
 
-![[54 - index_method.png]]
+![[chapter 3 - index_method.png]]
 
 #### sort()
 
@@ -464,7 +464,7 @@ names.sort()
 print(names)
 ```
 
-![[55 - sort_method_1.png]]
+![[chapter 3 - sort_method_1.png]]
 
 Nós também podemos organizar a lista de maneira reversa com ele:
 
@@ -474,7 +474,7 @@ names.sort(reverse=True)
 print(names)
 ```
 
-![[56 - sorte_method_2.png]]
+![[chapter 3 - sorte_method_2.png]]
 
 #### reverse()
 
@@ -486,7 +486,7 @@ names.reverse()
 print(names)
 ```
 
-![[57 - reverse_method.png]]
+![[chapter 3 - reverse_method.png]]
 
 #### count()
 
@@ -501,7 +501,7 @@ print(counter)
 
 Neste exemplo, passamos como argumento a string "Jessica". Então python contará quantas vezes a string "Jessica" aparece na lista e atribuirá este valor à variável ```counter```. Resultando em:
 
-![[57-5 - count_method.png]]
+![[chapter 3 - count_method.png]]
 
 O elemento "Jessica" aparece 3 vezes na lista ```names```.
 
@@ -554,7 +554,7 @@ print(word[0])
 
 Aqui nós estamos acessando o elemento de índice 0 na ```string```.
 
-![[60 - string_list_1.png]]
+![[chapter 3 - string_list_1.png]]
 
 Nós também podemos acessar os elementos da ```string``` utilizando um ```for``` loop:
 
@@ -565,7 +565,7 @@ for letter in word:
     print(letter, end=" ")
 ```
 
-![[61 - string_list_2.png]]
+![[chapter 3 - string_list_2.png]]
 
 Ou usar a função ```len()``` para descobrir quantos elementos há na ```string```:
 
@@ -576,7 +576,7 @@ letters = len(word)
 print(letters)
 ```
 
-![[62 - string_list_3.png]]
+![[chapter 3 - string_list_3.png]]
 
 Porém, ```string``` é um tipo de dado diferente de ```list```. Por conta disto, ele tem métodos diferentes. Neste módulo, nós veremos algumas outras formas de manipulação e métodos relacionados à ```string```.
 
@@ -592,7 +592,7 @@ print(name[2:5])
 
 Com nosso conhecimento de list slices, o que você acha que será impresso?
 
-![[62-1 string_slices.png]]
+![[chapter 3 - string_slices.png]]
 
 Correto! Python imprime do índice 2 ao índice 5, não incluso. Então, índices 2, 3 e 4 da string ```name```.
 
@@ -617,7 +617,7 @@ me.
 print(text)
 ```
 
-![[63 - triple_quotes.png]]
+![[chapter 3 - triple_quotes.png]]
 
 > **_Nota:_** Podem ser usadas aspas únicas ```'''```  ou duplas ```"""```.
 
@@ -629,7 +629,7 @@ Nós vimos que podemos ignorar caracteres e adicionar caracteres especiais utili
 print(r"hello, \"my friends\"!")
 ```
 
-![[64 - raw_string.png]]
+![[chapter 3 - raw_string.png]]
 
 Na ```r string``` python trata tudo na string como parte dela, mesmo que você tente passar caracteres especiais.
 
@@ -650,7 +650,7 @@ print(name)
 
 Aqui nós estamos criando uma varável do tipo ```string``` com o valor "Fatma", depois estamos atribuindo à variável ```name``` o valor original modificado para que todas as letras estejam maiúsculas.
 
-![[65 - upper_method.png]]
+![[chapter 3 - upper_method.png]]
 
 #### lower()
 
@@ -663,7 +663,7 @@ name = name.lower()
 print(name)
 ```
 
-![[66 - lower_method.png]]
+![[chapter 3 - lower_method.png]]
 
 #### isupper() e islower()
 
@@ -677,7 +677,7 @@ print(f"{word1} is upper? = {word1.isupper()}")
 print(f"{word2} is lower? = {word2.islower()}")
 ```
 
-![[67 - isupper_islower.png]]
+![[chapter 3 - isupper_islower.png]]
 
 #### capitalize()
 
@@ -690,20 +690,20 @@ text = text.capitalize()
 print(text)
 ```
 
-![[68 - capitalize_method.png]]
+![[chapter 3 - capitalize_method.png]]
 
 #### title()
 
 Transforma todas as palavras da ```string```, fazendo com que elas comecem com letras maiúsculas.
 
 ```python
-name = "james bond"  
+name = "brabra branch"  
 name = name.title()  
   
 print(name)
 ```
 
-![[69 - title_method.png]]
+![[chapter 3 - title_method.png]]
 
 #### startswith() and endswith()
 
@@ -716,7 +716,7 @@ print(message.startswith("Hello"))
 print(message.endswith("world"))
 ```
 
-![[70 - startswith_endswith.png]]
+![[chapter 3 - startswith_endswith.png]]
 
 #### split()
 
@@ -729,7 +729,7 @@ message = message.split()
 print(message)
 ```
 
-![[71 - split_method.png]]
+![[chapter 3 - split_method.png]]
 
 Por padrão, ele separa a string pelos espaços, mas nós podemos alterar este comportamento passando o argumento pelo qual queremos separar a string. A seguir, vamos separar a mesma ```string``` pelo ponto final.
 
@@ -740,7 +740,7 @@ message = message.split(".")
 print(message)
 ```
 
-![[72 - split_method_2.png]]
+![[chapter 3 - split_method_2.png]]
 
 #### strip(), rstrip() and lstrip()
 
@@ -754,7 +754,7 @@ print(f"rstrip: {message.rstrip()}")
 print(f"lstrip: {message.lstrip()}")
 ```
 
-![[73 - strip_method.png]]
+![[chapter 3 -  strip_method.png]]
 
 Porém, é possível passar como argumento o elemento que gostaríamos de remover. Talvez seu uso fique mais claro com o exemplo abaixo:
 
@@ -766,7 +766,7 @@ print(f"rstrip: {message.rstrip('_')}")
 print(f"lstrip: {message.lstrip('_')}")
 ```
 
-![[74 - strip_method_2.png]]
+![[chapter 3 - strip_method_2.png]]
 
 #### replace()
 
@@ -781,7 +781,7 @@ text = text.replace("cat", "dog")
 print(text)
 ```
 
-![[75 - replace_method.png]]
+![[chapter 3 - replace_method.png]]
 
 Neste exemplo nós substituímos a string "cat" por "dog".
 #### join()
@@ -794,7 +794,7 @@ phrase = " - blah - ".join(words)
 print(phrase)
 ```
 
-![[76 - join_method_1.png]]
+![[chapter 3 - join_method_1.png]]
 
 Eu concordo que pareça um método um pouco estranho. Mas talvez um outro exemplo deixe seu uso mais claro. Imagine que você tem uma ```list``` e deseja colocar todos os seus elementos dentro de uma ```string```, separados por espaço.
 
@@ -806,7 +806,7 @@ print(phrase)
 
 Python pegará a ```string``` que passamos, neste caso, um espaço vazio ```" "``` e colocará entre a cada um dos elementos da lista passada como argumento.
 
-![[77 - join_method_2.png]]
+![[chapter 3 - join_method_2.png]]
 
 Em outras palavras, ```" ".join(words)``` quer dizer "pegue cada elemento da lista ```words``` e coloque em uma string, separando-os com ```" "``` ".
 #### count()
@@ -822,7 +822,7 @@ print(my_counter)
 
 A palavra "my" aparece duas vezes na ```string``` dada.
 
-![[78 - count_method.png]]
+![[chapter 3 - count_method_2.png]]
 
 ### Exercícios 6
 
@@ -847,7 +847,7 @@ for number in range(1, 11):
 print(numbers)
 ```
 
-![[79 - list_comprehension_1.png]]
+![[chapter 3 - list_comprehension_1.png]]
 
 Porém, com list comprehension, nós podemos escrever a mesma coisa em apenas uma linha:
 
@@ -856,7 +856,7 @@ numbers = [number for number in range(1, 11)]
 print(numbers)
 ```
 
-![[80 - list_comprehension_2.png]]
+![[chapter 3 - list_comprehension_2.png]]
 
 O que nós estamos fazendo aqui? Primeiro, criamos uma variável ```numbers``` e dentro dos colchetes é onde colocamos a list comprehension. Ali, temos ```number for number in range(1, 11) ```, ou seja, adicione ```number``` à lista para cada valor de ```number``` de 1 até 11 (não incluso).
 
@@ -884,7 +884,7 @@ for number in range(1, 20):
 print(numbers)
 ```
 
-![[81 - list_comprehension_3.png]]
+![[chapter 3 - list_comprehension_3.png]]
 
 Com list comprehension:
 
@@ -893,7 +893,7 @@ numbers = [number for number in range(1, 20) if number % 2 == 0]
 print(numbers)
 ```
 
-![[82 - list_comprehension_4.png]]
+![[chapter 3 - list_comprehension_4.png]]
 
 No exemplo abaixo temos uma lista de nomes e queremos criar outra lista apenas com os nomes começados com a letra a.
 
@@ -910,7 +910,7 @@ for name in names:
 print(names_with_a)
 ```
 
-![[83 - list_comprehension_5.png]]
+![[chapter 3 - list_comprehension_5.png]]
 
 Com list comprehension:
 
@@ -920,13 +920,43 @@ names_with_a = [name for name in names if name.startswith('A')]
 print(names_with_a)
 ```
 
-![[84 - list_comprehension_6.png]]
+![[chapter 3 - list_comprehension_6.png]]
+
+Agora queremos criar uma lista que contém apenas os nomes que começam com A e, se ele tiver menos do que 4 letras, adicionamos à lista "nome: Good", caso contrário, adicionamos "nome: Bad".
+
+Sem list comprehension:
+
+```python
+names = ["João", "Alice", "Janaína", "Ana", "Bruna", "Eduarda"]  
+names_with_a = []  
+  
+for name in names:  
+    if name.startswith('A'):  
+        if len(name) <= 4:  
+            names_with_a.append(f"{name}: Good")  
+        else:  
+            names_with_a.append(f"{name}: Bad")  
+  
+print(names_with_a)
+```
+
+![[chapter 3 - list_comprehension.png]]
+
+Com list comprehension:
+
+```python
+names_with_a = [f"{name}: Good" if len(name) < 4 else f"{name}: Bad" for name in names if name.startswith("A")]  
+  
+print(names_with_a)
+```
+
+![[chapter 3 - list_comprehension.png]]
 
 ### Estrutura
 
 List comprehension podem ser um pouco difíceis de entender a princípio. O que eu quero que você entenda é como ela é estruturada. 
 
-1. Primeiro vem a variável da qual você quer adicionar à lista, juntamente com qualquer condição para filtrá-la.
+1. Primeiro vem a variável da qual você quer **adicionar à lista**, juntamente com qualquer condição para filtrá-la.
 
 ```python
 list_comprehension = [variable]  
@@ -954,55 +984,53 @@ for variable in range(10):
         list_comprehension.append(variable)
 ```
 
-Vamos ver alguns outros exemplos para esclarecer tudo. Preste atenção à estrutura.
+Vamos ver alguns outros exemplos para esclarecer tudo. Preste atenção na estrutura.
 
-Abaixo nós temos uma lista dos meus pokémon favoritos:
-
-```python
-my_favorite_pokemon = ["Dragonite", "Milotic", "Lapras", "Meganium", "Gengar", "Serperior"]  
-```
-
-Mas quando eu jogo, eu só gosto de usar pokémon que começa com a letra M. Então, usando list comprehension, vamos criar uma lista dos meus pokémon favoritos que começam com a letra M.
+Abaixo nós temos uma lista dos meus animais favoritos:
 
 ```python
-my_favorite_pokemon = ["Dragonite", "Milotic", "Lappras", "Meganium", "Gengar", "Serperior"]  
-
-my_pokemon = [pokemon for pokemon in my_favorite_pokemon if pokemon.startswith("M")]
+favorite_animals = ["Toucan", "Penguin", "Otter", "Wolf", "Owl", "Ocelot"]
 ```
 
-Eu iterarei por todos os nomes de pokémon na lista ```my_favorite_pokemon``` e, se seus nomes começarem com a letra M, eu os adicionarei à lista ```my_pokemon```.
+Usando list comprehension, vamos criar uma lista dos meus animais favoritos que começam com a letra O.
+
+```python
+favorite_animals = ["Toucan", "Penguin", "Otter", "Wolf", "Owl", "Ocelot"]  
+  
+animals_with_o = [animal for animal in favorite_animals if animal.startswith("O")]
+```
+
+Eu iterarei por todos os nomes de animais na lista ```favorite_animals``` e, se seus nomes começarem com a letra O, eu os adicionarei à lista ```animals_with_o```.
 
 Novamente: primeiro o que será adicionado à lista, depois o loop e por fim as condições.
 
-Mais um exemplo.
-
-Eu tenho uma lista de pokémon:
+Mais um exemplo: Eu tenho uma lista de animais.
 
 ```python
-pokemon = ["Kilowattrel", "Entei", "Lugia", "Crabominable", "Snorlax"]
+animals = ["Bear", "Zebra", "Sheep", "Lion", "Sloth", "Gecko"]  
 ```
 
-Mas eu acredito firmemente que qualquer pokémon com um nome mais longo que 10 caracteres não é legal. Então eu quero criar uma nova lista que diz "Cool" se o nome do pokémon for menor que 10 caracteres ou "Not cool" se não for..
+Mas eu acredito firmemente que qualquer animal com um nome mais longo que 5 caracteres não é legal. Então eu quero criar uma nova lista que diz "Cool" se o nome do animal tiver menos de 5 caracteres ou "Not cool" se não tiver.
 
 ```python
-pokemon = ["Kilowattrel", "Entei", "Lugia", "Crabominable", "Snorlax"] 
-
-cool_pokemon = ["Cool" if len(name) > 10 else "Not cool" for name in pokemon]
+animals = ["Bear", "Zebra", "Sheep", "Lion", "Sloth", "Gecko"]  
+  
+cool_animals = ["Cool" if len(animal) < 5 else "Not cool" for animal in animals]
 ```
 
-Aqui eu estou adicionando "Cool" se o tamanho do nome for maior que 10 e "Not cool" se não for, para cada nome na lista ```pokemon```.
+Aqui eu estou adicionando "Cool" se o nome tiver menos de 5 caracteres e "Not cool" se não tiver, para cada nome na lista ```animals```.
 
 Um último:
 
-Vamos usar a lista ```my_favorite_pokemon``` e pegar todos os nomes de pokémon que começam com a letra M. Se o tamanho do nome for maior que 7 caracteres, adicionaremos "Cute", se não for, adicionaremos "Not cute".
+Vamos usar a lista ```favorite_animals``` e pegar todos os nomes de animais que começam com a letra O. Se o nome tiver mais de 5 caracteres, adicionaremos "Cute", se não tiver, adicionaremos "Not cute".
 
 ```python
-my_favorite_pokemon = ["Dragonite", "Milotic", "Lappras", "Meganium", "Gengar", "Serperior"]  
-
-cute_pokemon = ["Cute" if len(pokemon) <= 7 else "Not cute" for pokemon in my_favorite_pokemon if pokemon.startswith("M")]
+favorite_animals = ["Toucan", "Penguin", "Otter", "Wolf", "Owl", "Ocelot"]  
+  
+cute_animals = ["Cute" if len(animal) > 5 else "Not cute" for animal in favorite_animals if animal.startswith("O")]
 ```
 
-Aqui estamos dizendo a python que adicione "Cute" se ```len(pokemon) <= 7``` ou então "Not cute" se não for, para cada pokémon em ```my_favorite_pokemon``` que começa com a letra M.
+Aqui estamos dizendo a python que adicione "Cute" se ```len(animal) > 5``` ou então "Not cute" se não for, para cada animal em ```favorite_animals``` que começa com a letra O.
 
 ### Exercícios 7
 
@@ -1026,18 +1054,18 @@ second_list = [90, 12, 23, 7, 38, 29, 56, 13, 2]
 
 ```python
 # person = {key: value, key: value, key: value, ...}
-person = {'name': 'Mario', 'age': 25, 'location': 'Mushroom Kingdom'}
+person = {'name': 'Mario', 'age': 25, 'location': 'Brazil'}
 ```
 
 Além de ser criado com chaves em vez de colchetes, outra grande diferença é que para acessarmos um valor, nós não usamos um índice numérico, nós usamos as palavras-chave.
 
 ```python
-person = {'name': 'Mario', 'age': 25, 'location': 'Mushroom Kingdom'} 
+person = {'name': 'Mario', 'age': 25, 'location': 'Brazil'} 
 print(person['name'])  
 print(person['age'])
 ```
 
-![[85 - dictionary_1.png]]
+![[chapter 3 - dictionary_1.png]]
 
 Uma outra diferença é que os elementos de um ```dictionary``` são desordenados, enquanto os de uma lista são ordenados.
 
@@ -1077,7 +1105,7 @@ print(f"Age: {doggo['age']}")
 print(f"Breed: {doggo['breed']}")
 ```
 
-![[86 - dict_accessing_elements.png]]
+![[chapter 3 - dict_accessing_elements.png]]
 
 ### Modificando um dicionário
 
@@ -1094,7 +1122,7 @@ print(doggo)
 
 A palavra-chave "favorite_toy" não existe no ```dictionary```, então python adiciona a mesma e atribui a ela o valor de "bone".
 
-![[87 - dict_adding_elements.png]]
+![[chapter 3 - dict_adding_elements.png]]
 
 #### Modificando elementos
 
@@ -1107,7 +1135,7 @@ doggo["name"] = "Dorito"
 print(doggo)
 ```
 
-![[88 - dict_modifying_elements.png]]
+![[chapter 3 - dict_modifying_elements.png]]
 
 #### Deletando elementos
 
@@ -1120,7 +1148,7 @@ del doggo["breed"]
 print(doggo)
 ```
 
-![[89 - dict_deleting_elements.png]]
+![[chapter 3 - dict_deleting_elements.png]]
 
 > **_Nota:_** O elemento é permanente deletado. 
 
@@ -1133,69 +1161,69 @@ Assim como fizemos com os dados de tipo ```list```, nós podemos utilizar loops 
 Este método nós da acesso apenas às palavras-chave de um ```dictionary```.
 
 ```python
-catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+catto = {"name": "Gatito", "age": 5, "color": "orange", "weight": 5.0}  
 
 print(catto.keys())
 ```
 
-![[90 - dict_method_keys_1.png]]
+![[chapter 3 - dict_method_keys_1.png]]
 
 E, assim, podemos utilizar um loop para acessar todas as palavras-chave.
 
 ```python
-catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+catto = {"name": "Gatito", "age": 5, "color": "orange", "weight": 5.0}  
   
 for key in catto.keys():  
     print(key)
 ```
 
-![[91 - dict_method_keys_2.png]]
+![[chapter 3 - dict_method_keys_2.png]]
 
 #### values()
 
 Assim como o método ```keys()```, o método ```values()``` nos dá acesso apenas aos valores de um ```dictionary```.
 
 ```python
-catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+catto = {"name": "Gatito", "age": 5, "color": "orange", "weight": 5.0}  
   
 print(catto.values())
 ```
 
-![[92- dict_method_values_1.png]]
+![[chapter 3 - dict_method_values_1.png]]
 
 E com ele nós podemos utilizar um loop para acessar apenas os valores do ```dictionary```.
 
 ```python
-catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+catto = {"name": "Gatito", "age": 5, "color": "orange", "weight": 5.0}  
   
 for values in catto.values():  
     print(values)
 ```
 
-![[93- dict_method_values_2.png]]
+![[chapter 3 - dict_method_values_2.png]]
 
 #### items()
 
 O método ```ìtems()``` nos dá acesso tanto às palavras-chave quanto aos valores.
 
 ```python
-catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+catto = {"name": "Gatito", "age": 5, "color": "orange", "weight": 5.0}  
   
 print(catto.items())
 ```
 
-![[94 - dict_method_items_1.png]]
+![[chapter 3 - dict_method_items_1.png]]
 
 Por conta disto, o ```for``` loop é um pouco diferente. Ele tem duas variáveis.
 
 ```python
-catto = {"name": "KitKat", "age": 5, "color": "orange", "weight": 5.0}  
+catto = {"name": "Gatito", "age": 5, "color": "orange", "weight": 5.0}  
   
 for key, value in catto.items():  
     print(f"Key: {key} -> Value: {value}")
 ```
 
-![[95 - dict_method_items_2.png]]
+![[chapter 3 - dict_method_items_2.png]]
 
 Como este loop tem duas variáveis, uma para a palavra-chave (```key```) e a outra para o valor (```value```), nós podemos manipular as duas dentro do ```for``` loop.
 
@@ -1215,7 +1243,7 @@ print(items.get("bow", 0))
 
 Neste exemplo, estamos dizendo para python imprimir o valor da palavra-chave "bow", caso não exista no ```dictionary```, diga que o valor é 0. A palavra-chave existe no ```dictionary```, então python imprime seu valor.
 
-![[96 - dict_method_get_1.png]]
+![[chapter 3 - dict_method_get_1.png]]
 
 ```python
 items = {"sword": 3, "shield": 1, "dagger": 2}  
@@ -1225,7 +1253,7 @@ print(items.get("bow", 0))
 
 Já neste exemplo, a palavra-chave "bow" não existe no ```dictionary```, então python imprimirá o valor padrão (default).
 
-![[97 - dict_method_get_2.png]]
+![[chapter 3 - dict_method_get_2.png]]
 
 > **_Nota:_** Caso você só passe um argumento, imprimirá o valor se a palavra-chave existir no ```dictionary``` e, caso não exista, imprimirá o valor ```None```, que é um tipo de dado que significa "nenhum valor existente".
 
@@ -1242,7 +1270,7 @@ print(f"Items: {items}")
 print(f"New items: {new_items}")
 ```
 
-![[98 - dict_method_copy.png]]
+![[chapter 3 - dict_method_copy.png]]
 
 #### clear()
 
@@ -1255,7 +1283,7 @@ items.clear()
 print(f"Items: {items}")
 ```
 
-![[99 - dict_method_clear.png]]
+![[chapter 3 - dict_method_clear.png]]
 
 #### setdefault()
 
@@ -1270,7 +1298,7 @@ print(f"Items: {items}")
 
 No exemplo acima, nós definimos que o ```dictionary``` deve ter ao menos 1 "heartstone" obrigatoriamente. Como não colocamos no dicionário, python colocará.
 
-![[100 - dict_method_setdefault().png]]
+![[chapter 3 - dict_method_setdefault().png]]
 
 Caso já existisse uma palavra-chave "heartstone" no ```dictionary``` python não faria nada.
 
@@ -1281,7 +1309,7 @@ items.setdefault("heartstone", 1)
 print(f"Items: {items}")
 ```
 
-![[101 - dict_method_setdefault()_2.png]]
+![[chapter 3 - dict_method_setdefault()_2.png]]
 
 #### pop()
 
@@ -1294,7 +1322,7 @@ items.pop("sword")
 print(f"Items: {items}")
 ```
 
-![[102 - dict_method_pop().png]]
+![[chapter 3 - dict_method_pop().png]]
 
 ### Embelezando dicionários
 
@@ -1304,13 +1332,13 @@ Assim como como dados do tipo ```list```, nós podemos escrever dados do tipo ``
 person = {  
     "name": "Luigi",  
     "age": 24,  
-    "location": "Mushroom Kingdom"  
+    "location": "Italy"  
 }  
   
 print(person)
 ```
 
-![[103 - beautifying_dict.png]]
+![[chapter 3 - beautifying_dict.png]]
 
 > **_Importante:_** Não esqueça de colocar virgula entre os elementos!
 
@@ -1350,7 +1378,7 @@ numbers = (10, 20, 30)
 print(numbers)
 ```
 
-![[104 - tuple.png]]
+![[chapter 3 - tuple.png]]
 
 > **_Importante:_** Uma ```list``` ou um ```dictionary``` dentro de um ```tuple``` ainda pode ser modificados, porém, a estrutura do ```tuple``` não pode.
 
@@ -1364,7 +1392,7 @@ numbers = (10, 20, 30)
 print(numbers[1])
 ```
 
-![[105 - accessing_tuple.png]]
+![[chapter 3 - accessing_tuple.png]]
 
 > **_Importante:_** Os índices começam sempre em 0.
 
@@ -1378,7 +1406,7 @@ numbers = (10, 20, 30, 40, 50)
 print(numbers[:3])
 ```
 
-![[106 - tuple_slices_1.png]]
+![[chapter 3 - tuple_slices_1.png]]
 
 ```python
 numbers = ("Banana", "Apple", "Grape")  
@@ -1386,7 +1414,7 @@ numbers = ("Banana", "Apple", "Grape")
 print(numbers[::-1])
 ```
 
-![[107 - tuple_slices_2.png]]
+![[chapter 3 - tuple_slices_2.png]]
 
 ### Métodos
 
@@ -1400,7 +1428,7 @@ numbers = (10, 20, 30, 30, 40, 20, 30, 10)
 print(numbers.count(30))
 ``` 
 
-![[108 - tuple_method_count.png]]
+![[chapter 3 - tuple_method_count.png]]
 
 #### index()
 
@@ -1412,7 +1440,7 @@ names = ("George", "Geoff", "Gob")
 print(names.index("Geoff"))
 ```
 
-![[109 - tuple_method_index.png]]
+![[chapter 3 - tuple_method_index.png]]
 
 ### Unpacking tuple
 
@@ -1427,7 +1455,7 @@ print(b)
 print(c)
 ```
 
-![[110 - unpacking_tuple.png]]
+![[chapter 3 - unpacking_tuple.png]]
 
 ### Trocando variáveis
 
@@ -1446,7 +1474,7 @@ b = c
 print(f"a: {a}, b: {b}")
 ```
 
-![[111 - swapping_variables_1.png]]
+![[chapter 3 - swapping_variables_1.png]]
 
 Temos duas variáveis, ```a``` de valor 10 e ```b``` de valor 20, e queremos trocar seus valores para que ```a``` seja 20 e ```b``` seja 10. Para isto, criamos uma variável temporária ```c```, depois colocamos o valor de ```a``` em ```c```, o de ```b``` em ```a``` e o de ```c``` em ```b```. É como se tivéssemos dois copos, refrigerante de laranja no copo A e refrigerante de uva no copo B, e nós quiséssemos colocar o de uva no A e o de laranja no B. Para isso, nós usaríamos um terceiro copo vazio chamado de C. Colocaríamos o refrigerante de laranja no C, o de uva no copo A e o de laranja, que está no copo C, no copo B.
 
@@ -1463,7 +1491,7 @@ a, b = b, a
 print(f"a: {a}, b: {b}")
 ```
 
-![[112 - swapping_variables_2.png]]
+![[chapter 3 - swapping_variables_2.png]]
 
 ### Concatenando tuple
 
@@ -1476,7 +1504,7 @@ numbers_total = numbers + (4, 5, 6)
 print(numbers_total)
 ```
 
-![[113 - tuple_concatenation.png]]
+![[chapter 3 - tuple_concatenation.png]]
 
 ### Exercícios 9
 
@@ -1503,7 +1531,7 @@ numbers = {10, 20, 10, 30, 10, 40}
 print(numbers)
 ```
 
-![[114 - set_1.png]]
+![[chapter 3 - set_1.png]]
 
 Como podemos ver, todos os números repetidos foram removidos e a ordem em que foram impressos está diferente da ordem em que o ```set``` foi escrito.
 
@@ -1522,7 +1550,7 @@ for vowel in vowels:
     print(vowel)
 ```
 
-![[115 - accessing_sets.png]]
+![[chapter 3 - accessing_sets.png]]
 
 ### Modificando um set
 
@@ -1539,7 +1567,7 @@ letters.add("d")
 print(letters)
 ```
 
-![[116 - set_method_add.png]]
+![[chapter 3 - set_method_add.png]]
 
 ##### update()
 
@@ -1553,7 +1581,7 @@ languages.update(languages_to_learn)
 print(languages)
 ``` 
 
-![[117 - set_method_update.png]]
+![[chapter 3 - set_method_update.png]]
 
 #### Removendo elementos
 
@@ -1568,7 +1596,7 @@ languages.discard("kotlin")
 print(languages)
 ```
 
-![[118 - set_method_remove.png]]
+![[chapter 3 - set_method_remove.png]]
 
 > **_Nota:_** Nós aprenderemos a lidar com erros posteriormente.
 
@@ -1583,7 +1611,7 @@ languages.discard("kotlin")
 print(languages)
 ```
 
-![[119 - set_method_discard.png]]
+![[chapter 3 - set_method_discard.png]]
 
 #### pop()
 
@@ -1601,7 +1629,7 @@ languages.pop()
 print(languages)
 ```
 
-![[120 - set_method_pop_1.png]]
+![[chapter 3 - set_method_pop_1.png]]
 
 Segundo uso:
 
@@ -1613,7 +1641,7 @@ print(languages)
 print(random_language)
 ```
 
-![[121 - set_method_pop_2.png]]
+![[chapter 3 - set_method_pop_2.png]]
 
 ### Operações com set
 
@@ -1627,7 +1655,7 @@ Existem operadores e métodos para cara uma dessas operações. Eu mostrarei das
 
 Quando fazemos a união de sets, nós pegamos todos os elementos contidos em todos os sets.
 
-![[122 - set_union.jpg]]
+![[chapter 3 - set_union.jpg]]
 
 Em python, nós podemos utilizar o método ```union()``` ou o operador ```|```.
 
@@ -1639,7 +1667,7 @@ print(f"Method: {numbers.union(more_numbers)}")
 print(f"Operator: {numbers | more_numbers}")
 ```
 
-![[123 - set_union_2.png]]
+![[chapter 3 - set_union_2.png]]
 
 Como podemos ver, foi criado um novo set contendo todos os elementos contidos nos sets ```numbers``` e ```more_numbers```, sem repeti-los, pois dados do tipo ```set``` não aceitam repetições de valores.
 
@@ -1647,7 +1675,7 @@ Como podemos ver, foi criado um novo set contendo todos os elementos contidos no
 
 Quando fazemos a interseção de sets, nós pegamos apenas os elementos únicos que existem em todos eles.
 
-![[124 - set_intersection.jpg]]
+![[chapter 3 - set_intersection.jpg]]
 
 Em python, nós podemos utilizar o método ```intersection()``` ou o operador ```&```.
 
@@ -1659,7 +1687,7 @@ print(f"Method: {numbers.intersection(more_numbers)}")
 print(f"Operator: {numbers & more_numbers}")
 ```
 
-![[125 - set_intersection_2.png]]
+![[chapter 3 - set_intersection_2.png]]
 
 Aqui foi criado um novo set contendo apenas os elementos que aparecem tanto no set ```numbers``` quanto no set ```more_numbers```. Novamente: sem repeti-los pois dados do tipo ```set``` não aceitam repetição de valores.
 
@@ -1667,7 +1695,7 @@ Aqui foi criado um novo set contendo apenas os elementos que aparecem tanto no s
 
 Quando fazemos a diferença entre sets, nós pegamos apenas os elementos que existem em um set mas não existem nos outros.
 
-![[126 - set_difference.jpg]]
+![[chapter 3 - set_difference.jpg]]
 
 Em python, nós podemos utilizar o método ```difference()``` ou o operador ```-```.
 
@@ -1679,7 +1707,7 @@ print(f"Method: {numbers.difference(more_numbers)}")
 print(f"Operator: {numbers - more_numbers}")
 ```
 
-![[127 - set_difference_2.png]]
+![[chapter 3 - set_difference_2.png]]
 
 Um novo set foi criado contendo apenas os números que pertencem ao set ```numbers``` que não pertencem a outros sets.
 
@@ -1687,7 +1715,7 @@ Um novo set foi criado contendo apenas os números que pertencem ao set ```numbe
 
 Quando fazemos a diferença simétrica entre sets, nós pegamos todos os elementos que são únicos de cada set. Qualquer elemento que apareça em mais de um set é ignorado.
 
-![[128 - set_symmetric_difference.jpg]]
+![[chapter 3 - set_symmetric_difference.jpg]]
 
 Em python, nós podemos utilizar o método ```symmetric_difference()``` ou o operador ```^```.
 
@@ -1699,7 +1727,7 @@ print(f"Method: {numbers.symmetric_difference(more_numbers)}")
 print(f"Operator: {numbers ^ more_numbers}")
 ```
 
-![[129 - set_symmetric_difference_2.png]]
+![[chapter 3 - set_symmetric_difference_2.png]]
 
 Neste caso, criamos um novo set com todos os elementos únicos que pertencem ao set ```numbers``` e ao set ```more_numbers```. Qualquer elemento que pertença aos dois sets não foi incluído.
 
@@ -1722,7 +1750,7 @@ print(numbers)
 
 Neste exemplo, passamos uma lista como argumento, fazemos o type casting para frozenset e este é o resultado:
 
-![[130 - frozenset.png]]
+![[chapter 3 - frozenset.png]]
 
 ---
 
@@ -1766,7 +1794,7 @@ print(numbers)
 print(type(numbers))
 ```
 
-![[131 - type_casting.png]]
+![[chapter 3 - type_casting.png]]
 
 > **_Nota:_** Nós aprenderemos posteriormente a criar nossas próprias classes.
 
@@ -1782,7 +1810,7 @@ print(dict(name_and_age))
 
 Neste exemplo, temos uma lista de dados do tipo ```tuple``` (mas poderia ser um set de tuples ou um tuple de tuples), e estamos convertendo-o para o tipo ```dict```.
 
-![[132 - type_casting_dict.png]]
+![[chapter 3 - type_casting_dict.png]]
 
 ---
 ## Exercício 10
@@ -1819,7 +1847,7 @@ print(my_zip)
 
 Neste exemplo temos duas listas e estamos utilizando a função ```zip()``` para uni-los. Se tentarmos imprimir diretamente, python imprimirá que é um objeto do tipo ```zip``` e onde ele se encontra na memória.
 
-![[133 - zip_1.png]]
+![[chapter 3 - zip_1.png]]
 
 Objetos do tipo ```zip``` são iteráveis, então podemos utilizar um loop para acessar seus elementos.
 
@@ -1832,7 +1860,7 @@ for element in my_zip:
     print(element)
 ```
 
-![[134 - zip_2.png]]
+![[chapter 3 - zip_2.png]]
 
 Ao acessar seus elementos, podemos ver que o objeto do tipo ```zip``` pegou os elementos de cada lista e criou tuples. Primeiro elemento com primeiro elemento, segundo elemento com segundo elemento, e assim por diante.
 
@@ -1848,7 +1876,7 @@ zip_list = list(zip(positions, months))
 print(zip_list)
 ```
 
-![[135 - zip_3.png]]
+![[chapter 3 - zip_3.png]]
 
 Já neste exemplo, o transformamos em um dict:
 
@@ -1860,7 +1888,7 @@ zip_dict = dict(zip(positions, months))
 print(zip_dict)
 ```
 
-![[136 - zip_4.png]]
+![[chapter 3 - zip_4.png]]
 
 > **_Importante:_** Só é possível transformar um objeto do tipo ```zip``` em um objeto do tipo ```dict``` quando temos no zip apenas tuples de tamanho 2, pois dicts só aceitam pares de elementos.
 
@@ -1878,7 +1906,7 @@ print(zip_list)
 
 Aqui estamos passando dois argumentos para a função ```zip()```: a lista ```positions``` que tem um tamanho 7, ou seja, ela tem 7 elementos; e a lista ```months``` que tem apenas 3. Neste caso, o objeto zip criado terá um tamanho igual ao tamanho do menor argumento passado, que é a lista ```month```. O tamanho do objeto zip será 3.
 
-![[137 - zip_5.png]]
+![[chapter 3 - zip_5.png]]
 
 ---
 
@@ -1926,7 +1954,7 @@ print(my_zip)
 
 Quando tentamos imprimir na tela o valor da variável ```my_zip```, python entende que o nome da variável é simplesmente uma referência a um endereço na memória.
 
-![[133 - zip_1.png]]
+![[chapter 3 - zip_1.png]]
 
 Quando a imprimimos, ele nos diz que dentro do endereço ```0x7f9a1e5f3780``` na memória há um objeto zip. Python entende que a variável de nome ```my_zip``` é uma referência ao endereço ```0x7f9a1e5f3780``` na memória.
 

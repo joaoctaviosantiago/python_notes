@@ -1,3 +1,1209 @@
+# Introduction
+
+</br>
+
+## What is programming?
+
+Programming is giving a series of instructions to a computer. This series of instructions is known as Algorithm. Here is an example:
+
+```
+take two steps forward,
+try opening the door
+if it's unlocked, open the door,
+if it isn't, turn left
+```
+
+It is fairly common for educators to teach programming using "hands-on examples", in which you're simply copying someone, without actually learning how to think or use the tools at your disposal. I disagree with this approach and prefer to add a little bit of information with each module, expanding our knowledge and teaching the student how to find solutions to problems using the tools they've learned.
+
+</br>
+
+## Do I need to know math?
+
+A common fear among those who are interested in programming is the _myth_ that you need to know math to program. Yes, I've said _myth_. And the reason why I've said it is that most times programming will not require anything but basic math. It is important to understand that inside the computer science field there are many professions. Some will require a higher knowledge of math, others will barely require any. Just because something involve numbers, it doesn't mean it requires math.
+
+</br>
+
+## I think I'm too old to learn how to code
+
+Another _myth_ that is very common is that to become a good programmer you need to start learning it very early in life. Programming is something you learn by doing, by practicing. And you'll grow with each day of doing it. No one is born a programmer. It is a skill acquired through study and practice.
+
+</br>
+
+## Why python?
+
+Python is a general-purpose language, which means it is a language used in many fields, including data science, machine learning, software development, web development, automation, among others. On top of this, its syntax is similar to English, which makes it less intimidating than other languages for those who are beginning their journey.
+
+</br>
+
+## About the course
+
+The course was developed in such way that each chapter will build on the previous. Because of this, everything we see will be utilized in the future, so it is crucial that you do not move to the next module until the topics are well understood. 
+
+We'll cover other topics besides python throughout the course, even if not deeply, because we'll need this knowledge to work on our projects.
+
+Do not limit yourself to the exercises of this course. Programming is like LEGO. It is a creative exercise. In this course you'll learn all the tools and knowledge needed to create everything you can imagine, as well as the ability to learn another programming language.
+
+</br>
+
+## About the exercises
+
+There are multiple ways of doing the same thing in programming. Some codes are more optimized than others, but as long as everything works, it's good. The answers to the exercises can be found on [this repository](https://github.com/joaosoutosantiago/temporary_python_exercises).
+
+Try to do the exercises yourself and, if you can't, check my answers.
+
+</br>
+
+## Bonus: How does a computer work?
+
+Each piece of a computer has a specific job. Here, I want to clarify a little bit about what each of them do, in a superficial manner. This will help us clarify some things later on.
+
+### Motherboard
+
+It connects all the pieces of the computer and made them work together.
+
+### CPU | Processor
+
+It is the brain of the computer. It is capable of processing an enormous amount of information per second.
+
+### GPU | Graphics Card
+
+It processes the images and videos on a computer, such as games, tv-shows, the image in your monitor.
+
+### HDD | SSD | NVMe
+
+This is the long term memory of a computer. The data is **persistent**, which means that even after you turn off the computer, the data on your HD will still exist. It is where you'll store photos, videos, software, games, etc.
+
+### RAM | Random Access Memory
+
+RAM is the _short term memory_ of a computer. It is extremely fast when compared to the speed of an HD, however, it is much smaller in size. When we run a software, open a video, do something, all the data needed to run these things is stored on RAM, when we close these programs, they're removed from memory. Because of that, when you open a new program, its data is placed where there is free space within the RAM. The location of the data is not permanent.
+
+</br>
+
+## Python download and installation
+
+Python can be downloaded from the [official website](https://www.python.org/downloads/).
+
+> **_Important:_** Download python 3 (or the most updated version) to guarantee that the codes on this course will function correctly.
+
+### Windows
+
+The windows installation is simple, like any other software. Select "Add python.exe to PATH" and then just click "next" and wait.
+
+![[chapter 1 - install_python.png]]
+
+> **_Important:_** Check the "Add python.exe to PATH" checkbox before installing.
+
+### MacOS
+
+For the installation on MacOS I recommend this link from [freeCodeCamp](https://www.freecodecamp.org/news/python-version-on-mac-update/). Feel free to use a different source, maybe another website or a youtube video.
+
+### Linux
+
+Python comes installed with most Linux distributions. I do not recommend updating python because some libraries might break due to difference in versions.
+
+</br>
+
+## IDE installation
+
+Once installed, python can run from the terminal of the computer. However, for the this first part of the course, we'll install an IDE (Integrated Development Environment) to program.
+
+> **_Note:_** You can write your code even on Microsoft Word or Notepad, and execute it from the terminal. An IDE is a software made specifically to run certain languages, coming prepared with everything you need and optimized for this purpose. There are other text editors and IDEs you can use.
+
+### PyCharm Community Edition
+
+I will use PyCharm as my IDE for the first part of the course. The download can be done from [this link](https://www.jetbrains.com/pycharm/download).
+
+> **_Note:_** There are two versions, PyCharm Professional Edition, which is paid, and PyCharm Community Edition, which is free. We'll be using the Community Edition.
+
+Once installed, create a new project and wait a little. The first time a project is created, the IDE requires some time to organize things.
+
+### Visual Studio Code
+
+VSCode is a text editor optimized for coding and it utilizes plugins to improve the life of the programmer. If you are using and older or slower computer, I recommend using VSCode with the python plugin. It is easy to find on google how to install said plugins. The download can be done from [this link](https://code.visualstudio.com/).
+
+Once installed, open the program, click in "Open folder" and select the folder in which your files will be. After this, create a file ```filename.py``` by clicking with the right button of the mouse on the "EXPLORER" panel, on the left side of the screen.
+
+Later in the course we'll utilize VSCode for some projects.
+
+</br>
+</br>
+
+# Chapter 1: The Basics
+
+## My first program
+
+It is standard that the first thing we make is a little program that says _"Hello, world"_ to confirm that everything works properly, and this is what we're going to do. Some IDE's or text editors automatically create a python file when you start a project, some don't. If your file was not created, make a file called "hello.py". The ```.py``` at the end is what makes this a python file. Write:
+
+```python
+print("Hello, world")
+```
+
+> **_Note:_** It is important to use quotation marks in the message.
+
+And execute the program by clicking on the **play** button at the top of the screen:
+
+![[chapter 1 - play.png]]
+
+This should be the result:
+
+![[chapter 1 - hello_world_resultado.png]]
+
+There you go! You'e just made your first python program. Simple, right?
+
+```python
+print()
+```
+
+Is a function that prints on screen whatever data is between parenthesis.
+
+> **_Note:_** We'll study functions deeply later. For now, don't worry about them.
+
+### Interpreted x compiled languages
+
+You might have heard that computers do not understand anything but zeros and ones. This is true, they only understand binary code. Then how is it possible that the computer has understood what I wrote? Behind the scenes, python reads the code and "explains" it to the computer.
+
+There are two types of languages, the **compiled** ones and the **interpreted** ones.
+
+Languages such as java, C and C++ are compiled, meaning the code written is converted to a language the computer understands and then we can execute the program. We compile it once and execute it multiple times.
+
+Other languages such as python and javascript are interpreted. Every time we run the code, the interpreter reads it and "explains" it to the computer. And it will happen whenever you run it again. When we open a website, for example, the browser reads the website's code and creates it on screen.
+
+
+
+## Variables
+
+A variable is a little space in memory (RAM) where you'll store a data. This data can be a name, a date, a number, etc. It sounds confusing, I know. Let's make it a little clearer using an example. We'll make a variable called ```message```:
+
+```python
+message = "Hello, world"
+print(message)
+```
+
+In this example, we're separating a little space in memory and calling it ```message```,  then we get the data ```Hello, world``` and put it inside of that space. Next, we call the function ```print()``` again:
+
+![[chapter 1 - resultado_variable.png]]
+
+As we can see, we have the same result. Python printed the value assigned to the variable ```message```.
+
+> **_Important:_** The equal sign ```=``` is not the same as the mathematical sign. We'll see the comparative equal sign later. In python ```=``` is called _"Assign operator"_. It gets a value and assign it to a variable.
+
+Okay, but where is this used? Think of the games you've played. The number of lives, your HP, the name of the characters, their attributes, the ammo. All of this data is stored in variables.
+
+Variables can have any name, however, there are some rules that must be followed when choosing them:
+
+* The name of the variables cannot contain spaces.
+* They can only contain letters, numbers and underscores, but they can only begin with a letter or underscore. The names cannot begin with a number.
+* The ideal is that names are descriptive and help understand the type of information the variable is storing.
+* Avoid using words that are reserved by python, like ```print```.
+
+> **_Note:_** There are some naming conventions. Some of them are:
+> 
+> * **camelCase**: The first word starts with a lowercase letter and the rest of the words start with an uppercase letter
+> * **PascalCase**: The first letter of every word is uppercase
+> * **snake_case**: All the words are lowercase and separated by underscores
+> * **kebab-case**: All the words are lowercase and separated by a hyphen
+> 
+> Python recommends snake_case
+
+
+
+## Python reads code from top to bottom
+
+Programming languages, in general, read code from top to bottom. In the following code, we try to print a variable that has still not been read by python:
+
+```python
+print(f"Hello, {nome}")
+nome = "João"
+```
+
+When we try to run the code, python raises an error:
+
+![[chapter 1 - erro.png]]
+
+Here, python gives us some information about where it believes the problem is. It informs us the file and line. Then it says the name of the error it's found:
+
+```
+NameError: name 'nome' is not defined. Did you mean: 'None'?
+```
+
+It informs us that the word "nome" has not been defined. It doesn't know this word or what it means. Then it asks "Did you mean: 'None'?"
+
+
+
+## The importance of errors
+
+When python can't understand what you're trying to do, it will raise an error and tell you what is wrong, or try to do so. Read the error carefully and don't be afraid of googling it. As important as learning how to code, it is to learn how to debug, which is the act of fixing problems within your code. 
+
+Nobody knows everything about a language. The more we use it, the more we learn. But even so, it is a very big topic. This is why basically everything in programming is documented. Within the documentation we can find, in detail, how to use certain tools and how the language runs behind the scenes.
+
+Besides google and stackoverflow, now we also have the aid of AIs such as ChatGPT, among others, to help with programming. They're excellent tools that will explain and help you write code.
+
+> **_Important:_** It is common to see students copying code generated by AI and pasting them into projects. If you don't understand the code, it can break parts of your program and even add vulnerabilities to it. Use AI as a tool only.
+
+
+
+## Data Types
+
+There are many data types, and each is treated by the language in a different way behind the scenes. The interaction between data will depend on their type.
+
+Some languages are more strict and force us to specify the type of data a variable will take. These are known as _Statically Typed Languages_, and some examples are: Java, C, C++, C#, Kotlin, Go.
+Other languages are less demanding and check the type of data within the variable when the program runs. These are known as _Dynamically Typed Languages_, and some examples are: Python, JavaScript, Ruby, PHP.
+
+We've already created variables and assigned data to them, like this:
+
+```python
+message = "Hello, world"
+```
+
+As we can see, we did not have to explicitly tell python the type of data we're assigning to the variable. It can figure out the type. But in other languages, such as java, we do. Here is an example of a variable being created in java, a statically typed language:
+
+```java
+String message = "Hello, world";
+```
+
+In java we have to tell it what is the type of data the variable should expect.
+
+But if python can recognize them, why do I need to know all the different types? Each type has their own rules of usage and interaction. We'll learn more about these when we talk about them in the following sections.
+
+### String
+
+The data of type ```string``` are alphanumeric characters, which means they're letters and numbers. They appear between quotation marks (double ```"``` or single ```'```).
+
+> **_Note:_**  When a word is typed without quotation marks, python sees them as commands.
+
+Let's make a variable ```name``` and this time let's ask the user to type their name with the function ```input```:
+
+```python
+name = input("What's your name?")
+print(name)
+```
+
+When we run the code, this is what we'll see:
+
+![[chapter 1 - string_input_en.png]]
+
+```python
+input()
+```
+
+Is a function that writes on screen the message in-between parenthesis then gets what the user types and stores it in a variable.
+
+#### Ignoring characters
+
+As we can see, when running the code, the user's answer was right next to the question. This can be fixed with a space, but we can also add a line break using a backwards slash ```\``` to add special characters. For example:
+
+```python
+name = input("What is your name?\n")
+```
+
+> **_Note:_** ```\n``` in the middle of a string causes a line break.
+
+The backwards slash is also used to ignore a character that follows it, as we'll see next.
+
+#### Should I use single or double quotation marks?
+
+Both work the same way: They determine where the string begins and where it ends. Let's assume that you want to use quotation marks within a string:
+
+```python
+"And then he said "wow""
+```
+
+As we can see, the colors are different to let us know that python will complain and raise an error. It can't understand that "wow" is a part of the string because the first quotation marks determine where the string begins and the second where it ends.
+
+One possible solution is to use the backwards slash, as we've seen:
+
+```python
+"And then he said \"wow\""
+```
+
+In this case, the colors haven't changed. Python understands that the quotation marks around "wow" should be treated as a part of the string, because they're in front of a backwards slash.
+
+Another way to deal with this situation is to utilize single quotation marks:
+
+```python
+'And then he said \"wow\"'
+```
+
+Here, the single quotation marks determine where the string begins and where it ends, so the double quotation marks are treated as a part of the string.
+
+#### Concatenation
+
+Concatenation is the act of putting data together.  There are multiple ways of doing this in python, we'll see some of them:
+
+The most common way of concatenation is by using the ```+``` operator.
+
+```python
+name = input("What is your name?\n")  
+print("Hello, " + name)
+```
+
+In this case, we are concatenating the string ```"Hello, "``` and the string inside the variable ```name```, which was given by the user.
+
+![[chapter 1 - concatenation_1_en.png]]
+
+Another way of concatenating variables is by separating them with a comma:
+
+```python
+name = input("What is your name?\n")
+print("Hello,", name)
+```
+
+> **_Note:_** In this case, python adds a space between the string and the variable.
+
+As you're probably already imagining, concatenating multiple variables in a huge text would be a lot of work. There is a better way of concatenating in python: using an ```f string```.
+
+```python
+name = input("What is your name?\n")
+print(f"Hello, {name}")
+```
+
+In the ```f string``` all the variables are between curly braces in the middle of the string. Python understands that they're variables and replaces them with their values.
+
+
+
+### Exercise 1
+
+1. What is the result of the following expression:
+
+```python
+print("11" + "11")
+```
+
+2. What's the difference between Dynamically Typed Languages and Statically Typed Languages?
+3. Madlibs is a game in which a list of words is given and added to a story. Make a program that will ask the user for 1 name and 2 adjectives, then add them to a sentence.
+
+### Numbers
+
+There are two numeric data types: int (integer) and float (floating-point number). Integers are whole numbers, while floats are numbers with decimal places.
+
+| Data type | Examples                               |
+|--------------|----------------------------------------|
+| Int          | -2, -1, 0, 1, 2, 3, 10, 45, 67, 106    |
+| Float        | -1.32 , -1.0 , 0.0 , 1.57, 43.5, 100.0 |
+
+We can make calculations using python, and for this we utilize operators, just like in math. They are:
+
+| Operator | Name                             | What it does                                                  |
+|----------|----------------------------------|---------------------------------------------------------------|
+| +        | add                              | adds the number                                               |
+| -        | subtract                         | subtracts the number                                          |
+| *        | multiplication                   | multiplies the number                                         |
+| /        | division                         | divides the number                                            |
+| %        | modulus                          | gives you the remainder of the division                       |
+| **       | exponentiation                   | raises the number to a power                                  |
+| //       | floor division                   | divides the number and gives you the result rounded to the closest lowest number |
+
+Some are quite simple and you probably remember them, but others not so much. Then let's take a look on some examples to clarify their usage.
+
+#### Modulus
+
+This operator divides the numbers and gives us the remainder of the division. What will be the result of the expression below?
+
+```python
+print(11 % 2)
+```
+
+That's right! The result is 1.
+
+![[chapter 1 - modulus.png]]
+
+It divides 11 by 2 and the remainder is 1.
+
+#### Exponentiation
+
+In case you don't remember, exponentiation is the act of multiplying a number by itself one or more  times.
+
+```python
+print(2 ** 3)
+```
+
+Is the same as 2³ or 2 · 2 · 2, which is equal to 8.
+
+![[chapter 1 - power.png]]
+
+#### Floor Division
+
+With this operator, the numbers are divided and python rounds them to the closest lowest number.
+
+```python
+print(10 // 3)
+```
+
+The result of 10 divided by 3 is 3.333, however, when we utilize the floor division, python gives 3 as the answer.
+
+![[chapter 1 - floor_division.png]]
+
+#### Int e Float
+
+In certain languages, you can only execute operators with data of the same type. In python this is not the case. the language tries to understand what you're trying to do and tries to give you the most precise answer possible.
+
+Because of that, it whenever we try to do an calculation with an ```int``` and a ```float```, the result will be a```float```. Python understands that there is a high chance the result of this calculation will be a number with decimal points, so it converts the result to ```float```.
+
+```python
+print(5.0 + 3)
+```
+
+![[chapter 1 - float.png]]
+
+In some cases, as in the division, this also occur. Even if the division is between two integers. Python knows that there is a good chance that the result of a division will be a number with decimal points.
+
+```python
+print(4 / 2)
+```
+
+![[chapter 1 - division.png]]
+
+#### Number of decimal places
+
+Sometimes python will give a result with many decimal places. This is normal and it happens in many languages. Python always tries to deliver the most precise answer, which is a little hard given how computers deal with numbers.
+
+```python
+print(0.2 + 0.1)
+```
+
+![[chapter 1 - decimal_points.png]]
+
+But what if I want a number with a specific amount of decimal places? In this case, we can format the result.
+
+```python
+number = 1 + 0.9887984
+print(f"Non-formatted result: {number}")
+print(f'Formatted result: {"%.2f" % number}')
+```
+
+Here we're trying to add an ```int``` and a ```float```, so we know that the result will be a ```float``` and python will try to make it as precise as it can. On the third line, notice that the variable is not alone. We've also passed ```"%.2f" % variable_name```, which will get the value passed to the variable and round it to two decimal places.
+
+> **_Note:_** The ```"%.2f"``` must always be between quotation marks. The ```2``` is the amount of decimal places you want.
+
+and this will be the result:
+
+![[chapter 1 - formatted_numbers_en.png]]
+
+#### Order of mathematical operations
+
+Just like in math, in python the order of operations must also be respected.
+
+```python
+number = 5 + (2 + 3) ** 2
+```
+
+First we'll calculate the numbers between parenthesis, then the exponentiation and finally, we add.
+
+![[chapter 1 - order.png]]
+
+#### Numbers with underscore
+
+Big numbers are often hard to read. Python solves this problem by letting us use underscores to separate the numbers, making them more readable.
+
+```python
+big_number = 4_540_000_000
+print(big_number)
+```
+
+![[chapter 1 - number_with_underline.png]]
+
+### Boolean
+
+Boolean is a data type with only two possible values: True and False.
+
+```python
+true_bool = True
+false_bool = False
+```
+
+Pretty easy, huh?
+
+I know that it doesn't seem too relevant yet, but boolean is extremely important and we'll see their usage soon.
+
+
+
+## Revisiting variables
+
+Now that we already have a solid understanding of variables and data types, we can go a little deeper into these topics.
+
+Up to this point we've only assigned a value to a variable and used it. But, as the name suggests, it is variable. Which means we can alter it's value at any moment.
+
+```python
+number = 100
+number = 10
+print(number)
+```
+
+In this example, first we make a variable ```number```  and assign it the integer 100. Nothing new.  Then we modify the value of the variable to 10. When we run the code, this is the result we get:
+
+![[chapter 1 - revisiting_variables.png]]
+
+Python reads the code from top to bottom, remember? So first it creates the variable, then python modifies it and finally, prints its current value on screen, which is 10.
+
+Since python is a dynamically typed language, we can even change the type of the variable to string and python would understand it.
+
+```python
+number = 100
+number = "hello"
+print(number)
+```
+
+![[chapter 1 - revisiting_variables_2.png]]
+
+### More assign operators
+
+Let's imagine that we have a variable ```number``` of value 2 and we want to add 10 to its value. How would we do that?
+
+```python
+number = 2
+number = number + 10
+print(number)
+```
+
+It looks a little confusing, right? But let's go through it step by step. First, we create a variable and assign it the value 2. Then, we assign to the variable ```number``` the value of ```number``` + 10, meaning that the new value of ```number``` will be its current value (2) plus the integer 10. Resulting in:
+
+![[chapter 1 - assigning_values.png]]
+
+Another way of writing this would be:
+
+```python
+number = 2
+number += 10
+print(number)
+```
+
+Here are some other assign operators:
+
+| Operator | What it does                                                        |
+|----------|---------------------------------------------------------------------|
+| +=       | adds to the old value and assigns the result to the variable        |
+| -=       | subtracts from the old value and assigns the result to the variable |
+| \*=       | multiplies by the old value and assigns the result to the variable  |
+| /=       | divides by the old value and assigns the result to the variable     |
+| %=       | calculates the division and assigns the remainder to the variable   |
+| \**=      | raises the number to the power and assings the result to the variable |
+
+
+
+## Type Casting
+
+Type casting is the act of changing the type of a variable. 
+
+While python allows us to work with integers and floats at the same time, even if they're different data types, this doesn't happen when with strings and numbers. If we try, python will raise an error.
+
+```python
+print("10" + 10)
+```
+
+![[chapter 1 - type_casting.png]]
+
+Python is complaining and saying that it can only concatenate ```string``` (str) to ```string```, and not ```int```.
+
+### User input
+
+When we use the function ```input()``` to get some information from the user, this data always comes in the ```string``` format, even if the user has types a number. To deal with this situation we need to convert the data. And how do we do that?
+
+There are a few functions we can use:
+
+```python
+int(data)
+```
+
+turns the data into an integer.
+
+```python
+float(data)
+```
+
+turns the data into a float.
+
+```python
+str(data)
+```
+
+turns the data into a string.
+
+An use case example:
+
+```python
+number = input("type a number:\n")
+number = int(number)
+```
+
+or, if you'd like to make your code more concise:
+
+```python
+number = int(input("type a number:\n"))
+```
+
+
+
+## Exercise 2
+
+1. Make a program that asks the user to type 2 numbers and print their sum.
+2. Make a program that asks the user's name and the year they were born, and shows a sentence with their name and how old they are/will be this year.
+3. Make a program that asks the user for two numbers and show their division with 3 decimal places.
+
+
+
+## Constants
+
+Just like variables, constants are spaces in memory where data is stored. The difference is that the value assigned to a constant cannot be changed when the program is running.
+
+When you are sure that the value of a data will not be altered during the execution of the program, you can write it as a constant. This way, the language will know that the value will not change and, behind the scenes, will make optimizations to work in a more efficient manner.
+
+Okay, but how do I do this in python? So, python does not have a constant data type. However, since this data type exists in other languages, we follow the same naming conventions and make its name capitalized. This way we make it clear to other programmers or to ourselves when we revisit our code, that the variable should be treated as a constant. For example:
+
+```python
+CHARACTER_NAME = Lonk
+```
+
+
+
+## Comments
+
+Comments are lines of code ignored by python, which we write for ourselves or for other programmers. Wait, this sounds confusing. Let me explain it with an example:
+
+Imagine that you worked on a project a year ago and now you want to improve it. When opening the project, you can read all that code and decipher what each line is doing, but it would be a lot faster and easier if there were comments in the code explaining what each block of code does, or explaining how you've solved a certain problem.
+
+Comments are essential and make our lives much easier. When we are part of a team, they allow us to clarify to other programmers what our code is doing; When we revisit our old projects, they allows us to understand what and how we did them.
+
+In python, everything that's written in front of a ```#``` is treated as a comment.
+
+```pyhon
+# This is a comment.
+# and this is too!
+```
+
+We can also use triple quotation marks to make multi-line comments.
+
+```python
+"""
+This is a comment.
+and this is too!
+
+Everything written here is treated as a comment.
+"""
+```
+
+
+
+## The Zen of Python
+
+The Zen of Python is a text written by Tim Peters that describes the philosophy followed by the community to write good python code.
+
+```
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+```
+
+I'll comment only about a few principles. Some may not be understandable yet, but they will be later.
+
+```
+Beautiful is better than ugly.
+
+Explicit is better than implicit.
+
+Simple is better than complex.
+
+Readability counts.
+```
+
+When we are beginning our programming journey, we don't know what is good and what is bad. Today we see many videos on social media telling us to write code a certain way because "it is more professional", when, in fact, you're needlessly making your code harder to read. A readable, beautiful, easy to understand and simple code is always preferred and more professional than the opposite.
+
+And, finally, perhaps the most important principle:
+
+```
+Now is better than never.
+```
+
+Often times we want to learn as much as we can before starting. We feel we're not ready, that we don't know enough. However, you don't need to know everything to take the first step. More important that writing the perfect code, is to write a code that works. Later, if you want, you can revisit it and improve it.
+
+Don't leave it for later. Do what you can with what you have now.
+
+
+
+# Chapter 2: Flow Control
+
+When we talk about flow control, we are referring to the ability of a program to decide what to do or how many times to do it, depending on a condition. Take a look at the flow chart below:
+
+![[chapter 2 - flowchart_en.drawio.png]]
+
+In this example, before deciding what to do, we evaluate certain conditions. Is it hot? if it isn't, we go outside. In case it is, we check if it's bearable, if it is, we go outside, if not, we wait a little and check again.
+
+In this chapter you'll learn how to utilize flow control to improve the functionalities of your programs.
+
+## Comparison Operators
+
+Before we begin to utilize flow control in our code, we need to talk about comparison operators. They're used to form expressions, which are simply a combination of operators and operands, resulting in a value. We have used expressions previously, for example:
+
+```python
+number = 10 + 2
+```
+
+10 + 2 is an expression that forms the value 12. Nothing new in the horizon. With comparison operators we can create expressions a little more complex. As we can see below:
+
+```python
+is_less_than = 2 < 10
+# is_less_than = True
+```
+
+In this expression, python will check if two is less than 10 and the result will be a ```boolean```, in other words, true ou false.
+
+The comparison operators are:
+
+| Operator  | What it does             |
+|-----------|--------------------------|
+| ==        | equal to                 |
+| !=        | not equal to             |
+| >         | greater than             |
+| <         | less than                |
+| >=        | greater than or equal to |
+| <=        | less than or equal to    |
+
+```python
+number1 = 10  
+number2 = 2  
+  
+print(f"Is {number1} less than {number2}? {number1 < number2}")  
+print(f"Is {number1} greater than {number2}? {number1 > number2}")  
+print(f"Is {number1} equal to {number2}? {number1 == number2}")  
+print(f"Is {number1} not equal to {number2}? {number1 != number2}")
+```
+
+![[chapter 1 - comparisson_operators_en.png]]
+
+> **_Note:_** Do not confuse the assign operator (=) with the equality operator (=\=).
+
+
+
+## If / Elif / Else
+
+The first form of flow control we'll see is the ```if``` / ```else```. The idea is simple: if a condition is true, do this, otherwise, do that.
+
+```python
+name = "Jorge"
+
+if name == "Jorge":
+	print("Hello, Jorge")
+else:
+	print("Hello, person")
+```
+
+In this example, we compare if the value of the variable ```name``` is the equal to "Jorge", python evaluates this expression as true, then executes the following commands. Resulting in:
+
+![[chapter 2 - if_elif_else.png]]
+
+If the value of the variable ```name``` was not equal to "Jorge", python would execute the commends after ```else```. 
+
+Okay, what about the ```elif```? The ```elif``` is utilized when we have more than two options.
+
+```python
+if name == "Jorge":
+	print(f"Hello, Jorge")
+elif name == "Janine":
+	print("Hello, Janine")
+else:
+	print(f"Hello, person")
+```
+
+First python will check if the value of the variable ```name``` is equal to "Jorge"; If it isn't, then it checks if the value is equal to "Janine"; If it also isn't, then it will execute the code after ```else```.
+
+> **_Note:_** Remember that the code is executed from top to bottom. Once a condition is true, python will execute the code in its block and will not verify if any other condition is also true.
+
+> **_Important:_** ```if``` does not need an ```else``` statement for it to work. You can have an ```if``` statement by itself and if the condition is not true, python skips the ```if``` and continues running the rest of the code. The statement can also be ended with an ```elif``` instead of an ```else```.
+
+
+## Indentation
+
+indentation is the space in the beginning of a line. In most languages, it only exists to organize and beautify the code. In other languages, like python, it is extremely important because it defines where a block of code begins and where it ends. The indentation is created with 4 spaces. Most text editors and IDEs allow us to indent with the _tab_ key.
+
+```python
+if name == "Jorge":
+	# this code is indented and it belongs to the block of code of "if"
+	print("Hello, Jorge")
+else:
+	# this code is indented and it belongs to the block of code of "else"
+	print("Hello, person")
+```
+
+A block of code may contain other blocks of code, as we can see below:
+
+```python
+username = "Ushi"  
+password = "litterbox"  
+
+if username == "Ushi":
+	
+	print("Hello, Ushi")
+	
+    if password == "litterbox": 
+	    print("Login successful.")  
+    else:  
+	    print("wrong password.")
+	
+else:  
+    print("unknown user.")
+```
+
+Let's see, step by step, how python will execute this code:
+
+1. First, python will check if ```username == "Ushi"```, if it is, it will run the following block of code:
+
+![[chapter 2 - code_blocks_1.png]]
+
+2.  So it will run ```print("Hello, Ushi")``` and check if ```password == "litterbox"```, if it is, it will run the block of code shown below
+
+![[chapter 2 - code_blocks_2.png]]
+
+3. In case ```password``` is not "litterbox", it will execute the following block of code:
+
+![[chapter 2 - code_blocks_3.png]]
+
+4. If ```username``` isn't "Ushi", it will execute the following block of code:
+
+![[chapter 2 - code_blocks_4.png]]
+
+
+
+## Line breaks
+
+Unlike indentation, which is so important in python, line breaks are often ignored and do not affect your program in any way. Because of this, we can use it to better organize our code, making it more readable.
+
+
+
+## Logical Operators
+
+Logical operators are used when we want to evaluate two or more expressions. There are 3 logical operators in python: ```and```, ```or```, ```not```.
+
+> **_Note:_** To help with readability, some people prefer to put the expressions between parenthesis.
+
+### and
+
+When we use the ```and``` operator, python will only run the block of code if all the expressions are true.
+
+```python
+first_number = 15  
+second_number = 6  
+  
+if (first_number > 10) and (second_number < 20):  
+    print("yay")
+```
+
+Here, ```first_number``` is greater than 10 and ```second_number``` is less than 20. Both the expressions are true; thus python will run the block of code.
+
+### or
+
+When we utilize the ```or``` operator, python will run the block of code if one of the expressions is true.
+
+```python
+first_number = 15  
+second_number = 6  
+  
+if first_number > 10 or second_number < 5:  
+    print("yay")
+```
+
+In this case, ```first_number > 10``` is true and ```second_number < 5``` is false. Python will execute the block of code because one of the expressions is true.
+
+### not
+
+When we use the ```not``` operator, we reverse the boolean value. If the expression is true, it will then become false; if it's false, it will become true.
+
+```python
+number = 6  
+  
+if not number < 5:
+    print("yay")
+```
+
+In this example, ```number < 5``` is false. Since we're using the ```not``` operator, the block of code will be executed because ```not False``` is ```True```.
+
+
+
+## Ternary Operator
+
+The ternary operator is a "one-line ```if```", it's a more concise way of writing a simple ```if/else```.
+
+```python
+price = 999.99  
+can_afford = "no" if price >= 1200 else "yes"
+```
+
+The value of the variable ```can_afford``` will be "no" if the price is greater than or equal to 1200, otherwise, it will be "yes".
+
+
+
+## Exercise 3
+
+1. Make a program that will ask the user for the grades of 3 exams, calculate the average grade, print it and if the grade is greater or equal to 6, print "You've passed! (:", if it was between 4 and 6, print "You will go to summer school", if it's less than 4, print "you've failed".
+2. Make a program that asks the user for their weight and height,  calculate their BMI (Body Mass Index), print it with 2 decimal points and print the information following the table below:
+
+| BMI         | Classification  |
+|-------------|-----------------|
+| <18,5       | Underweight     |
+| 18,5 a 24,9 | Normal weight   |
+| 25,0 a 29,9 | Overweight      |
+| >30,0       | Obesity         |
+
+3. Make a program that will calculate the tip. Ask the user for the value of the bill and how much, in percentage, they want to give as tip, then print the value of the bill, the percentage and the total value, including the tip.
+
+
+
+## Loops
+
+What are loops? Imagine you're drawing a circle. When you reach the end of the drawing, you find the beginning of it. In programming, loops are used in code repetition, when the code block reaches the end, it starts again. Up until now, our code began and ended, from top to bottom. But what if we want the code to run a certain amount of times, or if we want it to run until a condition is true?
+
+> **_Note:_** Each time a loop starts over it's called an iteration.
+
+### For loop
+
+The ```for``` loop is used when we know how many times the code needs to be repeated. It is used utilized in conjunction with the function ```range```. Let's analyze the ```for``` loop a little more:
+
+```python
+for number in range(1, 4):
+	print("Hello")
+```
+
+First we use the command ```for```, then we create a variable that I've decided to call ```number```, we then use the command ```in``` and call the function ```range```. Another way of reading this would be "for each number from 1 to 4, not including 4, do this".
+
+When the loop begins, the variable ```number``` will have the value of 1, python will run the commands in the block of code and then will return to the beginning of the ```for``` loop, this time, ```number``` will have the value of 2, the block of code will run once more and go back to the beginning, and now ```number``` will have the value of 3, the block of code will run and the loop will end.
+
+We can access the variable ```number``` inside the ```for``` loop.
+
+```python
+for number in range(1, 4):  
+    print(number)
+```
+
+![[chapter 2 - range_function.png]]
+As you can see here, on the first loop, ```number``` had the value of 1 and that was printed on screen, on the second it had the value of 2 and on the third it had the value of 3.
+
+#### Nested for loops
+
+Just like with ```if```, we can create a ```for``` loop inside another;
+
+```python
+for i in range(1, 5):  
+    print(i, end=': ')  
+  
+    for j in range(1, 5):  
+        print(j, end=' ')  
+  
+    print()
+```
+
+I know this code is a little scary, so let's read it together. The first loop begins and the variable ```i``` has the value of 1, the block of code then runs. In it, we print ```i```; Then the second ```for``` loop begins. In it, the variable ```j``` will be printed 4 times (from 1 to 5, not including 5), the second ```for``` loop ends and we go back to the block of code of the first loop, and skip a line with the function ```print()```.
+
+This is the result:
+
+![[chapter 2 - nested_loops.png]]
+
+> **_Note:_**  The function ```print()``` normally breaks the line after printing. We can change this behavior by passing the parameter ```end=```.  With it we can define if after each print there will be a space, a line break, a comma, etc.
+
+It is important to note that the variable ```i``` can be accessed anywhere within the block of code of the first ```for``` loop, even inside the second ```for``` loop, this is why I've used different names for each of them.
+
+```python
+for i in range(1, 5):
+    print(i)  
+	# The variable i can be accessed here, but j cannot.
+
+    for j in range(1, 5):  
+        print(i, j)  
+		# both the varaibles i and j can be accessed here.
+    print()
+```
+
+#### range()
+
+Although we have seen how the function ```range()``` words, I want to go over it in a little more detail. The function ```range()``` can have up to 3 parameters:
+
+```python
+range(beginning, end, step)
+```
+
+The first, which here I'm referring to as ```beginning```, defines in which number the count will begin; The second, called ```end```, defines in which number the count will end, not including this number; the third, which I'm referring to as ```step``` will determine how the count will be done, one by one, two by two, three by three. The default is one by one.
+
+```python
+for num in range(0, 11, 2):  
+    print(num)
+```
+
+![[chapter 2 - ranged_function_steps.png]]
+
+It is also possible to pass only one argument to the ```range()``` function. In this case, python will run from 0 up to the passed argument. For example:
+
+```python
+for number in range(5):
+	print(number)
+```
+
+In the first iteration, ```number``` will have the value of 0, in the second it will have the value of 1, then 2, 3, and 4. Running 5 times in total. The loop will run from 0 to 5, non-inclusive.
+
+![[chapter 2 - range_function_single_argument.png]]
+
+### While loop
+
+The ```while``` loop is executed while a condition is true. It is used when we don't know how many times a code will need to run.
+
+```python
+number = 1  
+  
+while number <= 5:  
+    print(number)  
+    number += 1
+```
+
+In this example, python will test if ```number <= 5``` is true, in case it is, it will run the block of code, print the value of number and add 1 to it; case it isn't, the loop ends.
+
+![[chapter 2 - while_loop.png]]
+
+> **_Important:_** Be careful so that you don't create an infinite loop. If the condition never becomes false, the program will run infinitely and, eventually, crash - it will stop working and close.
+
+#### truthy and falsy values
+
+When we try to pass data as conditions, instead of an expression, python will evaluate that data as ```True``` ou ```False```. When the value is true, we call it "truthy", and when it's false, we call it "falsy". For example:
+
+```python
+while 10:
+	print("truthy")
+	# this is an infinite loop
+```
+
+The data ```0```, ```0.0```, and ```''```, are falsy. Any other date is truthy.
+
+### Break
+
+```break``` is a command used inside of a loop. It forces python to stop the loop and leave it.
+
+In the following code, the loop will run and print the value of ```num``` while its value is not bigger than 5, when this happens, python will leave the loop and continue reading the code outside of it.
+
+```python
+for num in range(1, 10):  
+    if num > 5:  
+        break  
+    print(num)  
+  
+print("Done!")
+```
+
+![[chapter 2 - break.png]]
+
+### Continue
+
+The command ```continue``` is also used inside of a loop. When python reaches this command, it passes to the next iteration of the loop.
+
+```python
+for num in range(1, 11):  
+    if 2 < num < 8:  
+        continue  
+    print(num)  
+  
+print("Done!")
+```
+
+Here, we're telling python that, when the value of ```num``` is between 2 and 8, to jump to the next iteration of the loop. Which means, when ```num``` is equal to 3, python will get to the ```continue``` command, go back to the beginning, and ```num``` will now have the value of 4, and so on, until ```num``` is bigger than or equal to 8.
+
+This will be our result:
+
+![[chapter 2 - continue.png]]
+
+
+
+## Exercise 4
+
+1. Make a program that will print the number from 1 to 10 and say if they're odd or even.
+2. Make a program that will print the numbers from 1 to 50, however, in case the number is divisible by 3, print "Fizz", if its divisible by 5, print "Buzz" and if it's divisible by 3 and 5, print "FizzBuzz". Hint: 15 is supposed to be "FizzBuzz".
+3. Make a program that prints the following drawing:
+
+![[chapter 2 - exercise_4-3.png]]
+
+4. **Bonus:** Make a program that prints the following drawing:
+
+![[chapter 2 - exercise_4-4.png]]
+
+
+
+## Bonus: Flow control in Java
+
+You might have already seen codes with a syntax that is different from python's, with parenthesis, curly braces, with a much scarier look. But the truth is that it's nothing more than that: looks. The concepts are the same in every language. Of course, each language has their own particularities, but the base is the same.
+
+In this bonus section I want to show you how the control flow would be in the java language and explain them to you so that when you find code written in languages other than python, you are able to read them without any issues.
+
+### if/else if/else
+
+```java
+int number = 16;
+
+if (number <= 10) {
+    System.out.println("Small number");
+} else if (number <= 30) {
+    System.out.println("Medium number");
+} else {
+    System.out.println("Big number");
+}
+```
+
+It might be that you can read this code in java without many issues, but let's analyze them together anyways.
+
+First we create a variable of type ```int``` and assign it the value 16 and then we begin with our ```if```. Between parenthesis we have our condition that will be verified and, within curly braces, we have our block of code that will be executed if the condition is true. In this case, the command ```System.out.println()```, is the java equivalent of python's ```print()```. Another thing that is different is that, in java, instead of ```elif```, we use ```else if```.
+
+### For loop
+
+```java
+for (int i = 0; i < 10; i++) {
+	System.out.println("i = " + i);
+}
+```
+
+This one is a little scary, huh?
+
+In this type of ```for``` loop, inside the parenthesis, we create a variable ```i``` (but it can be called anything, this is just the standard) of value 0, define that the loop will run while ```i < 10```, and then we write ```i++```, which is the equivalent of ```i += 1``` in python. After running the code that is between curly braces, 1 will be added to the value of ```i```. This code will print on screen the concatenated ```string``` ```"i = " + i```.
+
+The equivalente of this ```for``` loop in python is:
+
+```python
+for i in range(0, 10):
+	print(f"i = {i}")
+```
+
+### While loop
+
+```java
+int i = 0;
+    
+while (i < 10) {
+	System.out.println("i = " + i);
+	i++;
+}
+```
+
+The ```while``` loop has a syntax similar to python's. First we create a variable of type ```int``` of value 0 to create the condition. The loop will run while ```i < 10```, it will print on screen ```"i = " + i```, then add 1 to the value of ```i``` before checking the condition again.
+
+The python equivalente of this ```while``` loop is:
+
+```python
+i = 0
+
+while i < 10:
+    print(f"i = {i}")
+    i += 1
+```
+
+
+
 # Chapter 3: Collections data type
 
 There are more advanced data types called ```collections``` that work like containers that can hold one or more data of various types. In this chapter we'll talk about python's **built-in collections**.
@@ -16,7 +1222,7 @@ A useful technique to achieve this goal is ```TODO```. Imagine you were hired to
 
 I hope that, from now on, you'll look at problems this way. Thinking about which steps you'll have to take to solve them. And look to what we're learning as new tools and new ways of doing the same. There are multiple ways to solve the same problem, and each will use the tools in a different way.
 
----
+
 
 ## List
 
@@ -542,7 +1748,7 @@ numbers = [6, 2, 5, 6, 2, 7, 1, 9, 1, 7, 6, 4, 2, 6]
 4. Still utilizing the previous list, create a program that will find the most common number in the list and print it alongside with how many times it appears on the list.
 5. **Bonus:** Do exercise 3 without using the ```count()``` method.
 
----
+
 
 ## Revisiting strings
 
@@ -833,7 +2039,7 @@ The word "my" appears twice in the given ```string```.
 2. Make a program that receives a phrase from the user and prints it backwards. Ex: "Hello world" -> "world Hello"
 3. Make a program that verifies if the world or phrase given by the user is a palindrome (a word, phrase, or sequence that reads the same backward as forward)
 
----
+
 
 ## List comprehension
 
@@ -1051,7 +2257,7 @@ second_list = [90, 12, 23, 7, 38, 29, 56, 13, 2]
 2. Make a program that generates a list of "even" or "odd" for each number from 1 to 20 (non-inclusive).  Ex: \[odd, even, odd, even...]
 3. Make a program that asks the user for a sentence and print a list of all the words with 4 or less letters from it.
 
----
+
 
 ## Dictionary
 
@@ -1369,7 +2575,7 @@ people = {
 2. Find the average age of people and print it with 2 decimal places.
 3. You were hired to create a program to interview 10 people about what they prefer, pizza or sushi. Make a program for this research that, in the end, print what the majority prefers and how many votes the winner received.
 
----
+
 
 ## Tuple
 
@@ -1524,7 +2730,7 @@ numbers = (7, 42, 93, 58, 12, 24, 30)
 3. Print the tuple backwards
 4. You're working with a team to create a 2D game. In such games, character's positions are defined by the coordinates (x, y). You're asked to create a new spell for the player character that swaps their location with their enemy. Create the code for this mechanic, print the previous positions and the current ones.
 
----
+
 
 ## Set
 
@@ -1736,7 +2942,7 @@ print(f"Operator: {numbers ^ more_numbers}")
 
 In this case, we're creating a new set with all the elements that belong to the ```numbers``` set and to the ```more_numbers``` set. Any other element that is present in both sets was not included.
 
----
+
 
 ## Frozenset
 
@@ -1757,7 +2963,7 @@ In this example, we're passing a list as an argument and doing the type casting 
 
 ![[chapter 3 - frozenset.png]]
 
----
+
 
 ## More type casting
 
@@ -1817,7 +3023,7 @@ In this example, we hae a list of data of ```tuple``` type (but it could be a se
 
 ![[chapter 3 - type_casting_dict.png]]
 
----
+
 ## Exercise 10
 
 Given the lists below:
@@ -1836,7 +3042,7 @@ names3 = ['Conan', 'Giorgio', 'Rodrigo']
 numbers = [12, 7, 5, 46, 32, 26, 1, 90, 88, 7, 12, 26, 1]
 ```
 
----
+
 
 ## zip() function
 
@@ -1913,7 +3119,7 @@ Here we're passing two arguments to the ```zip()``` function: the ```positions``
 
 ![[chapter 3 - zip_5.png]]
 
----
+
 
 ## Optimization
 
@@ -1933,7 +3139,7 @@ The intention here is that you know these terms and have an idea of what they me
 
 So don't worry about it for now. Let's continue studying because first we need to learn how to do it, then we can learn how to improve what we've made.
 
----
+
 
 ## Bonus: A deeper look into variables
 
@@ -1965,6 +3171,5 @@ When we print it, it tells us that inside the memory address ```0x7f9a1e5f3780``
 
 And this is how a computational variable differs from the mathematical variable. It isn't simply a name with a value, it is a name that points to memory address, where a value is located.
 
----
 
 

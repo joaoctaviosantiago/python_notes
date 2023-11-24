@@ -2,7 +2,7 @@
 
 Quando falamos de controle de fluxo, nos referimos à habilidade de um programa de decidir o que fazer ou quantas vezes fazer, dependendo de uma condição. Dê uma olhadinha no fluxograma a seguir:
 
-![[21 - flowchart_pt.drawio.png]]
+![[chapter 2 - flowchart_pt.drawio.png]]
 
 Neste exemplo, antes de decidirmos o que fazer, avaliamos certas condições. Está quente? Se não estiver, saímos. Caso esteja, verificamos então se está suportável, se estiver, saímos, se não estiver, esperamos um pouco e verificamos novamente.
 
@@ -46,7 +46,7 @@ print(f"{number1} é igual a {number2}? {number1 == number2}")
 print(f"{number1} não é igual a {number2}? {number1 != number2}")
 ```
 
-![[22 - comparisson_operators_pt.png]]
+![[chapter 2 - comparisson_operators_pt.png]]
 
 > **_Nota:_** Não confunda o operador de atribuição (=) com o operador de igualdade  (=\=).
 
@@ -67,7 +67,7 @@ else:
 
 Neste exemplo, comparamos se o valor da variável ```name``` é igual a "Jorge", python avalia esta expressão como verdadeira então faz os comandos seguintes. Resultando em:
 
-![[23 - if_elif_else.png]]
+![[chapter 2 - if_elif_else.png]]
 
 Caso o valor da variável ```nome``` não fosse igual a "Jorge", python executaria os comandos após ```else```. 
 
@@ -125,19 +125,19 @@ Vamos ver passo a passo como python executará este código:
 
 1. Primeiro, python checará se ```username == "Ushi"```, caso seja, ele rodará o seguinte bloco de código:
 
-![[24 - code_blocks_1.png]]
+![[chapter 2 - code_blocks_1.png]]
 
 2.  Então executará ```print("Hello, Ushi")``` e checará se ```password == "litterbox"```, caso seja, ele rodará o bloco de código mostrado abaixo:
 
-![[24 - code_blocks_2.png]]
+![[chapter 2 - code_blocks_2.png]]
 
 3. Caso ```password``` não seja "litterbox", ele executará o seguinte bloco:
 
-![[24 - code_blocks_3.png]]
+![[chapter 2 - code_blocks_3.png]]
 
 4. Se ```username``` não for "Ushi", ele executará o seguinte bloco:
 
-![[24 - code_blocks_4.png]]
+![[chapter 2 - code_blocks_4.png]]
 
 ---
 
@@ -251,7 +251,7 @@ for number in range(1, 4):
     print(number)
 ```
 
-![[25 - range_function.png]]
+![[chapter 2 - range_function.png]]
 Como você pode ver aqui, no primeiro loop ```number``` tinha o valor de 1 e isso foi impresso na tela, no segundo tinha o valor de 2 e no terceiro o valor de 3.
 
 #### Laço for aninhado | Nested for loops
@@ -272,7 +272,7 @@ Eu sei que este código assusta um pouco, então vamos lê-lo com calma. O prime
 
 Este é o resultado:
 
-![[26 - nested_loops.png]]
+![[chapter 2 - nested_loops.png]]
 
 > **_Nota:_**  A função ```print()```, normalmente, pula uma linha depois da impressão. Nós podemos alterar este comportamento com o parâmetro ```end=```.  Com ele podemos definir se vai ter um espaço depois de cada impressão, uma virgula, etc.
 
@@ -304,7 +304,7 @@ for num in range(0, 11, 2):
     print(num)
 ```
 
-![[27 - ranged_function_steps.png]]
+![[chapter 2 - ranged_function_steps.png]]
 
 Também é possível passar apenas um argumento. Neste caso, python rodará de 0 até o argumento passado. Por exemplo:
 
@@ -315,7 +315,7 @@ for number in range(5):
 
 Na primeira iteração, ```number``` terá o valor de 0, na segunda terá o valor de 1, depois 2, 3 e 4. Rodando, assim, 5 vezes. O loop rodará de 0 até 5, não incluso.
 
-![[27-5 - range_function_single_argument.png]]
+![[chapter 2 - range_function_single_argument.png]]
 
 ### Laço while | While loop
 
@@ -331,7 +331,7 @@ while number <= 5:
 
 Neste exemplo, python vai testar se ```number <= 5``` é verdadeiro, caso seja, ele vai rodar o bloco de código, imprimir o valor de number e somar 1 ao mesmo; caso não seja, o loop acaba.
 
-![[28 - while_loop.png]]
+![[chapter 2 - while_loop.png]]
 
 > **_Importante:_** Cuidado para não criar um loop infinito. Se a condição nunca se tornar falsa, o programa vai rodar infinitamente e, eventualmente, "crashar", ou seja, parar de funcionar e fechar.
 
@@ -362,7 +362,7 @@ for num in range(1, 10):
 print("Done!")
 ```
 
-![[29 - break.png]]
+![[chapter 2 - break.png]]
 
 ### Continue
 
@@ -381,7 +381,7 @@ Aqui, estamos dizendo para python que, quando ```num``` estiver entre 2 e 8, par
 
 Este será nosso resultado:
 
-![[30 - continue.png]]
+![[chapter 2 - continue.png]]
 
 ---
 
@@ -391,11 +391,11 @@ Este será nosso resultado:
 2. Crie um programa que imprima os números de 1 a 50, porém, caso o número seja divisível por 3, imprima "Fizz", caso seja divisível por 5, imprima "Buzz", caso seja divisível por 3 e por 5, imprima "FizzBuzz".
 3. Crie um programa que imprima a seguinte figura:
 
-![[31 - exercise_4-3.png]]
+![[chapter 2 - exercise_4-3.png]]
 
 4. **Bonus:** crie um programa que imprima a figura abaixo:
 
-![[31-2 - exercise_4-4.png]]
+![[chapter 2 - exercise_4-4.png]]
 
 ---
 

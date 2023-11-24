@@ -31,7 +31,7 @@ Outro _mito_ bastante comum é de que só consegue aprender a programar bem, aqu
 
 ## Por que python?
 
-Python é uma linguagem de _"uso geral"_ , o que significa que é uma linguagem usada em diversas áreas, incluindo ciência de dados, machine learning, desenvolvimento de software, desenvolvimento web, automação, entre outras. Além de ser uma linguagem amplamente utilizada, sua sintaxe é muito parecida com o inglês, o que a torna muito menos intimidadora para quem está começando.
+Python é uma linguagem de _"uso geral"_, o que significa que é uma linguagem usada em diversas áreas, incluindo ciência de dados, machine learning, desenvolvimento de software, desenvolvimento web, automação, entre outras. Além de ser uma linguagem amplamente utilizada, sua sintaxe é muito parecida com o inglês, o que a torna muito menos intimidadora para quem está começando.
 
 ---
 
@@ -90,7 +90,7 @@ O download de python pode ser feito através do seu [site oficial](https://www.p
 
 A instalação no windows é simples, como de qualquer outro programa. Selecione "Add python.exe to PATH" e depois é só clicar em "próximo" e esperar.
 
-![[1 - install_python.png]]
+![[chapter 1 - install_python.png]]
 
 > **_Importante:_** Marcar "Add python.exe to PATH" antes de instalar.
 
@@ -142,11 +142,11 @@ print("Hello, world")
 
 E execute seu programa clicando no botão **_play_** no topo da tela:
 
-![[2 - play.png]]
+![[chapter 1 - play.png]]
 
 Este deverá ser o resultado:
 
-![[3 - hello_world_resultado.png]]
+![[chapter 1 - hello_world_resultado.png]]
 
 Pronto! Você criou seu primeiro programa em python. Simples, não é?
 
@@ -181,7 +181,7 @@ print(message)
 
 Neste exemplo, estamos separando um espacinho na memória e chamando de ```message```, depois pegamos o dado ```Hello, world``` e colocamos dentro dele. Em seguida, chamamos a função ```print()``` novamente:
 
-![[4 - resultado_variable.png]]
+![[chapter 1 - resultado_variable.png]]
 
 Como podemos ver, temos o mesmo resultado. Python imprimiu o valor atribuído à variável ```message```.
 
@@ -218,7 +218,7 @@ nome = "João"
 
 Quando tentamos rodar o código, python levanta um erro:
 
-![[5 - erro.png]]
+![[chapter 1 - erro.png]]
 
 Aqui python nos dá algumas informações sobre onde acredita estar o erro. Ele nos informa o arquivo e a linha. Depois nos diz o erro que encontrou:
 
@@ -280,7 +280,7 @@ print(name)
 
 Ao rodarmos o código, veremos isto:
 
-![[6 - string_input_pt.png]]
+![[chapter 1 - string_input_pt.png]]
 
 ```python
 input()
@@ -339,7 +339,7 @@ print("Hello, " + name)
 
 Neste caso, concatenamos a string ```"Hello, "``` e a string dentro da variável ```name```, que foi digitada pelo usuário.
 
-![[7 - concatenation_1_pt.png]]
+![[chapter 1 - concatenation_1_pt.png]]
 
 Uma outra forma de concatenar variáveis é separando com virgula:
 
@@ -406,7 +406,7 @@ print(11 % 2)
 
 isto mesmo! O resultado é 1.
 
-![[8 - modulus.png]]
+![[chapter 1 - modulus.png]]
 
 Ele divide 11 por 2 e restam 1.
 
@@ -420,7 +420,7 @@ print(2 ** 3)
 
 é o mesmo que 2³ ou 2 · 2 · 2, que é igual a 8.
 
-![[9 - power.png]]
+![[chapter 1 - power.png]]
 
 #### Divisor Inteiro | Floor Division
 
@@ -432,7 +432,7 @@ print(10 // 3)
 
 O resultado de 10 dividido por 3 é 3.333, porém, como utilizamos o divisor inteiro, python nos dá como resposta o número 3.
 
-![[10 - floor_division.png]]
+![[chapter 1 - floor_division.png]]
 
 #### Int e Float
 
@@ -444,7 +444,7 @@ Por conta disso, sempre que fazemos qualquer calculo entre um ```int``` e um ```
 print(5.0 + 3)
 ```
 
-![[11 - float.png]]
+![[chapter 1 - float.png]]
 
 Em alguns casos, como na divisão, isto também ocorre. Mesmo que seja uma divisão entre dois números inteiros. Python sabe que existe uma boa chance de que o resultado de uma divisão seja um número com virgula.
 
@@ -452,7 +452,7 @@ Em alguns casos, como na divisão, isto também ocorre. Mesmo que seja uma divis
 print(4 / 2)
 ```
 
-![[12 - division.png]]
+![[chapter 1 - division.png]]
 
 #### Quantidade de casas decimais
 
@@ -462,7 +462,7 @@ As vezes python te dará um resultado com muitas casas decimais. Isto é normal 
 print(0.2 + 0.1)
 ```
 
-![[13 - decimal_points.png]]
+![[chapter 1 - decimal_points.png]]
 
 Mas e se eu quiser um número especifico de casas decimais? Neste caso, podemos formatar o resultado.
 
@@ -478,7 +478,7 @@ aqui estamos somando um ```int``` e um ```float```, então sabemos que o resulta
 
 e este será nosso resultado:
 
-![[14 - formatted_numbers_pt.png]]
+![[chapter 1 - formatted_numbers_pt.png]]
 
 #### Ordem de operações matemáticas
 
@@ -490,7 +490,7 @@ number = 5 + (2 + 3) ** 2
 
 primeiro fazemos o calculo entre parênteses, depois calculamos a potência e, por fim, somamos.
 
-![[15 - order.png]]
+![[chapter 1 - order.png]]
 
 #### Números com underline
 
@@ -501,7 +501,7 @@ big_number = 4_540_000_000
 print(big_number)
 ```
 
-![[16 - number_with_underline.png]]
+![[chapter 1 - number_with_underline.png]]
 
 ### Boolean
 
@@ -532,7 +532,7 @@ print(number)
 
 Neste exemplo, primeiro criamos uma variável ```number``` e atribuímos uma integer de valor 100 a ela. Nada de novo. Logo abaixo, modificamos o valor da variável para 10. Ao rodarmos o código, temos este resultado:
 
-![[17 - revisiting_variables.png]]
+![[chapter 1 - revisiting_variables.png]]
 
 Python lê o código de cima para baixo, lembra? Então primeiro ele cria a variável, depois a modifica e, por ultimo, imprime o valor atual dela na tela, que é 10.
 
@@ -544,7 +544,7 @@ number = "hello"
 print(number)
 ```
 
-![[18 - revisiting_variables_2.png]]
+![[chapter 1 - revisiting_variables_2.png]]
 
 ### Mais operadores de atribuição
 
@@ -558,7 +558,7 @@ print(number)
 
 Parece um pouco confuso,né? Mas vamos passo a passo. Primeiro criamos a variável e atribuímos o valor 2. Depois, nós atribuímos à variável ```number``` o valor de ```number``` + 10, ou seja, o novo valor de ```number``` é seu valor atual (2) mais a integer 10. Resultando:
 
-![[19 - assigning_values.png]]
+![[chapter 1 - assigning_values.png]]
 
 Outra forma de escrever isso, seria:
 
@@ -591,7 +591,7 @@ Enquanto python nos permite trabalhar com integers e floats ao mesmo tempo, mesm
 print("10" + 10)
 ```
 
-![[20 - type_casting.png]]
+![[chapter 1 - type_casting.png]]
 
 Python está reclamando e dizendo que pode apenas concatenar ```string``` (str) com ```string```, e não ```int```.
 
